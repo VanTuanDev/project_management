@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\code\\C#\\QLCH\\csharp_project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\qlch\\csharp_project\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\qlch\\csharp_project\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\QLCH\\csharp_project\\staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\qlch\\csharp_project\\staff\\ucfoodmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucfoodmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\qlch\\csharp_project\\staff\\ucclientmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucclientmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\qlch\\csharp_project\\staff\\uccategorymanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\uccategorymanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\QLCH\\csharp_project\\staff\\ucbillmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucbillmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\qlch\\csharp_project\\admin\\ucaccountmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ucFoodManage.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucFoodManage.cs",
+              "RelativeDocumentMoniker": "Staff\\ucFoodManage.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucFoodManage.cs [Design]",
+              "RelativeToolTip": "Staff\\ucFoodManage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T12:19:10.299Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ucClientManage.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucClientManage.cs",
+              "RelativeDocumentMoniker": "Staff\\ucClientManage.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucClientManage.cs [Design]",
+              "RelativeToolTip": "Staff\\ucClientManage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T12:18:53.39Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ucCategoryManage.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucCategoryManage.cs",
+              "RelativeDocumentMoniker": "Staff\\ucCategoryManage.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucCategoryManage.cs [Design]",
+              "RelativeToolTip": "Staff\\ucCategoryManage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T12:18:42.685Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ucAccountManage.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Admin\\ucAccountManage.cs",
+              "RelativeDocumentMoniker": "Admin\\ucAccountManage.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Admin\\ucAccountManage.cs [Design]",
+              "RelativeToolTip": "Admin\\ucAccountManage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T12:14:40.15Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Main.cs",
+              "RelativeDocumentMoniker": "Main.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Main.cs",
+              "RelativeToolTip": "Main.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T10:25:27.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Main.cs",
+              "RelativeDocumentMoniker": "Main.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Main.cs [Design]",
+              "RelativeToolTip": "Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T11:59:02.789Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ucSelling.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucSelling.cs",
+              "RelativeDocumentMoniker": "Staff\\ucSelling.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucSelling.cs [Design]",
+              "RelativeToolTip": "Staff\\ucSelling.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T10:24:35.906Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ucBillManage.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucBillManage.cs",
+              "RelativeDocumentMoniker": "Staff\\ucBillManage.cs",
+              "ToolTip": "D:\\code\\C#\\QLCH\\csharp_project\\Staff\\ucBillManage.cs [Design]",
+              "RelativeToolTip": "Staff\\ucBillManage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T10:20:45.537Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
