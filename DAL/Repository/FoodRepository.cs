@@ -77,10 +77,10 @@ namespace DAL.Repository
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@FoodId", foodId);
-                    command.Parameters.AddWithValue("@FoodName", newFoodName);
-                    command.Parameters.AddWithValue("@Unit", newUnit);
-                    command.Parameters.AddWithValue("@Price", newPrice);
-                    command.Parameters.AddWithValue("@CategoryId", newCategoryId);
+                    command.Parameters.AddWithValue("@NewFoodName", newFoodName);
+                    command.Parameters.AddWithValue("@NewUnit", newUnit);
+                    command.Parameters.AddWithValue("@NewPrice", newPrice);
+                    command.Parameters.AddWithValue("@NewCategoryId", newCategoryId);
 
                     try
                     {
@@ -121,6 +121,34 @@ namespace DAL.Repository
                 // 
             }
             return categoryId;
+        }
+        public DataTable GetCategories()
+        {
+            DataTable categoriesTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT catename FROM Category";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(categoriesTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // 
+            }
+
+            return categoriesTable;
         }
     }
 }

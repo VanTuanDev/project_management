@@ -36,7 +36,7 @@ namespace Csharp_Project.Staff
             txtNewName.Text = "";
             txtNewUnit.Text = "";
             txtNewPrice.Text = "";
-            txtNewCategory.Text = "";
+            cbbCategory.Text = "";
             txtId.Text = "";
             txtName.Text = "";
             txtUnit.Text = "";
@@ -52,7 +52,7 @@ namespace Csharp_Project.Staff
             lblNewPrice.Visible = false;
             txtNewPrice.Visible = false;
             lblNewCategory.Visible = false;
-            txtNewCategory.Visible = false;
+            cbbCategory.Visible = false;
 
             btnSave.Visible = false;
             btnCancel.Visible = false;
@@ -73,7 +73,7 @@ namespace Csharp_Project.Staff
             lblNewPrice.Visible = true;
             txtNewPrice.Visible = true;
             lblNewCategory.Visible = true;
-            txtNewCategory.Visible = true;
+            cbbCategory.Visible = true;
             btnSave.Visible = true;
             btnCancel.Visible = true;
         }
@@ -81,6 +81,11 @@ namespace Csharp_Project.Staff
         {
             LoadFoods();
             Reset();
+            DataTable categoriesTable = foodBLL.GetCategories();
+
+            cbbCategory.DataSource = categoriesTable;
+            cbbCategory.DisplayMember = "catename";
+            cbbCategory.ValueMember = "catename";
         }
 
         private void dgFood_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -146,14 +151,14 @@ namespace Csharp_Project.Staff
             txtNewName.Text = txtName.Text;
             txtNewUnit.Text = txtUnit.Text;
             txtNewPrice.Text = txtPrice.Text;
-            txtNewCategory.Text = txtCategory.Text;
+            cbbCategory.Text = txtCategory.Text;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (isAdd)
             {
-                if (string.IsNullOrEmpty(txtNewId.Text) || string.IsNullOrEmpty(txtNewName.Text) || string.IsNullOrEmpty(txtNewUnit.Text) || string.IsNullOrEmpty(txtNewPrice.Text) || string.IsNullOrEmpty(txtNewCategory.Text))
+                if (string.IsNullOrEmpty(txtNewId.Text) || string.IsNullOrEmpty(txtNewName.Text) || string.IsNullOrEmpty(txtNewUnit.Text) || string.IsNullOrEmpty(txtNewPrice.Text) || string.IsNullOrEmpty(cbbCategory.Text))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -162,7 +167,7 @@ namespace Csharp_Project.Staff
                 string newName = txtNewName.Text;
                 string newUnit = txtNewUnit.Text;
                 string newPrice = txtNewPrice.Text;
-                string selectedCategoryName = txtNewCategory.Text;
+                string selectedCategoryName = cbbCategory.Text;
                 int newCategory = foodBLL.GetCategoryIdByName(selectedCategoryName);
 
                 bool insertSuccess = foodBLL.InsertFood(newId, newName, newUnit, newPrice, newCategory);
@@ -185,7 +190,8 @@ namespace Csharp_Project.Staff
                 string newName = txtNewName.Text;
                 string newUnit = txtNewUnit.Text;
                 string newPrice = txtNewPrice.Text;
-                int newCategory = Convert.ToInt32(txtNewCategory.Text);
+                string selectedCategoryName = cbbCategory.Text;
+                int newCategory = foodBLL.GetCategoryIdByName(selectedCategoryName);
 
                 bool updateSuccess = foodBLL.UpdateFood(id, newName, newUnit, newPrice, newCategory);
 

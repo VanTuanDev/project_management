@@ -32,5 +32,9 @@ namespace BLL.Manager
         {
             return foodDAL.GetCategoryIdByName(categoryName);
         }
+        public DataTable GetCategories()
+        {
+            return foodDAL.GetCategories();
+        }
     }
 }

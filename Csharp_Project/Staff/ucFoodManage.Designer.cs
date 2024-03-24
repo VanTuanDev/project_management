@@ -34,6 +34,7 @@
             dataGridView2 = new DataGridView();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel5 = new Panel();
+            cbbCategory = new ComboBox();
             lblNewCategory = new Label();
             lblNewUnit = new Label();
             txtNewUnit = new TextBox();
@@ -67,7 +68,6 @@
             cl4 = new DataGridViewTextBoxColumn();
             cl5 = new DataGridViewTextBoxColumn();
             panel4 = new Panel();
-            txtNewCategory = new TextBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -134,7 +134,7 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(192, 255, 192);
-            panel5.Controls.Add(txtNewCategory);
+            panel5.Controls.Add(cbbCategory);
             panel5.Controls.Add(lblNewCategory);
             panel5.Controls.Add(lblNewUnit);
             panel5.Controls.Add(txtNewUnit);
@@ -166,6 +166,15 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(424, 868);
             panel5.TabIndex = 0;
+            // 
+            // cbbCategory
+            // 
+            cbbCategory.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbCategory.FormattingEnabled = true;
+            cbbCategory.Location = new Point(185, 687);
+            cbbCategory.Name = "cbbCategory";
+            cbbCategory.Size = new Size(219, 32);
+            cbbCategory.TabIndex = 31;
             // 
             // lblNewCategory
             // 
@@ -573,18 +582,6 @@
             panel4.Size = new Size(1208, 876);
             panel4.TabIndex = 11;
             // 
-            // txtNewCategory
-            // 
-            txtNewCategory.BorderStyle = BorderStyle.None;
-            txtNewCategory.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewCategory.Location = new Point(185, 687);
-            txtNewCategory.Margin = new Padding(3, 4, 3, 4);
-            txtNewCategory.Name = "txtNewCategory";
-            txtNewCategory.Size = new Size(219, 25);
-            txtNewCategory.TabIndex = 31;
-            txtNewCategory.Tag = "1";
-            txtNewCategory.KeyPress += txtNewCategory_KeyPress;
-            // 
             // ucFoodManage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -649,6 +646,6 @@
         private DataGridViewTextBoxColumn cl3;
         private DataGridViewTextBoxColumn cl4;
         private DataGridViewTextBoxColumn cl5;
-        private TextBox txtNewCategory;
+        private ComboBox cbbCategory;
     }
 }
