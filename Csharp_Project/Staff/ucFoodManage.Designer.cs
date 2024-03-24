@@ -34,7 +34,6 @@
             dataGridView2 = new DataGridView();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel5 = new Panel();
-            txtNewCategory = new TextBox();
             lblNewCategory = new Label();
             lblNewUnit = new Label();
             txtNewUnit = new TextBox();
@@ -68,6 +67,7 @@
             cl4 = new DataGridViewTextBoxColumn();
             cl5 = new DataGridViewTextBoxColumn();
             panel4 = new Panel();
+            txtNewCategory = new TextBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -167,18 +167,6 @@
             panel5.Size = new Size(424, 868);
             panel5.TabIndex = 0;
             // 
-            // txtNewCategory
-            // 
-            txtNewCategory.BorderStyle = BorderStyle.None;
-            txtNewCategory.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewCategory.Location = new Point(185, 687);
-            txtNewCategory.Margin = new Padding(3, 4, 3, 4);
-            txtNewCategory.Name = "txtNewCategory";
-            txtNewCategory.Size = new Size(219, 25);
-            txtNewCategory.TabIndex = 31;
-            txtNewCategory.Tag = "1";
-            txtNewCategory.KeyPress += txtNewCategory_KeyPress;
-            // 
             // lblNewCategory
             // 
             lblNewCategory.AutoSize = true;
@@ -186,9 +174,9 @@
             lblNewCategory.ForeColor = Color.FromArgb(0, 64, 0);
             lblNewCategory.Location = new Point(3, 687);
             lblNewCategory.Name = "lblNewCategory";
-            lblNewCategory.Size = new Size(159, 24);
+            lblNewCategory.Size = new Size(166, 24);
             lblNewCategory.TabIndex = 30;
-            lblNewCategory.Text = "Mã danh mục :";
+            lblNewCategory.Text = "Tên danh mục :";
             // 
             // lblNewUnit
             // 
@@ -322,9 +310,9 @@
             lblCategory.ForeColor = Color.FromArgb(0, 64, 0);
             lblCategory.Location = new Point(3, 376);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(159, 24);
+            lblCategory.Size = new Size(166, 24);
             lblCategory.TabIndex = 17;
-            lblCategory.Text = "Mã danh mục :";
+            lblCategory.Text = "Tên danh mục :";
             // 
             // txtCategory
             // 
@@ -517,6 +505,7 @@
             dgFood.RowHeadersVisible = false;
             dgFood.RowHeadersWidth = 51;
             dgFood.RowTemplate.Height = 25;
+            dgFood.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgFood.Size = new Size(772, 868);
             dgFood.TabIndex = 0;
             dgFood.CellClick += dgFood_CellClick;
@@ -566,8 +555,8 @@
             // cl5
             // 
             cl5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl5.DataPropertyName = "cateid";
-            cl5.HeaderText = "Mã danh mục";
+            cl5.DataPropertyName = "catename";
+            cl5.HeaderText = "Tên danh mục";
             cl5.MinimumWidth = 6;
             cl5.Name = "cl5";
             cl5.ReadOnly = true;
@@ -583,6 +572,18 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(1208, 876);
             panel4.TabIndex = 11;
+            // 
+            // txtNewCategory
+            // 
+            txtNewCategory.BorderStyle = BorderStyle.None;
+            txtNewCategory.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewCategory.Location = new Point(185, 687);
+            txtNewCategory.Margin = new Padding(3, 4, 3, 4);
+            txtNewCategory.Name = "txtNewCategory";
+            txtNewCategory.Size = new Size(219, 25);
+            txtNewCategory.TabIndex = 31;
+            txtNewCategory.Tag = "1";
+            txtNewCategory.KeyPress += txtNewCategory_KeyPress;
             // 
             // ucFoodManage
             // 

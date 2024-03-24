@@ -95,5 +95,32 @@ namespace DAL.Repository
                 }
             }
         }
+        public int GetCategoryIdByName(string categoryName)
+        {
+            int categoryId = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT id FROM Category WHERE catename = @categoryName";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@categoryName", categoryName);
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        if (result != null)
+                        {
+                            categoryId = Convert.ToInt32(result);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // 
+            }
+            return categoryId;
+        }
     }
 }

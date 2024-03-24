@@ -12,6 +12,18 @@ namespace Csharp_Project.Staff
         {
             foodBLL = new FoodManager();
             InitializeComponent();
+            dgFood.DefaultCellStyle.Font = new Font("Tahoma", 10);
+            dgFood.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            dgFood.DefaultCellStyle.SelectionBackColor = Color.Blue;
+            dgFood.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgFood.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12, FontStyle.Bold);
+            dgFood.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgFood.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
+
+            dgFood.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgFood.AllowUserToResizeRows = false;
+            dgFood.AllowUserToResizeColumns = false;
         }
         private void LoadFoods()
         {
@@ -50,7 +62,21 @@ namespace Csharp_Project.Staff
             isAdd = false;
             isEdit = false;
         }
-
+        private void Display()
+        {
+            lblNewId.Visible = true;
+            txtNewId.Visible = true;
+            lblNewName.Visible = true;
+            txtNewName.Visible = true;
+            lblNewUnit.Visible = true;
+            txtNewUnit.Visible = true;
+            lblNewPrice.Visible = true;
+            txtNewPrice.Visible = true;
+            lblNewCategory.Visible = true;
+            txtNewCategory.Visible = true;
+            btnSave.Visible = true;
+            btnCancel.Visible = true;
+        }
         private void ucFoodManage_Load(object sender, EventArgs e)
         {
             LoadFoods();
@@ -66,7 +92,7 @@ namespace Csharp_Project.Staff
                 txtName.Text = row.Cells["cl2"].Value.ToString();
                 txtUnit.Text = row.Cells["cl3"].Value.ToString();
                 txtPrice.Text = row.Cells["cl4"].Value.ToString();
-                txtCategory.Text = row.Cells["cl4"].Value.ToString();
+                txtCategory.Text = row.Cells["cl5"].Value.ToString();
             }
         }
 
@@ -100,21 +126,7 @@ namespace Csharp_Project.Staff
         {
             isAdd = true;
             isEdit = false;
-
-            lblNewId.Visible = true;
-            txtNewId.Visible = true;
-            lblNewName.Visible = true;
-            txtNewName.Visible = true;
-            lblNewUnit.Visible = true;
-            txtNewUnit.Visible = true;
-            lblNewPrice.Visible = true;
-            txtNewPrice.Visible = true;
-            lblNewCategory.Visible = true;
-            txtNewCategory.Visible = true;
-
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
-
+            Display();
             btnEdit.Enabled = false;
         }
 
@@ -127,29 +139,14 @@ namespace Csharp_Project.Staff
             }
             isAdd = false;
             isEdit = true;
-
-            lblNewId.Visible = true;
-            txtNewId.Visible = true;
-            lblNewName.Visible = true;
-            txtNewName.Visible = true;
-            lblNewUnit.Visible = true;
-            txtNewUnit.Visible = true;
-            lblNewPrice.Visible = true;
-            txtNewPrice.Visible = true;
-            lblNewCategory.Visible = true;
-            txtNewCategory.Visible = true;
-
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
-
+            Display();
             btnAdd.Enabled = false;
             txtNewId.ReadOnly = true;
-
             txtNewId.Text = txtId.Text;
             txtNewName.Text = txtName.Text;
             txtNewUnit.Text = txtUnit.Text;
             txtNewPrice.Text = txtPrice.Text;
-            txtNewCategory.Text = txtCategory.Text; //
+            txtNewCategory.Text = txtCategory.Text;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -165,7 +162,8 @@ namespace Csharp_Project.Staff
                 string newName = txtNewName.Text;
                 string newUnit = txtNewUnit.Text;
                 string newPrice = txtNewPrice.Text;
-                int newCategory = Convert.ToInt32(txtNewCategory.Text);
+                string selectedCategoryName = txtNewCategory.Text;
+                int newCategory = foodBLL.GetCategoryIdByName(selectedCategoryName);
 
                 bool insertSuccess = foodBLL.InsertFood(newId, newName, newUnit, newPrice, newCategory);
 
@@ -211,7 +209,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ')
+            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }

@@ -25,7 +25,6 @@ namespace Csharp_Project.Staff
             dgCategory.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dgCategory.AllowUserToResizeRows = false;
             dgCategory.AllowUserToResizeColumns = false;
-
         }
         private void LoadCategories()
         {
@@ -51,6 +50,15 @@ namespace Csharp_Project.Staff
 
             isAdd = false;
             isEdit = false;
+        }
+        private void Display ()
+        {
+            lblNewId.Visible = true;
+            txtNewId.Visible = true;
+            lblNewName.Visible = true;
+            txtNewName.Visible = true;
+            btnSave.Visible = true;
+            btnCancel.Visible = true;
         }
         private void ucCategoryManage_Load(object sender, EventArgs e)
         {
@@ -112,12 +120,7 @@ namespace Csharp_Project.Staff
             isAdd = true;
             isEdit = false;
 
-            lblNewId.Visible = true;
-            txtNewId.Visible = true;
-            lblNewName.Visible = true;
-            txtNewName.Visible = true;
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
+            Display();
 
             btnEdit.Enabled = false;
         }
@@ -132,12 +135,7 @@ namespace Csharp_Project.Staff
             isAdd = false;
             isEdit = true;
 
-            lblNewId.Visible = true;
-            txtNewId.Visible = true;
-            lblNewName.Visible = true;
-            txtNewName.Visible = true;
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
+            Display();
 
             btnAdd.Enabled = false;
             txtNewId.ReadOnly = true;
@@ -199,9 +197,9 @@ namespace Csharp_Project.Staff
 
         private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ') 
+            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
     }

@@ -12,6 +12,18 @@ namespace Csharp_Project.Staff
         {
             clientBLL = new ClientManager();
             InitializeComponent();
+            dgClient.DefaultCellStyle.Font = new Font("Tahoma", 10);
+            dgClient.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            dgClient.DefaultCellStyle.SelectionBackColor = Color.Blue;
+            dgClient.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgClient.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12, FontStyle.Bold);
+            dgClient.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgClient.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
+
+            dgClient.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgClient.AllowUserToResizeRows = false;
+            dgClient.AllowUserToResizeColumns = false;
         }
         private void LoadClients()
         {
@@ -28,7 +40,6 @@ namespace Csharp_Project.Staff
             txtNewName.Text = "";
             txtNewAddress.Text = "";
             txtNewPhone.Text = "";
-
             lblNewId.Visible = false;
             txtNewId.Visible = false;
             lblNewName.Visible = false;
@@ -37,13 +48,25 @@ namespace Csharp_Project.Staff
             txtNewAddress.Visible = false;
             lblNewPhone.Visible = false;
             txtNewPhone.Visible = false;
-
             btnSave.Visible = false;
             btnCancel.Visible = false;
             btnAdd.Enabled = true;
             btnEdit.Enabled = true;
             isAdd = false;
             isEdit = false;
+        }
+        private void Display ()
+        {
+            lblNewId.Visible = true;
+            txtNewId.Visible = true;
+            lblNewName.Visible = true;
+            txtNewName.Visible = true;
+            lblNewAddress.Visible = true;
+            txtNewAddress.Visible = true;
+            lblNewPhone.Visible = true;
+            txtNewPhone.Visible = true;
+            btnSave.Visible = true;
+            btnCancel.Visible = true;
         }
         private void ucClientManage_Load(object sender, EventArgs e)
         {
@@ -94,17 +117,7 @@ namespace Csharp_Project.Staff
             isAdd = true;
             isEdit = false;
 
-            lblNewId.Visible = true;
-            txtNewId.Visible = true;
-            lblNewName.Visible = true;
-            txtNewName.Visible = true;
-            lblNewAddress.Visible = true;
-            txtNewAddress.Visible = true;
-            lblNewPhone.Visible = true;
-            txtNewPhone.Visible = true;
-
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
+            Display();
 
             btnEdit.Enabled = false;
         }
@@ -118,22 +131,9 @@ namespace Csharp_Project.Staff
             }
             isAdd = false;
             isEdit = true;
-
-            lblNewId.Visible = true;
-            txtNewId.Visible = true;
-            lblNewName.Visible = true;
-            txtNewName.Visible = true;
-            lblNewAddress.Visible = true;
-            txtNewAddress.Visible = true;
-            lblNewPhone.Visible = true;
-            txtNewPhone.Visible = true;
-
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
-
-            btnAdd.Enabled = false;
+            Display();
             txtNewId.ReadOnly = true;
-
+            btnAdd.Enabled = false;
             txtNewId.Text = txtId.Text;
             txtNewName.Text = txtName.Text;
             txtNewPhone.Text = txtPhone.Text;
@@ -173,7 +173,6 @@ namespace Csharp_Project.Staff
                 string newName = txtNewName.Text;
                 string newAddress = txtNewAddress.Text;
                 string newPhone = txtNewPhone.Text;
-
                 bool updateSuccess = clientBLL.UpdateClient(newId, newName, newAddress, newPhone);
 
                 if (updateSuccess)
@@ -205,9 +204,9 @@ namespace Csharp_Project.Staff
 
         private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ') 
+            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ') 
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
     }

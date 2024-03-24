@@ -28,5 +28,9 @@ namespace BLL.Manager
         {
             return foodDAL.UpdateFood(foodId, newFoodName, newUnit, newPrice, newCategoryId);
         }
+        public int GetCategoryIdByName(string categoryName)
+        {
+            return foodDAL.GetCategoryIdByName(categoryName);
+        }
     }
 }

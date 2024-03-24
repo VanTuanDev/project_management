@@ -14,7 +14,6 @@ AS
 BEGIN
     DELETE FROM Category
     WHERE id = @CategoryID
-
     SELECT 1 AS Success
 END
 GO
@@ -24,7 +23,7 @@ CREATE PROCEDURE InsertCategory
     @CategoryName NVARCHAR(100)
 AS
 BEGIN
-    INSERT INTO Category(id, name)
+    INSERT INTO Category(id, catename)
     VALUES (@CategoryId, @CategoryName)
 END
 GO
@@ -35,7 +34,7 @@ CREATE PROCEDURE UpdateCategory
 AS
 BEGIN
     UPDATE Category
-    SET name = @NewCategoryName
+    SET catename = @NewCategoryName
     WHERE id = @CategoryId
 END
 GO
@@ -88,7 +87,9 @@ GO
 CREATE PROCEDURE GetFoods
 AS
 BEGIN
-    SELECT * FROM Item;
+    SELECT I.id, I.name, I.unit, I.price, C.catename
+    FROM Item AS I
+    INNER JOIN Category AS C ON I.cateid = C.id;
 END
 GO
 

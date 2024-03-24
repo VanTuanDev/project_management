@@ -29,7 +29,7 @@ CREATE TABLE Account (
 -- Tạo bảng Category
 CREATE TABLE Category (
     id INT PRIMARY KEY,
-    name VARCHAR(255)
+    catename VARCHAR(255)
 );
 
 -- Tạo bảng Item
@@ -92,7 +92,7 @@ VALUES ('levantuan', '123456', 1, 1),('nguyenthiennhan', '123456', 1, 2),('letan
 GO
 
 -- Thêm dữ liệu mẫu vào bảng Category
-INSERT INTO Category (id, name)
+INSERT INTO Category (id, catename)
 VALUES(1, 'Electronics'),(2, 'Clothing'),(3, 'Home Decor'),(4, 'Appliances'),(5, 'Books'),
 (6, 'Beauty'),(7, 'Toys'),(8, 'Sports'),(9, 'Jewelry'),(10, 'Food'),(11, 'Furniture'),
 (12, 'Stationery'),(13, 'Automotive'),(14, 'Pets'),(15, 'Health'),(16, 'Garden'),
