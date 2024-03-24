@@ -20,6 +20,15 @@ namespace Csharp_Project.Staff
         }
         private void Reset()
         {
+            txtId.Text = "";
+            txtName.Text = "";
+            txtAddress.Text = "";
+            txtPhone.Text = "";
+            txtNewId.Text = "";
+            txtNewName.Text = "";
+            txtNewAddress.Text = "";
+            txtNewPhone.Text = "";
+
             lblNewId.Visible = false;
             txtNewId.Visible = false;
             lblNewName.Visible = false;
@@ -36,7 +45,6 @@ namespace Csharp_Project.Staff
             isAdd = false;
             isEdit = false;
         }
-
         private void ucClientManage_Load(object sender, EventArgs e)
         {
             LoadClients();
@@ -127,7 +135,7 @@ namespace Csharp_Project.Staff
             txtNewId.ReadOnly = true;
 
             txtNewId.Text = txtId.Text;
-            txtNewName.Text = txtName.Text; 
+            txtNewName.Text = txtName.Text;
             txtNewPhone.Text = txtPhone.Text;
             txtNewAddress.Text = txtAddress.Text;
         }
@@ -157,10 +165,6 @@ namespace Csharp_Project.Staff
                 {
                     MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                txtNewId.Text = "";
-                txtNewName.Text = "";
-                txtNewAddress.Text = "";
-                txtNewPhone.Text = "";
             }
 
             if (isEdit)
@@ -183,19 +187,28 @@ namespace Csharp_Project.Staff
                     MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                txtId.Text = "";
-                txtName.Text = "";
-                txtAddress.Text = "";
-                txtPhone.Text = "";
-                txtNewId.Text = "";
-                txtNewName.Text = "";
-                txtNewAddress.Text = "";
-                txtNewPhone.Text = "";
+                
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+
+        private void txtNewPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ') 
+            {
+                e.Handled = true; 
+            }
         }
     }
 }

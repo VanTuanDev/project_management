@@ -1,39 +1,40 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
+using System.Diagnostics;
 
 namespace DAL.Repository
 {
-    public class ClientRepository
+    public class FoodRepository
     {
         private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
-        public DataTable GetClients()
+        public DataTable GetFoods()
         {
-            DataTable clients = new DataTable();
+            DataTable foods = new DataTable();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("GetClients", connection))
+                using (SqlCommand command = new SqlCommand("GetFoods", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
                     connection.Open();
                     using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
-                        adapter.Fill(clients);
+                        adapter.Fill(foods);
                     }
                 }
             }
 
-            return clients;
+            return foods;
         }
-        public bool DeleteClient(int clientID)
+        public bool DeleteFood(int foodID)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("DeleteClient", connection))
+                using (SqlCommand command = new SqlCommand("DeleteFood", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ClientID", clientID);
+                    command.Parameters.AddWithValue("@FoodID", foodID);
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -42,17 +43,18 @@ namespace DAL.Repository
                 }
             }
         }
-        public bool InsertClient(int clientId, string clientName, string clientAddress, string clientPhone)
+        public bool InsertFood(int foodId, string foodName, string unit, string price, int categoryId)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("InsertClient", connection))
+                using (SqlCommand command = new SqlCommand("InsertFood", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ClientId", clientId);
-                    command.Parameters.AddWithValue("@ClientName", clientName);
-                    command.Parameters.AddWithValue("@ClientAddress", clientAddress);
-                    command.Parameters.AddWithValue("@ClientPhone", clientPhone);
+                    command.Parameters.AddWithValue("@FoodId", foodId);
+                    command.Parameters.AddWithValue("@FoodName", foodName);
+                    command.Parameters.AddWithValue("@Unit", unit);
+                    command.Parameters.AddWithValue("@Price", price);
+                    command.Parameters.AddWithValue("@CategoryId", categoryId);
 
                     try
                     {
@@ -67,17 +69,18 @@ namespace DAL.Repository
                 }
             }
         }
-        public bool UpdateClient(int clientId, string newClientName, string newClientAddress, string newClientPhone)
+        public bool UpdateFood(int foodId, string newFoodName, string newUnit, string newPrice, int newCategoryId)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("UpdateClient", connection))
+                using (SqlCommand command = new SqlCommand("UpdateFood", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ClientId", clientId);
-                    command.Parameters.AddWithValue("@NewClientName", newClientName);
-                    command.Parameters.AddWithValue("@NewClientAddress", newClientAddress);
-                    command.Parameters.AddWithValue("@NewClientPhone", newClientPhone);
+                    command.Parameters.AddWithValue("@FoodId", foodId);
+                    command.Parameters.AddWithValue("@FoodName", newFoodName);
+                    command.Parameters.AddWithValue("@Unit", newUnit);
+                    command.Parameters.AddWithValue("@Price", newPrice);
+                    command.Parameters.AddWithValue("@CategoryId", newCategoryId);
 
                     try
                     {

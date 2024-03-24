@@ -34,14 +34,21 @@ namespace Csharp_Project.Staff
         }
         private void Reset()
         {
+            txtNewId.Text = string.Empty;
+            txtNewName.Text = string.Empty;
+            txtId.Text = string.Empty;
+            txtName.Text = string.Empty;
+
             lblNewId.Visible = false;
             txtNewId.Visible = false;
             lblNewName.Visible = false;
             txtNewName.Visible = false;
+
             btnSave.Visible = false;
             btnCancel.Visible = false;
             btnAdd.Enabled = true;
             btnEdit.Enabled = true;
+
             isAdd = false;
             isEdit = false;
         }
@@ -188,6 +195,14 @@ namespace Csharp_Project.Staff
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+
+        private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ') 
+            {
+                e.Handled = true; 
+            }
         }
     }
 }

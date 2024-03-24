@@ -103,16 +103,16 @@ GO
 
 -- Thêm dữ liệu mẫu vào bảng Item
 INSERT INTO Item (id, name, unit, price, cateid)
-VALUES (1, 'Laptop', 'piece', 1500.00, 1),(2, 'T-Shirt', 'piece', 25.00, 2),(3, 'Cushion', 'piece', 10.00, 3),
-(4, 'Refrigerator', 'piece', 800.00, 4),(5, 'Novel', 'piece', 12.99, 5),(6, 'Lipstick', 'piece', 8.50, 6),
-(7, 'Action Figure', 'piece', 15.00, 7),(8, 'Basketball', 'piece', 20.00, 8),(9, 'Necklace', 'piece', 50.00, 9),
-(10, 'Chocolate', 'piece', 5.99, 10),(11, 'Sofa', 'piece', 600.00, 11),(12, 'Notebook', 'piece', 3.99, 12),
-(13, 'Car Battery', 'piece', 100.00, 13),(14, 'Dog Toy', 'piece', 7.99, 14),(15, 'Vitamin C', 'piece', 9.99, 15),
-(16, 'Garden Hose', 'piece', 15.99, 16),(17, 'CD Album', 'piece', 9.99, 17),(18, 'DVD Movie', 'piece', 7.99, 18),
-(19, 'Baby Bib', 'piece', 3.50, 19),(20, 'Hammer', 'piece', 12.99, 20),(21, 'Scrapbook', 'piece', 8.99, 21),
-(22, 'Party Hat', 'piece', 1.99, 22),(23, 'Stapler', 'piece', 5.99, 23),(24, 'Luggage', 'piece', 80.00, 24),
-(25, 'Yoga Mat', 'piece', 25.00, 25),(26, 'Dress', 'piece', 45.00, 26),(27, 'Guitar', 'piece', 200.00, 27),
-(28, 'Smartphone', 'piece', 800.00, 28),(29, 'Gift Card', 'piece', 50.00, 29),(30, 'Camping Tent', 'piece', 100.00, 30);
+VALUES (1, 'Laptop', N'Cái', 15000000, 1),(2, 'T-Shirt', N'Cái', 250000, 2),(3, 'Cushion', N'Cái', 100000, 3),
+(4, 'Refrigerator', N'Cái', 8000000, 4),(5, 'Novel', N'Cái', 129900, 5),(6, 'Lipstick', N'Cái', 85000, 6),
+(7, 'Action Figure', N'Cái', 150000, 7),(8, 'Basketball', N'Cái', 200000, 8),(9, 'Necklace', N'Cái', 500000, 9),
+(10, 'Chocolate', N'Cái', 59900, 10),(11, 'Sofa', N'Cái', 6000000, 11),(12, 'Notebook', N'Cái', 39900, 12),
+(13, 'Car Battery', N'Cái', 1000000, 13),(14, 'Dog Toy', N'Cái', 79900, 14),(15, 'Vitamin C', N'Cái', 99900, 15),
+(16, 'Garden Hose', N'Cái', 159900, 16),(17, 'CD Album', N'Cái', 99900, 17),(18, 'DVD Movie', N'Cái', 79900, 18),
+(19, 'Baby Bib', N'Cái', 35000, 19),(20, 'Hammer', N'Cái', 129900, 20),(21, 'Scrapbook', N'Cái', 89900, 21),
+(22, 'Party Hat', N'Cái', 19900, 22),(23, 'Stapler', N'Cái', 59900, 23),(24, 'Luggage', N'Cái', 800000, 24),
+(25, 'Yoga Mat', N'Cái', 250000, 25),(26, 'Dress', N'Cái', 450000, 26),(27, 'Guitar', N'Cái', 2000000, 27),
+(28, 'Smartphone', N'Cái', 8000000, 28),(29, 'Gift Card', N'Cái', 500000, 29),(30, 'Camping Tent', N'Cái', 1000000, 30);
 GO
 
 INSERT INTO Customer (id, fullname, address, phonenumber)

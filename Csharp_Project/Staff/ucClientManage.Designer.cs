@@ -171,6 +171,7 @@
             // btnSave
             // 
             btnSave.BackColor = Color.FromArgb(128, 255, 128);
+            btnSave.Cursor = Cursors.Hand;
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.Green;
@@ -264,6 +265,7 @@
             txtNewPhone.Size = new Size(195, 25);
             txtNewPhone.TabIndex = 33;
             txtNewPhone.Tag = "1";
+            txtNewPhone.KeyPress += txtNewPhone_KeyPress;
             // 
             // lblNewAddress
             // 
@@ -331,6 +333,7 @@
             txtNewId.Size = new Size(195, 25);
             txtNewId.TabIndex = 27;
             txtNewId.Tag = "0";
+            txtNewId.KeyPress += txtNewId_KeyPress;
             // 
             // lblPhone
             // 
@@ -381,6 +384,7 @@
             // btnCancel
             // 
             btnCancel.BackColor = Color.FromArgb(128, 255, 128);
+            btnCancel.Cursor = Cursors.Hand;
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.Green;
@@ -420,6 +424,7 @@
             // btnDelete
             // 
             btnDelete.BackColor = Color.FromArgb(128, 255, 128);
+            btnDelete.Cursor = Cursors.Hand;
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.Green;
@@ -436,6 +441,7 @@
             // btnEdit
             // 
             btnEdit.BackColor = Color.FromArgb(128, 255, 128);
+            btnEdit.Cursor = Cursors.Hand;
             btnEdit.FlatStyle = FlatStyle.Flat;
             btnEdit.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEdit.ForeColor = Color.Green;
@@ -464,6 +470,7 @@
             // btnAdd
             // 
             btnAdd.BackColor = Color.FromArgb(128, 255, 128);
+            btnAdd.Cursor = Cursors.Hand;
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.Green;

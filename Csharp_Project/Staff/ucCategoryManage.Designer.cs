@@ -178,6 +178,7 @@
             txtNewId.Size = new Size(213, 25);
             txtNewId.TabIndex = 20;
             txtNewId.Tag = "0";
+            txtNewId.KeyPress += txtNewId_KeyPress;
             // 
             // btnSave
             // 
@@ -202,9 +203,9 @@
             lblNewName.ForeColor = Color.FromArgb(0, 64, 0);
             lblNewName.Location = new Point(3, 569);
             lblNewName.Name = "lblNewName";
-            lblNewName.Size = new Size(103, 24);
+            lblNewName.Size = new Size(166, 24);
             lblNewName.TabIndex = 13;
-            lblNewName.Text = "Tên mới :";
+            lblNewName.Text = "Tên danh mục :";
             // 
             // txtNewName
             // 
