@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sale_Management\\DAL\\DAL.csproj",
+      "projectUniqueName": "E:\\sell_management\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "E:\\Sale_Management\\DAL\\DAL.csproj",
+      "projectPath": "E:\\sell_management\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\Le Van Tuan\\.nuget\\packages\\",
-      "outputPath": "E:\\Sale_Management\\DAL\\obj\\",
+      "outputPath": "E:\\sell_management\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

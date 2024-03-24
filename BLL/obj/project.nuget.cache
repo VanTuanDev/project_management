@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nsfUcZJU090MtLiE/xvc0T/bmolMWBAT5CH80YDs/osOPgoayRkbS7YXptEj9hrK5ch/pmvrHwEaJ/BDCfoOSw==",
+  "dgSpecHash": "UpO7J7UD++0o8PQrzj7hG5hg1Zse1a70f8+BDUEgJnN/7mk9mg5bK6eYnWkf5QUicesgY6oePqUVlTbIL+TJkw==",
   "success": true,
-  "projectFilePath": "E:\\Sale_Management\\BLL\\BLL.csproj",
+  "projectFilePath": "E:\\sell_management\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

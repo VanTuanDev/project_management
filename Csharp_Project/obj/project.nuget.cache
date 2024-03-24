@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ujXB+HVcTIv8DH9tQSM7FUsRJB8wFtZ0zaTh+IZxbPFkuPj7A7xX4nq/U/9TitsI7UJNdy5aZ07QwM4ZNu/e4Q==",
+  "dgSpecHash": "Z0SnuiARHkKzBRA6WueeqoApfXQQWKZgfH/kKDTzjcwY8fG+49CF/FIuEvJTuryC3KtA35RJfdnFs5MglW0Jgg==",
   "success": true,
-  "projectFilePath": "E:\\Sale_Management\\Csharp_Project\\Csharp_Project.csproj",
+  "projectFilePath": "E:\\sell_management\\Csharp_Project\\Csharp_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

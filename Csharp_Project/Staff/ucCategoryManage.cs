@@ -1,8 +1,6 @@
 ﻿using BLL.Manager;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
-using System.Windows.Forms;
 
 namespace Csharp_Project.Staff
 {
@@ -143,7 +141,7 @@ namespace Csharp_Project.Staff
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(isAdd)
+            if (isAdd)
             {
                 if (string.IsNullOrEmpty(txtNewId.Text) || string.IsNullOrEmpty(txtNewName.Text))
                 {
@@ -167,7 +165,7 @@ namespace Csharp_Project.Staff
                 }
             }
 
-            if(isEdit)
+            if (isEdit)
             {
                 int categoryId = Convert.ToInt32(txtNewId.Text);
                 string newCategoryName = txtNewName.Text;
@@ -185,6 +183,11 @@ namespace Csharp_Project.Staff
                     MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

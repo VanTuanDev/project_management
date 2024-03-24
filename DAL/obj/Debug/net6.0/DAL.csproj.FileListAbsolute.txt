@@ -22,3 +22,15 @@ E:\Sale_Management\DAL\obj\Debug\net6.0\DAL.dll
 E:\Sale_Management\DAL\obj\Debug\net6.0\refint\DAL.dll
 E:\Sale_Management\DAL\obj\Debug\net6.0\DAL.pdb
 E:\Sale_Management\DAL\obj\Debug\net6.0\ref\DAL.dll
+E:\sell_management\DAL\bin\Debug\net6.0\DAL.deps.json
+E:\sell_management\DAL\bin\Debug\net6.0\DAL.dll
+E:\sell_management\DAL\bin\Debug\net6.0\DAL.pdb
+E:\sell_management\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+E:\sell_management\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\sell_management\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+E:\sell_management\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+E:\sell_management\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+E:\sell_management\DAL\obj\Debug\net6.0\DAL.dll
+E:\sell_management\DAL\obj\Debug\net6.0\refint\DAL.dll
+E:\sell_management\DAL\obj\Debug\net6.0\DAL.pdb
+E:\sell_management\DAL\obj\Debug\net6.0\ref\DAL.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MfR9E0dzsUKFtl1v3HvAcvrZ5CKFaqFMnZERSy+37fW6fQFHU3WIvVHj9OOkvaEaZzdjDPnP5VDl8/OjcV0K/A==",
+  "dgSpecHash": "xmriWzFGNXN2YYJN8+vKApeOM5cL5LC55RwNvPCXZ1cKUu8vzPvcNJBQxDamm/tC5j8fzdOikKKMp4xkw4hC+g==",
   "success": true,
-  "projectFilePath": "E:\\Sale_Management\\DAL\\DAL.csproj",
+  "projectFilePath": "E:\\sell_management\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

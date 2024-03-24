@@ -154,6 +154,7 @@
             btnCancel.Tag = "4";
             btnCancel.Text = "Hủy";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // lblNewId
             // 

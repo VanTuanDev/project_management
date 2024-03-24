@@ -32,26 +32,41 @@
             panel4 = new Panel();
             dataGridView2 = new DataGridView();
             panel6 = new Panel();
-            dataGridView3 = new DataGridView();
-            btnLuu = new Button();
-            label3 = new Label();
-            txtTenmoi = new TextBox();
+            dgClient = new DataGridView();
+            cl1 = new DataGridViewTextBoxColumn();
+            cl2 = new DataGridViewTextBoxColumn();
+            cl3 = new DataGridViewTextBoxColumn();
+            cl4 = new DataGridViewTextBoxColumn();
+            btnSave = new Button();
             pictureBox3 = new PictureBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel5 = new Panel();
-            label8 = new Label();
-            label9 = new Label();
-            btnXoad = new Button();
-            btnSua = new Button();
-            txtTen = new TextBox();
-            btnThem = new Button();
-            txtMa = new TextBox();
+            lblNewPhone = new Label();
+            txtNewPhone = new TextBox();
+            lblNewAddress = new Label();
+            txtNewAddress = new TextBox();
+            lblNewName = new Label();
+            lblNewId = new Label();
+            txtNewName = new TextBox();
+            txtNewId = new TextBox();
+            lblPhone = new Label();
+            txtPhone = new TextBox();
+            lblAddress = new Label();
+            txtAddress = new TextBox();
+            btnCancel = new Button();
+            lblName = new Label();
+            lblId = new Label();
+            btnDelete = new Button();
+            btnEdit = new Button();
+            txtName = new TextBox();
+            btnAdd = new Button();
+            txtId = new TextBox();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgClient).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -63,9 +78,10 @@
             // 
             panel4.Controls.Add(dataGridView2);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 657);
+            panel4.Location = new Point(0, 876);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1057, 0);
+            panel4.Size = new Size(1208, 0);
             panel4.TabIndex = 11;
             // 
             // dataGridView2
@@ -74,73 +90,107 @@
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(0, 0);
+            dataGridView2.Margin = new Padding(3, 4, 3, 4);
             dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(1057, 0);
+            dataGridView2.Size = new Size(1208, 0);
             dataGridView2.TabIndex = 0;
             // 
             // panel6
             // 
-            panel6.Controls.Add(dataGridView3);
+            panel6.Controls.Add(dgClient);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 3);
+            panel6.Location = new Point(3, 4);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(674, 651);
+            panel6.Size = new Size(772, 868);
             panel6.TabIndex = 1;
             // 
-            // dataGridView3
+            // dgClient
             // 
-            dataGridView3.BackgroundColor = Color.Honeydew;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Dock = DockStyle.Fill;
-            dataGridView3.Location = new Point(0, 0);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.ReadOnly = true;
-            dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new Size(674, 651);
-            dataGridView3.TabIndex = 0;
+            dgClient.AllowUserToAddRows = false;
+            dgClient.BackgroundColor = Color.FromArgb(192, 255, 192);
+            dgClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgClient.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4 });
+            dgClient.Dock = DockStyle.Fill;
+            dgClient.Location = new Point(0, 0);
+            dgClient.Margin = new Padding(3, 4, 3, 4);
+            dgClient.Name = "dgClient";
+            dgClient.ReadOnly = true;
+            dgClient.RowHeadersVisible = false;
+            dgClient.RowHeadersWidth = 51;
+            dgClient.RowTemplate.Height = 25;
+            dgClient.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgClient.Size = new Size(772, 868);
+            dgClient.TabIndex = 0;
+            dgClient.CellClick += dgClient_CellClick;
             // 
-            // btnLuu
+            // cl1
             // 
-            btnLuu.BackColor = Color.FromArgb(128, 255, 128);
-            btnLuu.FlatStyle = FlatStyle.Flat;
-            btnLuu.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLuu.ForeColor = Color.Green;
-            btnLuu.Location = new Point(125, 533);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(116, 38);
-            btnLuu.TabIndex = 19;
-            btnLuu.Tag = "4";
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = false;
+            cl1.DataPropertyName = "id";
+            cl1.HeaderText = "Mã khách hàng";
+            cl1.MinimumWidth = 6;
+            cl1.Name = "cl1";
+            cl1.ReadOnly = true;
+            cl1.Resizable = DataGridViewTriState.False;
+            cl1.Width = 145;
             // 
-            // label3
+            // cl2
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(0, 64, 0);
-            label3.Location = new Point(3, 423);
-            label3.Name = "label3";
-            label3.Size = new Size(86, 19);
-            label3.TabIndex = 15;
-            label3.Text = "Tên mới :";
+            cl2.DataPropertyName = "fullname";
+            cl2.HeaderText = "Tên khách hàng";
+            cl2.MinimumWidth = 6;
+            cl2.Name = "cl2";
+            cl2.ReadOnly = true;
+            cl2.Resizable = DataGridViewTriState.False;
+            cl2.Width = 185;
             // 
-            // txtTenmoi
+            // cl3
             // 
-            txtTenmoi.BorderStyle = BorderStyle.None;
-            txtTenmoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTenmoi.Location = new Point(105, 423);
-            txtTenmoi.Name = "txtTenmoi";
-            txtTenmoi.Size = new Size(249, 20);
-            txtTenmoi.TabIndex = 13;
-            txtTenmoi.Tag = "1";
+            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl3.DataPropertyName = "address";
+            cl3.HeaderText = "Địa chỉ";
+            cl3.MinimumWidth = 6;
+            cl3.Name = "cl3";
+            cl3.ReadOnly = true;
+            cl3.Resizable = DataGridViewTriState.False;
+            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cl4
+            // 
+            cl4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl4.DataPropertyName = "phonenumber";
+            cl4.HeaderText = "Số điện thoại";
+            cl4.MinimumWidth = 6;
+            cl4.Name = "cl4";
+            cl4.ReadOnly = true;
+            cl4.Resizable = DataGridViewTriState.False;
+            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // btnSave
+            // 
+            btnSave.BackColor = Color.FromArgb(128, 255, 128);
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.ForeColor = Color.Green;
+            btnSave.Location = new Point(56, 669);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(133, 51);
+            btnSave.TabIndex = 19;
+            btnSave.Tag = "4";
+            btnSave.Text = "Lưu";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(105, 65);
+            pictureBox3.Location = new Point(120, 50);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(165, 90);
+            pictureBox3.Size = new Size(189, 120);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
@@ -154,116 +204,290 @@
             tableLayoutPanel3.Controls.Add(panel6, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Top;
             tableLayoutPanel3.Location = new Point(0, 0);
+            tableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(1057, 657);
+            tableLayoutPanel3.Size = new Size(1208, 876);
             tableLayoutPanel3.TabIndex = 13;
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(192, 255, 192);
-            panel5.Controls.Add(btnLuu);
-            panel5.Controls.Add(label3);
-            panel5.Controls.Add(txtTenmoi);
+            panel5.Controls.Add(lblNewPhone);
+            panel5.Controls.Add(txtNewPhone);
+            panel5.Controls.Add(lblNewAddress);
+            panel5.Controls.Add(txtNewAddress);
+            panel5.Controls.Add(lblNewName);
+            panel5.Controls.Add(lblNewId);
+            panel5.Controls.Add(txtNewName);
+            panel5.Controls.Add(txtNewId);
+            panel5.Controls.Add(lblPhone);
+            panel5.Controls.Add(txtPhone);
+            panel5.Controls.Add(lblAddress);
+            panel5.Controls.Add(txtAddress);
+            panel5.Controls.Add(btnCancel);
+            panel5.Controls.Add(btnSave);
             panel5.Controls.Add(pictureBox3);
-            panel5.Controls.Add(label8);
-            panel5.Controls.Add(label9);
-            panel5.Controls.Add(btnXoad);
-            panel5.Controls.Add(btnSua);
-            panel5.Controls.Add(txtTen);
-            panel5.Controls.Add(btnThem);
-            panel5.Controls.Add(txtMa);
+            panel5.Controls.Add(lblName);
+            panel5.Controls.Add(lblId);
+            panel5.Controls.Add(btnDelete);
+            panel5.Controls.Add(btnEdit);
+            panel5.Controls.Add(txtName);
+            panel5.Controls.Add(btnAdd);
+            panel5.Controls.Add(txtId);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(683, 3);
+            panel5.Location = new Point(781, 4);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(371, 651);
+            panel5.Size = new Size(424, 868);
             panel5.TabIndex = 0;
             // 
-            // label8
+            // lblNewPhone
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(0, 64, 0);
-            label8.Location = new Point(3, 223);
-            label8.Name = "label8";
-            label8.Size = new Size(149, 19);
-            label8.TabIndex = 7;
-            label8.Text = "Tên khách hàng :";
+            lblNewPhone.AutoSize = true;
+            lblNewPhone.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNewPhone.ForeColor = Color.FromArgb(0, 64, 0);
+            lblNewPhone.Location = new Point(3, 601);
+            lblNewPhone.Name = "lblNewPhone";
+            lblNewPhone.Size = new Size(155, 24);
+            lblNewPhone.TabIndex = 34;
+            lblNewPhone.Text = "Số điện thoại :";
             // 
-            // label9
+            // txtNewPhone
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(0, 64, 0);
-            label9.Location = new Point(3, 194);
-            label9.Name = "label9";
-            label9.Size = new Size(142, 19);
-            label9.TabIndex = 6;
-            label9.Text = "Mã khách hàng :";
-            label9.UseMnemonic = false;
+            txtNewPhone.BorderStyle = BorderStyle.None;
+            txtNewPhone.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewPhone.Location = new Point(210, 601);
+            txtNewPhone.Margin = new Padding(3, 4, 3, 4);
+            txtNewPhone.Name = "txtNewPhone";
+            txtNewPhone.Size = new Size(195, 25);
+            txtNewPhone.TabIndex = 33;
+            txtNewPhone.Tag = "1";
             // 
-            // btnXoad
+            // lblNewAddress
             // 
-            btnXoad.BackColor = Color.FromArgb(128, 255, 128);
-            btnXoad.FlatStyle = FlatStyle.Flat;
-            btnXoad.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXoad.ForeColor = Color.Green;
-            btnXoad.Location = new Point(247, 310);
-            btnXoad.Name = "btnXoad";
-            btnXoad.Size = new Size(116, 38);
-            btnXoad.TabIndex = 5;
-            btnXoad.Tag = "5";
-            btnXoad.Text = "Xoá";
-            btnXoad.UseVisualStyleBackColor = false;
+            lblNewAddress.AutoSize = true;
+            lblNewAddress.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNewAddress.ForeColor = Color.FromArgb(0, 64, 0);
+            lblNewAddress.Location = new Point(3, 561);
+            lblNewAddress.Name = "lblNewAddress";
+            lblNewAddress.Size = new Size(92, 24);
+            lblNewAddress.TabIndex = 32;
+            lblNewAddress.Text = "Địa chỉ :";
             // 
-            // btnSua
+            // txtNewAddress
             // 
-            btnSua.BackColor = Color.FromArgb(128, 255, 128);
-            btnSua.FlatStyle = FlatStyle.Flat;
-            btnSua.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSua.ForeColor = Color.Green;
-            btnSua.Location = new Point(125, 310);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(116, 38);
-            btnSua.TabIndex = 4;
-            btnSua.Tag = "4";
-            btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = false;
+            txtNewAddress.BorderStyle = BorderStyle.None;
+            txtNewAddress.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewAddress.Location = new Point(210, 561);
+            txtNewAddress.Margin = new Padding(3, 4, 3, 4);
+            txtNewAddress.Name = "txtNewAddress";
+            txtNewAddress.Size = new Size(195, 25);
+            txtNewAddress.TabIndex = 31;
+            txtNewAddress.Tag = "1";
             // 
-            // txtTen
+            // lblNewName
             // 
-            txtTen.BorderStyle = BorderStyle.None;
-            txtTen.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTen.Location = new Point(158, 223);
-            txtTen.Name = "txtTen";
-            txtTen.Size = new Size(196, 20);
-            txtTen.TabIndex = 2;
-            txtTen.Tag = "1";
+            lblNewName.AutoSize = true;
+            lblNewName.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNewName.ForeColor = Color.FromArgb(0, 64, 0);
+            lblNewName.Location = new Point(3, 521);
+            lblNewName.Name = "lblNewName";
+            lblNewName.Size = new Size(184, 24);
+            lblNewName.TabIndex = 30;
+            lblNewName.Text = "Tên khách hàng :";
             // 
-            // btnThem
+            // lblNewId
             // 
-            btnThem.BackColor = Color.FromArgb(128, 255, 128);
-            btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThem.ForeColor = Color.Green;
-            btnThem.Location = new Point(3, 310);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(116, 38);
-            btnThem.TabIndex = 1;
-            btnThem.Tag = "3";
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = false;
+            lblNewId.AutoSize = true;
+            lblNewId.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNewId.ForeColor = Color.FromArgb(0, 64, 0);
+            lblNewId.Location = new Point(3, 481);
+            lblNewId.Name = "lblNewId";
+            lblNewId.Size = new Size(177, 24);
+            lblNewId.TabIndex = 29;
+            lblNewId.Text = "Mã khách hàng :";
+            lblNewId.UseMnemonic = false;
             // 
-            // txtMa
+            // txtNewName
             // 
-            txtMa.BorderStyle = BorderStyle.None;
-            txtMa.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMa.Location = new Point(158, 194);
-            txtMa.Name = "txtMa";
-            txtMa.Size = new Size(196, 20);
-            txtMa.TabIndex = 0;
-            txtMa.Tag = "0";
+            txtNewName.BorderStyle = BorderStyle.None;
+            txtNewName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewName.Location = new Point(210, 521);
+            txtNewName.Margin = new Padding(3, 4, 3, 4);
+            txtNewName.Name = "txtNewName";
+            txtNewName.Size = new Size(195, 25);
+            txtNewName.TabIndex = 28;
+            txtNewName.Tag = "1";
+            // 
+            // txtNewId
+            // 
+            txtNewId.BorderStyle = BorderStyle.None;
+            txtNewId.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewId.Location = new Point(210, 481);
+            txtNewId.Margin = new Padding(3, 4, 3, 4);
+            txtNewId.Name = "txtNewId";
+            txtNewId.Size = new Size(195, 25);
+            txtNewId.TabIndex = 27;
+            txtNewId.Tag = "0";
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPhone.ForeColor = Color.FromArgb(0, 64, 0);
+            lblPhone.Location = new Point(3, 340);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(155, 24);
+            lblPhone.TabIndex = 26;
+            lblPhone.Text = "Số điện thoại :";
+            // 
+            // txtPhone
+            // 
+            txtPhone.BorderStyle = BorderStyle.None;
+            txtPhone.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPhone.Location = new Point(210, 340);
+            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Name = "txtPhone";
+            txtPhone.ReadOnly = true;
+            txtPhone.Size = new Size(195, 25);
+            txtPhone.TabIndex = 25;
+            txtPhone.Tag = "1";
+            // 
+            // lblAddress
+            // 
+            lblAddress.AutoSize = true;
+            lblAddress.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAddress.ForeColor = Color.FromArgb(0, 64, 0);
+            lblAddress.Location = new Point(3, 300);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(92, 24);
+            lblAddress.TabIndex = 24;
+            lblAddress.Text = "Địa chỉ :";
+            // 
+            // txtAddress
+            // 
+            txtAddress.BorderStyle = BorderStyle.None;
+            txtAddress.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAddress.Location = new Point(210, 300);
+            txtAddress.Margin = new Padding(3, 4, 3, 4);
+            txtAddress.Name = "txtAddress";
+            txtAddress.ReadOnly = true;
+            txtAddress.Size = new Size(195, 25);
+            txtAddress.TabIndex = 23;
+            txtAddress.Tag = "1";
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.FromArgb(128, 255, 128);
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.ForeColor = Color.Green;
+            btnCancel.Location = new Point(225, 669);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(133, 51);
+            btnCancel.TabIndex = 22;
+            btnCancel.Tag = "4";
+            btnCancel.Text = "Hủy";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblName.ForeColor = Color.FromArgb(0, 64, 0);
+            lblName.Location = new Point(3, 260);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(184, 24);
+            lblName.TabIndex = 7;
+            lblName.Text = "Tên khách hàng :";
+            // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblId.ForeColor = Color.FromArgb(0, 64, 0);
+            lblId.Location = new Point(3, 220);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(177, 24);
+            lblId.TabIndex = 6;
+            lblId.Text = "Mã khách hàng :";
+            lblId.UseMnemonic = false;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(128, 255, 128);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDelete.ForeColor = Color.Green;
+            btnDelete.Location = new Point(282, 397);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(133, 51);
+            btnDelete.TabIndex = 5;
+            btnDelete.Tag = "5";
+            btnDelete.Text = "Xoá";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.BackColor = Color.FromArgb(128, 255, 128);
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEdit.ForeColor = Color.Green;
+            btnEdit.Location = new Point(143, 397);
+            btnEdit.Margin = new Padding(3, 4, 3, 4);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(133, 51);
+            btnEdit.TabIndex = 4;
+            btnEdit.Tag = "4";
+            btnEdit.Text = "Sửa";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // txtName
+            // 
+            txtName.BorderStyle = BorderStyle.None;
+            txtName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.Location = new Point(210, 260);
+            txtName.Margin = new Padding(3, 4, 3, 4);
+            txtName.Name = "txtName";
+            txtName.ReadOnly = true;
+            txtName.Size = new Size(195, 25);
+            txtName.TabIndex = 2;
+            txtName.Tag = "1";
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.FromArgb(128, 255, 128);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdd.ForeColor = Color.Green;
+            btnAdd.Location = new Point(3, 397);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(133, 51);
+            btnAdd.TabIndex = 1;
+            btnAdd.Tag = "3";
+            btnAdd.Text = "Thêm";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // txtId
+            // 
+            txtId.BorderStyle = BorderStyle.None;
+            txtId.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtId.Location = new Point(210, 220);
+            txtId.Margin = new Padding(3, 4, 3, 4);
+            txtId.Name = "txtId";
+            txtId.ReadOnly = true;
+            txtId.Size = new Size(195, 25);
+            txtId.TabIndex = 0;
+            txtId.Tag = "0";
             // 
             // dataGridView1
             // 
@@ -271,9 +495,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1057, 657);
+            dataGridView1.Size = new Size(1208, 876);
             dataGridView1.TabIndex = 0;
             // 
             // panel2
@@ -281,23 +507,26 @@
             panel2.Controls.Add(dataGridView1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1057, 657);
+            panel2.Size = new Size(1208, 876);
             panel2.TabIndex = 12;
             // 
             // ucClientManage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel4);
             Controls.Add(tableLayoutPanel3);
             Controls.Add(panel2);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ucClientManage";
-            Size = new Size(1057, 657);
+            Size = new Size(1208, 876);
+            Load += ucClientManage_Load;
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgClient).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             panel5.ResumeLayout(false);
@@ -312,21 +541,37 @@
         private Panel panel4;
         private DataGridView dataGridView2;
         private Panel panel6;
-        private DataGridView dataGridView3;
-        private Button btnLuu;
-        private Label label3;
+        private DataGridView dgClient;
+        private Button btnSave;
         private TextBox txtTenmoi;
         private PictureBox pictureBox3;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panel5;
-        private Label label8;
-        private Label label9;
-        private Button btnXoad;
-        private Button btnSua;
-        private TextBox txtTen;
-        private Button btnThem;
-        private TextBox txtMa;
+        private Label lblName;
+        private Label lblId;
+        private Button btnDelete;
+        private Button btnEdit;
+        private TextBox txtName;
+        private Button btnAdd;
+        private TextBox txtId;
         private DataGridView dataGridView1;
         private Panel panel2;
+        private DataGridViewTextBoxColumn cl1;
+        private DataGridViewTextBoxColumn cl2;
+        private DataGridViewTextBoxColumn cl3;
+        private DataGridViewTextBoxColumn cl4;
+        private Button btnCancel;
+        private Label lblNewPhone;
+        private TextBox txtNewPhone;
+        private Label lblNewAddress;
+        private TextBox txtNewAddress;
+        private Label lblNewName;
+        private Label lblNewId;
+        private TextBox txtNewName;
+        private TextBox txtNewId;
+        private Label lblPhone;
+        private TextBox txtPhone;
+        private Label lblAddress;
+        private TextBox txtAddress;
     }
 }
