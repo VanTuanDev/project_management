@@ -55,7 +55,7 @@ namespace Csharp_Project.Staff
             isAdd = false;
             isEdit = false;
         }
-        private void Display ()
+        private void Display()
         {
             lblNewId.Visible = true;
             txtNewId.Visible = true;
@@ -105,6 +105,7 @@ namespace Csharp_Project.Staff
             {
                 MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadClients();
+                Reset();
             }
             else
             {
@@ -186,7 +187,7 @@ namespace Csharp_Project.Staff
                     MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                
+
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)
@@ -204,7 +205,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ') 
+            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }

@@ -4,7 +4,7 @@ GO
 CREATE PROCEDURE GetCategories
 AS
 BEGIN
-    SELECT * FROM Category;
+    SELECT id, catename FROM Category WHERE status = N'Using';
 END
 GO
 
@@ -12,7 +12,8 @@ CREATE PROCEDURE DeleteCategory
     @CategoryID INT
 AS
 BEGIN
-    DELETE FROM Category
+    UPDATE Category
+    SET status = N'Unused'
     WHERE id = @CategoryID
     SELECT 1 AS Success
 END
@@ -23,8 +24,8 @@ CREATE PROCEDURE InsertCategory
     @CategoryName NVARCHAR(100)
 AS
 BEGIN
-    INSERT INTO Category(id, catename)
-    VALUES (@CategoryId, @CategoryName)
+    INSERT INTO Category(id, catename, status)
+    VALUES (@CategoryId, @CategoryName, N'Using')
 END
 GO
 
@@ -89,7 +90,8 @@ AS
 BEGIN
     SELECT I.id, I.name, I.unit, I.price, C.catename
     FROM Item AS I
-    INNER JOIN Category AS C ON I.cateid = C.id;
+    INNER JOIN Category AS C ON I.cateid = C.id
+	WHERE I.status = N'Using';
 END
 GO
 
@@ -97,9 +99,9 @@ CREATE PROCEDURE DeleteFood
     @FoodId INT
 AS
 BEGIN
-    DELETE FROM Item
-    WHERE id = @FoodId
-
+	UPDATE Item
+    SET status = N'Unused'
+    WHERE id = @FoodID
     SELECT 1 AS Success
 END
 GO
@@ -112,8 +114,8 @@ CREATE PROCEDURE InsertFood
     @CategoryId INT
 AS
 BEGIN
-    INSERT INTO Item(id, name, unit, price, cateid)
-    VALUES (@FoodId, @FoodName, @Unit, @Price, @CategoryId)
+    INSERT INTO Item(id, name, unit, price, cateid, status)
+    VALUES (@FoodId, @FoodName, @Unit, @Price, @CategoryId, N'Using')
 END
 GO
 

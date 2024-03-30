@@ -62,12 +62,12 @@
             txtId = new TextBox();
             panel6 = new Panel();
             dgFood = new DataGridView();
+            panel4 = new Panel();
             cl1 = new DataGridViewTextBoxColumn();
             cl2 = new DataGridViewTextBoxColumn();
             cl3 = new DataGridViewTextBoxColumn();
             cl4 = new DataGridViewTextBoxColumn();
             cl5 = new DataGridViewTextBoxColumn();
-            panel4 = new Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -519,15 +519,25 @@
             dgFood.TabIndex = 0;
             dgFood.CellClick += dgFood_CellClick;
             // 
+            // panel4
+            // 
+            panel4.Controls.Add(dataGridView2);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(0, 0);
+            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1208, 876);
+            panel4.TabIndex = 11;
+            // 
             // cl1
             // 
             cl1.DataPropertyName = "id";
-            cl1.HeaderText = "Mã sản phẩm";
+            cl1.HeaderText = "Mã SP";
             cl1.MinimumWidth = 6;
             cl1.Name = "cl1";
             cl1.ReadOnly = true;
             cl1.Resizable = DataGridViewTriState.False;
-            cl1.Width = 140;
+            cl1.Width = 125;
             // 
             // cl2
             // 
@@ -571,16 +581,6 @@
             cl5.ReadOnly = true;
             cl5.Resizable = DataGridViewTriState.False;
             cl5.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(dataGridView2);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 0);
-            panel4.Margin = new Padding(3, 4, 3, 4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1208, 876);
-            panel4.TabIndex = 11;
             // 
             // ucFoodManage
             // 
@@ -641,11 +641,11 @@
         private TextBox txtNewName;
         private TextBox txtNewId;
         private Button btnCancel;
+        private ComboBox cbbCategory;
         private DataGridViewTextBoxColumn cl1;
         private DataGridViewTextBoxColumn cl2;
         private DataGridViewTextBoxColumn cl3;
         private DataGridViewTextBoxColumn cl4;
         private DataGridViewTextBoxColumn cl5;
-        private ComboBox cbbCategory;
     }
 }

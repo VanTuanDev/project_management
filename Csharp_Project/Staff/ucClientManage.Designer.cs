@@ -33,10 +33,6 @@
             dataGridView2 = new DataGridView();
             panel6 = new Panel();
             dgClient = new DataGridView();
-            cl1 = new DataGridViewTextBoxColumn();
-            cl2 = new DataGridViewTextBoxColumn();
-            cl3 = new DataGridViewTextBoxColumn();
-            cl4 = new DataGridViewTextBoxColumn();
             btnSave = new Button();
             pictureBox3 = new PictureBox();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -63,6 +59,10 @@
             txtId = new TextBox();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
+            cl1 = new DataGridViewTextBoxColumn();
+            cl2 = new DataGridViewTextBoxColumn();
+            cl3 = new DataGridViewTextBoxColumn();
+            cl4 = new DataGridViewTextBoxColumn();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel6.SuspendLayout();
@@ -125,48 +125,6 @@
             dgClient.Size = new Size(772, 868);
             dgClient.TabIndex = 0;
             dgClient.CellClick += dgClient_CellClick;
-            // 
-            // cl1
-            // 
-            cl1.DataPropertyName = "id";
-            cl1.HeaderText = "Mã khách hàng";
-            cl1.MinimumWidth = 6;
-            cl1.Name = "cl1";
-            cl1.ReadOnly = true;
-            cl1.Resizable = DataGridViewTriState.False;
-            cl1.Width = 145;
-            // 
-            // cl2
-            // 
-            cl2.DataPropertyName = "fullname";
-            cl2.HeaderText = "Tên khách hàng";
-            cl2.MinimumWidth = 6;
-            cl2.Name = "cl2";
-            cl2.ReadOnly = true;
-            cl2.Resizable = DataGridViewTriState.False;
-            cl2.Width = 185;
-            // 
-            // cl3
-            // 
-            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl3.DataPropertyName = "address";
-            cl3.HeaderText = "Địa chỉ";
-            cl3.MinimumWidth = 6;
-            cl3.Name = "cl3";
-            cl3.ReadOnly = true;
-            cl3.Resizable = DataGridViewTriState.False;
-            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // cl4
-            // 
-            cl4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl4.DataPropertyName = "phonenumber";
-            cl4.HeaderText = "Số điện thoại";
-            cl4.MinimumWidth = 6;
-            cl4.Name = "cl4";
-            cl4.ReadOnly = true;
-            cl4.Resizable = DataGridViewTriState.False;
-            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // btnSave
             // 
@@ -519,6 +477,48 @@
             panel2.Size = new Size(1208, 876);
             panel2.TabIndex = 12;
             // 
+            // cl1
+            // 
+            cl1.DataPropertyName = "id";
+            cl1.HeaderText = "Mã KH";
+            cl1.MinimumWidth = 6;
+            cl1.Name = "cl1";
+            cl1.ReadOnly = true;
+            cl1.Resizable = DataGridViewTriState.False;
+            cl1.Width = 130;
+            // 
+            // cl2
+            // 
+            cl2.DataPropertyName = "fullname";
+            cl2.HeaderText = "Tên khách hàng";
+            cl2.MinimumWidth = 6;
+            cl2.Name = "cl2";
+            cl2.ReadOnly = true;
+            cl2.Resizable = DataGridViewTriState.False;
+            cl2.Width = 215;
+            // 
+            // cl3
+            // 
+            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl3.DataPropertyName = "address";
+            cl3.HeaderText = "Địa chỉ";
+            cl3.MinimumWidth = 6;
+            cl3.Name = "cl3";
+            cl3.ReadOnly = true;
+            cl3.Resizable = DataGridViewTriState.False;
+            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cl4
+            // 
+            cl4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl4.DataPropertyName = "phonenumber";
+            cl4.HeaderText = "Số điện thoại";
+            cl4.MinimumWidth = 6;
+            cl4.Name = "cl4";
+            cl4.ReadOnly = true;
+            cl4.Resizable = DataGridViewTriState.False;
+            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
             // ucClientManage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -563,10 +563,6 @@
         private TextBox txtId;
         private DataGridView dataGridView1;
         private Panel panel2;
-        private DataGridViewTextBoxColumn cl1;
-        private DataGridViewTextBoxColumn cl2;
-        private DataGridViewTextBoxColumn cl3;
-        private DataGridViewTextBoxColumn cl4;
         private Button btnCancel;
         private Label lblNewPhone;
         private TextBox txtNewPhone;
@@ -580,5 +576,9 @@
         private TextBox txtPhone;
         private Label lblAddress;
         private TextBox txtAddress;
+        private DataGridViewTextBoxColumn cl1;
+        private DataGridViewTextBoxColumn cl2;
+        private DataGridViewTextBoxColumn cl3;
+        private DataGridViewTextBoxColumn cl4;
     }
 }

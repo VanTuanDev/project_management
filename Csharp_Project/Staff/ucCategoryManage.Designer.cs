@@ -50,9 +50,9 @@
             txtId = new TextBox();
             panel6 = new Panel();
             dgCategory = new DataGridView();
+            panel4 = new Panel();
             cl1 = new DataGridViewTextBoxColumn();
             cl2 = new DataGridViewTextBoxColumn();
-            panel4 = new Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -353,27 +353,6 @@
             dgCategory.TabIndex = 0;
             dgCategory.CellClick += dgCategory_CellClick;
             // 
-            // cl1
-            // 
-            cl1.DataPropertyName = "id";
-            cl1.HeaderText = "Mã danh mục";
-            cl1.MinimumWidth = 6;
-            cl1.Name = "cl1";
-            cl1.ReadOnly = true;
-            cl1.Resizable = DataGridViewTriState.False;
-            cl1.Width = 225;
-            // 
-            // cl2
-            // 
-            cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl2.DataPropertyName = "name";
-            cl2.HeaderText = "Tên danh mục";
-            cl2.MinimumWidth = 6;
-            cl2.Name = "cl2";
-            cl2.ReadOnly = true;
-            cl2.Resizable = DataGridViewTriState.False;
-            cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
             // panel4
             // 
             panel4.Controls.Add(dataGridView2);
@@ -383,6 +362,27 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(1208, 876);
             panel4.TabIndex = 8;
+            // 
+            // cl1
+            // 
+            cl1.DataPropertyName = "id";
+            cl1.HeaderText = "Mã danh mục";
+            cl1.MinimumWidth = 6;
+            cl1.Name = "cl1";
+            cl1.ReadOnly = true;
+            cl1.Resizable = DataGridViewTriState.False;
+            cl1.Width = 185;
+            // 
+            // cl2
+            // 
+            cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl2.DataPropertyName = "catename";
+            cl2.HeaderText = "Tên danh mục";
+            cl2.MinimumWidth = 6;
+            cl2.Name = "cl2";
+            cl2.ReadOnly = true;
+            cl2.Resizable = DataGridViewTriState.False;
+            cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ucCategoryManage
             // 
@@ -429,10 +429,10 @@
         private Panel panel6;
         private DataGridView dgCategory;
         private Panel panel4;
-        private DataGridViewTextBoxColumn cl1;
-        private DataGridViewTextBoxColumn cl2;
         private Label lblNewId;
         private TextBox txtNewId;
         private Button btnCancel;
+        private DataGridViewTextBoxColumn cl1;
+        private DataGridViewTextBoxColumn cl2;
     }
 }

@@ -51,7 +51,7 @@ namespace Csharp_Project.Staff
             isAdd = false;
             isEdit = false;
         }
-        private void Display ()
+        private void Display()
         {
             lblNewId.Visible = true;
             txtNewId.Visible = true;
@@ -96,6 +96,7 @@ namespace Csharp_Project.Staff
                 {
                     MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadCategories();
+                    Reset();
                 }
                 else
                 {

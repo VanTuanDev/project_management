@@ -120,6 +120,7 @@ namespace Csharp_Project.Staff
             {
                 MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadFoods();
+                Reset();
             }
             else
             {
