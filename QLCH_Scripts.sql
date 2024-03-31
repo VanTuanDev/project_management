@@ -43,7 +43,7 @@ GO
 CREATE PROCEDURE GetClients
 AS
 BEGIN
-    SELECT * FROM Customer;
+    SELECT id, fullname, address, phonenumber FROM Customer WHERE status = N'Using';
 END
 GO
 
@@ -51,9 +51,9 @@ CREATE PROCEDURE DeleteClient
     @ClientID INT
 AS
 BEGIN
-    DELETE FROM Customer
+    UPDATE Customer
+    SET status = N'Unused'
     WHERE id = @ClientID
-
     SELECT 1 AS Success
 END
 GO
@@ -65,8 +65,8 @@ CREATE PROCEDURE InsertClient
     @ClientPhone CHAR(10)
 AS
 BEGIN
-    INSERT INTO Customer(id, fullname, address, phonenumber)
-    VALUES (@ClientId, @ClientName, @ClientAddress, @ClientPhone)
+    INSERT INTO Customer(id, fullname, address, phonenumber, status)
+    VALUES (@ClientId, @ClientName, @ClientAddress, @ClientPhone, N'Using')
 END
 GO
 
