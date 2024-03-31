@@ -140,9 +140,6 @@ E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Login.
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Main.resources
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Properties.Resources.resources
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucBillManage.resources
-E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucCategoryManage.resources
-E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucClientManage.resources
-E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucFoodManage.resources
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucSelling.resources
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.csproj.GenerateResource.cache
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.GeneratedMSBuildEditorConfig.editorconfig
@@ -155,3 +152,6 @@ E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\refint\Csharp_Project
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.pdb
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.genruntimeconfig.cache
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\ref\Csharp_Project.dll
+E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucCustomerManager.resources
+E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucCategoryManager.resources
+E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucProductManager.resources

@@ -3,14 +3,14 @@ using System.Data;
 
 namespace Csharp_Project.Staff
 {
-    public partial class ucClientManage : UserControl
+    public partial class ucCustomerManager : UserControl
     {
-        private ClientManager clientBLL;
+        private CustomerManager clientBLL;
         private bool isAdd = false;
         private bool isEdit = false;
-        public ucClientManage()
+        public ucCustomerManager()
         {
-            clientBLL = new ClientManager();
+            clientBLL = new CustomerManager();
             InitializeComponent();
             dgClient.DefaultCellStyle.Font = new Font("Tahoma", 10);
             dgClient.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;

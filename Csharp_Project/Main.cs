@@ -13,9 +13,9 @@ namespace Csharp_Project
         }
 
         private ucAccountManage AccountManage;
-        private ucCategoryManage CategoryManage;
-        private ucClientManage ClientManage;
-        private ucFoodManage FoodManage;
+        private ucCategoryManager CategoryManage;
+        private ucCustomerManager ClientManage;
+        private ucProductManager FoodManage;
         private ucBillManage BillManage;
         private ucSelling Selling;
         private void ResetBackColorBtn()
@@ -50,7 +50,7 @@ namespace Csharp_Project
             btnKhachhang.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(ClientManage) == false)
             {
-                ClientManage = new ucClientManage();
+                ClientManage = new ucCustomerManager();
                 ClientManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(ClientManage);
                 ClientManage.BringToFront();
@@ -67,7 +67,7 @@ namespace Csharp_Project
             btnSanPham.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(FoodManage) == false)
             {
-                FoodManage = new ucFoodManage();
+                FoodManage = new ucProductManager();
                 FoodManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(FoodManage);
                 FoodManage.BringToFront();
@@ -84,7 +84,7 @@ namespace Csharp_Project
             btnDanhmuc.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(CategoryManage) == false)
             {
-                CategoryManage = new ucCategoryManage();
+                CategoryManage = new ucCategoryManager();
                 CategoryManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(CategoryManage);
                 CategoryManage.BringToFront();

@@ -1,6 +1,6 @@
 ﻿namespace Csharp_Project.Staff
 {
-    partial class ucClientManage
+    partial class ucCustomerManager
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucClientManage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCustomerManager));
             panel4 = new Panel();
             dataGridView2 = new DataGridView();
             panel6 = new Panel();

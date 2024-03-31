@@ -4,12 +4,12 @@ using System.Data.SqlClient;
 
 namespace Csharp_Project.Staff
 {
-    public partial class ucCategoryManage : UserControl
+    public partial class ucCategoryManager : UserControl
     {
         private CategoryManager categoryBLL;
         private bool isAdd = false;
         private bool isEdit = false;
-        public ucCategoryManage()
+        public ucCategoryManager()
         {
             categoryBLL = new CategoryManager();
             InitializeComponent();

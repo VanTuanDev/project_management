@@ -3,13 +3,13 @@ using System.Data;
 
 namespace BLL.Manager
 {
-    public class ClientManager
+    public class CustomerManager
     {
-        private ClientRepository clientDAL;
+        private CustomerRepository clientDAL;
 
-        public ClientManager()
+        public CustomerManager()
         {
-            clientDAL = new ClientRepository();
+            clientDAL = new CustomerRepository();
         }
 
         public DataTable GetClients()

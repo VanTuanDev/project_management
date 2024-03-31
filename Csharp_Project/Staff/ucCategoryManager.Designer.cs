@@ -1,6 +1,6 @@
 ﻿namespace Csharp_Project.Staff
 {
-    partial class ucCategoryManage
+    partial class ucCategoryManager
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCategoryManage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCategoryManager));
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
             dataGridView2 = new DataGridView();

@@ -3,14 +3,14 @@ using System.Data;
 
 namespace Csharp_Project.Staff
 {
-    public partial class ucFoodManage : UserControl
+    public partial class ucProductManager : UserControl
     {
-        private FoodManager foodBLL;
+        private ProductManager foodBLL;
         private bool isAdd = false;
         private bool isEdit = false;
-        public ucFoodManage()
+        public ucProductManager()
         {
-            foodBLL = new FoodManager();
+            foodBLL = new ProductManager();
             InitializeComponent();
             dgFood.DefaultCellStyle.Font = new Font("Tahoma", 10);
             dgFood.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;

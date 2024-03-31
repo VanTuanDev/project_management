@@ -3,7 +3,7 @@ using System.Data;
 
 namespace DAL.Repository
 {
-    public class FoodRepository
+    public class ProductRepository
     {
         private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
         public DataTable GetFoods()

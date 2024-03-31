@@ -50,7 +50,8 @@ CREATE TABLE Customer (
     id INT PRIMARY KEY,
     fullname NVARCHAR(255),
 	address NVARCHAR(255),
-	phonenumber CHAR(10)
+	phonenumber CHAR(10),
+	status nvarchar(255)
 );
 
 -- Tạo bảng Bill
@@ -129,22 +130,22 @@ VALUES (1, 'Laptop', N'Cái', 15000000, 1, N'Using'),(2, 'T-Shirt', N'Cái', 250
 (29, 'Gift Card', N'Cái', 500000, 29, N'Using'),(30, 'Camping Tent', N'Cái', 1000000, 30, N'Using');
 GO
 
-INSERT INTO Customer (id, fullname, address, phonenumber)
-VALUES(1, N'Nguyễn Thị X', N'Hà Nội', '0123456789'),(2, N'Trần Văn Y', N'Hồ Chí Minh', '0987654321'),
-(3, N'Lê Thị Z', N'Đà Nẵng', '0369852147'),(4, N'Phạm Văn T', N'Hải Phòng', '0798541236'),
-(5, N'Huỳnh Thị U', N'Cần Thơ', '0923658741'),(6, N'Đặng Văn S', N'Bình Dương', '0852147963'),
-(7, N'Bùi Thị R', N'Hải Dương', '0769852143'),(8, N'Ngô Văn P', N'Nam Định', '0369852147'),
-(9, N'Trương Thị O', N'Hưng Yên', '0987456321'),(10, N'Vũ Văn N', N'Hải Dương', '0912345678'),
-(11, N'Lý Thị M', N'Bắc Giang', '0876543210'),(12, N'Hoàng Văn L', N'Quảng Ninh', '0923658741'),
-(13, N'Chu Thị K', N'Thái Bình', '0769852143'),(14, N'Dương Văn J', N'Ninh Bình', '0798541236'),
-(15, N'Trịnh Thị I', N'Yên Bái', '0369852147'),(16, N'Võ Văn H', N'Hòa Bình', '0987456321'),
-(17, N'Tôn Thị G', N'Thanh Hóa', '0912345678'),(18, N'Thái Văn F', N'Hà Nam', '0876543210'),
-(19, N'Âu Thị E', N'Nghệ An', '0923658741'),(20, N'Vương Văn D', N'Hà Tĩnh', '0769852143'),
-(21, N'Khúc Thị C', N'Quảng Bình', '0798541236'),(22, N'Liễu Văn B', N'Quảng Trị', '0369852147'),
-(23, N'Phí Thị A', N'Thừa Thiên Huế', '0987456321'),(24, N'Mạch Văn Z', N'Quảng Nam', '0912345678'),
-(25, N'Nghiêm Thị Y', N'Quảng Ngãi', '0876543210'),(26, N'Chử Văn X', N'Bình Định', '0923658741'),
-(27, N'Phan Thị W', N'Phú Yên', '0769852143'),(28, N'Quách Văn V', N'Khánh Hòa', '0798541236'),
-(29, N'Tạ Thị U', N'Lâm Đồng', '0369852147'),(30, N'Lục Văn T', N'Đắk Lắk', '0987456321');
+INSERT INTO Customer (id, fullname, address, phonenumber, status)
+VALUES(1, N'Nguyễn Thị X', N'Hà Nội', '0123456789', N'Using'),(2, N'Trần Văn Y', N'Hồ Chí Minh', '0987654321', N'Using'),
+(3, N'Lê Thị Z', N'Đà Nẵng', '0369852147', N'Using'),(4, N'Phạm Văn T', N'Hải Phòng', '0798541236', N'Using'),
+(5, N'Huỳnh Thị U', N'Cần Thơ', '0923658741', N'Using'),(6, N'Đặng Văn S', N'Bình Dương', '0852147963', N'Using'),
+(7, N'Bùi Thị R', N'Hải Dương', '0769852143', N'Using'),(8, N'Ngô Văn P', N'Nam Định', '0369852147', N'Using'),
+(9, N'Trương Thị O', N'Hưng Yên', '0987456321', N'Using'),(10, N'Vũ Văn N', N'Hải Dương', '0912345678', N'Using'),
+(11, N'Lý Thị M', N'Bắc Giang', '0876543210', N'Using'),(12, N'Hoàng Văn L', N'Quảng Ninh', '0923658741', N'Using'),
+(13, N'Chu Thị K', N'Thái Bình', '0769852143', N'Using'),(14, N'Dương Văn J', N'Ninh Bình', '0798541236', N'Using'),
+(15, N'Trịnh Thị I', N'Yên Bái', '0369852147', N'Using'),(16, N'Võ Văn H', N'Hòa Bình', '0987456321', N'Using'),
+(17, N'Tôn Thị G', N'Thanh Hóa', '0912345678', N'Using'),(18, N'Thái Văn F', N'Hà Nam', '0876543210', N'Using'),
+(19, N'Âu Thị E', N'Nghệ An', '0923658741', N'Using'),(20, N'Vương Văn D', N'Hà Tĩnh', '0769852143', N'Using'),
+(21, N'Khúc Thị C', N'Quảng Bình', '0798541236', N'Using'),(22, N'Liễu Văn B', N'Quảng Trị', '0369852147', N'Using'),
+(23, N'Phí Thị A', N'Thừa Thiên Huế', '0987456321', N'Using'),(24, N'Mạch Văn Z', N'Quảng Nam', '0912345678', N'Using'),
+(25, N'Nghiêm Thị Y', N'Quảng Ngãi', '0876543210', N'Using'),(26, N'Chử Văn X', N'Bình Định', '0923658741', N'Using'),
+(27, N'Phan Thị W', N'Phú Yên', '0769852143', N'Using'),(28, N'Quách Văn V', N'Khánh Hòa', '0798541236', N'Using'),
+(29, N'Tạ Thị U', N'Lâm Đồng', '0369852147', N'Using'),(30, N'Lục Văn T', N'Đắk Lắk', '0987456321', N'Using');
 GO
 
 SELECT * FROM Account

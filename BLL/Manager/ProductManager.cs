@@ -3,13 +3,13 @@ using System.Data;
 
 namespace BLL.Manager
 {
-    public class FoodManager
+    public class ProductManager
     {
-        private FoodRepository foodDAL;
+        private ProductRepository foodDAL;
 
-        public FoodManager()
+        public ProductManager()
         {
-            foodDAL = new FoodRepository();
+            foodDAL = new ProductRepository();
         }
 
         public DataTable GetFoods()

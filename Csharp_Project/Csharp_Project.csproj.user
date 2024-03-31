@@ -13,13 +13,13 @@
     <Compile Update="Staff\ucBillManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Staff\ucCategoryManage.cs">
+    <Compile Update="Staff\ucCategoryManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Staff\ucClientManage.cs">
+    <Compile Update="Staff\ucCustomerManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Staff\ucFoodManage.cs">
+    <Compile Update="Staff\ucProductManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Staff\ucSelling.cs">
