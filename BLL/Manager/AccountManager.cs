@@ -1,5 +1,7 @@
 ﻿using DAL.Repository;
 using System.Data;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace BLL.Manager
 {
@@ -23,17 +25,17 @@ namespace BLL.Manager
         {
             return accountDAL.GetAccount();
         }
-        public bool InsertAccount(string username, string pwd, int role)
+        public bool InsertAccount(string username, string fullname, string pwd, int role)
         {
-            return accountDAL.InsertAccount(username, pwd, role);
+            return accountDAL.InsertAccount(username, fullname, pwd, role);
         }
         public bool DeleteAccount(string username)
         {
             return accountDAL.DeleteAccount(username);
         }
-        public bool UpdateAccount(string username, string pwd, int role, string status)
+        public bool UpdateAccount(string username, string fullname, string pwd, int role, string status)
         {
-            return accountDAL.UpdateAccount(username, pwd, role, status);
+            return accountDAL.UpdateAccount(username, fullname, pwd, role, status);
         }
         public int GetRoleIdByName(string roleName)
         {
@@ -42,6 +44,27 @@ namespace BLL.Manager
         public DataTable GetRoleName()
         {
             return accountDAL.GetRoleName();
+        }
+        public bool checkpwd(string username, string pwd)
+        {
+            return accountDAL.checkpwd(username, pwd);
+        }
+        public class textToMd5
+        {
+            public static string converText(string text)
+            {
+                MD5 md = MD5.Create();
+                byte[] inputstr = System.Text.Encoding.ASCII.GetBytes(text);
+                byte[] hash = md.ComputeHash(inputstr);
+                StringBuilder sb = new StringBuilder();
+
+                for (int i = 0; i < hash.Length; i++)
+                {
+                    sb.Append(hash[i].ToString("X2"));
+                }
+                return sb.ToString();
+
+            }
         }
     }
 

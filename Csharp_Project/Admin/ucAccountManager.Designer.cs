@@ -32,39 +32,45 @@
             panel6 = new Panel();
             dgAccount = new DataGridView();
             username = new DataGridViewTextBoxColumn();
-            pwd = new DataGridViewTextBoxColumn();
+            fullname = new DataGridViewTextBoxColumn();
             role = new DataGridViewTextBoxColumn();
-            status = new DataGridViewTextBoxColumn();
+            cl4 = new DataGridViewTextBoxColumn();
             btnLuu = new Button();
-            lblquyenmoi = new Label();
-            lblmkmoi = new Label();
+            lblQuyenMoi = new Label();
+            lblMatKhauMoi = new Label();
             panel5 = new Panel();
-            cbbQuyenmoi = new ComboBox();
-            lbltksua = new Label();
-            txttksua = new TextBox();
+            lbltenmoi = new Label();
+            txtTenmoi = new TextBox();
+            lblten = new Label();
+            txtTen = new TextBox();
+            lblmkcu = new Label();
+            txtmkcu = new TextBox();
+            cbbQuyenMoi = new ComboBox();
+            lblTaiKhoanMoi = new Label();
+            txtTaiKhoanMoi = new TextBox();
             cbbQuyen = new ComboBox();
-            lblTinhTrang = new Label();
-            txtTinhTrang = new TextBox();
+            lblTinhTrangMoi = new Label();
+            txtTinhTrangMoi = new TextBox();
             btnHuy = new Button();
-            txtmkmoi = new TextBox();
-            label1 = new Label();
-            pictureBox3 = new PictureBox();
-            label8 = new Label();
-            label9 = new Label();
+            txtMatKhauMoi = new TextBox();
+            lblQuyen = new Label();
+            ptbLogo = new PictureBox();
+            lblTaiKhoan = new Label();
             btnXoa = new Button();
             btnSua = new Button();
-            txtMatkhau = new TextBox();
             btnThem = new Button();
-            txtTaikhoan = new TextBox();
+            txtTaiKhoan = new TextBox();
             panel4 = new Panel();
             dataGridView2 = new DataGridView();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
+            txtMatKhau = new TextBox();
+            lblMatKhau = new Label();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgAccount).BeginInit();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -86,7 +92,7 @@
             dgAccount.AllowUserToAddRows = false;
             dgAccount.BackgroundColor = Color.Honeydew;
             dgAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgAccount.Columns.AddRange(new DataGridViewColumn[] { username, pwd, role, status });
+            dgAccount.Columns.AddRange(new DataGridViewColumn[] { username, fullname, role, cl4 });
             dgAccount.Dock = DockStyle.Fill;
             dgAccount.Location = new Point(0, 0);
             dgAccount.Name = "dgAccount";
@@ -102,30 +108,46 @@
             // username
             // 
             username.DataPropertyName = "username";
-            username.HeaderText = "Tài khoản";
+            username.HeaderText = "Tên tài khoản";
+            username.MinimumWidth = 6;
             username.Name = "username";
             username.ReadOnly = true;
+            username.Resizable = DataGridViewTriState.False;
+            username.SortMode = DataGridViewColumnSortMode.NotSortable;
+            username.Width = 200;
             // 
-            // pwd
+            // fullname
             // 
-            pwd.DataPropertyName = "pwd";
-            pwd.HeaderText = "Mật khẩu";
-            pwd.Name = "pwd";
-            pwd.ReadOnly = true;
+            fullname.DataPropertyName = "fullname";
+            fullname.HeaderText = "Tên người dùng";
+            fullname.MinimumWidth = 6;
+            fullname.Name = "fullname";
+            fullname.ReadOnly = true;
+            fullname.Resizable = DataGridViewTriState.False;
+            fullname.SortMode = DataGridViewColumnSortMode.NotSortable;
+            fullname.Width = 230;
             // 
             // role
             // 
+            role.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             role.DataPropertyName = "rolename";
             role.HeaderText = "Quyền";
+            role.MinimumWidth = 6;
             role.Name = "role";
             role.ReadOnly = true;
+            role.Resizable = DataGridViewTriState.False;
+            role.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // status
+            // cl4
             // 
-            status.DataPropertyName = "status";
-            status.HeaderText = "Tình Trạng";
-            status.Name = "status";
-            status.ReadOnly = true;
+            cl4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl4.DataPropertyName = "status";
+            cl4.HeaderText = "Trạng thái";
+            cl4.MinimumWidth = 6;
+            cl4.Name = "cl4";
+            cl4.ReadOnly = true;
+            cl4.Resizable = DataGridViewTriState.False;
+            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // btnLuu
             // 
@@ -133,131 +155,202 @@
             btnLuu.FlatStyle = FlatStyle.Flat;
             btnLuu.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnLuu.ForeColor = Color.Green;
-            btnLuu.Location = new Point(61, 535);
+            btnLuu.Location = new Point(54, 574);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(116, 38);
-            btnLuu.TabIndex = 18;
+            btnLuu.TabIndex = 12;
             btnLuu.Tag = "9";
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
             btnLuu.Click += btnLuu_Click;
             // 
-            // lblquyenmoi
+            // lblQuyenMoi
             // 
-            lblquyenmoi.AutoSize = true;
-            lblquyenmoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblquyenmoi.ForeColor = Color.FromArgb(0, 64, 0);
-            lblquyenmoi.Location = new Point(3, 470);
-            lblquyenmoi.Name = "lblquyenmoi";
-            lblquyenmoi.Size = new Size(106, 19);
-            lblquyenmoi.TabIndex = 17;
-            lblquyenmoi.Text = "Quyền mới :";
+            lblQuyenMoi.AutoSize = true;
+            lblQuyenMoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblQuyenMoi.ForeColor = Color.FromArgb(0, 64, 0);
+            lblQuyenMoi.Location = new Point(3, 523);
+            lblQuyenMoi.Name = "lblQuyenMoi";
+            lblQuyenMoi.Size = new Size(106, 19);
+            lblQuyenMoi.TabIndex = 17;
+            lblQuyenMoi.Text = "Quyền mới :";
             // 
-            // lblmkmoi
+            // lblMatKhauMoi
             // 
-            lblmkmoi.AutoSize = true;
-            lblmkmoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblmkmoi.ForeColor = Color.FromArgb(0, 64, 0);
-            lblmkmoi.Location = new Point(3, 440);
-            lblmkmoi.Name = "lblmkmoi";
-            lblmkmoi.Size = new Size(131, 19);
-            lblmkmoi.TabIndex = 15;
-            lblmkmoi.Text = "Mật khẩu mới :";
+            lblMatKhauMoi.AutoSize = true;
+            lblMatKhauMoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMatKhauMoi.ForeColor = Color.FromArgb(0, 64, 0);
+            lblMatKhauMoi.Location = new Point(3, 493);
+            lblMatKhauMoi.Name = "lblMatKhauMoi";
+            lblMatKhauMoi.Size = new Size(131, 19);
+            lblMatKhauMoi.TabIndex = 15;
+            lblMatKhauMoi.Text = "Mật khẩu mới :";
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(192, 255, 192);
-            panel5.Controls.Add(cbbQuyenmoi);
-            panel5.Controls.Add(lbltksua);
-            panel5.Controls.Add(txttksua);
+            panel5.Controls.Add(lbltenmoi);
+            panel5.Controls.Add(txtTenmoi);
+            panel5.Controls.Add(lblten);
+            panel5.Controls.Add(txtTen);
+            panel5.Controls.Add(lblmkcu);
+            panel5.Controls.Add(txtmkcu);
+            panel5.Controls.Add(cbbQuyenMoi);
+            panel5.Controls.Add(lblTaiKhoanMoi);
+            panel5.Controls.Add(txtTaiKhoanMoi);
             panel5.Controls.Add(cbbQuyen);
-            panel5.Controls.Add(lblTinhTrang);
-            panel5.Controls.Add(txtTinhTrang);
+            panel5.Controls.Add(lblTinhTrangMoi);
+            panel5.Controls.Add(txtTinhTrangMoi);
             panel5.Controls.Add(btnHuy);
             panel5.Controls.Add(btnLuu);
-            panel5.Controls.Add(lblquyenmoi);
-            panel5.Controls.Add(lblmkmoi);
-            panel5.Controls.Add(txtmkmoi);
-            panel5.Controls.Add(label1);
-            panel5.Controls.Add(pictureBox3);
-            panel5.Controls.Add(label8);
-            panel5.Controls.Add(label9);
+            panel5.Controls.Add(lblQuyenMoi);
+            panel5.Controls.Add(lblMatKhauMoi);
+            panel5.Controls.Add(txtMatKhauMoi);
+            panel5.Controls.Add(lblQuyen);
+            panel5.Controls.Add(ptbLogo);
+            panel5.Controls.Add(lblMatKhau);
+            panel5.Controls.Add(lblTaiKhoan);
             panel5.Controls.Add(btnXoa);
             panel5.Controls.Add(btnSua);
-            panel5.Controls.Add(txtMatkhau);
+            panel5.Controls.Add(txtMatKhau);
             panel5.Controls.Add(btnThem);
-            panel5.Controls.Add(txtTaikhoan);
+            panel5.Controls.Add(txtTaiKhoan);
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(683, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(371, 651);
             panel5.TabIndex = 0;
             // 
-            // cbbQuyenmoi
+            // lbltenmoi
             // 
-            cbbQuyenmoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbbQuyenmoi.FormattingEnabled = true;
-            cbbQuyenmoi.Location = new Point(139, 470);
-            cbbQuyenmoi.Margin = new Padding(3, 2, 3, 2);
-            cbbQuyenmoi.Name = "cbbQuyenmoi";
-            cbbQuyenmoi.Size = new Size(215, 27);
-            cbbQuyenmoi.TabIndex = 35;
-            cbbQuyenmoi.Tag = "8";
+            lbltenmoi.AutoSize = true;
+            lbltenmoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbltenmoi.ForeColor = Color.FromArgb(0, 64, 0);
+            lbltenmoi.Location = new Point(3, 402);
+            lbltenmoi.Name = "lbltenmoi";
+            lbltenmoi.Size = new Size(147, 19);
+            lbltenmoi.TabIndex = 41;
+            lbltenmoi.Text = "Tên người dùng :";
+            lbltenmoi.UseMnemonic = false;
             // 
-            // lbltksua
+            // txtTenmoi
             // 
-            lbltksua.AutoSize = true;
-            lbltksua.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbltksua.ForeColor = Color.FromArgb(0, 64, 0);
-            lbltksua.Location = new Point(3, 377);
-            lbltksua.Name = "lbltksua";
-            lbltksua.Size = new Size(101, 19);
-            lbltksua.TabIndex = 34;
-            lbltksua.Text = "Tài khoản :";
-            lbltksua.UseMnemonic = false;
+            txtTenmoi.BorderStyle = BorderStyle.None;
+            txtTenmoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenmoi.Location = new Point(156, 402);
+            txtTenmoi.Name = "txtTenmoi";
+            txtTenmoi.Size = new Size(198, 20);
+            txtTenmoi.TabIndex = 7;
+            txtTenmoi.Tag = "0";
             // 
-            // txttksua
+            // lblten
             // 
-            txttksua.BorderStyle = BorderStyle.None;
-            txttksua.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txttksua.Location = new Point(139, 377);
-            txttksua.Name = "txttksua";
-            txttksua.ReadOnly = true;
-            txttksua.Size = new Size(215, 20);
-            txttksua.TabIndex = 33;
-            txttksua.Tag = "0";
+            lblten.AutoSize = true;
+            lblten.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblten.ForeColor = Color.FromArgb(0, 64, 0);
+            lblten.Location = new Point(3, 208);
+            lblten.Name = "lblten";
+            lblten.Size = new Size(147, 19);
+            lblten.TabIndex = 1;
+            lblten.Text = "Tên người dùng :";
+            lblten.UseMnemonic = false;
+            // 
+            // txtTen
+            // 
+            txtTen.BorderStyle = BorderStyle.None;
+            txtTen.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTen.Location = new Point(156, 208);
+            txtTen.Name = "txtTen";
+            txtTen.Size = new Size(198, 20);
+            txtTen.TabIndex = 1;
+            txtTen.Tag = "0";
+            // 
+            // lblmkcu
+            // 
+            lblmkcu.AutoSize = true;
+            lblmkcu.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblmkcu.ForeColor = Color.FromArgb(0, 64, 0);
+            lblmkcu.Location = new Point(3, 461);
+            lblmkcu.Name = "lblmkcu";
+            lblmkcu.Size = new Size(119, 19);
+            lblmkcu.TabIndex = 37;
+            lblmkcu.Text = "Mật khẩu cũ :";
+            // 
+            // txtmkcu
+            // 
+            txtmkcu.BorderStyle = BorderStyle.None;
+            txtmkcu.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtmkcu.Location = new Point(156, 461);
+            txtmkcu.Name = "txtmkcu";
+            txtmkcu.Size = new Size(199, 20);
+            txtmkcu.TabIndex = 9;
+            txtmkcu.Tag = "7";
+            // 
+            // cbbQuyenMoi
+            // 
+            cbbQuyenMoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbQuyenMoi.FormattingEnabled = true;
+            cbbQuyenMoi.Location = new Point(156, 523);
+            cbbQuyenMoi.Margin = new Padding(3, 2, 3, 2);
+            cbbQuyenMoi.Name = "cbbQuyenMoi";
+            cbbQuyenMoi.Size = new Size(198, 27);
+            cbbQuyenMoi.TabIndex = 11;
+            cbbQuyenMoi.Tag = "8";
+            // 
+            // lblTaiKhoanMoi
+            // 
+            lblTaiKhoanMoi.AutoSize = true;
+            lblTaiKhoanMoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTaiKhoanMoi.ForeColor = Color.FromArgb(0, 64, 0);
+            lblTaiKhoanMoi.Location = new Point(3, 374);
+            lblTaiKhoanMoi.Name = "lblTaiKhoanMoi";
+            lblTaiKhoanMoi.Size = new Size(101, 19);
+            lblTaiKhoanMoi.TabIndex = 34;
+            lblTaiKhoanMoi.Text = "Tài khoản :";
+            lblTaiKhoanMoi.UseMnemonic = false;
+            // 
+            // txtTaiKhoanMoi
+            // 
+            txtTaiKhoanMoi.BorderStyle = BorderStyle.None;
+            txtTaiKhoanMoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTaiKhoanMoi.Location = new Point(156, 374);
+            txtTaiKhoanMoi.Name = "txtTaiKhoanMoi";
+            txtTaiKhoanMoi.ReadOnly = true;
+            txtTaiKhoanMoi.Size = new Size(199, 20);
+            txtTaiKhoanMoi.TabIndex = 33;
+            txtTaiKhoanMoi.Tag = "0";
             // 
             // cbbQuyen
             // 
             cbbQuyen.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbQuyen.FormattingEnabled = true;
-            cbbQuyen.Location = new Point(136, 253);
+            cbbQuyen.Location = new Point(156, 268);
             cbbQuyen.Margin = new Padding(3, 2, 3, 2);
             cbbQuyen.Name = "cbbQuyen";
-            cbbQuyen.Size = new Size(218, 27);
-            cbbQuyen.TabIndex = 32;
+            cbbQuyen.Size = new Size(198, 27);
+            cbbQuyen.TabIndex = 3;
             cbbQuyen.Tag = "8";
             // 
-            // lblTinhTrang
+            // lblTinhTrangMoi
             // 
-            lblTinhTrang.AutoSize = true;
-            lblTinhTrang.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTinhTrang.ForeColor = Color.FromArgb(0, 64, 0);
-            lblTinhTrang.Location = new Point(3, 409);
-            lblTinhTrang.Name = "lblTinhTrang";
-            lblTinhTrang.Size = new Size(110, 19);
-            lblTinhTrang.TabIndex = 21;
-            lblTinhTrang.Text = "Tình trạng : ";
+            lblTinhTrangMoi.AutoSize = true;
+            lblTinhTrangMoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTinhTrangMoi.ForeColor = Color.FromArgb(0, 64, 0);
+            lblTinhTrangMoi.Location = new Point(3, 430);
+            lblTinhTrangMoi.Name = "lblTinhTrangMoi";
+            lblTinhTrangMoi.Size = new Size(110, 19);
+            lblTinhTrangMoi.TabIndex = 21;
+            lblTinhTrangMoi.Text = "Tình trạng : ";
             // 
-            // txtTinhTrang
+            // txtTinhTrangMoi
             // 
-            txtTinhTrang.BorderStyle = BorderStyle.None;
-            txtTinhTrang.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTinhTrang.Location = new Point(139, 409);
-            txtTinhTrang.Name = "txtTinhTrang";
-            txtTinhTrang.Size = new Size(215, 20);
-            txtTinhTrang.TabIndex = 20;
-            txtTinhTrang.Tag = "6";
+            txtTinhTrangMoi.BorderStyle = BorderStyle.None;
+            txtTinhTrangMoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTinhTrangMoi.Location = new Point(156, 430);
+            txtTinhTrangMoi.Name = "txtTinhTrangMoi";
+            txtTinhTrangMoi.Size = new Size(199, 20);
+            txtTinhTrangMoi.TabIndex = 8;
+            txtTinhTrangMoi.Tag = "6";
             // 
             // btnHuy
             // 
@@ -265,68 +358,57 @@
             btnHuy.FlatStyle = FlatStyle.Flat;
             btnHuy.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnHuy.ForeColor = Color.Green;
-            btnHuy.Location = new Point(207, 535);
+            btnHuy.Location = new Point(200, 574);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(116, 38);
-            btnHuy.TabIndex = 19;
+            btnHuy.TabIndex = 13;
             btnHuy.Tag = "10";
             btnHuy.Text = "Huỷ";
             btnHuy.UseVisualStyleBackColor = false;
             btnHuy.Click += btnHuy_Click;
             // 
-            // txtmkmoi
+            // txtMatKhauMoi
             // 
-            txtmkmoi.BorderStyle = BorderStyle.None;
-            txtmkmoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtmkmoi.Location = new Point(139, 440);
-            txtmkmoi.Name = "txtmkmoi";
-            txtmkmoi.Size = new Size(215, 20);
-            txtmkmoi.TabIndex = 13;
-            txtmkmoi.Tag = "7";
+            txtMatKhauMoi.BorderStyle = BorderStyle.None;
+            txtMatKhauMoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMatKhauMoi.Location = new Point(156, 493);
+            txtMatKhauMoi.Name = "txtMatKhauMoi";
+            txtMatKhauMoi.Size = new Size(199, 20);
+            txtMatKhauMoi.TabIndex = 10;
+            txtMatKhauMoi.Tag = "7";
             // 
-            // label1
+            // lblQuyen
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(0, 64, 0);
-            label1.Location = new Point(3, 253);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 19);
-            label1.TabIndex = 11;
-            label1.Text = "Quyền :";
+            lblQuyen.AutoSize = true;
+            lblQuyen.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblQuyen.ForeColor = Color.FromArgb(0, 64, 0);
+            lblQuyen.Location = new Point(3, 268);
+            lblQuyen.Name = "lblQuyen";
+            lblQuyen.Size = new Size(71, 19);
+            lblQuyen.TabIndex = 11;
+            lblQuyen.Text = "Quyền :";
             // 
-            // pictureBox3
+            // ptbLogo
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(105, 65);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(165, 90);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
+            ptbLogo.Image = (Image)resources.GetObject("ptbLogo.Image");
+            ptbLogo.Location = new Point(105, 65);
+            ptbLogo.Name = "ptbLogo";
+            ptbLogo.Size = new Size(165, 90);
+            ptbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbLogo.TabIndex = 9;
+            ptbLogo.TabStop = false;
             // 
-            // label8
+            // lblTaiKhoan
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(0, 64, 0);
-            label8.Location = new Point(3, 223);
-            label8.Name = "label8";
-            label8.Size = new Size(96, 19);
-            label8.TabIndex = 7;
-            label8.Text = "Mật khẩu :";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(0, 64, 0);
-            label9.Location = new Point(3, 194);
-            label9.Name = "label9";
-            label9.Size = new Size(101, 19);
-            label9.TabIndex = 6;
-            label9.Text = "Tài khoản :";
-            label9.UseMnemonic = false;
+            lblTaiKhoan.AutoSize = true;
+            lblTaiKhoan.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTaiKhoan.ForeColor = Color.FromArgb(0, 64, 0);
+            lblTaiKhoan.Location = new Point(3, 178);
+            lblTaiKhoan.Name = "lblTaiKhoan";
+            lblTaiKhoan.Size = new Size(101, 19);
+            lblTaiKhoan.TabIndex = 6;
+            lblTaiKhoan.Text = "Tài khoản :";
+            lblTaiKhoan.UseMnemonic = false;
             // 
             // btnXoa
             // 
@@ -337,7 +419,7 @@
             btnXoa.Location = new Point(247, 316);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(116, 38);
-            btnXoa.TabIndex = 5;
+            btnXoa.TabIndex = 6;
             btnXoa.Tag = "5";
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = false;
@@ -352,21 +434,11 @@
             btnSua.Location = new Point(125, 316);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(116, 38);
-            btnSua.TabIndex = 4;
+            btnSua.TabIndex = 5;
             btnSua.Tag = "4";
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
             btnSua.Click += btnSua_Click;
-            // 
-            // txtMatkhau
-            // 
-            txtMatkhau.BorderStyle = BorderStyle.None;
-            txtMatkhau.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMatkhau.Location = new Point(136, 223);
-            txtMatkhau.Name = "txtMatkhau";
-            txtMatkhau.Size = new Size(218, 20);
-            txtMatkhau.TabIndex = 2;
-            txtMatkhau.Tag = "1";
             // 
             // btnThem
             // 
@@ -377,21 +449,21 @@
             btnThem.Location = new Point(3, 316);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(116, 38);
-            btnThem.TabIndex = 1;
+            btnThem.TabIndex = 4;
             btnThem.Tag = "3";
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
             btnThem.Click += btnThem_Click;
             // 
-            // txtTaikhoan
+            // txtTaiKhoan
             // 
-            txtTaikhoan.BorderStyle = BorderStyle.None;
-            txtTaikhoan.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTaikhoan.Location = new Point(136, 194);
-            txtTaikhoan.Name = "txtTaikhoan";
-            txtTaikhoan.Size = new Size(218, 20);
-            txtTaikhoan.TabIndex = 0;
-            txtTaikhoan.Tag = "0";
+            txtTaiKhoan.BorderStyle = BorderStyle.None;
+            txtTaiKhoan.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTaiKhoan.Location = new Point(156, 178);
+            txtTaiKhoan.Name = "txtTaiKhoan";
+            txtTaiKhoan.Size = new Size(198, 20);
+            txtTaiKhoan.TabIndex = 0;
+            txtTaiKhoan.Tag = "0";
             // 
             // panel4
             // 
@@ -409,6 +481,7 @@
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(0, 0);
             dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(1057, 0);
             dataGridView2.TabIndex = 0;
@@ -420,6 +493,7 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1057, 0);
             dataGridView1.TabIndex = 0;
@@ -448,21 +522,42 @@
             tableLayoutPanel3.Size = new Size(1057, 657);
             tableLayoutPanel3.TabIndex = 10;
             // 
-            // ucAccountManage
+            // txtMatKhau
+            // 
+            txtMatKhau.BorderStyle = BorderStyle.None;
+            txtMatKhau.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMatKhau.Location = new Point(156, 238);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.Size = new Size(198, 20);
+            txtMatKhau.TabIndex = 2;
+            txtMatKhau.Tag = "1";
+            // 
+            // lblMatKhau
+            // 
+            lblMatKhau.AutoSize = true;
+            lblMatKhau.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMatKhau.ForeColor = Color.FromArgb(0, 64, 0);
+            lblMatKhau.Location = new Point(3, 238);
+            lblMatKhau.Name = "lblMatKhau";
+            lblMatKhau.Size = new Size(96, 19);
+            lblMatKhau.TabIndex = 7;
+            lblMatKhau.Text = "Mật khẩu :";
+            // 
+            // ucAccountManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(tableLayoutPanel3);
-            Name = "ucAccountManage";
+            Name = "ucAccountManager";
             Size = new Size(1057, 657);
             Load += ucAccountManage_Load;
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgAccount).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -476,34 +571,41 @@
         private Panel panel6;
         private DataGridView dgAccount;
         private Button btnLuu;
-        private Label lblquyenmoi;
-        private Label lblmkmoi;
+        private Label lblQuyenMoi;
+        private Label lblMatKhauMoi;
         private Panel panel5;
-        private TextBox txtmkmoi;
-        private Label label1;
-        private PictureBox pictureBox3;
-        private Label label8;
-        private Label label9;
+        private TextBox txtMatKhauMoi;
+        private Label lblQuyen;
+        private PictureBox ptbLogo;
+        private Label lblTaiKhoan;
         private Button btnXoa;
         private Button btnSua;
-        private TextBox txtMatkhau;
         private Button btnThem;
-        private TextBox txtTaikhoan;
+        private TextBox txtTaiKhoan;
         private Panel panel4;
         private DataGridView dataGridView2;
         private DataGridView dataGridView1;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel3;
         private Button btnHuy;
-        private Label lblTinhTrang;
-        private TextBox txtTinhTrang;
+        private Label lblTinhTrangMoi;
+        private TextBox txtTinhTrangMoi;
         private ComboBox cbbQuyen;
-        private DataGridViewTextBoxColumn username;
-        private DataGridViewTextBoxColumn pwd;
-        private DataGridViewTextBoxColumn role;
+        private Label lblTaiKhoanMoi;
+        private TextBox txtTaiKhoanMoi;
+        private ComboBox cbbQuyenMoi;
         private DataGridViewTextBoxColumn status;
-        private Label lbltksua;
-        private TextBox txttksua;
-        private ComboBox cbbQuyenmoi;
+        private Label lblmkcu;
+        private TextBox txtmkcu;
+        private Label lbltenmoi;
+        private TextBox txtTenmoi;
+        private Label lblten;
+        private TextBox txtTen;
+        private DataGridViewTextBoxColumn username;
+        private DataGridViewTextBoxColumn fullname;
+        private DataGridViewTextBoxColumn role;
+        private DataGridViewTextBoxColumn cl4;
+        private Label lblMatKhau;
+        private TextBox txtMatKhau;
     }
 }

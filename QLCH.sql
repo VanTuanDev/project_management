@@ -72,19 +72,32 @@ GO
 
 -- Thêm dữ liệu vào bảng User
 INSERT INTO Account (username, pwd, roleid, fullname ,status) 
-VALUES ('levantuan', '123456', 1, N'Lê Văn Tuấn', N'Using'),('nguyenthiennhan', '123456', 1, N'Nguyễn Thiện Nhân', N'Using'),
-('letanphat', '123456', 2, N'Lê Tấn Phát', N'Using'), ('user4', 'password4', 2, N'User 4', N'Using'),
-('user5', 'password5', 2, N'User 5', N'Using'),('user6', 'password6', 2, N'User 6', N'Using'),
-('user7', 'password7', 2, N'User 7', N'Using'),('user8', 'password8', 2, N'User 8', N'Using'),
-('user9', 'password9', 2, N'User 9', N'Using'),('user10', 'password10', 2, N'User 10', N'Using'),
-('user11', 'password11', 2, N'User 11', N'Using'),('user12', 'password12', 2, N'User 12', N'Using'),
-('user13', 'password13', 2, N'User 13', N'Using'),('user14', 'password14', 2, N'User 14', N'Using'),
-('user15', 'password15', 2, N'User 15', N'Using'),('user16', 'password16', 2, N'User 16', N'Using'),
-('user17', 'password17', 2, N'User 17', N'Using'),('user18', 'password18', 2, N'User 18', N'Using'),
-('user19', 'password19', 2, N'User 19', N'Using'),('user20', 'password20', 2, N'User 20', N'Using'),
-('user21', 'password21', 2, N'User 21', N'Using'),('user22', 'password22', 2, N'User 22', N'Using'),
-('user23', 'password23', 2, N'User 23', N'Using'),('user24', 'password24', 2, N'User 24', N'Using'),
-('user25', 'password25', 2, N'User 25', N'Using'),('user26', 'password26', 2, N'User 26', N'Using')
+VALUES ('levantuan', '202CB962AC59075B964B07152D234B70', 1, N'Lê Văn Tuấn', N'Using'),
+('nguyenthiennhan', '202CB962AC59075B964B07152D234B70', 1, N'Nguyễn Thiện Nhân', N'Using'),
+('letanphat', '202CB962AC59075B964B07152D234B70', 2, N'Lê Tấn Phát', N'Using'), 
+('user4', '202CB962AC59075B964B07152D234B70', 2, N'User 4', N'Using'),
+('user5', '202CB962AC59075B964B07152D234B70', 2, N'User 5', N'Using'),
+('user6', '202CB962AC59075B964B07152D234B70', 2, N'User 6', N'Using'),
+('user7', '202CB962AC59075B964B07152D234B70', 2, N'User 7', N'Using'),
+('user8', '202CB962AC59075B964B07152D234B70', 2, N'User 8', N'Using'),
+('user9', '202CB962AC59075B964B07152D234B70', 2, N'User 9', N'Using'),
+('user10', '202CB962AC59075B964B07152D234B70', 2, N'User 10', N'Using'),
+('user11', '202CB962AC59075B964B07152D234B70', 2, N'User 11', N'Using'),
+('user12', '202CB962AC59075B964B07152D234B70', 2, N'User 12', N'Using'),
+('user13', '202CB962AC59075B964B07152D234B70', 2, N'User 13', N'Using'),
+('user14', '202CB962AC59075B964B07152D234B70', 2, N'User 14', N'Using'),
+('user15', '202CB962AC59075B964B07152D234B70', 2, N'User 15', N'Using'),
+('user16', '202CB962AC59075B964B07152D234B70', 2, N'User 16', N'Using'),
+('user17', '202CB962AC59075B964B07152D234B70', 2, N'User 17', N'Using'),
+('user18', '202CB962AC59075B964B07152D234B70', 2, N'User 18', N'Using'),
+('user19', '202CB962AC59075B964B07152D234B70', 2, N'User 19', N'Using'),
+('user20', '202CB962AC59075B964B07152D234B70', 2, N'User 20', N'Using'),
+('user21', '202CB962AC59075B964B07152D234B70', 2, N'User 21', N'Using'),
+('user22', '202CB962AC59075B964B07152D234B70', 2, N'User 22', N'Using'),
+('user23', '202CB962AC59075B964B07152D234B70', 2, N'User 23', N'Using'),
+('user24', '202CB962AC59075B964B07152D234B70', 2, N'User 24', N'Using'),
+('user25', '202CB962AC59075B964B07152D234B70', 2, N'User 25', N'Using'),
+('user26', '202CB962AC59075B964B07152D234B70', 2, N'User 26', N'Using')
 GO
 
 -- Thêm dữ liệu mẫu vào bảng Category
@@ -139,7 +152,6 @@ GO
 
 SELECT * FROM Account
 SELECT * FROM Role	
-SELECT * FROM UserInfo
 SELECT * FROM Item
 SELECT * FROM Category
 SELECT * FROM Customer

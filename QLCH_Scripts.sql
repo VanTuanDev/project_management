@@ -136,10 +136,10 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE GetAccount
+CREATE PROCEDURE GetAccounts
 AS
 BEGIN
-    SELECT A.username, A.pwd, R.rolename , A.status
+    SELECT A.username, A.fullname, R.rolename, A.status
     FROM Account AS A
     INNER JOIN Role AS R ON A.roleid = R.id
 END
@@ -147,12 +147,13 @@ GO
 
 CREATE PROCEDURE InsertAccount
     @Username VARCHAR(255),
+	@fullname VARCHAR(255),
     @pwd VARCHAR(255),
     @roleid INT
 AS
 BEGIN
-    INSERT INTO Account(username,pwd,roleid,status)
-    VALUES (@Username, @pwd, @roleid,N'Using')
+    INSERT INTO Account(username,fullname,pwd,roleid,status)
+    VALUES (@Username, @fullname, @pwd, @roleid,N'Using')
 END
 GO
 
@@ -168,16 +169,18 @@ GO
 
 CREATE PROCEDURE UpdateAccount
     @Username VARCHAR(255),
+	@fullname NVARCHAR(255),
     @pwd VARCHAR(255),
     @roleid INT,
 	@status nvarchar(255)
 AS
 BEGIN
     UPDATE Account
-    SET pwd = @pwd,
+    SET fullname = @fullname,
+		pwd = @pwd,
 		roleid = @roleid,
 		status = @status
-    WHERE username = @Username
+    WHERE username = @Username 
 END
 GO
 
@@ -195,5 +198,13 @@ CREATE PROC checkAdmin
 AS 
 BEGIN
 	SELECT * FROM dbo.Account WHERE  username = @userName AND roleid = 1
+END
+GO
+CREATE PROC checkpwd
+@userName nvarchar(100),
+@pwd nvarchar(100)
+AS 
+BEGIN
+	SELECT * FROM dbo.Account WHERE  username = @userName AND pwd = @pwd
 END
 GO

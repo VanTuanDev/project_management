@@ -52,6 +52,7 @@
             txtTaikhoan.Size = new Size(351, 36);
             txtTaikhoan.TabIndex = 0;
             txtTaikhoan.Tag = "0";
+            txtTaikhoan.KeyPress += txtTaikhoan_KeyPress;
             // 
             // btnLogin
             // 
@@ -103,6 +104,7 @@
             txtMatkhau.Size = new Size(351, 36);
             txtMatkhau.TabIndex = 1;
             txtMatkhau.Tag = "1";
+            txtMatkhau.KeyPress += txtMatkhau_KeyPress;
             // 
             // pictureBox1
             // 
@@ -145,6 +147,8 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
+            KeyDown += Login_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

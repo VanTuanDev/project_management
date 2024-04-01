@@ -1,5 +1,6 @@
 ﻿using BLL.Manager;
 using System.Data;
+using static BLL.Manager.AccountManager;
 
 namespace Csharp_Project
 {
@@ -16,7 +17,7 @@ namespace Csharp_Project
         {
 
             string username = txtTaikhoan.Text;
-            string pwd = txtMatkhau.Text;
+            string pwd = textToMd5.converText(txtMatkhau.Text);
             bool loginSuccess = accountBLL.LoginAccount(username, pwd);
             if (loginSuccess)
             {
@@ -31,12 +32,41 @@ namespace Csharp_Project
         {
             if (txtMatkhau.PasswordChar == '⬤')
             {
-                txtMatkhau.PasswordChar = '\0'; 
+                txtMatkhau.PasswordChar = '\0';
             }
             else
             {
-                txtMatkhau.PasswordChar = '⬤'; 
+                txtMatkhau.PasswordChar = '⬤';
             }
+        }
+
+        private void txtTaikhoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMatkhau_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
         }
     }
 }

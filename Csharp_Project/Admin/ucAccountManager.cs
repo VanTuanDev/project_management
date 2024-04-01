@@ -1,15 +1,6 @@
 ﻿using BLL.Manager;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
+using static BLL.Manager.AccountManager;
 
 namespace Csharp_Project.Admin
 {
@@ -40,22 +31,29 @@ namespace Csharp_Project.Admin
         }
         private void Reset()
         {
-            txtTaikhoan.Text = string.Empty;
-            txtMatkhau.Text = string.Empty;
+            txtTaiKhoan.Text = string.Empty;
+            txtTen.Text = string.Empty;
+            txtMatKhau.Text = string.Empty;
             cbbQuyen.Text = string.Empty;
-            txttksua.Text = string.Empty;
-            txtTinhTrang.Text = string.Empty;
-            txtmkmoi.Text = string.Empty;
-            cbbQuyenmoi.Text = string.Empty;
+            txtTenmoi.Text = string.Empty;
+            txtTaiKhoanMoi.Text = string.Empty;
+            txtTinhTrangMoi.Text = string.Empty;
+            txtmkcu.Text = string.Empty;
+            txtMatKhauMoi.Text = string.Empty;
+            cbbQuyenMoi.Text = string.Empty;
 
-            lbltksua.Visible = false;
-            txttksua.Visible = false;
-            lblTinhTrang.Visible = false;
-            txtTinhTrang.Visible = false;
-            lblmkmoi.Visible = false;
-            txtmkmoi.Visible = false;
-            lblquyenmoi.Visible = false;
-            cbbQuyenmoi.Visible = false;
+            lblTaiKhoanMoi.Visible = false;
+            txtTaiKhoanMoi.Visible = false;
+            lbltenmoi.Visible = false;
+            txtTenmoi.Visible = false;
+            lblTinhTrangMoi.Visible = false;
+            txtTinhTrangMoi.Visible = false;
+            lblmkcu.Visible = false;
+            txtmkcu.Visible = false;
+            lblMatKhauMoi.Visible = false;
+            txtMatKhauMoi.Visible = false;
+            lblQuyenMoi.Visible = false;
+            cbbQuyenMoi.Visible = false;
 
             btnLuu.Visible = false;
             btnHuy.Visible = false;
@@ -64,14 +62,18 @@ namespace Csharp_Project.Admin
         }
         private void Display()
         {
-            lbltksua.Visible = true;
-            txttksua.Visible = true;
-            lblTinhTrang.Visible = true;
-            txtTinhTrang.Visible = true;
-            lblmkmoi.Visible = true;
-            txtmkmoi.Visible = true;
-            lblquyenmoi.Visible = true;
-            cbbQuyenmoi.Visible = true;
+            lblTaiKhoanMoi.Visible = true;
+            txtTaiKhoanMoi.Visible = true;
+            lbltenmoi.Visible = true;
+            txtTenmoi.Visible = true;
+            lblTinhTrangMoi.Visible = true;
+            txtTinhTrangMoi.Visible = true;
+            lblmkcu.Visible = true;
+            txtmkcu.Visible = true;
+            lblMatKhauMoi.Visible = true;
+            txtMatKhauMoi.Visible = true;
+            lblQuyenMoi.Visible = true;
+            cbbQuyenMoi.Visible = true;
             btnLuu.Visible = true;
             btnHuy.Visible = true;
         }
@@ -81,13 +83,13 @@ namespace Csharp_Project.Admin
             LoadAccount();
             Reset();
             DataTable roleTable = accountBLL.GetRoleName();
-
             cbbQuyen.DataSource = roleTable;
             cbbQuyen.DisplayMember = "rolename";
             cbbQuyen.ValueMember = "rolename";
-            cbbQuyenmoi.DataSource = roleTable;
-            cbbQuyenmoi.DisplayMember = "rolename";
-            cbbQuyenmoi.ValueMember = "rolename";
+            cbbQuyenMoi.DataSource = roleTable;
+            cbbQuyenMoi.DisplayMember = "rolename";
+            cbbQuyenMoi.ValueMember = "rolename";
+            cbbQuyen.Text = string.Empty;
         }
 
         private void dgAccount_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -95,45 +97,43 @@ namespace Csharp_Project.Admin
             if (e.RowIndex >= 0 && e.RowIndex < dgAccount.Rows.Count)
             {
                 DataGridViewRow row = dgAccount.Rows[e.RowIndex];
-                txtTaikhoan.Text = row.Cells["username"].Value.ToString();
-                txtMatkhau.Text = row.Cells["pwd"].Value.ToString();
+                txtTaiKhoan.Text = row.Cells["username"].Value.ToString();
+                txtTen.Text = row.Cells["fullname"].Value.ToString();
                 cbbQuyen.Text = row.Cells["role"].Value.ToString();
-                txtTinhTrang.Text = row.Cells["status"].Value.ToString();
-                txttksua.Text = txtTaikhoan.Text;
-                txtmkmoi.Text = txtMatkhau.Text;
+                txtTinhTrangMoi.Text = row.Cells["cl4"].Value.ToString();
+                txtTaiKhoanMoi.Text = txtTaiKhoan.Text;
+                txtTenmoi.Text = txtTen.Text;
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTaikhoan.Text) || string.IsNullOrEmpty(txtMatkhau.Text) || string.IsNullOrEmpty(cbbQuyen.Text))
+            if (string.IsNullOrEmpty(txtTaiKhoan.Text) || string.IsNullOrEmpty(txtMatKhau.Text) || string.IsNullOrEmpty(txtTen.Text) || string.IsNullOrEmpty(cbbQuyen.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            string username = txtTaikhoan.Text;
-            string pwd = txtMatkhau.Text;
+            string username = txtTaiKhoan.Text.Trim();
+            string fullname = txtTen.Text;
+            string pwd = textToMd5.converText(txtMatKhau.Text);
             string rolename = cbbQuyen.Text;
             int roleid = accountBLL.GetRoleIdByName(rolename);
-
-            bool insertSuccess = accountBLL.InsertAccount(username, pwd, roleid);
-
+            bool insertSuccess = accountBLL.InsertAccount(username, fullname, pwd, roleid);
             if (insertSuccess)
-            {
-                MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Reset();
-                LoadAccount();
-            }
+                {
+                    MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Reset();
+                    LoadAccount();
+                }
             else
-            {
-                MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+                {
+                    MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTaikhoan.Text))
+            if (string.IsNullOrEmpty(txtTaiKhoan.Text))
             {
                 MessageBox.Show("Vui lòng chọn dữ liệu để chỉnh sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -177,23 +177,33 @@ namespace Csharp_Project.Admin
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string username = txttksua.Text;
-            string pwd = txtmkmoi.Text;
-            string status = txtTinhTrang.Text;
-            string rolename = cbbQuyenmoi.Text;
+          
+            string username = txtTaiKhoanMoi.Text;
+            string fullname = txtTenmoi.Text;
+            string oldpwd = textToMd5.converText(txtmkcu.Text);
+            string newpwd = textToMd5.converText(txtMatKhauMoi.Text);
+            string status = txtTinhTrangMoi.Text;
+            string rolename = cbbQuyenMoi.Text;
             int roleid = accountBLL.GetRoleIdByName(rolename);
-
-            bool updateSuccess = accountBLL.UpdateAccount(username, pwd, roleid, status);
-
-            if (updateSuccess)
+            bool checkpwd = accountBLL.checkpwd(username, oldpwd);
+            if(checkpwd)
             {
-                MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Reset();
-                LoadAccount();
+                bool updateSuccess = accountBLL.UpdateAccount(username, fullname, newpwd, roleid, status);
+
+                if (updateSuccess)
+                {
+                    MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Reset();
+                    LoadAccount();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mật khẩu cũ sai", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

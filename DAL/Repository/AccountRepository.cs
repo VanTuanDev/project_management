@@ -44,7 +44,7 @@ namespace DAL.Repository
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("GetAccount", connection))
+                using (SqlCommand command = new SqlCommand("GetAccounts", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
@@ -58,7 +58,7 @@ namespace DAL.Repository
 
             return account;
         }
-        public bool InsertAccount(string username, string pwd, int role)
+        public bool InsertAccount(string username,string fullname ,string pwd, int role)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -66,6 +66,7 @@ namespace DAL.Repository
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@fullname", fullname);
                     command.Parameters.AddWithValue("@pwd", pwd);
                     command.Parameters.AddWithValue("@roleid", role);
 
@@ -98,7 +99,7 @@ namespace DAL.Repository
                 }
             }
         }
-        public bool UpdateAccount(string username, string pwd, int role, string status)
+        public bool UpdateAccount(string username, string fullname, string pwd, int role, string status)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -106,6 +107,7 @@ namespace DAL.Repository
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@fullname", fullname);
                     command.Parameters.AddWithValue("@pwd", pwd);
                     command.Parameters.AddWithValue("@roleid", role);
                     command.Parameters.AddWithValue("@status", status);
@@ -178,5 +180,22 @@ namespace DAL.Repository
 
             return rolenameTable;
         }
+        public bool checkpwd(string username, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("checkpwd", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@pwd", password);
+
+                    connection.Open();
+                    object data = command.ExecuteScalar();
+                    return data != null;
+                }
+            }
+        }
     }
+
 }

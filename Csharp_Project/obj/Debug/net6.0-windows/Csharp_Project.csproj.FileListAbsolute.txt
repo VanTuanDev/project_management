@@ -169,11 +169,9 @@ D:\code\C#\project_management\Csharp_Project\bin\Debug\net6.0-windows\DAL.dll
 D:\code\C#\project_management\Csharp_Project\bin\Debug\net6.0-windows\BLL.pdb
 D:\code\C#\project_management\Csharp_Project\bin\Debug\net6.0-windows\DAL.pdb
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.csproj.AssemblyReference.cache
-D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Admin.ucAccountManage.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Login.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Main.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Properties.Resources.resources
-D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucBillManage.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucCategoryManager.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucCustomerManager.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucProductManager.resources
@@ -192,3 +190,5 @@ D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Pro
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\ref\Csharp_Project.dll
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Admin.ucAccountManager.resources
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucBillManager.resources
+D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Admin.ucAccountManager.resources
+D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucBillManager.resources
