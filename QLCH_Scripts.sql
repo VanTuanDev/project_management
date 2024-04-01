@@ -136,10 +136,10 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE GetAccount
+CREATE PROCEDURE GetAccounts
 AS
 BEGIN
-    SELECT A.username, A.pwd, R.rolename , A.status
+    SELECT A.username, A.fullname, R.rolename, A.status
     FROM Account AS A
     INNER JOIN Role AS R ON A.roleid = R.id
 END

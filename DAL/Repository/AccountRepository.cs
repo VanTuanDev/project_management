@@ -44,7 +44,7 @@ namespace DAL.Repository
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("GetAccount", connection))
+                using (SqlCommand command = new SqlCommand("GetAccounts", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
