@@ -30,19 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucAccountManage));
             panel6 = new Panel();
-            dataGridView3 = new DataGridView();
+            dgAccount = new DataGridView();
+            username = new DataGridViewTextBoxColumn();
+            pwd = new DataGridViewTextBoxColumn();
+            role = new DataGridViewTextBoxColumn();
+            status = new DataGridViewTextBoxColumn();
             btnLuu = new Button();
-            label2 = new Label();
-            txtquyenmoi = new TextBox();
-            label3 = new Label();
+            lblquyenmoi = new Label();
+            lblmkmoi = new Label();
             panel5 = new Panel();
+            cbbQuyenmoi = new ComboBox();
+            lbltksua = new Label();
+            txttksua = new TextBox();
+            cbbQuyen = new ComboBox();
+            lblTinhTrang = new Label();
+            txtTinhTrang = new TextBox();
+            btnHuy = new Button();
             txtmkmoi = new TextBox();
             label1 = new Label();
-            txtQuyen = new TextBox();
             pictureBox3 = new PictureBox();
             label8 = new Label();
             label9 = new Label();
-            btnXoad = new Button();
+            btnXoa = new Button();
             btnSua = new Button();
             txtMatkhau = new TextBox();
             btnThem = new Button();
@@ -53,7 +62,7 @@
             panel2 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgAccount).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel4.SuspendLayout();
@@ -65,24 +74,58 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(dataGridView3);
+            panel6.Controls.Add(dgAccount);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 3);
             panel6.Name = "panel6";
             panel6.Size = new Size(674, 651);
             panel6.TabIndex = 1;
             // 
-            // dataGridView3
+            // dgAccount
             // 
-            dataGridView3.BackgroundColor = Color.Honeydew;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Dock = DockStyle.Fill;
-            dataGridView3.Location = new Point(0, 0);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.ReadOnly = true;
-            dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new Size(674, 651);
-            dataGridView3.TabIndex = 0;
+            dgAccount.AllowUserToAddRows = false;
+            dgAccount.BackgroundColor = Color.Honeydew;
+            dgAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgAccount.Columns.AddRange(new DataGridViewColumn[] { username, pwd, role, status });
+            dgAccount.Dock = DockStyle.Fill;
+            dgAccount.Location = new Point(0, 0);
+            dgAccount.Name = "dgAccount";
+            dgAccount.ReadOnly = true;
+            dgAccount.RowHeadersVisible = false;
+            dgAccount.RowHeadersWidth = 51;
+            dgAccount.RowTemplate.Height = 25;
+            dgAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgAccount.Size = new Size(674, 651);
+            dgAccount.TabIndex = 0;
+            dgAccount.CellClick += dgAccount_CellClick;
+            // 
+            // username
+            // 
+            username.DataPropertyName = "username";
+            username.HeaderText = "Tài khoản";
+            username.Name = "username";
+            username.ReadOnly = true;
+            // 
+            // pwd
+            // 
+            pwd.DataPropertyName = "pwd";
+            pwd.HeaderText = "Mật khẩu";
+            pwd.Name = "pwd";
+            pwd.ReadOnly = true;
+            // 
+            // role
+            // 
+            role.DataPropertyName = "rolename";
+            role.HeaderText = "Quyền";
+            role.Name = "role";
+            role.ReadOnly = true;
+            // 
+            // status
+            // 
+            status.DataPropertyName = "status";
+            status.HeaderText = "Tình Trạng";
+            status.Name = "status";
+            status.ReadOnly = true;
             // 
             // btnLuu
             // 
@@ -90,60 +133,56 @@
             btnLuu.FlatStyle = FlatStyle.Flat;
             btnLuu.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnLuu.ForeColor = Color.Green;
-            btnLuu.Location = new Point(125, 533);
+            btnLuu.Location = new Point(61, 535);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(116, 38);
             btnLuu.TabIndex = 18;
-            btnLuu.Tag = "4";
+            btnLuu.Tag = "9";
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
+            btnLuu.Click += btnLuu_Click;
             // 
-            // label2
+            // lblquyenmoi
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(0, 64, 0);
-            label2.Location = new Point(3, 453);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 19);
-            label2.TabIndex = 17;
-            label2.Text = "Quyền mới :";
+            lblquyenmoi.AutoSize = true;
+            lblquyenmoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblquyenmoi.ForeColor = Color.FromArgb(0, 64, 0);
+            lblquyenmoi.Location = new Point(3, 470);
+            lblquyenmoi.Name = "lblquyenmoi";
+            lblquyenmoi.Size = new Size(106, 19);
+            lblquyenmoi.TabIndex = 17;
+            lblquyenmoi.Text = "Quyền mới :";
             // 
-            // txtquyenmoi
+            // lblmkmoi
             // 
-            txtquyenmoi.BorderStyle = BorderStyle.None;
-            txtquyenmoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtquyenmoi.Location = new Point(136, 453);
-            txtquyenmoi.Name = "txtquyenmoi";
-            txtquyenmoi.Size = new Size(218, 20);
-            txtquyenmoi.TabIndex = 16;
-            txtquyenmoi.Tag = "1";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(0, 64, 0);
-            label3.Location = new Point(3, 423);
-            label3.Name = "label3";
-            label3.Size = new Size(131, 19);
-            label3.TabIndex = 15;
-            label3.Text = "Mật khẩu mới :";
+            lblmkmoi.AutoSize = true;
+            lblmkmoi.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblmkmoi.ForeColor = Color.FromArgb(0, 64, 0);
+            lblmkmoi.Location = new Point(3, 440);
+            lblmkmoi.Name = "lblmkmoi";
+            lblmkmoi.Size = new Size(131, 19);
+            lblmkmoi.TabIndex = 15;
+            lblmkmoi.Text = "Mật khẩu mới :";
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(192, 255, 192);
+            panel5.Controls.Add(cbbQuyenmoi);
+            panel5.Controls.Add(lbltksua);
+            panel5.Controls.Add(txttksua);
+            panel5.Controls.Add(cbbQuyen);
+            panel5.Controls.Add(lblTinhTrang);
+            panel5.Controls.Add(txtTinhTrang);
+            panel5.Controls.Add(btnHuy);
             panel5.Controls.Add(btnLuu);
-            panel5.Controls.Add(label2);
-            panel5.Controls.Add(txtquyenmoi);
-            panel5.Controls.Add(label3);
+            panel5.Controls.Add(lblquyenmoi);
+            panel5.Controls.Add(lblmkmoi);
             panel5.Controls.Add(txtmkmoi);
             panel5.Controls.Add(label1);
-            panel5.Controls.Add(txtQuyen);
             panel5.Controls.Add(pictureBox3);
             panel5.Controls.Add(label8);
             panel5.Controls.Add(label9);
-            panel5.Controls.Add(btnXoad);
+            panel5.Controls.Add(btnXoa);
             panel5.Controls.Add(btnSua);
             panel5.Controls.Add(txtMatkhau);
             panel5.Controls.Add(btnThem);
@@ -154,15 +193,96 @@
             panel5.Size = new Size(371, 651);
             panel5.TabIndex = 0;
             // 
+            // cbbQuyenmoi
+            // 
+            cbbQuyenmoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbQuyenmoi.FormattingEnabled = true;
+            cbbQuyenmoi.Location = new Point(139, 470);
+            cbbQuyenmoi.Margin = new Padding(3, 2, 3, 2);
+            cbbQuyenmoi.Name = "cbbQuyenmoi";
+            cbbQuyenmoi.Size = new Size(215, 27);
+            cbbQuyenmoi.TabIndex = 35;
+            cbbQuyenmoi.Tag = "8";
+            // 
+            // lbltksua
+            // 
+            lbltksua.AutoSize = true;
+            lbltksua.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbltksua.ForeColor = Color.FromArgb(0, 64, 0);
+            lbltksua.Location = new Point(3, 377);
+            lbltksua.Name = "lbltksua";
+            lbltksua.Size = new Size(101, 19);
+            lbltksua.TabIndex = 34;
+            lbltksua.Text = "Tài khoản :";
+            lbltksua.UseMnemonic = false;
+            // 
+            // txttksua
+            // 
+            txttksua.BorderStyle = BorderStyle.None;
+            txttksua.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txttksua.Location = new Point(139, 377);
+            txttksua.Name = "txttksua";
+            txttksua.ReadOnly = true;
+            txttksua.Size = new Size(215, 20);
+            txttksua.TabIndex = 33;
+            txttksua.Tag = "0";
+            // 
+            // cbbQuyen
+            // 
+            cbbQuyen.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbQuyen.FormattingEnabled = true;
+            cbbQuyen.Location = new Point(136, 253);
+            cbbQuyen.Margin = new Padding(3, 2, 3, 2);
+            cbbQuyen.Name = "cbbQuyen";
+            cbbQuyen.Size = new Size(218, 27);
+            cbbQuyen.TabIndex = 32;
+            cbbQuyen.Tag = "8";
+            // 
+            // lblTinhTrang
+            // 
+            lblTinhTrang.AutoSize = true;
+            lblTinhTrang.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTinhTrang.ForeColor = Color.FromArgb(0, 64, 0);
+            lblTinhTrang.Location = new Point(3, 409);
+            lblTinhTrang.Name = "lblTinhTrang";
+            lblTinhTrang.Size = new Size(110, 19);
+            lblTinhTrang.TabIndex = 21;
+            lblTinhTrang.Text = "Tình trạng : ";
+            // 
+            // txtTinhTrang
+            // 
+            txtTinhTrang.BorderStyle = BorderStyle.None;
+            txtTinhTrang.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTinhTrang.Location = new Point(139, 409);
+            txtTinhTrang.Name = "txtTinhTrang";
+            txtTinhTrang.Size = new Size(215, 20);
+            txtTinhTrang.TabIndex = 20;
+            txtTinhTrang.Tag = "6";
+            // 
+            // btnHuy
+            // 
+            btnHuy.BackColor = Color.FromArgb(128, 255, 128);
+            btnHuy.FlatStyle = FlatStyle.Flat;
+            btnHuy.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHuy.ForeColor = Color.Green;
+            btnHuy.Location = new Point(207, 535);
+            btnHuy.Name = "btnHuy";
+            btnHuy.Size = new Size(116, 38);
+            btnHuy.TabIndex = 19;
+            btnHuy.Tag = "10";
+            btnHuy.Text = "Huỷ";
+            btnHuy.UseVisualStyleBackColor = false;
+            btnHuy.Click += btnHuy_Click;
+            // 
             // txtmkmoi
             // 
             txtmkmoi.BorderStyle = BorderStyle.None;
             txtmkmoi.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtmkmoi.Location = new Point(136, 423);
+            txtmkmoi.Location = new Point(139, 440);
             txtmkmoi.Name = "txtmkmoi";
-            txtmkmoi.Size = new Size(218, 20);
+            txtmkmoi.Size = new Size(215, 20);
             txtmkmoi.TabIndex = 13;
-            txtmkmoi.Tag = "1";
+            txtmkmoi.Tag = "7";
             // 
             // label1
             // 
@@ -174,16 +294,6 @@
             label1.Size = new Size(71, 19);
             label1.TabIndex = 11;
             label1.Text = "Quyền :";
-            // 
-            // txtQuyen
-            // 
-            txtQuyen.BorderStyle = BorderStyle.None;
-            txtQuyen.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtQuyen.Location = new Point(136, 253);
-            txtQuyen.Name = "txtQuyen";
-            txtQuyen.Size = new Size(218, 20);
-            txtQuyen.TabIndex = 10;
-            txtQuyen.Tag = "1";
             // 
             // pictureBox3
             // 
@@ -218,19 +328,20 @@
             label9.Text = "Tài khoản :";
             label9.UseMnemonic = false;
             // 
-            // btnXoad
+            // btnXoa
             // 
-            btnXoad.BackColor = Color.FromArgb(128, 255, 128);
-            btnXoad.FlatStyle = FlatStyle.Flat;
-            btnXoad.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXoad.ForeColor = Color.Green;
-            btnXoad.Location = new Point(247, 310);
-            btnXoad.Name = "btnXoad";
-            btnXoad.Size = new Size(116, 38);
-            btnXoad.TabIndex = 5;
-            btnXoad.Tag = "5";
-            btnXoad.Text = "Xoá";
-            btnXoad.UseVisualStyleBackColor = false;
+            btnXoa.BackColor = Color.FromArgb(128, 255, 128);
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXoa.ForeColor = Color.Green;
+            btnXoa.Location = new Point(247, 316);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(116, 38);
+            btnXoa.TabIndex = 5;
+            btnXoa.Tag = "5";
+            btnXoa.Text = "Xoá";
+            btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnSua
             // 
@@ -238,13 +349,14 @@
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSua.ForeColor = Color.Green;
-            btnSua.Location = new Point(125, 310);
+            btnSua.Location = new Point(125, 316);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(116, 38);
             btnSua.TabIndex = 4;
             btnSua.Tag = "4";
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
+            btnSua.Click += btnSua_Click;
             // 
             // txtMatkhau
             // 
@@ -262,13 +374,14 @@
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnThem.ForeColor = Color.Green;
-            btnThem.Location = new Point(3, 310);
+            btnThem.Location = new Point(3, 316);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(116, 38);
             btnThem.TabIndex = 1;
             btnThem.Tag = "3";
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // txtTaikhoan
             // 
@@ -344,8 +457,9 @@
             Controls.Add(tableLayoutPanel3);
             Name = "ucAccountManage";
             Size = new Size(1057, 657);
+            Load += ucAccountManage_Load;
             panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgAccount).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -360,19 +474,17 @@
         #endregion
 
         private Panel panel6;
-        private DataGridView dataGridView3;
+        private DataGridView dgAccount;
         private Button btnLuu;
-        private Label label2;
-        private TextBox txtquyenmoi;
-        private Label label3;
+        private Label lblquyenmoi;
+        private Label lblmkmoi;
         private Panel panel5;
         private TextBox txtmkmoi;
         private Label label1;
-        private TextBox txtQuyen;
         private PictureBox pictureBox3;
         private Label label8;
         private Label label9;
-        private Button btnXoad;
+        private Button btnXoa;
         private Button btnSua;
         private TextBox txtMatkhau;
         private Button btnThem;
@@ -382,5 +494,16 @@
         private DataGridView dataGridView1;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel3;
+        private Button btnHuy;
+        private Label lblTinhTrang;
+        private TextBox txtTinhTrang;
+        private ComboBox cbbQuyen;
+        private DataGridViewTextBoxColumn username;
+        private DataGridViewTextBoxColumn pwd;
+        private DataGridViewTextBoxColumn role;
+        private DataGridViewTextBoxColumn status;
+        private Label lbltksua;
+        private TextBox txttksua;
+        private ComboBox cbbQuyenmoi;
     }
 }

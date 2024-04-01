@@ -3,38 +3,78 @@ using System.Data;
 
 namespace DAL.Repository
 {
-    public class ProductRepository
+    public class AccountRepository
     {
         //private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True"; 
         private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
-        public DataTable GetFoods()
+        public bool LoginAccount(string username, string password)
         {
-            DataTable foods = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("LoginAccount", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    connection.Open();
+                    object data = command.ExecuteScalar();
+                    return data != null;
+                }
+            }
+        }
+        public DataTable GetAccount()
+        {
+            DataTable account = new DataTable();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("GetFoods", connection))
+                using (SqlCommand command = new SqlCommand("GetAccount", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
                     connection.Open();
                     using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
-                        adapter.Fill(foods);
+                        adapter.Fill(account);
                     }
                 }
             }
 
-            return foods;
+            return account;
         }
-        public bool DeleteFood(int foodID)
+        public bool InsertAccount(string username, string pwd, int role)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("DeleteFood", connection))
+                using (SqlCommand command = new SqlCommand("InsertAccount", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@FoodID", foodID);
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@pwd", pwd);
+                    command.Parameters.AddWithValue("@roleid", role);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        public bool DeleteAccount(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("DeleteAccount", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Username", username);
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -43,18 +83,17 @@ namespace DAL.Repository
                 }
             }
         }
-        public bool InsertFood(int foodId, string foodName, string unit, string price, int categoryId)
+        public bool UpdateAccount(string username, string pwd, int role, string status)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("InsertFood", connection))
+                using (SqlCommand command = new SqlCommand("UpdateAccount", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@FoodId", foodId);
-                    command.Parameters.AddWithValue("@FoodName", foodName);
-                    command.Parameters.AddWithValue("@Unit", unit);
-                    command.Parameters.AddWithValue("@Price", price);
-                    command.Parameters.AddWithValue("@CategoryId", categoryId);
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@pwd", pwd);
+                    command.Parameters.AddWithValue("@roleid", role);
+                    command.Parameters.AddWithValue("@status", status);
 
                     try
                     {
@@ -69,49 +108,23 @@ namespace DAL.Repository
                 }
             }
         }
-        public bool UpdateFood(int foodId, string newFoodName, string newUnit, string newPrice, int newCategoryId)
+        public int GetRoleIdByName(string roleName)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("UpdateFood", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@FoodId", foodId);
-                    command.Parameters.AddWithValue("@NewFoodName", newFoodName);
-                    command.Parameters.AddWithValue("@NewUnit", newUnit);
-                    command.Parameters.AddWithValue("@NewPrice", newPrice);
-                    command.Parameters.AddWithValue("@NewCategoryId", newCategoryId);
-
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
-        }
-        public int GetCategoryIdByName(string categoryName)
-        {
-            int categoryId = 0;
+            int roleId = 0;
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT id FROM Category WHERE catename = @categoryName";
+                    string query = "SELECT id FROM Role WHERE rolename = @roleName";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@categoryName", categoryName);
+                        command.Parameters.AddWithValue("@roleName", roleName);
                         connection.Open();
                         object result = command.ExecuteScalar();
                         if (result != null)
                         {
-                            categoryId = Convert.ToInt32(result);
+                            roleId = Convert.ToInt32(result);
                         }
                     }
                 }
@@ -120,17 +133,17 @@ namespace DAL.Repository
             {
                 // 
             }
-            return categoryId;
+            return roleId;
         }
-        public DataTable GetCategories()
+        public DataTable GetRoleName()
         {
-            DataTable categoriesTable = new DataTable();
+            DataTable rolenameTable = new DataTable();
 
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT catename FROM Category";
+                    string query = "SELECT rolename FROM Role";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -138,7 +151,7 @@ namespace DAL.Repository
 
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
-                            adapter.Fill(categoriesTable);
+                            adapter.Fill(rolenameTable);
                         }
                     }
                 }
@@ -148,7 +161,7 @@ namespace DAL.Repository
                 // 
             }
 
-            return categoriesTable;
+            return rolenameTable;
         }
     }
 }

@@ -135,3 +135,44 @@ BEGIN
     WHERE id = @FoodId
 END
 GO
+CREATE PROCEDURE GetAccount
+AS
+BEGIN
+    SELECT A.username, A.pwd, R.rolename , A.status
+    FROM Account AS A
+    INNER JOIN Role AS R ON A.roleid = R.id
+END
+GO
+CREATE PROCEDURE InsertAccount
+    @Username VARCHAR(255),
+    @pwd VARCHAR(255),
+    @roleid INT
+AS
+BEGIN
+    INSERT INTO Account(username,pwd,roleid,status)
+    VALUES (@Username, @pwd, @roleid,N'Using')
+END
+GO
+CREATE PROCEDURE DeleteAccount
+    @Username VARCHAR(255)
+AS
+BEGIN
+	Delete Account
+    WHERE userid = @Username
+	SELECT 1 AS Success
+END
+GO
+CREATE PROCEDURE UpdateAccount
+    @Username VARCHAR(255),
+    @pwd VARCHAR(255),
+    @roleid INT,
+	@status nvarchar(255)
+AS
+BEGIN
+    UPDATE Account
+    SET pwd = @pwd,
+		roleid = @roleid,
+		status = @status
+    WHERE username = @Username
+END
+SELECT rolename FROM Role

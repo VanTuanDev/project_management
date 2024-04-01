@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BLL.Manager;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Csharp_Project
 {
     public partial class Login : Form
     {
+        
+        AccountManager accountBLL = new AccountManager();
         public Login()
         {
             InitializeComponent();
@@ -19,7 +14,15 @@ namespace Csharp_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Close();
+       
+            string username = txtTaikhoan.Text;
+            string pwd = txtMatkhau.Text;
+            bool loginSuccess = accountBLL.LoginAccount(username, pwd);
+            if (loginSuccess)
+            {
+                this.Close();
+            }else { MessageBox.Show("Sai tài khoản mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
         }
     }
 }
