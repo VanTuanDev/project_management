@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\sell_management\\BLL\\BLL.csproj": {}
+    "D:\\code\\C#\\project_management\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "E:\\sell_management\\BLL\\BLL.csproj": {
+    "D:\\code\\C#\\project_management\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\sell_management\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\code\\C#\\project_management\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "E:\\sell_management\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\Le Van Tuan\\.nuget\\packages\\",
-        "outputPath": "E:\\sell_management\\BLL\\obj\\",
+        "projectPath": "D:\\code\\C#\\project_management\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\code\\C#\\project_management\\BLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Le Van Tuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\sell_management\\DAL\\DAL.csproj": {
-                "projectPath": "E:\\sell_management\\DAL\\DAL.csproj"
+              "D:\\code\\C#\\project_management\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\code\\C#\\project_management\\DAL\\DAL.csproj"
               }
             }
           }
@@ -42,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,25 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\sell_management\\DAL\\DAL.csproj": {
+    "D:\\code\\C#\\project_management\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\sell_management\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\code\\C#\\project_management\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\sell_management\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Le Van Tuan\\.nuget\\packages\\",
-        "outputPath": "E:\\sell_management\\DAL\\obj\\",
+        "projectPath": "D:\\code\\C#\\project_management\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\code\\C#\\project_management\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Le Van Tuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,6 +104,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -134,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
