@@ -23,6 +23,21 @@ namespace DAL.Repository
                 }
             }
         }
+        public bool checkAdmin(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("checkAdmin", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    connection.Open();
+                    object data = command.ExecuteScalar();
+                    return data != null;
+                }
+            }
+        }
         public DataTable GetAccount()
         {
             DataTable account = new DataTable();

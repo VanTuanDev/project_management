@@ -15,6 +15,10 @@ namespace BLL.Manager
         {
             return accountDAL.LoginAccount(username, pwd);
         }
+        public bool checkAdmin(string username)
+        {
+            return accountDAL.checkAdmin(username);
+        }
         public DataTable GetAccount()
         {
             return accountDAL.GetAccount();

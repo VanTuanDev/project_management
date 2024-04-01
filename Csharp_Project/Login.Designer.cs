@@ -78,6 +78,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox3
             // 
@@ -98,6 +99,7 @@
             txtMatkhau.ForeColor = Color.Green;
             txtMatkhau.Location = new Point(154, 243);
             txtMatkhau.Name = "txtMatkhau";
+            txtMatkhau.PasswordChar = '⬤';
             txtMatkhau.Size = new Size(351, 36);
             txtMatkhau.TabIndex = 1;
             txtMatkhau.Tag = "1";

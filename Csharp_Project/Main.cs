@@ -1,6 +1,8 @@
 using Csharp_Project.Admin;
 using Csharp_Project.Staff;
 using System.Windows.Forms;
+using BLL.Manager;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Csharp_Project
 {
@@ -128,12 +130,26 @@ namespace Csharp_Project
                 Selling.BringToFront();
             }
         }
-
+        AccountManager accountBLL = new AccountManager();
         private void Main_Load(object sender, EventArgs e)
         {
+            btnTaikhoan.Visible = false;
+            pbxTaikhoan.Visible = false;
             this.Hide();
             Login f = new Login();
             f.ShowDialog();
+            string username = SaveAccount.username;
+            bool checkAdmin = accountBLL.checkAdmin(username);
+            if (checkAdmin)
+            {
+                btnTaikhoan.Visible = true;
+                pbxTaikhoan.Visible = true;
+            }
+            else
+            {
+                btnTaikhoan.Visible = false;
+                pbxTaikhoan.Visible = false;
+            }
             this.Show();
 
         }
@@ -141,6 +157,11 @@ namespace Csharp_Project
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Main_Load(sender,e);
         }
     }
 }

@@ -32,13 +32,13 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             pnlMenu = new Panel();
             btnThoat = new Button();
-            pictureBox7 = new PictureBox();
+            pbxKhachhang = new PictureBox();
             btnKhachhang = new Button();
-            pictureBox6 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            pbxBanhang = new PictureBox();
+            pbxHoadon = new PictureBox();
+            pbxDanhmuc = new PictureBox();
+            pbxSanpham = new PictureBox();
+            pbxTaikhoan = new PictureBox();
             btnDoithongtin = new Button();
             btnBanhang = new Button();
             btnHoadon = new Button();
@@ -50,12 +50,12 @@
             pnlInfo = new Panel();
             tableLayoutPanel1.SuspendLayout();
             pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxKhachhang).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxBanhang).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxHoadon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxDanhmuc).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxSanpham).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxTaikhoan).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -79,13 +79,13 @@
             // 
             pnlMenu.BackColor = Color.FromArgb(192, 255, 192);
             pnlMenu.Controls.Add(btnThoat);
-            pnlMenu.Controls.Add(pictureBox7);
+            pnlMenu.Controls.Add(pbxKhachhang);
             pnlMenu.Controls.Add(btnKhachhang);
-            pnlMenu.Controls.Add(pictureBox6);
-            pnlMenu.Controls.Add(pictureBox5);
-            pnlMenu.Controls.Add(pictureBox4);
-            pnlMenu.Controls.Add(pictureBox3);
-            pnlMenu.Controls.Add(pictureBox2);
+            pnlMenu.Controls.Add(pbxBanhang);
+            pnlMenu.Controls.Add(pbxHoadon);
+            pnlMenu.Controls.Add(pbxDanhmuc);
+            pnlMenu.Controls.Add(pbxSanpham);
+            pnlMenu.Controls.Add(pbxTaikhoan);
             pnlMenu.Controls.Add(btnDoithongtin);
             pnlMenu.Controls.Add(btnBanhang);
             pnlMenu.Controls.Add(btnHoadon);
@@ -109,20 +109,20 @@
             btnThoat.Location = new Point(9, 610);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(214, 44);
-            btnThoat.TabIndex = 15;
+            btnThoat.TabIndex = 8;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click;
             // 
-            // pictureBox7
+            // pbxKhachhang
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(9, 185);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(49, 44);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 14;
-            pictureBox7.TabStop = false;
+            pbxKhachhang.Image = (Image)resources.GetObject("pbxKhachhang.Image");
+            pbxKhachhang.Location = new Point(9, 185);
+            pbxKhachhang.Name = "pbxKhachhang";
+            pbxKhachhang.Size = new Size(49, 44);
+            pbxKhachhang.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxKhachhang.TabIndex = 14;
+            pbxKhachhang.TabStop = false;
             // 
             // btnKhachhang
             // 
@@ -133,60 +133,61 @@
             btnKhachhang.Location = new Point(62, 185);
             btnKhachhang.Name = "btnKhachhang";
             btnKhachhang.Size = new Size(161, 44);
-            btnKhachhang.TabIndex = 13;
+            btnKhachhang.TabIndex = 1;
+            btnKhachhang.Tag = "";
             btnKhachhang.Text = "Khách hàng";
             btnKhachhang.UseVisualStyleBackColor = false;
             btnKhachhang.Click += btnKhachhang_Click;
             // 
-            // pictureBox6
+            // pbxBanhang
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(9, 436);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(49, 44);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 12;
-            pictureBox6.TabStop = false;
+            pbxBanhang.Image = (Image)resources.GetObject("pbxBanhang.Image");
+            pbxBanhang.Location = new Point(9, 436);
+            pbxBanhang.Name = "pbxBanhang";
+            pbxBanhang.Size = new Size(49, 44);
+            pbxBanhang.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxBanhang.TabIndex = 12;
+            pbxBanhang.TabStop = false;
             // 
-            // pictureBox5
+            // pbxHoadon
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(9, 373);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(49, 44);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 11;
-            pictureBox5.TabStop = false;
+            pbxHoadon.Image = (Image)resources.GetObject("pbxHoadon.Image");
+            pbxHoadon.Location = new Point(9, 373);
+            pbxHoadon.Name = "pbxHoadon";
+            pbxHoadon.Size = new Size(49, 44);
+            pbxHoadon.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxHoadon.TabIndex = 11;
+            pbxHoadon.TabStop = false;
             // 
-            // pictureBox4
+            // pbxDanhmuc
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(9, 308);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(49, 44);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 10;
-            pictureBox4.TabStop = false;
+            pbxDanhmuc.Image = (Image)resources.GetObject("pbxDanhmuc.Image");
+            pbxDanhmuc.Location = new Point(9, 308);
+            pbxDanhmuc.Name = "pbxDanhmuc";
+            pbxDanhmuc.Size = new Size(49, 44);
+            pbxDanhmuc.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxDanhmuc.TabIndex = 10;
+            pbxDanhmuc.TabStop = false;
             // 
-            // pictureBox3
+            // pbxSanpham
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(9, 245);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(49, 44);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
+            pbxSanpham.Image = (Image)resources.GetObject("pbxSanpham.Image");
+            pbxSanpham.Location = new Point(9, 245);
+            pbxSanpham.Name = "pbxSanpham";
+            pbxSanpham.Size = new Size(49, 44);
+            pbxSanpham.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxSanpham.TabIndex = 9;
+            pbxSanpham.TabStop = false;
             // 
-            // pictureBox2
+            // pbxTaikhoan
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(9, 124);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(49, 44);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 8;
-            pictureBox2.TabStop = false;
+            pbxTaikhoan.Image = (Image)resources.GetObject("pbxTaikhoan.Image");
+            pbxTaikhoan.Location = new Point(9, 124);
+            pbxTaikhoan.Name = "pbxTaikhoan";
+            pbxTaikhoan.Size = new Size(49, 44);
+            pbxTaikhoan.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxTaikhoan.TabIndex = 8;
+            pbxTaikhoan.TabStop = false;
             // 
             // btnDoithongtin
             // 
@@ -197,7 +198,8 @@
             btnDoithongtin.Location = new Point(9, 499);
             btnDoithongtin.Name = "btnDoithongtin";
             btnDoithongtin.Size = new Size(214, 44);
-            btnDoithongtin.TabIndex = 7;
+            btnDoithongtin.TabIndex = 6;
+            btnDoithongtin.Tag = "";
             btnDoithongtin.Text = "Đổi mật khẩu";
             btnDoithongtin.UseVisualStyleBackColor = false;
             // 
@@ -210,7 +212,8 @@
             btnBanhang.Location = new Point(62, 436);
             btnBanhang.Name = "btnBanhang";
             btnBanhang.Size = new Size(161, 44);
-            btnBanhang.TabIndex = 6;
+            btnBanhang.TabIndex = 5;
+            btnBanhang.Tag = "";
             btnBanhang.Text = "Bán hàng";
             btnBanhang.UseVisualStyleBackColor = false;
             btnBanhang.Click += btnBanhang_Click;
@@ -224,7 +227,8 @@
             btnHoadon.Location = new Point(62, 373);
             btnHoadon.Name = "btnHoadon";
             btnHoadon.Size = new Size(161, 44);
-            btnHoadon.TabIndex = 5;
+            btnHoadon.TabIndex = 4;
+            btnHoadon.Tag = "";
             btnHoadon.Text = "Hoá đơn";
             btnHoadon.UseVisualStyleBackColor = false;
             btnHoadon.Click += btnHoadon_Click;
@@ -238,7 +242,8 @@
             btnDanhmuc.Location = new Point(62, 308);
             btnDanhmuc.Name = "btnDanhmuc";
             btnDanhmuc.Size = new Size(161, 44);
-            btnDanhmuc.TabIndex = 4;
+            btnDanhmuc.TabIndex = 3;
+            btnDanhmuc.Tag = "";
             btnDanhmuc.Text = "Danh mục";
             btnDanhmuc.UseMnemonic = false;
             btnDanhmuc.UseVisualStyleBackColor = false;
@@ -253,7 +258,8 @@
             btnSanPham.Location = new Point(62, 245);
             btnSanPham.Name = "btnSanPham";
             btnSanPham.Size = new Size(161, 44);
-            btnSanPham.TabIndex = 3;
+            btnSanPham.TabIndex = 2;
+            btnSanPham.Tag = "";
             btnSanPham.Text = "Sản phẩm";
             btnSanPham.UseVisualStyleBackColor = false;
             btnSanPham.Click += btnSanPham_Click;
@@ -267,7 +273,8 @@
             btnTaikhoan.Location = new Point(62, 124);
             btnTaikhoan.Name = "btnTaikhoan";
             btnTaikhoan.Size = new Size(161, 44);
-            btnTaikhoan.TabIndex = 2;
+            btnTaikhoan.TabIndex = 0;
+            btnTaikhoan.Tag = "";
             btnTaikhoan.Text = "Tài khoản";
             btnTaikhoan.UseVisualStyleBackColor = false;
             btnTaikhoan.Click += btnTaikhoan_Click;
@@ -281,9 +288,11 @@
             btnDangXuat.Location = new Point(9, 555);
             btnDangXuat.Name = "btnDangXuat";
             btnDangXuat.Size = new Size(214, 44);
-            btnDangXuat.TabIndex = 1;
+            btnDangXuat.TabIndex = 7;
+            btnDangXuat.Tag = "";
             btnDangXuat.Text = "Đăng xuất";
             btnDangXuat.UseVisualStyleBackColor = false;
+            btnDangXuat.Click += btnDangXuat_Click;
             // 
             // pictureBox1
             // 
@@ -319,12 +328,12 @@
             Load += Main_Load;
             tableLayoutPanel1.ResumeLayout(false);
             pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxKhachhang).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxBanhang).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxHoadon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxDanhmuc).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxSanpham).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxTaikhoan).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -343,12 +352,12 @@
         private Button btnHoadon;
         private Button btnDanhmuc;
         private Button btnSanPham;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox7;
+        private PictureBox pbxBanhang;
+        private PictureBox pbxHoadon;
+        private PictureBox pbxDanhmuc;
+        private PictureBox pbxSanpham;
+        private PictureBox pbxTaikhoan;
+        private PictureBox pbxKhachhang;
         private Button btnKhachhang;
         private Button btnThoat;
     }

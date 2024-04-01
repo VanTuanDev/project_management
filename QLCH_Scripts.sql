@@ -158,7 +158,7 @@ CREATE PROCEDURE DeleteAccount
 AS
 BEGIN
 	Delete Account
-    WHERE userid = @Username
+    WHERE username = @Username
 	SELECT 1 AS Success
 END
 GO
@@ -175,4 +175,19 @@ BEGIN
 		status = @status
     WHERE username = @Username
 END
-SELECT rolename FROM Role
+GO
+CREATE PROC LoginAccount
+@userName nvarchar(100),
+@passWord nvarchar(100)
+AS 
+BEGIN
+	SELECT * FROM dbo.Account WHERE  username = @userName AND pwd = @passWord AND status = N'Using'
+END
+GO
+CREATE PROC checkAdmin
+@userName nvarchar(100)
+AS 
+BEGIN
+	SELECT * FROM dbo.Account WHERE  username = @userName AND roleid = 1
+END
+GO
