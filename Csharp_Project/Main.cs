@@ -29,6 +29,34 @@ namespace Csharp_Project
             btnHoadon.BackColor = Color.Cornsilk;
             btnBanhang.BackColor = Color.Cornsilk;
         }
+        private void Reset()
+        {
+            if (pnlInfo.Controls.Contains(AccountManage))
+            {
+                pnlInfo.Controls.Remove(AccountManage);
+            }
+            if (pnlInfo.Controls.Contains(CategoryManage))
+            {
+                pnlInfo.Controls.Remove(CategoryManage);
+            }
+            if (pnlInfo.Controls.Contains(ClientManage))
+            {
+                pnlInfo.Controls.Remove(ClientManage);
+            }
+            if (pnlInfo.Controls.Contains(FoodManage))
+            {
+                pnlInfo.Controls.Remove(FoodManage);
+            }
+            if (pnlInfo.Controls.Contains(BillManage))
+            {
+                pnlInfo.Controls.Remove(BillManage);
+            }
+            if (pnlInfo.Controls.Contains(Selling))
+            {
+                pnlInfo.Controls.Remove(Selling);
+            }
+
+        }
         private void btnTaikhoan_Click(object sender, EventArgs e)
         {
             ResetBackColorBtn();
@@ -133,6 +161,7 @@ namespace Csharp_Project
         AccountManager accountBLL = new AccountManager();
         private void Main_Load(object sender, EventArgs e)
         {
+            
             btnTaikhoan.Visible = false;
             pbxTaikhoan.Visible = false;
             this.Hide();
@@ -162,6 +191,7 @@ namespace Csharp_Project
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             Main_Load(sender,e);
+            Reset();
         }
     }
 }

@@ -35,6 +35,8 @@
             BtnXoa = new Button();
             cbxDanhmuc = new ComboBox();
             panel5 = new Panel();
+            btnCong = new Button();
+            btnTru = new Button();
             label2 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -46,8 +48,10 @@
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
-            btnTru = new Button();
-            btnCong = new Button();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            btnSelect = new Button();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel6.SuspendLayout();
@@ -117,14 +121,18 @@
             // 
             cbxDanhmuc.FlatStyle = FlatStyle.Flat;
             cbxDanhmuc.FormattingEnabled = true;
-            cbxDanhmuc.Location = new Point(104, 20);
+            cbxDanhmuc.Location = new Point(121, 43);
             cbxDanhmuc.Name = "cbxDanhmuc";
-            cbxDanhmuc.Size = new Size(121, 23);
+            cbxDanhmuc.Size = new Size(206, 23);
             cbxDanhmuc.TabIndex = 12;
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(192, 255, 192);
+            panel5.Controls.Add(btnSelect);
+            panel5.Controls.Add(textBox3);
+            panel5.Controls.Add(label3);
+            panel5.Controls.Add(textBox2);
             panel5.Controls.Add(btnCong);
             panel5.Controls.Add(btnTru);
             panel5.Controls.Add(BtnXoa);
@@ -143,12 +151,40 @@
             panel5.Size = new Size(371, 651);
             panel5.TabIndex = 0;
             // 
+            // btnCong
+            // 
+            btnCong.BackColor = Color.FromArgb(128, 255, 128);
+            btnCong.FlatStyle = FlatStyle.Flat;
+            btnCong.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCong.ForeColor = Color.Green;
+            btnCong.Location = new Point(231, 110);
+            btnCong.Name = "btnCong";
+            btnCong.Size = new Size(30, 26);
+            btnCong.TabIndex = 15;
+            btnCong.Tag = "3";
+            btnCong.Text = "+";
+            btnCong.UseVisualStyleBackColor = false;
+            // 
+            // btnTru
+            // 
+            btnTru.BackColor = Color.FromArgb(128, 255, 128);
+            btnTru.FlatStyle = FlatStyle.Flat;
+            btnTru.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTru.ForeColor = Color.Green;
+            btnTru.Location = new Point(125, 110);
+            btnTru.Name = "btnTru";
+            btnTru.Size = new Size(30, 26);
+            btnTru.TabIndex = 14;
+            btnTru.Tag = "3";
+            btnTru.Text = "-";
+            btnTru.UseVisualStyleBackColor = false;
+            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 64, 0);
-            label2.Location = new Point(3, 24);
+            label2.Location = new Point(3, 47);
             label2.Name = "label2";
             label2.Size = new Size(100, 19);
             label2.TabIndex = 11;
@@ -189,7 +225,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(0, 64, 0);
-            label9.Location = new Point(3, 69);
+            label9.Location = new Point(3, 78);
             label9.Name = "label9";
             label9.Size = new Size(100, 19);
             label9.TabIndex = 6;
@@ -228,7 +264,7 @@
             // 
             txtSoluong.BorderStyle = BorderStyle.None;
             txtSoluong.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSoluong.Location = new Point(133, 110);
+            txtSoluong.Location = new Point(161, 110);
             txtSoluong.Name = "txtSoluong";
             txtSoluong.Size = new Size(64, 26);
             txtSoluong.TabIndex = 0;
@@ -269,33 +305,51 @@
             tableLayoutPanel3.Size = new Size(1057, 657);
             tableLayoutPanel3.TabIndex = 13;
             // 
-            // btnTru
+            // textBox2
             // 
-            btnTru.BackColor = Color.FromArgb(128, 255, 128);
-            btnTru.FlatStyle = FlatStyle.Flat;
-            btnTru.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTru.ForeColor = Color.Green;
-            btnTru.Location = new Point(97, 110);
-            btnTru.Name = "btnTru";
-            btnTru.Size = new Size(30, 26);
-            btnTru.TabIndex = 14;
-            btnTru.Tag = "3";
-            btnTru.Text = "-";
-            btnTru.UseVisualStyleBackColor = false;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(121, 78);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(206, 26);
+            textBox2.TabIndex = 16;
+            textBox2.Tag = "0";
             // 
-            // btnCong
+            // textBox3
             // 
-            btnCong.BackColor = Color.FromArgb(128, 255, 128);
-            btnCong.FlatStyle = FlatStyle.Flat;
-            btnCong.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCong.ForeColor = Color.Green;
-            btnCong.Location = new Point(203, 110);
-            btnCong.Name = "btnCong";
-            btnCong.Size = new Size(30, 26);
-            btnCong.TabIndex = 15;
-            btnCong.Tag = "3";
-            btnCong.Text = "+";
-            btnCong.UseVisualStyleBackColor = false;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(121, 10);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(170, 26);
+            textBox3.TabIndex = 18;
+            textBox3.Tag = "0";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(0, 64, 0);
+            label3.Location = new Point(3, 10);
+            label3.Name = "label3";
+            label3.Size = new Size(114, 19);
+            label3.TabIndex = 17;
+            label3.Text = "Khách hàng :";
+            label3.UseMnemonic = false;
+            // 
+            // btnSelect
+            // 
+            btnSelect.BackColor = Color.FromArgb(128, 255, 128);
+            btnSelect.FlatStyle = FlatStyle.Flat;
+            btnSelect.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSelect.ForeColor = Color.Green;
+            btnSelect.Location = new Point(297, 10);
+            btnSelect.Name = "btnSelect";
+            btnSelect.Size = new Size(40, 26);
+            btnSelect.TabIndex = 19;
+            btnSelect.Tag = "3";
+            btnSelect.Text = ". . .";
+            btnSelect.UseVisualStyleBackColor = false;
             // 
             // ucSelling
             // 
@@ -340,5 +394,9 @@
         private TableLayoutPanel tableLayoutPanel3;
         private Button btnCong;
         private Button btnTru;
+        private Button btnSelect;
+        private TextBox textBox3;
+        private Label label3;
+        private TextBox textBox2;
     }
 }

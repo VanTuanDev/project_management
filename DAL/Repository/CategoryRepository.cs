@@ -6,8 +6,8 @@ namespace DAL.Repository
 {
     public class CategoryRepository
     {
-        private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
-        //private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
+        //private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
+        private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
 
         public DataTable GetCategories()
         {

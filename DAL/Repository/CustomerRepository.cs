@@ -5,8 +5,8 @@ namespace DAL.Repository
 {
     public class CustomerRepository
     {
-        private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
-        //private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
+        //private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
+        private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
         public DataTable GetClients()
         {
             DataTable clients = new DataTable();
