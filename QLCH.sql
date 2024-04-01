@@ -10,21 +10,14 @@ CREATE TABLE Role (
     rolename NVARCHAR(255)
 );
 
--- Tạo bảng UserInfo
-CREATE TABLE UserInfo (
-    id INT PRIMARY KEY,
-    fullname NVARCHAR(255),
-);
-
 -- Tạo bảng Account
 CREATE TABLE Account (
     username VARCHAR(255) PRIMARY KEY,
     pwd VARCHAR(255),
     roleid INT,
-    userid INT,
+    fullname NVARCHAR(255),
 	status nvarchar(255),
     FOREIGN KEY (roleid) REFERENCES Role(id),
-    FOREIGN KEY (userid) REFERENCES UserInfo(id)
 );
 
 -- Tạo bảng Category
@@ -77,25 +70,21 @@ CREATE TABLE BillDetail (
 INSERT INTO Role (id, rolename) VALUES(1, 'Admin'),(2, 'Staff')
 GO
 
--- Thêm dữ liệu vào bảng UserInfo
-INSERT INTO UserInfo(id, fullname) VALUES(1, N'Lê Văn Tuấn'),(2, N'Nguyễn Thiện Nhân'),(3, N'Lê Tấn Phát'),
-(4, N'Phạm Thị D'),(5, N'Huỳnh Văn E'),(6, N'Đặng Thị F'),(7, N'Bùi Văn G'),(8, N'Ngô Thị H'),(9, N'Trương Văn I'),
-(10, N'Vũ Thị K'),(11, N'Lý Văn L'),(12, N'Hoàng Thị M'),(13, N'Chu Văn N'),(14, N'Dương Thị P'),(15, N'Trịnh Văn Q'),
-(16, N'Võ Thị R'),(17, N'Tôn Văn S'),(18, N'Thái Thị T'),(19, N'Âu Văn U'),(20, N'Vương Thị V'),(21, N'Khúc Văn X'),
-(22, N'Liễu Thị Y'),(23, N'Phí Văn Z'),(24, N'Mạch Thị Ô'),(25, N'Nghiêm Văn Ơ'),(26, N'Chử Thị Ư')
-GO
-
 -- Thêm dữ liệu vào bảng User
-INSERT INTO Account (username, pwd, roleid, userid, status) 
-VALUES ('levantuan', '123456', 1, 1, N'Using'),('nguyenthiennhan', '123456', 1, 2, N'Using'),('letanphat', '123456', 2, 3, N'Using'),
-('user4', 'password4', 2, 4, N'Using'),('user5', 'password5', 2, 5, N'Using'),('user6', 'password6', 2, 6, N'Using'),('user7', 'password7', 2, 7, N'Using'),
-('user8', 'password8', 2, 8, N'Using'),('user9', 'password9', 1, 9, N'Using'),('user10', 'password10', 2, 10, N'Using'),
-('user11', 'password11', 1, 11, N'Using'),('user12', 'password12', 2, 12, N'Using'),('user13', 'password13', 1, 13, N'Using'),
-('user14', 'password14', 2, 14, N'Using'),('user15', 'password15', 1, 15, N'Using'),('user16', 'password16', 2, 16, N'Using'),
-('user17', 'password17', 1, 17, N'Using'),('user18', 'password18', 2, 18, N'Using'),('user19', 'password19', 1, 19, N'Using'),
-('user20', 'password20', 2, 20, N'Using'),('user21', 'password21', 1, 21, N'Using'),('user22', 'password22', 2, 22, N'Using'),
-('user23', 'password23', 1, 23, N'Using'),('user24', 'password24', 2, 24, N'Using'),('user25', 'password25', 1, 25, N'Using'),
-('user26', 'password26', 2, 26, N'Using')
+INSERT INTO Account (username, pwd, roleid, fullname ,status) 
+VALUES ('levantuan', '123456', 1, N'Lê Văn Tuấn', N'Using'),('nguyenthiennhan', '123456', 1, N'Nguyễn Thiện Nhân', N'Using'),
+('letanphat', '123456', 2, N'Lê Tấn Phát', N'Using'), ('user4', 'password4', 2, N'User 4', N'Using'),
+('user5', 'password5', 2, N'User 5', N'Using'),('user6', 'password6', 2, N'User 6', N'Using'),
+('user7', 'password7', 2, N'User 7', N'Using'),('user8', 'password8', 2, N'User 8', N'Using'),
+('user9', 'password9', 2, N'User 9', N'Using'),('user10', 'password10', 2, N'User 10', N'Using'),
+('user11', 'password11', 2, N'User 11', N'Using'),('user12', 'password12', 2, N'User 12', N'Using'),
+('user13', 'password13', 2, N'User 13', N'Using'),('user14', 'password14', 2, N'User 14', N'Using'),
+('user15', 'password15', 2, N'User 15', N'Using'),('user16', 'password16', 2, N'User 16', N'Using'),
+('user17', 'password17', 2, N'User 17', N'Using'),('user18', 'password18', 2, N'User 18', N'Using'),
+('user19', 'password19', 2, N'User 19', N'Using'),('user20', 'password20', 2, N'User 20', N'Using'),
+('user21', 'password21', 2, N'User 21', N'Using'),('user22', 'password22', 2, N'User 22', N'Using'),
+('user23', 'password23', 2, N'User 23', N'Using'),('user24', 'password24', 2, N'User 24', N'Using'),
+('user25', 'password25', 2, N'User 25', N'Using'),('user26', 'password26', 2, N'User 26', N'Using')
 GO
 
 -- Thêm dữ liệu mẫu vào bảng Category

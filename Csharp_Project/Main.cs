@@ -14,11 +14,11 @@ namespace Csharp_Project
 
         }
 
-        private ucAccountManage AccountManage;
+        private ucAccountManager AccountManage;
         private ucCategoryManager CategoryManage;
         private ucCustomerManager ClientManage;
         private ucProductManager FoodManage;
-        private ucBillManage BillManage;
+        private ucBillManager BillManage;
         private ucSelling Selling;
         private void ResetBackColorBtn()
         {
@@ -35,7 +35,7 @@ namespace Csharp_Project
             btnTaikhoan.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(AccountManage) == false)
             {
-                AccountManage = new ucAccountManage();
+                AccountManage = new ucAccountManager();
                 AccountManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(AccountManage);
                 AccountManage.BringToFront();
@@ -103,7 +103,7 @@ namespace Csharp_Project
             btnHoadon.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(BillManage) == false)
             {
-                BillManage = new ucBillManage();
+                BillManage = new ucBillManager();
                 BillManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(BillManage);
                 BillManage.BringToFront();

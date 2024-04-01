@@ -135,6 +135,7 @@ BEGIN
     WHERE id = @FoodId
 END
 GO
+
 CREATE PROCEDURE GetAccount
 AS
 BEGIN
@@ -143,6 +144,7 @@ BEGIN
     INNER JOIN Role AS R ON A.roleid = R.id
 END
 GO
+
 CREATE PROCEDURE InsertAccount
     @Username VARCHAR(255),
     @pwd VARCHAR(255),
@@ -153,6 +155,7 @@ BEGIN
     VALUES (@Username, @pwd, @roleid,N'Using')
 END
 GO
+
 CREATE PROCEDURE DeleteAccount
     @Username VARCHAR(255)
 AS
@@ -162,6 +165,7 @@ BEGIN
 	SELECT 1 AS Success
 END
 GO
+
 CREATE PROCEDURE UpdateAccount
     @Username VARCHAR(255),
     @pwd VARCHAR(255),
@@ -176,6 +180,7 @@ BEGIN
     WHERE username = @Username
 END
 GO
+
 CREATE PROC LoginAccount
 @userName nvarchar(100),
 @passWord nvarchar(100)
@@ -184,6 +189,7 @@ BEGIN
 	SELECT * FROM dbo.Account WHERE  username = @userName AND pwd = @passWord AND status = N'Using'
 END
 GO
+
 CREATE PROC checkAdmin
 @userName nvarchar(100)
 AS 

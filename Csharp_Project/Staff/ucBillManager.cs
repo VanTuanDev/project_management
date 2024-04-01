@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_Project.Staff
 {
-    public partial class ucBillManage : UserControl
+    public partial class ucBillManager : UserControl
     {
-        public ucBillManage()
+        public ucBillManager()
         {
             InitializeComponent();
         }

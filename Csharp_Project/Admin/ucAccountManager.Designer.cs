@@ -1,6 +1,6 @@
 ﻿namespace Csharp_Project.Admin
 {
-    partial class ucAccountManage
+    partial class ucAccountManager
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucAccountManage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucAccountManager));
             panel6 = new Panel();
             dgAccount = new DataGridView();
             username = new DataGridViewTextBoxColumn();

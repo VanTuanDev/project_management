@@ -13,10 +13,10 @@ using System.Xml.Linq;
 
 namespace Csharp_Project.Admin
 {
-    public partial class ucAccountManage : UserControl
+    public partial class ucAccountManager : UserControl
     {
         private AccountManager accountBLL;
-        public ucAccountManage()
+        public ucAccountManager()
         {
             accountBLL = new AccountManager();
             InitializeComponent();

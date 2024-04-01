@@ -1,6 +1,6 @@
 ﻿namespace Csharp_Project.Staff
 {
-    partial class ucBillManage
+    partial class ucBillManager
     {
         /// <summary> 
         /// Required designer variable.
