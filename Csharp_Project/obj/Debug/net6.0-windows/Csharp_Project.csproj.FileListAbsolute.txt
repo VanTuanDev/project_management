@@ -192,3 +192,4 @@ E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Admin.
 E:\sell_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucBillManager.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Admin.ucAccountManager.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.ucBillManager.resources
+D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.SelectCustomer.resources

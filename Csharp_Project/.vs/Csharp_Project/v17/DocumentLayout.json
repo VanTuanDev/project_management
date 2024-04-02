@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "D:\\code\\C#\\project_management\\Csharp_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\uccategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\uccategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\staff\\uccategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\uccategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1109CA6C-D988-4AA4-9D80-772BC1A613F6}|..\\DAL\\DAL.csproj|d:\\code\\c#\\project_management\\dal\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -41,10 +45,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{1109CA6C-D988-4AA4-9D80-772BC1A613F6}|..\\DAL\\DAL.csproj|d:\\code\\c#\\project_management\\dal\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{302DFAB8-B65B-4FFA-9E02-EBC217FE2073}|..\\BLL\\BLL.csproj|d:\\code\\c#\\project_management\\bll\\manager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -61,11 +61,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Main.cs",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
@@ -79,43 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SelectCustomer.cs [Design]",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\SelectCustomer.cs",
-              "RelativeDocumentMoniker": "Staff\\SelectCustomer.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\SelectCustomer.cs [Design]",
-              "RelativeToolTip": "Staff\\SelectCustomer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T12:42:50.217Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ucSelling.cs [Design]",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs",
-              "RelativeDocumentMoniker": "Staff\\ucSelling.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs [Design]",
-              "RelativeToolTip": "Staff\\ucSelling.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T12:38:26.544Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ucCategoryManager.cs [Design]",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucCategoryManager.cs",
-              "RelativeDocumentMoniker": "Staff\\ucCategoryManager.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucCategoryManager.cs [Design]",
-              "RelativeToolTip": "Staff\\ucCategoryManager.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T12:24:19.036Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
@@ -127,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CustomerRepository.cs",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\DAL\\Repository\\CustomerRepository.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Repository\\CustomerRepository.cs",
@@ -135,8 +99,7 @@
               "RelativeToolTip": "..\\DAL\\Repository\\CustomerRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAUwAkAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T12:02:13.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T12:02:13.33Z"
             },
             {
               "$type": "Document",
@@ -153,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
@@ -165,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\DAL\\Repository\\AccountRepository.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Repository\\AccountRepository.cs",
@@ -173,12 +136,11 @@
               "RelativeToolTip": "..\\DAL\\Repository\\AccountRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAL4AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T10:22:20.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T10:22:20.361Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ucAccountManager.cs [Design]",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
               "RelativeDocumentMoniker": "Admin\\ucAccountManager.cs",
@@ -190,7 +152,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "ucAccountManager.cs",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
+              "RelativeDocumentMoniker": "Admin\\ucAccountManager.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
+              "RelativeToolTip": "Admin\\ucAccountManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T10:06:47.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ucCategoryManager.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucCategoryManager.cs",
+              "RelativeDocumentMoniker": "Staff\\ucCategoryManager.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucCategoryManager.cs [Design]",
+              "RelativeToolTip": "Staff\\ucCategoryManager.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T12:24:19.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ucSelling.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs",
+              "RelativeDocumentMoniker": "Staff\\ucSelling.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs [Design]",
+              "RelativeToolTip": "Staff\\ucSelling.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T12:38:26.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SelectCustomer.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\SelectCustomer.cs",
+              "RelativeDocumentMoniker": "Staff\\SelectCustomer.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\SelectCustomer.cs [Design]",
+              "RelativeToolTip": "Staff\\SelectCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T12:42:50.217Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\DAL\\Repository\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Repository\\CategoryRepository.cs",
@@ -198,12 +207,11 @@
               "RelativeToolTip": "..\\DAL\\Repository\\CategoryRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T12:02:32.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T12:02:32.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "D:\\code\\C#\\project_management\\DAL\\Repository\\ProductRepository.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Repository\\ProductRepository.cs",
@@ -211,21 +219,7 @@
               "RelativeToolTip": "..\\DAL\\Repository\\ProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T12:02:38.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ucAccountManager.cs",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
-              "RelativeDocumentMoniker": "Admin\\ucAccountManager.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
-              "RelativeToolTip": "Admin\\ucAccountManager.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAAAkwLUAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T10:06:47.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T12:02:38.727Z"
             },
             {
               "$type": "Document",
