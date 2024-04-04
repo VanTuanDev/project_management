@@ -68,5 +68,16 @@ namespace Csharp_Project
         {
             this.KeyPreview = true;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            string username = "";
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát khỏi ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SaveAccount.username = username;
+                this.Close();
+            }
+        }
     }
 }

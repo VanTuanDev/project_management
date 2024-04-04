@@ -33,9 +33,13 @@ namespace BLL.Manager
         {
             return accountDAL.DeleteAccount(username);
         }
-        public bool UpdateAccount(string username, string fullname, string pwd, int role, string status)
+        public bool UpdateAccount(string username, string fullname, int role, string status)
         {
-            return accountDAL.UpdateAccount(username, fullname, pwd, role, status);
+            return accountDAL.UpdateAccount(username, fullname, role, status);
+        }
+        public bool UpdateInfo(string username, string fullname, string pwd)
+        {
+            return accountDAL.UpdateInfo(username, fullname, pwd);
         }
         public int GetRoleIdByName(string roleName)
         {

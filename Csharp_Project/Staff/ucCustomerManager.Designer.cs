@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCustomerManager));
             panel4 = new Panel();
             dataGridView2 = new DataGridView();
             panel6 = new Panel();
             dgClient = new DataGridView();
+            cl1 = new DataGridViewTextBoxColumn();
+            cl2 = new DataGridViewTextBoxColumn();
+            cl3 = new DataGridViewTextBoxColumn();
+            cl4 = new DataGridViewTextBoxColumn();
             btnSave = new Button();
             pictureBox3 = new PictureBox();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -59,10 +62,6 @@
             txtId = new TextBox();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
-            cl1 = new DataGridViewTextBoxColumn();
-            cl2 = new DataGridViewTextBoxColumn();
-            cl3 = new DataGridViewTextBoxColumn();
-            cl4 = new DataGridViewTextBoxColumn();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel6.SuspendLayout();
@@ -126,6 +125,48 @@
             dgClient.TabIndex = 0;
             dgClient.CellClick += dgClient_CellClick;
             // 
+            // cl1
+            // 
+            cl1.DataPropertyName = "id";
+            cl1.HeaderText = "Mã KH";
+            cl1.MinimumWidth = 6;
+            cl1.Name = "cl1";
+            cl1.ReadOnly = true;
+            cl1.Resizable = DataGridViewTriState.False;
+            cl1.Width = 130;
+            // 
+            // cl2
+            // 
+            cl2.DataPropertyName = "fullname";
+            cl2.HeaderText = "Tên khách hàng";
+            cl2.MinimumWidth = 6;
+            cl2.Name = "cl2";
+            cl2.ReadOnly = true;
+            cl2.Resizable = DataGridViewTriState.False;
+            cl2.Width = 215;
+            // 
+            // cl3
+            // 
+            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl3.DataPropertyName = "address";
+            cl3.HeaderText = "Địa chỉ";
+            cl3.MinimumWidth = 6;
+            cl3.Name = "cl3";
+            cl3.ReadOnly = true;
+            cl3.Resizable = DataGridViewTriState.False;
+            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cl4
+            // 
+            cl4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl4.DataPropertyName = "phonenumber";
+            cl4.HeaderText = "Số điện thoại";
+            cl4.MinimumWidth = 6;
+            cl4.Name = "cl4";
+            cl4.ReadOnly = true;
+            cl4.Resizable = DataGridViewTriState.False;
+            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
             // btnSave
             // 
             btnSave.BackColor = Color.FromArgb(128, 255, 128);
@@ -145,7 +186,6 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(120, 50);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
@@ -217,10 +257,10 @@
             // 
             txtNewPhone.BorderStyle = BorderStyle.None;
             txtNewPhone.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewPhone.Location = new Point(210, 601);
+            txtNewPhone.Location = new Point(203, 601);
             txtNewPhone.Margin = new Padding(3, 4, 3, 4);
             txtNewPhone.Name = "txtNewPhone";
-            txtNewPhone.Size = new Size(195, 25);
+            txtNewPhone.Size = new Size(201, 25);
             txtNewPhone.TabIndex = 33;
             txtNewPhone.Tag = "1";
             txtNewPhone.KeyPress += txtNewPhone_KeyPress;
@@ -240,10 +280,10 @@
             // 
             txtNewAddress.BorderStyle = BorderStyle.None;
             txtNewAddress.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewAddress.Location = new Point(210, 561);
+            txtNewAddress.Location = new Point(203, 561);
             txtNewAddress.Margin = new Padding(3, 4, 3, 4);
             txtNewAddress.Name = "txtNewAddress";
-            txtNewAddress.Size = new Size(195, 25);
+            txtNewAddress.Size = new Size(201, 25);
             txtNewAddress.TabIndex = 31;
             txtNewAddress.Tag = "1";
             // 
@@ -274,10 +314,10 @@
             // 
             txtNewName.BorderStyle = BorderStyle.None;
             txtNewName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewName.Location = new Point(210, 521);
+            txtNewName.Location = new Point(203, 521);
             txtNewName.Margin = new Padding(3, 4, 3, 4);
             txtNewName.Name = "txtNewName";
-            txtNewName.Size = new Size(195, 25);
+            txtNewName.Size = new Size(201, 25);
             txtNewName.TabIndex = 28;
             txtNewName.Tag = "1";
             // 
@@ -285,10 +325,10 @@
             // 
             txtNewId.BorderStyle = BorderStyle.None;
             txtNewId.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewId.Location = new Point(210, 481);
+            txtNewId.Location = new Point(203, 481);
             txtNewId.Margin = new Padding(3, 4, 3, 4);
             txtNewId.Name = "txtNewId";
-            txtNewId.Size = new Size(195, 25);
+            txtNewId.Size = new Size(201, 25);
             txtNewId.TabIndex = 27;
             txtNewId.Tag = "0";
             txtNewId.KeyPress += txtNewId_KeyPress;
@@ -308,11 +348,11 @@
             // 
             txtPhone.BorderStyle = BorderStyle.None;
             txtPhone.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPhone.Location = new Point(210, 340);
+            txtPhone.Location = new Point(203, 340);
             txtPhone.Margin = new Padding(3, 4, 3, 4);
             txtPhone.Name = "txtPhone";
             txtPhone.ReadOnly = true;
-            txtPhone.Size = new Size(195, 25);
+            txtPhone.Size = new Size(201, 25);
             txtPhone.TabIndex = 25;
             txtPhone.Tag = "1";
             // 
@@ -331,11 +371,11 @@
             // 
             txtAddress.BorderStyle = BorderStyle.None;
             txtAddress.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAddress.Location = new Point(210, 300);
+            txtAddress.Location = new Point(203, 300);
             txtAddress.Margin = new Padding(3, 4, 3, 4);
             txtAddress.Name = "txtAddress";
             txtAddress.ReadOnly = true;
-            txtAddress.Size = new Size(195, 25);
+            txtAddress.Size = new Size(201, 25);
             txtAddress.TabIndex = 23;
             txtAddress.Tag = "1";
             // 
@@ -417,11 +457,11 @@
             // 
             txtName.BorderStyle = BorderStyle.None;
             txtName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(210, 260);
+            txtName.Location = new Point(203, 260);
             txtName.Margin = new Padding(3, 4, 3, 4);
             txtName.Name = "txtName";
             txtName.ReadOnly = true;
-            txtName.Size = new Size(195, 25);
+            txtName.Size = new Size(201, 25);
             txtName.TabIndex = 2;
             txtName.Tag = "1";
             // 
@@ -446,11 +486,11 @@
             // 
             txtId.BorderStyle = BorderStyle.None;
             txtId.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtId.Location = new Point(210, 220);
+            txtId.Location = new Point(203, 220);
             txtId.Margin = new Padding(3, 4, 3, 4);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new Size(195, 25);
+            txtId.Size = new Size(201, 25);
             txtId.TabIndex = 0;
             txtId.Tag = "0";
             // 
@@ -477,49 +517,7 @@
             panel2.Size = new Size(1208, 876);
             panel2.TabIndex = 12;
             // 
-            // cl1
-            // 
-            cl1.DataPropertyName = "id";
-            cl1.HeaderText = "Mã KH";
-            cl1.MinimumWidth = 6;
-            cl1.Name = "cl1";
-            cl1.ReadOnly = true;
-            cl1.Resizable = DataGridViewTriState.False;
-            cl1.Width = 130;
-            // 
-            // cl2
-            // 
-            cl2.DataPropertyName = "fullname";
-            cl2.HeaderText = "Tên khách hàng";
-            cl2.MinimumWidth = 6;
-            cl2.Name = "cl2";
-            cl2.ReadOnly = true;
-            cl2.Resizable = DataGridViewTriState.False;
-            cl2.Width = 215;
-            // 
-            // cl3
-            // 
-            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl3.DataPropertyName = "address";
-            cl3.HeaderText = "Địa chỉ";
-            cl3.MinimumWidth = 6;
-            cl3.Name = "cl3";
-            cl3.ReadOnly = true;
-            cl3.Resizable = DataGridViewTriState.False;
-            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // cl4
-            // 
-            cl4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl4.DataPropertyName = "phonenumber";
-            cl4.HeaderText = "Số điện thoại";
-            cl4.MinimumWidth = 6;
-            cl4.Name = "cl4";
-            cl4.ReadOnly = true;
-            cl4.Resizable = DataGridViewTriState.False;
-            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ucClientManage
+            // ucCustomerManager
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -527,7 +525,7 @@
             Controls.Add(tableLayoutPanel3);
             Controls.Add(panel2);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "ucClientManage";
+            Name = "ucCustomerManager";
             Size = new Size(1208, 876);
             Load += ucClientManage_Load;
             panel4.ResumeLayout(false);

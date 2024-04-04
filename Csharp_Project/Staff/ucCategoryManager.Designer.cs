@@ -50,9 +50,9 @@
             txtId = new TextBox();
             panel6 = new Panel();
             dgCategory = new DataGridView();
-            panel4 = new Panel();
             cl1 = new DataGridViewTextBoxColumn();
             cl2 = new DataGridViewTextBoxColumn();
+            panel4 = new Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -172,10 +172,10 @@
             // 
             txtNewId.BorderStyle = BorderStyle.None;
             txtNewId.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewId.Location = new Point(191, 529);
+            txtNewId.Location = new Point(203, 529);
             txtNewId.Margin = new Padding(3, 4, 3, 4);
             txtNewId.Name = "txtNewId";
-            txtNewId.Size = new Size(213, 25);
+            txtNewId.Size = new Size(201, 25);
             txtNewId.TabIndex = 20;
             txtNewId.Tag = "0";
             txtNewId.KeyPress += txtNewId_KeyPress;
@@ -211,10 +211,10 @@
             // 
             txtNewName.BorderStyle = BorderStyle.None;
             txtNewName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewName.Location = new Point(191, 569);
+            txtNewName.Location = new Point(203, 569);
             txtNewName.Margin = new Padding(3, 4, 3, 4);
             txtNewName.Name = "txtNewName";
-            txtNewName.Size = new Size(213, 25);
+            txtNewName.Size = new Size(201, 25);
             txtNewName.TabIndex = 11;
             txtNewName.Tag = "1";
             // 
@@ -288,11 +288,11 @@
             // 
             txtName.BorderStyle = BorderStyle.None;
             txtName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(191, 299);
+            txtName.Location = new Point(203, 299);
             txtName.Margin = new Padding(3, 4, 3, 4);
             txtName.Name = "txtName";
             txtName.ReadOnly = true;
-            txtName.Size = new Size(213, 25);
+            txtName.Size = new Size(201, 25);
             txtName.TabIndex = 2;
             txtName.Tag = "1";
             // 
@@ -316,11 +316,11 @@
             // 
             txtId.BorderStyle = BorderStyle.None;
             txtId.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtId.Location = new Point(191, 259);
+            txtId.Location = new Point(203, 259);
             txtId.Margin = new Padding(3, 4, 3, 4);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new Size(213, 25);
+            txtId.Size = new Size(201, 25);
             txtId.TabIndex = 0;
             txtId.Tag = "0";
             // 
@@ -353,16 +353,6 @@
             dgCategory.TabIndex = 0;
             dgCategory.CellClick += dgCategory_CellClick;
             // 
-            // panel4
-            // 
-            panel4.Controls.Add(dataGridView2);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 0);
-            panel4.Margin = new Padding(3, 4, 3, 4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1208, 876);
-            panel4.TabIndex = 8;
-            // 
             // cl1
             // 
             cl1.DataPropertyName = "id";
@@ -384,7 +374,17 @@
             cl2.Resizable = DataGridViewTriState.False;
             cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // ucCategoryManage
+            // panel4
+            // 
+            panel4.Controls.Add(dataGridView2);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(0, 0);
+            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1208, 876);
+            panel4.TabIndex = 8;
+            // 
+            // ucCategoryManager
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -392,7 +392,7 @@
             Controls.Add(tableLayoutPanel3);
             Controls.Add(panel4);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "ucCategoryManage";
+            Name = "ucCategoryManager";
             Size = new Size(1208, 876);
             Load += ucCategoryManage_Load;
             panel2.ResumeLayout(false);

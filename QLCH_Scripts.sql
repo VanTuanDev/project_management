@@ -170,22 +170,32 @@ GO
 CREATE PROCEDURE UpdateAccount
     @Username VARCHAR(255),
 	@fullname NVARCHAR(255),
-    @pwd VARCHAR(255),
     @roleid INT,
 	@status nvarchar(255)
 AS
 BEGIN
     UPDATE Account
     SET fullname = @fullname,
-		pwd = @pwd,
 		roleid = @roleid,
 		status = @status
     WHERE username = @Username 
 END
 GO
+CREATE PROCEDURE UpdateInfo
+    @Username VARCHAR(255),
+	@fullname NVARCHAR(255),
+    @pwd VARCHAR(255)
+AS
+BEGIN
+    UPDATE Account
+    SET fullname = @fullname,
+		pwd = @pwd
+    WHERE username = @Username 
+END
+GO
 
 CREATE PROC LoginAccount
-@userName nvarchar(100),
+@Username nvarchar(100),
 @passWord nvarchar(100)
 AS 
 BEGIN
@@ -194,14 +204,14 @@ END
 GO
 
 CREATE PROC checkAdmin
-@userName nvarchar(100)
+@Username nvarchar(100)
 AS 
 BEGIN
 	SELECT * FROM dbo.Account WHERE  username = @userName AND roleid = 1
 END
 GO
 CREATE PROC checkpwd
-@userName nvarchar(100),
+@Username nvarchar(100),
 @pwd nvarchar(100)
 AS 
 BEGIN

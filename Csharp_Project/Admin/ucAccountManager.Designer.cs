@@ -37,14 +37,11 @@
             cl4 = new DataGridViewTextBoxColumn();
             btnSave = new Button();
             lblNewrole = new Label();
-            lblNewpass = new Label();
             panel5 = new Panel();
             lblNewname = new Label();
             txtNewname = new TextBox();
             lblName = new Label();
             txtName = new TextBox();
-            lblOldpass = new Label();
-            txtOldpass = new TextBox();
             cbbNewrole = new ComboBox();
             lblSelectuser = new Label();
             txtSelectuser = new TextBox();
@@ -52,7 +49,6 @@
             lblNewstatus = new Label();
             txtNewstatus = new TextBox();
             btnCancel = new Button();
-            txtNewpass = new TextBox();
             lblRole = new Label();
             ptbLogo = new PictureBox();
             lblPass = new Label();
@@ -169,22 +165,11 @@
             lblNewrole.AutoSize = true;
             lblNewrole.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewrole.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewrole.Location = new Point(3, 523);
+            lblNewrole.Location = new Point(3, 491);
             lblNewrole.Name = "lblNewrole";
             lblNewrole.Size = new Size(106, 19);
             lblNewrole.TabIndex = 17;
             lblNewrole.Text = "Quyền mới :";
-            // 
-            // lblNewpass
-            // 
-            lblNewpass.AutoSize = true;
-            lblNewpass.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNewpass.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewpass.Location = new Point(3, 493);
-            lblNewpass.Name = "lblNewpass";
-            lblNewpass.Size = new Size(131, 19);
-            lblNewpass.TabIndex = 15;
-            lblNewpass.Text = "Mật khẩu mới :";
             // 
             // panel5
             // 
@@ -193,8 +178,6 @@
             panel5.Controls.Add(txtNewname);
             panel5.Controls.Add(lblName);
             panel5.Controls.Add(txtName);
-            panel5.Controls.Add(lblOldpass);
-            panel5.Controls.Add(txtOldpass);
             panel5.Controls.Add(cbbNewrole);
             panel5.Controls.Add(lblSelectuser);
             panel5.Controls.Add(txtSelectuser);
@@ -204,8 +187,6 @@
             panel5.Controls.Add(btnCancel);
             panel5.Controls.Add(btnSave);
             panel5.Controls.Add(lblNewrole);
-            panel5.Controls.Add(lblNewpass);
-            panel5.Controls.Add(txtNewpass);
             panel5.Controls.Add(lblRole);
             panel5.Controls.Add(ptbLogo);
             panel5.Controls.Add(lblPass);
@@ -226,7 +207,7 @@
             lblNewname.AutoSize = true;
             lblNewname.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewname.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewname.Location = new Point(3, 402);
+            lblNewname.Location = new Point(3, 432);
             lblNewname.Name = "lblNewname";
             lblNewname.Size = new Size(147, 19);
             lblNewname.TabIndex = 41;
@@ -237,9 +218,9 @@
             // 
             txtNewname.BorderStyle = BorderStyle.None;
             txtNewname.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewname.Location = new Point(156, 402);
+            txtNewname.Location = new Point(178, 432);
             txtNewname.Name = "txtNewname";
-            txtNewname.Size = new Size(198, 20);
+            txtNewname.Size = new Size(176, 20);
             txtNewname.TabIndex = 7;
             txtNewname.Tag = "0";
             // 
@@ -259,41 +240,20 @@
             // 
             txtName.BorderStyle = BorderStyle.None;
             txtName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(156, 208);
+            txtName.Location = new Point(178, 208);
             txtName.Name = "txtName";
-            txtName.Size = new Size(198, 20);
+            txtName.Size = new Size(176, 20);
             txtName.TabIndex = 1;
             txtName.Tag = "0";
-            // 
-            // lblOldpass
-            // 
-            lblOldpass.AutoSize = true;
-            lblOldpass.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblOldpass.ForeColor = Color.FromArgb(0, 64, 0);
-            lblOldpass.Location = new Point(3, 461);
-            lblOldpass.Name = "lblOldpass";
-            lblOldpass.Size = new Size(119, 19);
-            lblOldpass.TabIndex = 37;
-            lblOldpass.Text = "Mật khẩu cũ :";
-            // 
-            // txtOldpass
-            // 
-            txtOldpass.BorderStyle = BorderStyle.None;
-            txtOldpass.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtOldpass.Location = new Point(156, 461);
-            txtOldpass.Name = "txtOldpass";
-            txtOldpass.Size = new Size(199, 20);
-            txtOldpass.TabIndex = 9;
-            txtOldpass.Tag = "7";
             // 
             // cbbNewrole
             // 
             cbbNewrole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbNewrole.FormattingEnabled = true;
-            cbbNewrole.Location = new Point(156, 523);
+            cbbNewrole.Location = new Point(178, 491);
             cbbNewrole.Margin = new Padding(3, 2, 3, 2);
             cbbNewrole.Name = "cbbNewrole";
-            cbbNewrole.Size = new Size(198, 27);
+            cbbNewrole.Size = new Size(176, 27);
             cbbNewrole.TabIndex = 11;
             cbbNewrole.Tag = "8";
             // 
@@ -302,7 +262,7 @@
             lblSelectuser.AutoSize = true;
             lblSelectuser.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSelectuser.ForeColor = Color.FromArgb(0, 64, 0);
-            lblSelectuser.Location = new Point(3, 374);
+            lblSelectuser.Location = new Point(3, 402);
             lblSelectuser.Name = "lblSelectuser";
             lblSelectuser.Size = new Size(101, 19);
             lblSelectuser.TabIndex = 34;
@@ -313,10 +273,10 @@
             // 
             txtSelectuser.BorderStyle = BorderStyle.None;
             txtSelectuser.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSelectuser.Location = new Point(156, 374);
+            txtSelectuser.Location = new Point(178, 402);
             txtSelectuser.Name = "txtSelectuser";
             txtSelectuser.ReadOnly = true;
-            txtSelectuser.Size = new Size(199, 20);
+            txtSelectuser.Size = new Size(177, 20);
             txtSelectuser.TabIndex = 33;
             txtSelectuser.Tag = "0";
             // 
@@ -324,10 +284,10 @@
             // 
             cbbRole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbRole.FormattingEnabled = true;
-            cbbRole.Location = new Point(156, 268);
+            cbbRole.Location = new Point(178, 268);
             cbbRole.Margin = new Padding(3, 2, 3, 2);
             cbbRole.Name = "cbbRole";
-            cbbRole.Size = new Size(198, 27);
+            cbbRole.Size = new Size(176, 27);
             cbbRole.TabIndex = 3;
             cbbRole.Tag = "8";
             // 
@@ -336,7 +296,7 @@
             lblNewstatus.AutoSize = true;
             lblNewstatus.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewstatus.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewstatus.Location = new Point(3, 430);
+            lblNewstatus.Location = new Point(3, 462);
             lblNewstatus.Name = "lblNewstatus";
             lblNewstatus.Size = new Size(110, 19);
             lblNewstatus.TabIndex = 21;
@@ -346,9 +306,9 @@
             // 
             txtNewstatus.BorderStyle = BorderStyle.None;
             txtNewstatus.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewstatus.Location = new Point(156, 430);
+            txtNewstatus.Location = new Point(178, 462);
             txtNewstatus.Name = "txtNewstatus";
-            txtNewstatus.Size = new Size(199, 20);
+            txtNewstatus.Size = new Size(177, 20);
             txtNewstatus.TabIndex = 8;
             txtNewstatus.Tag = "6";
             // 
@@ -366,16 +326,6 @@
             btnCancel.Text = "Huỷ";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnHuy_Click;
-            // 
-            // txtNewpass
-            // 
-            txtNewpass.BorderStyle = BorderStyle.None;
-            txtNewpass.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewpass.Location = new Point(156, 493);
-            txtNewpass.Name = "txtNewpass";
-            txtNewpass.Size = new Size(199, 20);
-            txtNewpass.TabIndex = 10;
-            txtNewpass.Tag = "7";
             // 
             // lblRole
             // 
@@ -455,9 +405,9 @@
             // 
             txtPass.BorderStyle = BorderStyle.None;
             txtPass.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPass.Location = new Point(156, 238);
+            txtPass.Location = new Point(178, 238);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(198, 20);
+            txtPass.Size = new Size(176, 20);
             txtPass.TabIndex = 2;
             txtPass.Tag = "1";
             // 
@@ -480,9 +430,9 @@
             // 
             txtUser.BorderStyle = BorderStyle.None;
             txtUser.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUser.Location = new Point(156, 178);
+            txtUser.Location = new Point(178, 178);
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(198, 20);
+            txtUser.Size = new Size(176, 20);
             txtUser.TabIndex = 0;
             txtUser.Tag = "0";
             // 
@@ -572,9 +522,7 @@
         private DataGridView dgAccount;
         private Button btnSave;
         private Label lblNewrole;
-        private Label lblNewpass;
         private Panel panel5;
-        private TextBox txtNewpass;
         private Label lblRole;
         private PictureBox ptbLogo;
         private Label lblUser;
@@ -595,8 +543,6 @@
         private TextBox txtSelectuser;
         private ComboBox cbbNewrole;
         private DataGridViewTextBoxColumn status;
-        private Label lblOldpass;
-        private TextBox txtOldpass;
         private Label lblNewname;
         private TextBox txtNewname;
         private Label lblName;

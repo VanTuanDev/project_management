@@ -36,6 +36,7 @@
             txtMatkhau = new TextBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
+            btnExit = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -58,11 +59,11 @@
             // 
             btnLogin.BackColor = Color.FromArgb(128, 255, 128);
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Tahoma", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.Green;
-            btnLogin.Location = new Point(229, 319);
+            btnLogin.Location = new Point(154, 319);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(209, 42);
+            btnLogin.Size = new Size(154, 42);
             btnLogin.TabIndex = 2;
             btnLogin.Tag = "2";
             btnLogin.Text = "Đăng nhập";
@@ -128,6 +129,21 @@
             label1.TabIndex = 7;
             label1.Text = "CỬA HÀNG TIỆN LỢI XIN CHÀO";
             // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.FromArgb(128, 255, 128);
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.ForeColor = Color.Green;
+            btnExit.Location = new Point(351, 319);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(154, 42);
+            btnExit.TabIndex = 8;
+            btnExit.Tag = "2";
+            btnExit.Text = "Thoát";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -136,6 +152,7 @@
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(634, 409);
             ControlBox = false;
+            Controls.Add(btnExit);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox3);
@@ -165,5 +182,6 @@
         private TextBox txtMatkhau;
         private PictureBox pictureBox1;
         private Label label1;
+        private Button btnExit;
     }
 }

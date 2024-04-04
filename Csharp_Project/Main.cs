@@ -1,4 +1,4 @@
-using Csharp_Project.Admin;
+﻿using Csharp_Project.Admin;
 using Csharp_Project.Staff;
 using System.Windows.Forms;
 using BLL.Manager;
@@ -13,7 +13,7 @@ namespace Csharp_Project
             InitializeComponent();
 
         }
-
+        Font vietnameseFont = new Font("Arial", 10, FontStyle.Regular);
         private ucAccountManager AccountManage;
         private ucCategoryManager CategoryManage;
         private ucCustomerManager ClientManage;
@@ -22,12 +22,12 @@ namespace Csharp_Project
         private ucSelling Selling;
         private void ResetBackColorBtn()
         {
-            btnTaikhoan.BackColor = Color.Cornsilk;
-            btnKhachhang.BackColor = Color.Cornsilk;
-            btnSanPham.BackColor = Color.Cornsilk;
-            btnDanhmuc.BackColor = Color.Cornsilk;
-            btnHoadon.BackColor = Color.Cornsilk;
-            btnBanhang.BackColor = Color.Cornsilk;
+            btnAccount.BackColor = Color.Cornsilk;
+            btnCustomer.BackColor = Color.Cornsilk;
+            btnProduct.BackColor = Color.Cornsilk;
+            btnCategory.BackColor = Color.Cornsilk;
+            btnBill.BackColor = Color.Cornsilk;
+            btnSelling.BackColor = Color.Cornsilk;
         }
         private void Reset()
         {
@@ -60,7 +60,7 @@ namespace Csharp_Project
         private void btnTaikhoan_Click(object sender, EventArgs e)
         {
             ResetBackColorBtn();
-            btnTaikhoan.BackColor = Color.FromArgb(128, 255, 128);
+            btnAccount.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(AccountManage) == false)
             {
                 AccountManage = new ucAccountManager();
@@ -77,7 +77,7 @@ namespace Csharp_Project
         private void btnKhachhang_Click(object sender, EventArgs e)
         {
             ResetBackColorBtn();
-            btnKhachhang.BackColor = Color.FromArgb(128, 255, 128);
+            btnCustomer.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(ClientManage) == false)
             {
                 ClientManage = new ucCustomerManager();
@@ -94,7 +94,7 @@ namespace Csharp_Project
         private void btnSanPham_Click(object sender, EventArgs e)
         {
             ResetBackColorBtn();
-            btnSanPham.BackColor = Color.FromArgb(128, 255, 128);
+            btnProduct.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(FoodManage) == false)
             {
                 FoodManage = new ucProductManager();
@@ -111,7 +111,7 @@ namespace Csharp_Project
         private void btnDanhmuc_Click(object sender, EventArgs e)
         {
             ResetBackColorBtn();
-            btnDanhmuc.BackColor = Color.FromArgb(128, 255, 128);
+            btnCategory.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(CategoryManage) == false)
             {
                 CategoryManage = new ucCategoryManager();
@@ -128,7 +128,7 @@ namespace Csharp_Project
         private void btnHoadon_Click(object sender, EventArgs e)
         {
             ResetBackColorBtn();
-            btnHoadon.BackColor = Color.FromArgb(128, 255, 128);
+            btnBill.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(BillManage) == false)
             {
                 BillManage = new ucBillManager();
@@ -145,7 +145,7 @@ namespace Csharp_Project
         private void btnBanhang_Click(object sender, EventArgs e)
         {
             ResetBackColorBtn();
-            btnBanhang.BackColor = Color.FromArgb(128, 255, 128);
+            btnSelling.BackColor = Color.FromArgb(128, 255, 128);
             if (pnlInfo.Controls.Contains(Selling) == false)
             {
                 Selling = new ucSelling();
@@ -161,37 +161,57 @@ namespace Csharp_Project
         AccountManager accountBLL = new AccountManager();
         private void Main_Load(object sender, EventArgs e)
         {
-            
-            btnTaikhoan.Visible = false;
+
+            btnAccount.Visible = false;
             pbxTaikhoan.Visible = false;
             this.Hide();
+
             Login f = new Login();
             f.ShowDialog();
+
             string username = SaveAccount.username;
+            if (string.IsNullOrEmpty(username))
+            {
+                Application.Exit();
+            }
             bool checkAdmin = accountBLL.checkAdmin(username);
+
             if (checkAdmin)
             {
-                btnTaikhoan.Visible = true;
+                btnAccount.Visible = true;
                 pbxTaikhoan.Visible = true;
             }
-            else
-            {
-                btnTaikhoan.Visible = false;
-                pbxTaikhoan.Visible = false;
-            }
+
             this.Show();
+
+
 
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            Main_Load(sender,e);
-            Reset();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát khỏi ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Main_Load(sender, e);
+                Reset();
+            }
+        }
+
+        private void btnChangeinfo_Click(object sender, EventArgs e)
+        {
+            ChangeInfo f = new ChangeInfo();   
+            f.ShowDialog();
         }
     }
 }

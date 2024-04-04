@@ -99,7 +99,7 @@ namespace DAL.Repository
                 }
             }
         }
-        public bool UpdateAccount(string username, string fullname, string pwd, int role, string status)
+        public bool UpdateAccount(string username, string fullname, int role, string status)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -108,9 +108,32 @@ namespace DAL.Repository
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@fullname", fullname);
-                    command.Parameters.AddWithValue("@pwd", pwd);
                     command.Parameters.AddWithValue("@roleid", role);
                     command.Parameters.AddWithValue("@status", status);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        public bool UpdateInfo(string username, string fullname, string pwd)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("UpdateInfo", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@fullname", fullname);
+                    command.Parameters.AddWithValue("@pwd", pwd);
 
                     try
                     {

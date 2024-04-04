@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             tableLayoutPanel1 = new TableLayoutPanel();
             pnlMenu = new Panel();
-            btnThoat = new Button();
+            btnExit = new Button();
             pbxKhachhang = new PictureBox();
-            btnKhachhang = new Button();
+            btnCustomer = new Button();
             pbxBanhang = new PictureBox();
             pbxHoadon = new PictureBox();
             pbxDanhmuc = new PictureBox();
             pbxSanpham = new PictureBox();
             pbxTaikhoan = new PictureBox();
-            btnDoithongtin = new Button();
-            btnBanhang = new Button();
-            btnHoadon = new Button();
-            btnDanhmuc = new Button();
-            btnSanPham = new Button();
-            btnTaikhoan = new Button();
-            btnDangXuat = new Button();
+            btnChangeinfo = new Button();
+            btnSelling = new Button();
+            btnBill = new Button();
+            btnCategory = new Button();
+            btnProduct = new Button();
+            btnAccount = new Button();
+            btnLogout = new Button();
             pictureBox1 = new PictureBox();
             pnlInfo = new Panel();
             tableLayoutPanel1.SuspendLayout();
@@ -78,21 +78,21 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(192, 255, 192);
-            pnlMenu.Controls.Add(btnThoat);
+            pnlMenu.Controls.Add(btnExit);
             pnlMenu.Controls.Add(pbxKhachhang);
-            pnlMenu.Controls.Add(btnKhachhang);
+            pnlMenu.Controls.Add(btnCustomer);
             pnlMenu.Controls.Add(pbxBanhang);
             pnlMenu.Controls.Add(pbxHoadon);
             pnlMenu.Controls.Add(pbxDanhmuc);
             pnlMenu.Controls.Add(pbxSanpham);
             pnlMenu.Controls.Add(pbxTaikhoan);
-            pnlMenu.Controls.Add(btnDoithongtin);
-            pnlMenu.Controls.Add(btnBanhang);
-            pnlMenu.Controls.Add(btnHoadon);
-            pnlMenu.Controls.Add(btnDanhmuc);
-            pnlMenu.Controls.Add(btnSanPham);
-            pnlMenu.Controls.Add(btnTaikhoan);
-            pnlMenu.Controls.Add(btnDangXuat);
+            pnlMenu.Controls.Add(btnChangeinfo);
+            pnlMenu.Controls.Add(btnSelling);
+            pnlMenu.Controls.Add(btnBill);
+            pnlMenu.Controls.Add(btnCategory);
+            pnlMenu.Controls.Add(btnProduct);
+            pnlMenu.Controls.Add(btnAccount);
+            pnlMenu.Controls.Add(btnLogout);
             pnlMenu.Controls.Add(pictureBox1);
             pnlMenu.Dock = DockStyle.Fill;
             pnlMenu.Location = new Point(3, 3);
@@ -100,19 +100,19 @@
             pnlMenu.Size = new Size(237, 657);
             pnlMenu.TabIndex = 0;
             // 
-            // btnThoat
+            // btnExit
             // 
-            btnThoat.BackColor = Color.Honeydew;
-            btnThoat.FlatStyle = FlatStyle.Flat;
-            btnThoat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThoat.ForeColor = Color.Green;
-            btnThoat.Location = new Point(9, 610);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(214, 44);
-            btnThoat.TabIndex = 8;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = false;
-            btnThoat.Click += btnThoat_Click;
+            btnExit.BackColor = Color.Honeydew;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.ForeColor = Color.Green;
+            btnExit.Location = new Point(9, 610);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(214, 44);
+            btnExit.TabIndex = 8;
+            btnExit.Text = "Thoát";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnThoat_Click;
             // 
             // pbxKhachhang
             // 
@@ -124,20 +124,20 @@
             pbxKhachhang.TabIndex = 14;
             pbxKhachhang.TabStop = false;
             // 
-            // btnKhachhang
+            // btnCustomer
             // 
-            btnKhachhang.BackColor = Color.Cornsilk;
-            btnKhachhang.FlatStyle = FlatStyle.Flat;
-            btnKhachhang.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKhachhang.ForeColor = Color.Green;
-            btnKhachhang.Location = new Point(62, 185);
-            btnKhachhang.Name = "btnKhachhang";
-            btnKhachhang.Size = new Size(161, 44);
-            btnKhachhang.TabIndex = 1;
-            btnKhachhang.Tag = "";
-            btnKhachhang.Text = "Khách hàng";
-            btnKhachhang.UseVisualStyleBackColor = false;
-            btnKhachhang.Click += btnKhachhang_Click;
+            btnCustomer.BackColor = Color.Cornsilk;
+            btnCustomer.FlatStyle = FlatStyle.Flat;
+            btnCustomer.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCustomer.ForeColor = Color.Green;
+            btnCustomer.Location = new Point(62, 185);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.Size = new Size(161, 44);
+            btnCustomer.TabIndex = 1;
+            btnCustomer.Tag = "";
+            btnCustomer.Text = "Khách hàng";
+            btnCustomer.UseVisualStyleBackColor = false;
+            btnCustomer.Click += btnKhachhang_Click;
             // 
             // pbxBanhang
             // 
@@ -189,110 +189,111 @@
             pbxTaikhoan.TabIndex = 8;
             pbxTaikhoan.TabStop = false;
             // 
-            // btnDoithongtin
+            // btnChangeinfo
             // 
-            btnDoithongtin.BackColor = Color.Honeydew;
-            btnDoithongtin.FlatStyle = FlatStyle.Flat;
-            btnDoithongtin.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDoithongtin.ForeColor = Color.Green;
-            btnDoithongtin.Location = new Point(9, 499);
-            btnDoithongtin.Name = "btnDoithongtin";
-            btnDoithongtin.Size = new Size(214, 44);
-            btnDoithongtin.TabIndex = 6;
-            btnDoithongtin.Tag = "";
-            btnDoithongtin.Text = "Đổi mật khẩu";
-            btnDoithongtin.UseVisualStyleBackColor = false;
+            btnChangeinfo.BackColor = Color.Honeydew;
+            btnChangeinfo.FlatStyle = FlatStyle.Flat;
+            btnChangeinfo.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChangeinfo.ForeColor = Color.Green;
+            btnChangeinfo.Location = new Point(9, 499);
+            btnChangeinfo.Name = "btnChangeinfo";
+            btnChangeinfo.Size = new Size(214, 44);
+            btnChangeinfo.TabIndex = 6;
+            btnChangeinfo.Tag = "";
+            btnChangeinfo.Text = "Đổi thông tin";
+            btnChangeinfo.UseVisualStyleBackColor = false;
+            btnChangeinfo.Click += btnChangeinfo_Click;
             // 
-            // btnBanhang
+            // btnSelling
             // 
-            btnBanhang.BackColor = Color.Cornsilk;
-            btnBanhang.FlatStyle = FlatStyle.Flat;
-            btnBanhang.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnBanhang.ForeColor = Color.Green;
-            btnBanhang.Location = new Point(62, 436);
-            btnBanhang.Name = "btnBanhang";
-            btnBanhang.Size = new Size(161, 44);
-            btnBanhang.TabIndex = 5;
-            btnBanhang.Tag = "";
-            btnBanhang.Text = "Bán hàng";
-            btnBanhang.UseVisualStyleBackColor = false;
-            btnBanhang.Click += btnBanhang_Click;
+            btnSelling.BackColor = Color.Cornsilk;
+            btnSelling.FlatStyle = FlatStyle.Flat;
+            btnSelling.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSelling.ForeColor = Color.Green;
+            btnSelling.Location = new Point(62, 436);
+            btnSelling.Name = "btnSelling";
+            btnSelling.Size = new Size(161, 44);
+            btnSelling.TabIndex = 5;
+            btnSelling.Tag = "";
+            btnSelling.Text = "Bán hàng";
+            btnSelling.UseVisualStyleBackColor = false;
+            btnSelling.Click += btnBanhang_Click;
             // 
-            // btnHoadon
+            // btnBill
             // 
-            btnHoadon.BackColor = Color.Cornsilk;
-            btnHoadon.FlatStyle = FlatStyle.Flat;
-            btnHoadon.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnHoadon.ForeColor = Color.Green;
-            btnHoadon.Location = new Point(62, 373);
-            btnHoadon.Name = "btnHoadon";
-            btnHoadon.Size = new Size(161, 44);
-            btnHoadon.TabIndex = 4;
-            btnHoadon.Tag = "";
-            btnHoadon.Text = "Hoá đơn";
-            btnHoadon.UseVisualStyleBackColor = false;
-            btnHoadon.Click += btnHoadon_Click;
+            btnBill.BackColor = Color.Cornsilk;
+            btnBill.FlatStyle = FlatStyle.Flat;
+            btnBill.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBill.ForeColor = Color.Green;
+            btnBill.Location = new Point(62, 373);
+            btnBill.Name = "btnBill";
+            btnBill.Size = new Size(161, 44);
+            btnBill.TabIndex = 4;
+            btnBill.Tag = "";
+            btnBill.Text = "Hoá đơn";
+            btnBill.UseVisualStyleBackColor = false;
+            btnBill.Click += btnHoadon_Click;
             // 
-            // btnDanhmuc
+            // btnCategory
             // 
-            btnDanhmuc.BackColor = Color.Cornsilk;
-            btnDanhmuc.FlatStyle = FlatStyle.Flat;
-            btnDanhmuc.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDanhmuc.ForeColor = Color.Green;
-            btnDanhmuc.Location = new Point(62, 308);
-            btnDanhmuc.Name = "btnDanhmuc";
-            btnDanhmuc.Size = new Size(161, 44);
-            btnDanhmuc.TabIndex = 3;
-            btnDanhmuc.Tag = "";
-            btnDanhmuc.Text = "Danh mục";
-            btnDanhmuc.UseMnemonic = false;
-            btnDanhmuc.UseVisualStyleBackColor = false;
-            btnDanhmuc.Click += btnDanhmuc_Click;
+            btnCategory.BackColor = Color.Cornsilk;
+            btnCategory.FlatStyle = FlatStyle.Flat;
+            btnCategory.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCategory.ForeColor = Color.Green;
+            btnCategory.Location = new Point(62, 308);
+            btnCategory.Name = "btnCategory";
+            btnCategory.Size = new Size(161, 44);
+            btnCategory.TabIndex = 3;
+            btnCategory.Tag = "";
+            btnCategory.Text = "Danh mục";
+            btnCategory.UseMnemonic = false;
+            btnCategory.UseVisualStyleBackColor = false;
+            btnCategory.Click += btnDanhmuc_Click;
             // 
-            // btnSanPham
+            // btnProduct
             // 
-            btnSanPham.BackColor = Color.Cornsilk;
-            btnSanPham.FlatStyle = FlatStyle.Flat;
-            btnSanPham.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSanPham.ForeColor = Color.Green;
-            btnSanPham.Location = new Point(62, 245);
-            btnSanPham.Name = "btnSanPham";
-            btnSanPham.Size = new Size(161, 44);
-            btnSanPham.TabIndex = 2;
-            btnSanPham.Tag = "";
-            btnSanPham.Text = "Sản phẩm";
-            btnSanPham.UseVisualStyleBackColor = false;
-            btnSanPham.Click += btnSanPham_Click;
+            btnProduct.BackColor = Color.Cornsilk;
+            btnProduct.FlatStyle = FlatStyle.Flat;
+            btnProduct.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnProduct.ForeColor = Color.Green;
+            btnProduct.Location = new Point(62, 245);
+            btnProduct.Name = "btnProduct";
+            btnProduct.Size = new Size(161, 44);
+            btnProduct.TabIndex = 2;
+            btnProduct.Tag = "";
+            btnProduct.Text = "Sản phẩm";
+            btnProduct.UseVisualStyleBackColor = false;
+            btnProduct.Click += btnSanPham_Click;
             // 
-            // btnTaikhoan
+            // btnAccount
             // 
-            btnTaikhoan.BackColor = Color.Cornsilk;
-            btnTaikhoan.FlatStyle = FlatStyle.Flat;
-            btnTaikhoan.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTaikhoan.ForeColor = Color.Green;
-            btnTaikhoan.Location = new Point(62, 124);
-            btnTaikhoan.Name = "btnTaikhoan";
-            btnTaikhoan.Size = new Size(161, 44);
-            btnTaikhoan.TabIndex = 0;
-            btnTaikhoan.Tag = "";
-            btnTaikhoan.Text = "Tài khoản";
-            btnTaikhoan.UseVisualStyleBackColor = false;
-            btnTaikhoan.Click += btnTaikhoan_Click;
+            btnAccount.BackColor = Color.Cornsilk;
+            btnAccount.FlatStyle = FlatStyle.Flat;
+            btnAccount.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAccount.ForeColor = Color.Green;
+            btnAccount.Location = new Point(62, 124);
+            btnAccount.Name = "btnAccount";
+            btnAccount.Size = new Size(161, 44);
+            btnAccount.TabIndex = 0;
+            btnAccount.Tag = "";
+            btnAccount.Text = "Tài khoản";
+            btnAccount.UseVisualStyleBackColor = false;
+            btnAccount.Click += btnTaikhoan_Click;
             // 
-            // btnDangXuat
+            // btnLogout
             // 
-            btnDangXuat.BackColor = Color.Honeydew;
-            btnDangXuat.FlatStyle = FlatStyle.Flat;
-            btnDangXuat.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDangXuat.ForeColor = Color.Green;
-            btnDangXuat.Location = new Point(9, 555);
-            btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Size = new Size(214, 44);
-            btnDangXuat.TabIndex = 7;
-            btnDangXuat.Tag = "";
-            btnDangXuat.Text = "Đăng xuất";
-            btnDangXuat.UseVisualStyleBackColor = false;
-            btnDangXuat.Click += btnDangXuat_Click;
+            btnLogout.BackColor = Color.Honeydew;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogout.ForeColor = Color.Green;
+            btnLogout.Location = new Point(9, 555);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(214, 44);
+            btnLogout.TabIndex = 7;
+            btnLogout.Tag = "";
+            btnLogout.Text = "Đăng xuất";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnDangXuat_Click;
             // 
             // pictureBox1
             // 
@@ -345,20 +346,20 @@
         private Panel pnlMenu;
         private Panel pnlInfo;
         private PictureBox pictureBox1;
-        private Button btnDangXuat;
-        private Button btnTaikhoan;
-        private Button btnDoithongtin;
-        private Button btnBanhang;
-        private Button btnHoadon;
-        private Button btnDanhmuc;
-        private Button btnSanPham;
+        private Button btnLogout;
+        private Button btnAccount;
+        private Button btnChangeinfo;
+        private Button btnSelling;
+        private Button btnBill;
+        private Button btnCategory;
+        private Button btnProduct;
         private PictureBox pbxBanhang;
         private PictureBox pbxHoadon;
         private PictureBox pbxDanhmuc;
         private PictureBox pbxSanpham;
         private PictureBox pbxTaikhoan;
         private PictureBox pbxKhachhang;
-        private Button btnKhachhang;
-        private Button btnThoat;
+        private Button btnCustomer;
+        private Button btnExit;
     }
 }

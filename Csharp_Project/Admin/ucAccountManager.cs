@@ -38,8 +38,6 @@ namespace Csharp_Project.Admin
             txtNewname.Text = string.Empty;
             txtSelectuser.Text = string.Empty;
             txtNewstatus.Text = string.Empty;
-            txtOldpass.Text = string.Empty;
-            txtNewpass.Text = string.Empty;
             cbbNewrole.Text = string.Empty;
 
             lblSelectuser.Visible = false;
@@ -48,10 +46,6 @@ namespace Csharp_Project.Admin
             txtNewname.Visible = false;
             lblNewstatus.Visible = false;
             txtNewstatus.Visible = false;
-            lblOldpass.Visible = false;
-            txtOldpass.Visible = false;
-            lblNewpass.Visible = false;
-            txtNewpass.Visible = false;
             lblNewrole.Visible = false;
             cbbNewrole.Visible = false;
 
@@ -68,10 +62,6 @@ namespace Csharp_Project.Admin
             txtNewname.Visible = true;
             lblNewstatus.Visible = true;
             txtNewstatus.Visible = true;
-            lblOldpass.Visible = true;
-            txtOldpass.Visible = true;
-            lblNewpass.Visible = true;
-            txtNewpass.Visible = true;
             lblNewrole.Visible = true;
             cbbNewrole.Visible = true;
             btnSave.Visible = true;
@@ -120,15 +110,15 @@ namespace Csharp_Project.Admin
             int roleid = accountBLL.GetRoleIdByName(rolename);
             bool insertSuccess = accountBLL.InsertAccount(username, fullname, pwd, roleid);
             if (insertSuccess)
-                {
-                    MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Reset();
-                    LoadAccount();
-                }
+            {
+                MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+                LoadAccount();
+            }
             else
-                {
-                    MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            {
+                MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -177,18 +167,14 @@ namespace Csharp_Project.Admin
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-          
+
             string username = txtSelectuser.Text;
             string fullname = txtNewname.Text;
-            string oldpwd = textToMd5.converText(txtOldpass.Text);
-            string newpwd = textToMd5.converText(txtNewpass.Text);
             string status = txtNewstatus.Text;
             string rolename = cbbNewrole.Text;
             int roleid = accountBLL.GetRoleIdByName(rolename);
-            bool checkpwd = accountBLL.checkpwd(username, oldpwd);
-            if(checkpwd)
-            {
-                bool updateSuccess = accountBLL.UpdateAccount(username, fullname, newpwd, roleid, status);
+            
+                bool updateSuccess = accountBLL.UpdateAccount(username, fullname, roleid, status);
 
                 if (updateSuccess)
                 {
@@ -201,10 +187,5 @@ namespace Csharp_Project.Admin
                     MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-            {
-                MessageBox.Show("Mật khẩu cũ sai", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
     }
 }

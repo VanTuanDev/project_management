@@ -3,8 +3,26 @@
   "WorkspaceRootPath": "D:\\code\\C#\\project_management\\Csharp_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302DFAB8-B65B-4FFA-9E02-EBC217FE2073}|..\\BLL\\BLL.csproj|d:\\code\\c#\\project_management\\bll\\manager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1109CA6C-D988-4AA4-9D80-772BC1A613F6}|..\\DAL\\DAL.csproj|d:\\code\\c#\\project_management\\dal\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\changeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\changeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\changeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\changeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +32,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cs [Design]",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Main.cs",
-              "RelativeDocumentMoniker": "Main.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Main.cs [Design]",
-              "RelativeToolTip": "Main.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "AccountManager.cs",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\BLL\\Manager\\AccountManager.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Manager\\AccountManager.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\BLL\\Manager\\AccountManager.cs",
+              "RelativeToolTip": "..\\BLL\\Manager\\AccountManager.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCMAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T12:39:55.595Z",
+              "WhenOpened": "2024-04-04T14:24:16.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\DAL\\Repository\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repository\\AccountRepository.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\DAL\\Repository\\AccountRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Repository\\AccountRepository.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAWwG4AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T14:14:42.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChangeInfo.cs",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ChangeInfo.cs",
+              "RelativeDocumentMoniker": "Staff\\ChangeInfo.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ChangeInfo.cs",
+              "RelativeToolTip": "Staff\\ChangeInfo.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCUAAACDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T13:37:21.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ucAccountManager.cs",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
+              "RelativeDocumentMoniker": "Admin\\ucAccountManager.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
+              "RelativeToolTip": "Admin\\ucAccountManager.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAswLMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T13:44:05.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ucAccountManager.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
+              "RelativeDocumentMoniker": "Admin\\ucAccountManager.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs [Design]",
+              "RelativeToolTip": "Admin\\ucAccountManager.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T13:34:27.881Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChangeInfo.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ChangeInfo.cs",
+              "RelativeDocumentMoniker": "Staff\\ChangeInfo.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ChangeInfo.cs [Design]",
+              "RelativeToolTip": "Staff\\ChangeInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T13:33:36.8Z",
               "EditorCaption": " [Design]"
             }
           ]
