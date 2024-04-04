@@ -161,7 +161,7 @@ namespace Csharp_Project
         AccountManager accountBLL = new AccountManager();
         private void Main_Load(object sender, EventArgs e)
         {
-            
+
             btnTaikhoan.Visible = false;
             pbxTaikhoan.Visible = false;
             this.Hide();
@@ -190,7 +190,7 @@ namespace Csharp_Project
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            Main_Load(sender,e);
+            Main_Load(sender, e);
             Reset();
         }
     }

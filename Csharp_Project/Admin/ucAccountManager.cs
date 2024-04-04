@@ -120,15 +120,15 @@ namespace Csharp_Project.Admin
             int roleid = accountBLL.GetRoleIdByName(rolename);
             bool insertSuccess = accountBLL.InsertAccount(username, fullname, pwd, roleid);
             if (insertSuccess)
-                {
-                    MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Reset();
-                    LoadAccount();
-                }
+            {
+                MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+                LoadAccount();
+            }
             else
-                {
-                    MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            {
+                MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace Csharp_Project.Admin
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-          
+
             string username = txtSelectuser.Text;
             string fullname = txtNewname.Text;
             string oldpwd = textToMd5.converText(txtOldpass.Text);
@@ -186,7 +186,7 @@ namespace Csharp_Project.Admin
             string rolename = cbbNewrole.Text;
             int roleid = accountBLL.GetRoleIdByName(rolename);
             bool checkpwd = accountBLL.checkpwd(username, oldpwd);
-            if(checkpwd)
+            if (checkpwd)
             {
                 bool updateSuccess = accountBLL.UpdateAccount(username, fullname, newpwd, roleid, status);
 
