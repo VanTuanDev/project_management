@@ -2,6 +2,7 @@
 using System.Data;
 using System.Security.Cryptography;
 using System.Text;
+using DAL.Entity;
 
 namespace BLL.Manager
 {
@@ -11,47 +12,43 @@ namespace BLL.Manager
 
         public AccountManager()
         {
-            accountDAL = new AccountRepository();
+            accountDAL = AccountRepository.Instance;
         }
-        public bool LoginAccount(string username, string pwd)
+        public bool LoginAccount(AccountEntity Entity)
         {
-            return accountDAL.LoginAccount(username, pwd);
+            return accountDAL.LoginAccount(Entity);
         }
-        public bool checkAdmin(string username)
+        public bool checkAdmin(AccountEntity Entity)
         {
-            return accountDAL.checkAdmin(username);
+            return accountDAL.checkAdmin(Entity);
         }
         public DataTable GetAccount()
         {
             return accountDAL.GetAccount();
         }
-        public bool InsertAccount(string username, string fullname, string pwd, int role)
+        public bool InsertAccount(AccountEntity Entity)
         {
-            return accountDAL.InsertAccount(username, fullname, pwd, role);
+            return accountDAL.InsertAccount(Entity);
         }
-        public bool DeleteAccount(string username)
+        public bool DeleteAccount(AccountEntity Entity)
         {
-            return accountDAL.DeleteAccount(username);
+            return accountDAL.DeleteAccount(Entity);
         }
-        public bool UpdateAccount(string username, string fullname, int role, string status)
+        public bool UpdateAccount(AccountEntity Entity)
         {
-            return accountDAL.UpdateAccount(username, fullname, role, status);
+            return accountDAL.UpdateAccount(Entity);
         }
-        public bool UpdateInfo(string username, string fullname, string pwd)
+        public bool UpdateInfo(AccountEntity Entity)
         {
-            return accountDAL.UpdateInfo(username, fullname, pwd);
+            return accountDAL.UpdateInfo(Entity);
         }
-        public int GetRoleIdByName(string roleName)
+        public int GetRoleIdByName(AccountEntity Entity)
         {
-            return accountDAL.GetRoleIdByName(roleName);
+            return accountDAL.GetRoleIdByName(Entity);
         }
         public DataTable GetRoleName()
         {
             return accountDAL.GetRoleName();
-        }
-        public bool checkpwd(string username, string pwd)
-        {
-            return accountDAL.checkpwd(username, pwd);
         }
         public class textToMd5
         {

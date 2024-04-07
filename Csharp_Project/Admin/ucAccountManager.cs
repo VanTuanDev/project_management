@@ -1,11 +1,13 @@
 ﻿using BLL.Manager;
 using System.Data;
 using static BLL.Manager.AccountManager;
+using DAL.Entity;
 
 namespace Csharp_Project.Admin
 {
     public partial class ucAccountManager : UserControl
     {
+        AccountEntity entity = new AccountEntity();
         private AccountManager accountBLL;
         public ucAccountManager()
         {
@@ -103,12 +105,12 @@ namespace Csharp_Project.Admin
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            string username = txtUser.Text.Trim();
-            string fullname = txtName.Text;
-            string pwd = textToMd5.converText(txtPass.Text);
-            string rolename = cbbRole.Text;
-            int roleid = accountBLL.GetRoleIdByName(rolename);
-            bool insertSuccess = accountBLL.InsertAccount(username, fullname, pwd, roleid);
+            entity.username = txtUser.Text.Trim();
+            entity.fullname = txtName.Text;
+            entity.pwd = textToMd5.converText(txtPass.Text);
+            entity.rolename = cbbRole.Text;
+            entity.role = accountBLL.GetRoleIdByName(entity);
+            bool insertSuccess = accountBLL.InsertAccount(entity);
             if (insertSuccess)
             {
                 MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -148,10 +150,10 @@ namespace Csharp_Project.Admin
                 return;
             }
 
-            string username = selectedRow.Cells["username"].Value.ToString();
+            entity.username = selectedRow.Cells["username"].Value.ToString();
 
 
-            bool deleteSuccess = accountBLL.DeleteAccount(username);
+            bool deleteSuccess = accountBLL.DeleteAccount(entity);
 
             if (deleteSuccess)
             {
@@ -168,13 +170,13 @@ namespace Csharp_Project.Admin
         private void btnLuu_Click(object sender, EventArgs e)
         {
 
-            string username = txtSelectuser.Text;
-            string fullname = txtNewname.Text;
-            string status = txtNewstatus.Text;
-            string rolename = cbbNewrole.Text;
-            int roleid = accountBLL.GetRoleIdByName(rolename);
+            entity.username = txtSelectuser.Text;
+            entity.fullname = txtNewname.Text;
+            entity.status = txtNewstatus.Text;
+            entity.rolename = cbbNewrole.Text;
+            entity.role = accountBLL.GetRoleIdByName(entity);
             
-                bool updateSuccess = accountBLL.UpdateAccount(username, fullname, roleid, status);
+                bool updateSuccess = accountBLL.UpdateAccount(entity);
 
                 if (updateSuccess)
                 {

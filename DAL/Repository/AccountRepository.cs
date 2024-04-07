@@ -1,223 +1,101 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
+using DAL.Entity;
 
 namespace DAL.Repository
 {
     public class AccountRepository
     {
-        //private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
-        private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
-        public bool LoginAccount(string username, string password)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("LoginAccount", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
+        public static AccountRepository instance;
 
-                    connection.Open();
-                    object data = command.ExecuteScalar();
-                    return data != null;
-                }
-            }
+        public static AccountRepository Instance
+        {
+            get { if (instance == null) instance = new AccountRepository(); return instance; }
+            private set { instance = value; }
         }
-        public bool checkAdmin(string username)
+        private AccountRepository() { }
+        public bool LoginAccount(AccountEntity Entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("checkAdmin", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", username);
+            string query = "LoginAccount @Username , @Password ";
 
-                    connection.Open();
-                    object data = command.ExecuteScalar();
-                    return data != null;
-                }
-            }
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { Entity.username, Entity.pwd });
+            return result.Rows.Count > 0;
+        }
+        public bool checkAdmin(AccountEntity Entity)
+        {
+            string query = "checkAdmin @Username ";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { Entity.username });
+            return result.Rows.Count > 0;
         }
         public DataTable GetAccount()
         {
-            DataTable account = new DataTable();
+            string query = "GetAccounts";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("GetAccounts", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    connection.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(account);
-                    }
-                }
-            }
-
-            return account;
+            return DataProvider.Instance.ExecuteQuery(query);
         }
-        public bool InsertAccount(string username,string fullname ,string pwd, int role)
+        public bool InsertAccount(AccountEntity Entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("InsertAccount", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@fullname", fullname);
-                    command.Parameters.AddWithValue("@pwd", pwd);
-                    command.Parameters.AddWithValue("@roleid", role);
+            string query = "InsertAccount @Username , @fullname , @pwd , @roleid";
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { Entity.username, Entity.fullname, Entity.pwd, Entity.role });
+            return result > 0;
         }
-        public bool DeleteAccount(string username)
+        public bool DeleteAccount(AccountEntity Entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("DeleteAccount", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", username);
+            string query = "DeleteAccount @Username ";
 
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    return rowsAffected > 0;
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { Entity.username });
+            return result > 0;
         }
-        public bool UpdateAccount(string username, string fullname, int role, string status)
+        public bool UpdateAccount(AccountEntity Entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("UpdateAccount", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@fullname", fullname);
-                    command.Parameters.AddWithValue("@roleid", role);
-                    command.Parameters.AddWithValue("@status", status);
+            string query = "UpdateAccount @Username , @fullname , @roleid , @status";
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { Entity.username, Entity.fullname, Entity.role, Entity.status });
+            return result > 0;
         }
-        public bool UpdateInfo(string username, string fullname, string pwd)
+        public bool UpdateInfo(AccountEntity Entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("UpdateInfo", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@fullname", fullname);
-                    command.Parameters.AddWithValue("@pwd", pwd);
+            string query = "UpdateInfo @Username , @fullname , @pwd ";
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { Entity.username, Entity.fullname, Entity.pwd });
+            return result > 0;
+           
         }
-        public int GetRoleIdByName(string roleName)
+        public int GetRoleIdByName(AccountEntity Entity)
         {
             int roleId = 0;
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "SELECT id FROM Role WHERE rolename = @roleName";
+                string query = "SELECT id FROM Role WHERE rolename = @roleName";
+                object result = DataProvider.Instance.ExecuteScalar(query, new object[] { Entity.rolename });
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@roleName", roleName);
-                        connection.Open();
-                        object result = command.ExecuteScalar();
-                        if (result != null)
-                        {
-                            roleId = Convert.ToInt32(result);
-                        }
-                    }
+                if (result != null && int.TryParse(result.ToString(), out int roleIdResult))
+                {
+                    roleId = roleIdResult;
                 }
             }
             catch (Exception ex)
             {
-                // 
+                // Xử lý ngoại lệ, ví dụ ghi log, thông báo lỗi
             }
             return roleId;
         }
         public DataTable GetRoleName()
         {
-            DataTable rolenameTable = new DataTable();
-
+            DataTable roleNameTable = new DataTable();
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "SELECT rolename FROM Role";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        connection.Open();
-
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                        {
-                            adapter.Fill(rolenameTable);
-                        }
-                    }
-                }
+                string query = "SELECT rolename FROM Role";
+                DataProvider.Instance.FillDataTable(query, roleNameTable);
             }
             catch (Exception ex)
             {
-                // 
+                // Xử lý ngoại lệ, ví dụ ghi log, thông báo lỗi
             }
-
-            return rolenameTable;
-        }
-        public bool checkpwd(string username, string password)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("checkpwd", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@pwd", password);
-
-                    connection.Open();
-                    object data = command.ExecuteScalar();
-                    return data != null;
-                }
-            }
+            return roleNameTable;
+            
         }
     }
 

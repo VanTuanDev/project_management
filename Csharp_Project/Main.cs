@@ -2,12 +2,14 @@
 using Csharp_Project.Staff;
 using System.Windows.Forms;
 using BLL.Manager;
+using DAL.Entity;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Csharp_Project
 {
     public partial class Main : Form
     {
+        AccountEntity entity = new AccountEntity();
         public Main()
         {
             InitializeComponent();
@@ -169,12 +171,12 @@ namespace Csharp_Project
             Login f = new Login();
             f.ShowDialog();
 
-            string username = SaveAccount.username;
-            if (string.IsNullOrEmpty(username))
+            entity.username = SaveAccount.username;
+            if (string.IsNullOrEmpty(entity.username))
             {
                 Application.Exit();
             }
-            bool checkAdmin = accountBLL.checkAdmin(username);
+            bool checkAdmin = accountBLL.checkAdmin(entity);
 
             if (checkAdmin)
             {
