@@ -1,95 +1,49 @@
-﻿
-using System.Data;
-using System.Data.SqlClient;
+﻿using System.Data;
+using DAL.Entity;
 
 namespace DAL.Repository
 {
     public class CategoryRepository
     {
-        //private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
-        private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
+        public static CategoryRepository instance;
+
+        public static CategoryRepository Instance
+        {
+            get { if (instance == null) instance = new CategoryRepository(); return instance; }
+            private set { instance = value; }
+        }
+
+        private CategoryRepository() { }
 
         public DataTable GetCategories()
         {
-            DataTable categories = new DataTable();
+            string query = "GetCategories";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("GetCategories", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    connection.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(categories);
-                    }
-                }
-            }
-
-            return categories;
+            return DataProvider.Instance.ExecuteQuery(query);
         }
-        public bool DeleteCategory(int categoryID)
+
+        public bool DeleteCategory(CategoryEntity entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("DeleteCategory", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@CategoryID", categoryID);
+            string query = "DeleteCategory @@CategoryID ";
 
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    return rowsAffected > 0;
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id });
+            return result > 0;
         }
-        public bool InsertCategory(int categoryId, string categoryName)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("InsertCategory", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@CategoryId", categoryId);
-                    command.Parameters.AddWithValue("@CategoryName", categoryName);
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0; 
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+        public bool InsertCategory(CategoryEntity entity)
+        {
+            string query = "InsertCategory @CategoryId , @CategoryName";
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.catename });
+            return result > 0;
         }
-        public bool UpdateCategory(int categoryId, string newCategoryName)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("UpdateCategory", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@CategoryId", categoryId);
-                    command.Parameters.AddWithValue("@NewCategoryName", newCategoryName);
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0; 
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+        public bool UpdateCategory(CategoryEntity entity)
+        {
+            string query = "UpdateCategory @CategoryId , @NewCategoryName";
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.catename });
+            return result > 0;
         }
     }
 }

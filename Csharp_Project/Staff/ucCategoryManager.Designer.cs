@@ -150,7 +150,7 @@
             btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(133, 51);
-            btnCancel.TabIndex = 22;
+            btnCancel.TabIndex = 7;
             btnCancel.Tag = "4";
             btnCancel.Text = "Hủy";
             btnCancel.UseVisualStyleBackColor = false;
@@ -176,7 +176,7 @@
             txtNewId.Margin = new Padding(3, 4, 3, 4);
             txtNewId.Name = "txtNewId";
             txtNewId.Size = new Size(201, 25);
-            txtNewId.TabIndex = 20;
+            txtNewId.TabIndex = 4;
             txtNewId.Tag = "0";
             txtNewId.KeyPress += txtNewId_KeyPress;
             // 
@@ -190,7 +190,7 @@
             btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(133, 51);
-            btnSave.TabIndex = 19;
+            btnSave.TabIndex = 6;
             btnSave.Tag = "4";
             btnSave.Text = "Lưu";
             btnSave.UseVisualStyleBackColor = false;
@@ -215,7 +215,7 @@
             txtNewName.Margin = new Padding(3, 4, 3, 4);
             txtNewName.Name = "txtNewName";
             txtNewName.Size = new Size(201, 25);
-            txtNewName.TabIndex = 11;
+            txtNewName.TabIndex = 5;
             txtNewName.Tag = "1";
             // 
             // ptbLogo
@@ -262,7 +262,7 @@
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(133, 51);
-            btnDelete.TabIndex = 5;
+            btnDelete.TabIndex = 3;
             btnDelete.Tag = "5";
             btnDelete.Text = "Xoá";
             btnDelete.UseVisualStyleBackColor = false;
@@ -278,7 +278,7 @@
             btnEdit.Margin = new Padding(3, 4, 3, 4);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(133, 51);
-            btnEdit.TabIndex = 4;
+            btnEdit.TabIndex = 2;
             btnEdit.Tag = "4";
             btnEdit.Text = "Sửa";
             btnEdit.UseVisualStyleBackColor = false;

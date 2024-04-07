@@ -1,4 +1,5 @@
-﻿using DAL.Repository;
+﻿using DAL.Entity;
+using DAL.Repository;
 using System.Data;
 
 namespace BLL.Manager
@@ -9,24 +10,24 @@ namespace BLL.Manager
 
         public CategoryManager()
         {
-            categoryDAL = new CategoryRepository();
+            categoryDAL = CategoryRepository.Instance;
         }
 
         public DataTable GetCategories()
         {
             return categoryDAL.GetCategories();
         }
-        public bool DeleteCategory(int categoryID)
+        public bool DeleteCategory(CategoryEntity entity)
         {
-            return categoryDAL.DeleteCategory(categoryID);
+            return categoryDAL.DeleteCategory(entity);
         }
-        public bool InsertCategory(int categoryId, string categoryName)
+        public bool InsertCategory(CategoryEntity entity)
         {
-            return categoryDAL.InsertCategory(categoryId, categoryName);
+            return categoryDAL.InsertCategory(entity);
         }
-        public bool UpdateCategory(int categoryId, string newCategoryName)
+        public bool UpdateCategory(CategoryEntity entity)
         {
-            return categoryDAL.UpdateCategory(categoryId, newCategoryName);
+            return categoryDAL.UpdateCategory(entity);
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using BLL.Manager;
 using System.Data;
+using DAL.Entity;
 
 namespace Csharp_Project.Staff
 {
     public partial class ucCustomerManager : UserControl
     {
+        CustomerEntity entity = new CustomerEntity();
         private CustomerManager clientBLL;
         private bool isAdd = false;
         private bool isEdit = false;
@@ -88,28 +90,30 @@ namespace Csharp_Project.Staff
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dgClient.CurrentRow;
-
-            if (selectedRow == null)
+            if (!string.IsNullOrEmpty(txtId.Text))
             {
-                MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                DataGridViewRow selectedRow = dgClient.CurrentRow;
 
-            int clientID = Convert.ToInt32(selectedRow.Cells["cl1"].Value);
+                entity.id = Convert.ToInt32(selectedRow.Cells["cl1"].Value);
 
 
-            bool deleteSuccess = clientBLL.DeleteClient(clientID);
+                bool deleteSuccess = clientBLL.DeleteClient(entity);
 
-            if (deleteSuccess)
-            {
-                MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadClients();
-                Reset();
+                if (deleteSuccess)
+                {
+                    MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadClients();
+                    Reset();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -149,12 +153,12 @@ namespace Csharp_Project.Staff
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                int newId = Convert.ToInt32(txtNewId.Text);
-                string newName = txtNewName.Text;
-                string newAddress = txtNewAddress.Text;
-                string newPhone = txtNewPhone.Text;
+                entity.id = Convert.ToInt32(txtNewId.Text);
+                entity.fullname = txtNewName.Text;
+                entity.address = txtNewAddress.Text;
+                entity.phonenumber = txtNewPhone.Text;
 
-                bool insertSuccess = clientBLL.InsertClient(newId, newName, newAddress, newPhone);
+                bool insertSuccess = clientBLL.InsertClient(entity);
 
                 if (insertSuccess)
                 {
@@ -170,11 +174,12 @@ namespace Csharp_Project.Staff
 
             if (isEdit)
             {
-                int newId = Convert.ToInt32(txtNewId.Text);
-                string newName = txtNewName.Text;
-                string newAddress = txtNewAddress.Text;
-                string newPhone = txtNewPhone.Text;
-                bool updateSuccess = clientBLL.UpdateClient(newId, newName, newAddress, newPhone);
+                entity.id = Convert.ToInt32(txtNewId.Text);
+                entity.fullname = txtNewName.Text;
+                entity.address = txtNewAddress.Text;
+                entity.phonenumber = txtNewPhone.Text;
+
+                bool updateSuccess = clientBLL.UpdateClient(entity);
 
                 if (updateSuccess)
                 {

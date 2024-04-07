@@ -48,9 +48,10 @@
             txtTaikhoan.BorderStyle = BorderStyle.FixedSingle;
             txtTaikhoan.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             txtTaikhoan.ForeColor = Color.Green;
-            txtTaikhoan.Location = new Point(154, 171);
+            txtTaikhoan.Location = new Point(176, 228);
+            txtTaikhoan.Margin = new Padding(3, 4, 3, 4);
             txtTaikhoan.Name = "txtTaikhoan";
-            txtTaikhoan.Size = new Size(351, 36);
+            txtTaikhoan.Size = new Size(401, 44);
             txtTaikhoan.TabIndex = 0;
             txtTaikhoan.Tag = "0";
             txtTaikhoan.KeyPress += txtTaikhoan_KeyPress;
@@ -61,9 +62,10 @@
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.Green;
-            btnLogin.Location = new Point(154, 319);
+            btnLogin.Location = new Point(176, 425);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(154, 42);
+            btnLogin.Size = new Size(219, 56);
             btnLogin.TabIndex = 2;
             btnLogin.Tag = "2";
             btnLogin.Text = "Đăng nhập";
@@ -74,9 +76,10 @@
             // 
             pictureBox2.BackColor = Color.Honeydew;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(456, 246);
+            pictureBox2.Location = new Point(521, 328);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(46, 31);
+            pictureBox2.Size = new Size(53, 41);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -86,9 +89,10 @@
             // 
             pictureBox3.BackColor = Color.Honeydew;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(457, 173);
+            pictureBox3.Location = new Point(522, 231);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(46, 33);
+            pictureBox3.Size = new Size(53, 44);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
@@ -99,10 +103,11 @@
             txtMatkhau.BorderStyle = BorderStyle.FixedSingle;
             txtMatkhau.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             txtMatkhau.ForeColor = Color.Green;
-            txtMatkhau.Location = new Point(154, 243);
+            txtMatkhau.Location = new Point(176, 324);
+            txtMatkhau.Margin = new Padding(3, 4, 3, 4);
             txtMatkhau.Name = "txtMatkhau";
             txtMatkhau.PasswordChar = '⬤';
-            txtMatkhau.Size = new Size(351, 36);
+            txtMatkhau.Size = new Size(401, 44);
             txtMatkhau.TabIndex = 1;
             txtMatkhau.Tag = "1";
             txtMatkhau.KeyPress += txtMatkhau_KeyPress;
@@ -111,9 +116,10 @@
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(254, 5);
+            pictureBox1.Location = new Point(290, 7);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(151, 121);
+            pictureBox1.Size = new Size(173, 161);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -123,9 +129,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 192, 0);
-            label1.Location = new Point(133, 114);
+            label1.Location = new Point(152, 152);
             label1.Name = "label1";
-            label1.Size = new Size(392, 29);
+            label1.Size = new Size(491, 36);
             label1.TabIndex = 7;
             label1.Text = "CỬA HÀNG TIỆN LỢI XIN CHÀO";
             // 
@@ -135,9 +141,10 @@
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.Green;
-            btnExit.Location = new Point(351, 319);
+            btnExit.Location = new Point(430, 425);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(154, 42);
+            btnExit.Size = new Size(147, 56);
             btnExit.TabIndex = 8;
             btnExit.Tag = "2";
             btnExit.Text = "Thoát";
@@ -146,11 +153,11 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(634, 409);
+            ClientSize = new Size(725, 545);
             ControlBox = false;
             Controls.Add(btnExit);
             Controls.Add(label1);
@@ -161,6 +168,7 @@
             Controls.Add(txtMatkhau);
             Controls.Add(txtTaikhoan);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

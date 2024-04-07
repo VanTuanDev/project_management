@@ -17,7 +17,7 @@ namespace Csharp_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
             entity.username = txtTaikhoan.Text;
             entity.pwd = textToMd5.converText(txtMatkhau.Text);
             bool loginSuccess = accountBLL.LoginAccount(entity);

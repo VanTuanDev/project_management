@@ -1,154 +1,68 @@
-﻿using System.Data.SqlClient;
-using System.Data;
+﻿using System.Data;
+using DAL.Entity;
 
 namespace DAL.Repository
 {
     public class ProductRepository
     {
-        //private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
-        private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
+        public static ProductRepository instance;
+        public static ProductRepository Instance
+        {
+            get { if (instance == null) instance = new ProductRepository(); return instance; }
+            private set { instance = value; }
+        }
+        private ProductRepository() { }
         public DataTable GetFoods()
         {
-            DataTable foods = new DataTable();
+            string query = "GetFoods";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("GetFoods", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    connection.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(foods);
-                    }
-                }
-            }
-
-            return foods;
+            return DataProvider.Instance.ExecuteQuery(query);
         }
-        public bool DeleteFood(int foodID)
+        public bool DeleteFood(ProductEntity entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("DeleteFood", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@FoodID", foodID);
+            string query = "DeleteFood @FoodId ";
 
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    return rowsAffected > 0;
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id });
+            return result > 0;
         }
-        public bool InsertFood(int foodId, string foodName, string unit, string price, int categoryId)
+        public bool InsertFood(ProductEntity entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("InsertFood", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@FoodId", foodId);
-                    command.Parameters.AddWithValue("@FoodName", foodName);
-                    command.Parameters.AddWithValue("@Unit", unit);
-                    command.Parameters.AddWithValue("@Price", price);
-                    command.Parameters.AddWithValue("@CategoryId", categoryId);
+            string query = "InsertFood @FoodId , @FoodName , @Unit , @Price , @CategoryId";
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.name, entity.unit, entity.price, entity.cateid });
+            return result > 0;
         }
-        public bool UpdateFood(int foodId, string newFoodName, string newUnit, string newPrice, int newCategoryId)
+        public bool UpdateFood(ProductEntity entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("UpdateFood", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@FoodId", foodId);
-                    command.Parameters.AddWithValue("@NewFoodName", newFoodName);
-                    command.Parameters.AddWithValue("@NewUnit", newUnit);
-                    command.Parameters.AddWithValue("@NewPrice", newPrice);
-                    command.Parameters.AddWithValue("@NewCategoryId", newCategoryId);
+            string query = "UpdateFood @FoodId , @FoodName , @Unit , @Price , @CategoryId";
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.name, entity.unit, entity.price, entity.cateid });
+            return result > 0;
         }
-        public int GetCategoryIdByName(string categoryName)
+        public int GetCategoryIdByName(CategoryEntity entity)
         {
             int categoryId = 0;
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "SELECT id FROM Category WHERE catename = @categoryName";
+                string query = "SELECT id FROM Category WHERE catename = @categoryName";
+                object result = DataProvider.Instance.ExecuteScalar(query, new object[] { entity.catename });
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@categoryName", categoryName);
-                        connection.Open();
-                        object result = command.ExecuteScalar();
-                        if (result != null)
-                        {
-                            categoryId = Convert.ToInt32(result);
-                        }
-                    }
+                if (result != null && int.TryParse(result.ToString(), out int roleIdResult))
+                {
+                    categoryId = roleIdResult;
                 }
             }
             catch (Exception ex)
             {
-                // 
+                // Xử lý ngoại lệ, ví dụ ghi log, thông báo lỗi
             }
             return categoryId;
         }
         public DataTable GetCategories()
         {
-            DataTable categoriesTable = new DataTable();
+            string query = "GetCategoryName";
 
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "SELECT catename FROM Category";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        connection.Open();
-
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                        {
-                            adapter.Fill(categoriesTable);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // 
-            }
-
-            return categoriesTable;
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

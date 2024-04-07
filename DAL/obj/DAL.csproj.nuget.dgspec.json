@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\C#\\project_management\\DAL\\DAL.csproj": {}
+    "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "D:\\code\\C#\\project_management\\DAL\\DAL.csproj": {
+    "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\C#\\project_management\\DAL\\DAL.csproj",
+        "projectUniqueName": "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\code\\C#\\project_management\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\C#\\project_management\\DAL\\obj\\",
+        "projectPath": "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Le Van Tuan\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\C#\\project_management\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Le Van Tuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

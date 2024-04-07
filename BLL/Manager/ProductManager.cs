@@ -1,4 +1,5 @@
-﻿using DAL.Repository;
+﻿using DAL.Entity;
+using DAL.Repository;
 using System.Data;
 
 namespace BLL.Manager
@@ -9,28 +10,28 @@ namespace BLL.Manager
 
         public ProductManager()
         {
-            foodDAL = new ProductRepository();
+            foodDAL = ProductRepository.Instance;
         }
 
         public DataTable GetFoods()
         {
             return foodDAL.GetFoods();
         }
-        public bool DeleteFood(int foodId)
+        public bool DeleteFood(ProductEntity entity)
         {
-            return foodDAL.DeleteFood(foodId);
+            return foodDAL.DeleteFood(entity);
         }
-        public bool InsertFood(int foodId, string foodName, string unit, string price, int categoryId)
+        public bool InsertFood(ProductEntity entity)
         {
-            return foodDAL.InsertFood(foodId, foodName, unit, price, categoryId);
+            return foodDAL.InsertFood(entity);
         }
-        public bool UpdateFood(int foodId, string newFoodName, string newUnit, string newPrice, int newCategoryId)
+        public bool UpdateFood(ProductEntity entity)
         {
-            return foodDAL.UpdateFood(foodId, newFoodName, newUnit, newPrice, newCategoryId);
+            return foodDAL.UpdateFood(entity);
         }
-        public int GetCategoryIdByName(string categoryName)
+        public int GetCategoryIdByName(CategoryEntity entity)
         {
-            return foodDAL.GetCategoryIdByName(categoryName);
+            return foodDAL.GetCategoryIdByName(entity);
         }
         public DataTable GetCategories()
         {

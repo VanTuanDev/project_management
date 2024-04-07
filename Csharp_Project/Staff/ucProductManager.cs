@@ -1,10 +1,14 @@
 ﻿using BLL.Manager;
 using System.Data;
+using DAL.Entity;
 
 namespace Csharp_Project.Staff
 {
     public partial class ucProductManager : UserControl
     {
+
+        ProductEntity entity = new ProductEntity();
+        CategoryEntity entity2 = new CategoryEntity();
         private ProductManager foodBLL;
         private bool isAdd = false;
         private bool isEdit = false;
@@ -103,28 +107,29 @@ namespace Csharp_Project.Staff
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dgFood.CurrentRow;
-
-            if (selectedRow == null)
+            if (!string.IsNullOrEmpty(txtId.Text))
             {
-                MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                DataGridViewRow selectedRow = dgFood.CurrentRow;
 
-            int foodID = Convert.ToInt32(selectedRow.Cells["cl1"].Value);
+                entity.id = Convert.ToInt32(selectedRow.Cells["cl1"].Value);
 
+                bool deleteSuccess = foodBLL.DeleteFood(entity);
 
-            bool deleteSuccess = foodBLL.DeleteFood(foodID);
-
-            if (deleteSuccess)
-            {
-                MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadFoods();
-                Reset();
+                if (deleteSuccess)
+                {
+                    MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadFoods();
+                    Reset();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -164,14 +169,14 @@ namespace Csharp_Project.Staff
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                int newId = Convert.ToInt32(txtNewId.Text);
-                string newName = txtNewName.Text;
-                string newUnit = txtNewUnit.Text;
-                string newPrice = txtNewPrice.Text;
-                string selectedCategoryName = cbbCategory.Text;
-                int newCategory = foodBLL.GetCategoryIdByName(selectedCategoryName);
+                entity.id = Convert.ToInt32(txtNewId.Text);
+                entity.name = txtNewName.Text;
+                entity.unit = txtNewUnit.Text;
+                entity.price = Convert.ToInt32(txtNewPrice.Text);
+                entity2.catename = cbbCategory.Text;
+                entity.cateid = foodBLL.GetCategoryIdByName(entity2);
 
-                bool insertSuccess = foodBLL.InsertFood(newId, newName, newUnit, newPrice, newCategory);
+                bool insertSuccess = foodBLL.InsertFood(entity);
 
                 if (insertSuccess)
                 {
@@ -187,14 +192,14 @@ namespace Csharp_Project.Staff
 
             if (isEdit)
             {
-                int id = Convert.ToInt32(txtNewId.Text);
-                string newName = txtNewName.Text;
-                string newUnit = txtNewUnit.Text;
-                string newPrice = txtNewPrice.Text;
-                string selectedCategoryName = cbbCategory.Text;
-                int newCategory = foodBLL.GetCategoryIdByName(selectedCategoryName);
+                entity.id = Convert.ToInt32(txtNewId.Text);
+                entity.name = txtNewName.Text;
+                entity.unit = txtNewUnit.Text;
+                entity.price = Convert.ToInt32(txtNewPrice.Text);
+                entity2.catename = cbbCategory.Text;
+                entity.cateid = foodBLL.GetCategoryIdByName(entity2);
 
-                bool updateSuccess = foodBLL.UpdateFood(id, newName, newUnit, newPrice, newCategory);
+                bool updateSuccess = foodBLL.UpdateFood(entity);
 
                 if (updateSuccess)
                 {

@@ -8,6 +8,13 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE GetCategoryName
+AS
+BEGIN
+    SELECT catename FROM Category WHERE status = N'Using';
+END
+GO
+
 CREATE PROCEDURE DeleteCategory
     @CategoryID INT
 AS

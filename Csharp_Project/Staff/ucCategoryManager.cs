@@ -1,11 +1,13 @@
 ﻿using BLL.Manager;
 using System.Data;
 using System.Data.SqlClient;
+using DAL.Entity;
 
 namespace Csharp_Project.Staff
 {
     public partial class ucCategoryManager : UserControl
     {
+        CategoryEntity entity = new CategoryEntity();
         private CategoryManager categoryBLL;
         private bool isAdd = false;
         private bool isEdit = false;
@@ -78,41 +80,43 @@ namespace Csharp_Project.Staff
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dgCategory.CurrentRow;
+            if (!string.IsNullOrEmpty(txtId.Text))
+            {
+                DataGridViewRow selectedRow = dgCategory.CurrentRow;
 
-            if (selectedRow == null)
+                entity.id = Convert.ToInt32(selectedRow.Cells["cl1"].Value);
+
+                try
+                {
+                    bool deleteSuccess = categoryBLL.DeleteCategory(entity);
+
+                    if (deleteSuccess)
+                    {
+                        MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadCategories();
+                        Reset();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 547)
+                    {
+                        MessageBox.Show("Không thể xóa danh mục vì có các mục liên quan trong bảng Item!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã xảy ra lỗi khi xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
             {
                 MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-            }
-
-            int categoryID = Convert.ToInt32(selectedRow.Cells["cl1"].Value);
-
-            try
-            {
-                bool deleteSuccess = categoryBLL.DeleteCategory(categoryID);
-
-                if (deleteSuccess)
-                {
-                    MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadCategories();
-                    Reset();
-                }
-                else
-                {
-                    MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (SqlException ex)
-            {
-                if (ex.Number == 547)
-                {
-                    MessageBox.Show("Không thể xóa danh mục vì có các mục liên quan trong bảng Item!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("Đã xảy ra lỗi khi xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
         }
 
@@ -154,10 +158,10 @@ namespace Csharp_Project.Staff
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                int newId = Convert.ToInt32(txtNewId.Text);
-                string newName = txtNewName.Text;
+                entity.id = Convert.ToInt32(txtNewId.Text);
+                entity.catename = txtNewName.Text;
 
-                bool insertSuccess = categoryBLL.InsertCategory(newId, newName);
+                bool insertSuccess = categoryBLL.InsertCategory(entity);
 
                 if (insertSuccess)
                 {
@@ -173,10 +177,10 @@ namespace Csharp_Project.Staff
 
             if (isEdit)
             {
-                int categoryId = Convert.ToInt32(txtNewId.Text);
-                string newCategoryName = txtNewName.Text;
+                entity.id = Convert.ToInt32(txtNewId.Text);
+                entity.catename = txtNewName.Text;
 
-                bool updateSuccess = categoryBLL.UpdateCategory(categoryId, newCategoryName);
+                bool updateSuccess = categoryBLL.UpdateCategory(entity);
 
                 if (updateSuccess)
                 {

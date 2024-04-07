@@ -1,5 +1,4 @@
-﻿using System.Data.SqlClient;
-using System.Data;
+﻿using System.Data;
 using DAL.Entity;
 
 namespace DAL.Repository
@@ -7,7 +6,6 @@ namespace DAL.Repository
     public class AccountRepository
     {
         public static AccountRepository instance;
-
         public static AccountRepository Instance
         {
             get { if (instance == null) instance = new AccountRepository(); return instance; }

@@ -1,97 +1,43 @@
-﻿using System.Data.SqlClient;
-using System.Data;
+﻿using System.Data;
+using DAL.Entity;
 
 namespace DAL.Repository
 {
     public class CustomerRepository
     {
-        //private string connectionString = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
-        private string connectionString = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
+        public static CustomerRepository instance;
+        public static CustomerRepository Instance
+        {
+            get { if (instance == null) instance = new CustomerRepository(); return instance; }
+            private set { instance = value; }
+        }
+        private CustomerRepository() { }
         public DataTable GetClients()
         {
-            DataTable clients = new DataTable();
+            string query = "GetClients";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("GetClients", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    connection.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(clients);
-                    }
-                }
-            }
-
-            return clients;
+            return DataProvider.Instance.ExecuteQuery(query);
         }
-        public bool DeleteClient(int clientID)
+        public bool DeleteClient(CustomerEntity entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("DeleteClient", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ClientID", clientID);
+            string query = "DeleteClient @ClientID ";
 
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    return rowsAffected > 0;
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id });
+            return result > 0;
         }
-        public bool InsertClient(int clientId, string clientName, string clientAddress, string clientPhone)
+        public bool InsertClient(CustomerEntity entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("InsertClient", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ClientId", clientId);
-                    command.Parameters.AddWithValue("@ClientName", clientName);
-                    command.Parameters.AddWithValue("@ClientAddress", clientAddress);
-                    command.Parameters.AddWithValue("@ClientPhone", clientPhone);
+            string query = "InsertClient @ClientId , @ClientName , @ClientAddress , @ClientPhone";
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.fullname, entity.address, entity.phonenumber });
+            return result > 0;
         }
-        public bool UpdateClient(int clientId, string newClientName, string newClientAddress, string newClientPhone)
+        public bool UpdateClient(CustomerEntity entity)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("UpdateClient", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ClientId", clientId);
-                    command.Parameters.AddWithValue("@NewClientName", newClientName);
-                    command.Parameters.AddWithValue("@NewClientAddress", newClientAddress);
-                    command.Parameters.AddWithValue("@NewClientPhone", newClientPhone);
+            string query = "UpdateClient @ClientId , @NewClientName , @NewClientAddress , @NewClientPhone";
 
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        return false;
-                    }
-                }
-            }
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.fullname, entity.address, entity.phonenumber });
+            return result > 0;
         }
     }
 }

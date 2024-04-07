@@ -1,4 +1,5 @@
-﻿using DAL.Repository;
+﻿using DAL.Entity;
+using DAL.Repository;
 using System.Data;
 
 namespace BLL.Manager
@@ -9,24 +10,24 @@ namespace BLL.Manager
 
         public CustomerManager()
         {
-            clientDAL = new CustomerRepository();
+            clientDAL = CustomerRepository.Instance;
         }
 
         public DataTable GetClients()
         {
             return clientDAL.GetClients();
         }
-        public bool DeleteClient(int clientID)
+        public bool DeleteClient(CustomerEntity entity)
         {
-            return clientDAL.DeleteClient(clientID);
+            return clientDAL.DeleteClient(entity);
         }
-        public bool InsertClient(int clientId, string clientName, string clientAddress, string clientPhone)
+        public bool InsertClient(CustomerEntity entity)
         {
-            return clientDAL.InsertClient(clientId, clientName, clientAddress, clientPhone);
+            return clientDAL.InsertClient(entity);
         }
-        public bool UpdateClient(int clientId, string newClientName, string newClientAddress, string newClientPhone)
+        public bool UpdateClient(CustomerEntity entity)
         {
-            return clientDAL.UpdateClient(clientId, newClientName, newClientAddress, newClientPhone);
+            return clientDAL.UpdateClient(entity);
         }
     }
 }

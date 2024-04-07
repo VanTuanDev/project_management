@@ -178,7 +178,7 @@
             btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(133, 51);
-            btnSave.TabIndex = 19;
+            btnSave.TabIndex = 8;
             btnSave.Tag = "4";
             btnSave.Text = "Lưu";
             btnSave.UseVisualStyleBackColor = false;
@@ -186,6 +186,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Image = Properties.Resources.Customer;
             pictureBox3.Location = new Point(120, 50);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
@@ -261,7 +262,7 @@
             txtNewPhone.Margin = new Padding(3, 4, 3, 4);
             txtNewPhone.Name = "txtNewPhone";
             txtNewPhone.Size = new Size(201, 25);
-            txtNewPhone.TabIndex = 33;
+            txtNewPhone.TabIndex = 7;
             txtNewPhone.Tag = "1";
             txtNewPhone.KeyPress += txtNewPhone_KeyPress;
             // 
@@ -284,7 +285,7 @@
             txtNewAddress.Margin = new Padding(3, 4, 3, 4);
             txtNewAddress.Name = "txtNewAddress";
             txtNewAddress.Size = new Size(201, 25);
-            txtNewAddress.TabIndex = 31;
+            txtNewAddress.TabIndex = 6;
             txtNewAddress.Tag = "1";
             // 
             // lblNewName
@@ -318,7 +319,7 @@
             txtNewName.Margin = new Padding(3, 4, 3, 4);
             txtNewName.Name = "txtNewName";
             txtNewName.Size = new Size(201, 25);
-            txtNewName.TabIndex = 28;
+            txtNewName.TabIndex = 5;
             txtNewName.Tag = "1";
             // 
             // txtNewId
@@ -329,7 +330,7 @@
             txtNewId.Margin = new Padding(3, 4, 3, 4);
             txtNewId.Name = "txtNewId";
             txtNewId.Size = new Size(201, 25);
-            txtNewId.TabIndex = 27;
+            txtNewId.TabIndex = 4;
             txtNewId.Tag = "0";
             txtNewId.KeyPress += txtNewId_KeyPress;
             // 
@@ -390,7 +391,7 @@
             btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(133, 51);
-            btnCancel.TabIndex = 22;
+            btnCancel.TabIndex = 9;
             btnCancel.Tag = "4";
             btnCancel.Text = "Hủy";
             btnCancel.UseVisualStyleBackColor = false;
@@ -430,7 +431,7 @@
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(133, 51);
-            btnDelete.TabIndex = 5;
+            btnDelete.TabIndex = 3;
             btnDelete.Tag = "5";
             btnDelete.Text = "Xoá";
             btnDelete.UseVisualStyleBackColor = false;
@@ -447,7 +448,7 @@
             btnEdit.Margin = new Padding(3, 4, 3, 4);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(133, 51);
-            btnEdit.TabIndex = 4;
+            btnEdit.TabIndex = 2;
             btnEdit.Tag = "4";
             btnEdit.Text = "Sửa";
             btnEdit.UseVisualStyleBackColor = false;

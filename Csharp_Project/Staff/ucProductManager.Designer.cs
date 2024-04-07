@@ -62,12 +62,12 @@
             txtId = new TextBox();
             panel6 = new Panel();
             dgFood = new DataGridView();
-            panel4 = new Panel();
             cl1 = new DataGridViewTextBoxColumn();
             cl2 = new DataGridViewTextBoxColumn();
             cl3 = new DataGridViewTextBoxColumn();
             cl4 = new DataGridViewTextBoxColumn();
             cl5 = new DataGridViewTextBoxColumn();
+            panel4 = new Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -174,7 +174,7 @@
             cbbCategory.Location = new Point(185, 687);
             cbbCategory.Name = "cbbCategory";
             cbbCategory.Size = new Size(219, 32);
-            cbbCategory.TabIndex = 31;
+            cbbCategory.TabIndex = 8;
             // 
             // lblNewCategory
             // 
@@ -206,7 +206,7 @@
             txtNewUnit.Margin = new Padding(3, 4, 3, 4);
             txtNewUnit.Name = "txtNewUnit";
             txtNewUnit.Size = new Size(219, 25);
-            txtNewUnit.TabIndex = 27;
+            txtNewUnit.TabIndex = 6;
             txtNewUnit.Tag = "1";
             // 
             // lblNewPrice
@@ -228,7 +228,7 @@
             txtNewPrice.Margin = new Padding(3, 4, 3, 4);
             txtNewPrice.Name = "txtNewPrice";
             txtNewPrice.Size = new Size(219, 25);
-            txtNewPrice.TabIndex = 25;
+            txtNewPrice.TabIndex = 7;
             txtNewPrice.Tag = "1";
             txtNewPrice.KeyPress += txtNewPrice_KeyPress;
             // 
@@ -263,7 +263,7 @@
             txtNewName.Margin = new Padding(3, 4, 3, 4);
             txtNewName.Name = "txtNewName";
             txtNewName.Size = new Size(219, 25);
-            txtNewName.TabIndex = 22;
+            txtNewName.TabIndex = 5;
             txtNewName.Tag = "1";
             // 
             // txtNewId
@@ -274,7 +274,7 @@
             txtNewId.Margin = new Padding(3, 4, 3, 4);
             txtNewId.Name = "txtNewId";
             txtNewId.Size = new Size(219, 25);
-            txtNewId.TabIndex = 21;
+            txtNewId.TabIndex = 4;
             txtNewId.Tag = "0";
             txtNewId.KeyPress += txtNewId_KeyPress;
             // 
@@ -289,7 +289,7 @@
             btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(133, 51);
-            btnCancel.TabIndex = 20;
+            btnCancel.TabIndex = 10;
             btnCancel.Tag = "4";
             btnCancel.Text = "Hủy";
             btnCancel.UseVisualStyleBackColor = false;
@@ -306,7 +306,7 @@
             btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(133, 51);
-            btnSave.TabIndex = 19;
+            btnSave.TabIndex = 9;
             btnSave.Tag = "4";
             btnSave.Text = "Lưu";
             btnSave.UseVisualStyleBackColor = false;
@@ -426,7 +426,7 @@
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(133, 51);
-            btnDelete.TabIndex = 5;
+            btnDelete.TabIndex = 3;
             btnDelete.Tag = "5";
             btnDelete.Text = "Xoá";
             btnDelete.UseVisualStyleBackColor = false;
@@ -443,7 +443,7 @@
             btnEdit.Margin = new Padding(3, 4, 3, 4);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(133, 51);
-            btnEdit.TabIndex = 4;
+            btnEdit.TabIndex = 2;
             btnEdit.Tag = "4";
             btnEdit.Text = "Sửa";
             btnEdit.UseVisualStyleBackColor = false;
@@ -519,16 +519,6 @@
             dgFood.TabIndex = 0;
             dgFood.CellClick += dgFood_CellClick;
             // 
-            // panel4
-            // 
-            panel4.Controls.Add(dataGridView2);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 0);
-            panel4.Margin = new Padding(3, 4, 3, 4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1208, 876);
-            panel4.TabIndex = 11;
-            // 
             // cl1
             // 
             cl1.DataPropertyName = "id";
@@ -582,7 +572,17 @@
             cl5.Resizable = DataGridViewTriState.False;
             cl5.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // ucFoodManage
+            // panel4
+            // 
+            panel4.Controls.Add(dataGridView2);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(0, 0);
+            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1208, 876);
+            panel4.TabIndex = 11;
+            // 
+            // ucProductManager
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -590,7 +590,7 @@
             Controls.Add(tableLayoutPanel3);
             Controls.Add(panel4);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "ucFoodManage";
+            Name = "ucProductManager";
             Size = new Size(1208, 876);
             Load += ucFoodManage_Load;
             panel2.ResumeLayout(false);
