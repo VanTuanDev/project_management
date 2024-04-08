@@ -67,11 +67,11 @@ namespace Csharp_Project
                 AccountManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(AccountManage);
                 AccountManage.BringToFront();
-                pnlInfo.Controls.Remove(CategoryManage);
-                pnlInfo.Controls.Remove(ClientManage);
-                pnlInfo.Controls.Remove(FoodManage);
-                pnlInfo.Controls.Remove(BillManage);
-                pnlInfo.Controls.Remove(Selling);
+                //pnlInfo.Controls.Remove(CategoryManage);
+                //pnlInfo.Controls.Remove(ClientManage);
+                //pnlInfo.Controls.Remove(FoodManage);
+                //pnlInfo.Controls.Remove(BillManage);
+                //pnlInfo.Controls.Remove(Selling);
             }
             else
             {
@@ -89,11 +89,11 @@ namespace Csharp_Project
                 ClientManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(ClientManage);
                 ClientManage.BringToFront();
-                pnlInfo.Controls.Remove(CategoryManage);
-                pnlInfo.Controls.Remove(AccountManage);
-                pnlInfo.Controls.Remove(FoodManage);
-                pnlInfo.Controls.Remove(BillManage);
-                pnlInfo.Controls.Remove(Selling);
+                //pnlInfo.Controls.Remove(CategoryManage);
+                //pnlInfo.Controls.Remove(AccountManage);
+                //pnlInfo.Controls.Remove(FoodManage);
+                //pnlInfo.Controls.Remove(BillManage);
+                //pnlInfo.Controls.Remove(Selling);
             }
             else
             {
@@ -111,11 +111,11 @@ namespace Csharp_Project
                 FoodManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(FoodManage);
                 FoodManage.BringToFront();
-                pnlInfo.Controls.Remove(CategoryManage);
-                pnlInfo.Controls.Remove(ClientManage);
-                pnlInfo.Controls.Remove(AccountManage);
-                pnlInfo.Controls.Remove(BillManage);
-                pnlInfo.Controls.Remove(Selling);
+                //pnlInfo.Controls.Remove(CategoryManage);
+                //pnlInfo.Controls.Remove(ClientManage);
+                //pnlInfo.Controls.Remove(AccountManage);
+                //pnlInfo.Controls.Remove(BillManage);
+                //pnlInfo.Controls.Remove(Selling);
             }
             else
             {
@@ -133,11 +133,11 @@ namespace Csharp_Project
                 CategoryManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(CategoryManage);
                 CategoryManage.BringToFront();
-                pnlInfo.Controls.Remove(AccountManage);
-                pnlInfo.Controls.Remove(ClientManage);
-                pnlInfo.Controls.Remove(FoodManage);
-                pnlInfo.Controls.Remove(BillManage);
-                pnlInfo.Controls.Remove(Selling);
+                //pnlInfo.Controls.Remove(AccountManage);
+                //pnlInfo.Controls.Remove(ClientManage);
+                //pnlInfo.Controls.Remove(FoodManage);
+                //pnlInfo.Controls.Remove(BillManage);
+                //pnlInfo.Controls.Remove(Selling);
             }
             else
             {
@@ -155,11 +155,11 @@ namespace Csharp_Project
                 BillManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(BillManage);
                 BillManage.BringToFront();
-                pnlInfo.Controls.Remove(CategoryManage);
-                pnlInfo.Controls.Remove(ClientManage);
-                pnlInfo.Controls.Remove(FoodManage);
-                pnlInfo.Controls.Remove(AccountManage);
-                pnlInfo.Controls.Remove(Selling);
+                //pnlInfo.Controls.Remove(CategoryManage);
+                //pnlInfo.Controls.Remove(ClientManage);
+                //pnlInfo.Controls.Remove(FoodManage);
+                //pnlInfo.Controls.Remove(AccountManage);
+                //pnlInfo.Controls.Remove(Selling);
             }
             else
             {
@@ -177,11 +177,11 @@ namespace Csharp_Project
                 Selling.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(Selling);
                 Selling.BringToFront();
-                pnlInfo.Controls.Remove(CategoryManage);
-                pnlInfo.Controls.Remove(ClientManage);
-                pnlInfo.Controls.Remove(FoodManage);
-                pnlInfo.Controls.Remove(BillManage);
-                pnlInfo.Controls.Remove(AccountManage);
+                //pnlInfo.Controls.Remove(CategoryManage);
+                //pnlInfo.Controls.Remove(ClientManage);
+                //pnlInfo.Controls.Remove(FoodManage);
+                //pnlInfo.Controls.Remove(BillManage);
+                //pnlInfo.Controls.Remove(AccountManage);
             }
             else
             {

@@ -59,6 +59,7 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.FromArgb(128, 255, 128);
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.Green;
@@ -75,11 +76,12 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Honeydew;
+            pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(521, 328);
+            pictureBox2.Location = new Point(521, 326);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(53, 41);
+            pictureBox2.Size = new Size(53, 40);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -89,10 +91,10 @@
             // 
             pictureBox3.BackColor = Color.Honeydew;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(522, 231);
+            pictureBox3.Location = new Point(522, 229);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(53, 44);
+            pictureBox3.Size = new Size(53, 41);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
@@ -138,6 +140,7 @@
             // btnExit
             // 
             btnExit.BackColor = Color.FromArgb(128, 255, 128);
+            btnExit.Cursor = Cursors.Hand;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.Green;

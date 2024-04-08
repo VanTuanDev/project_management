@@ -1,6 +1,6 @@
 ﻿
 using BLL.Manager;
-using static  BLL.Manager.AccountManager;
+using static BLL.Manager.AccountManager;
 using DAL.Entity;
 
 namespace Csharp_Project.Staff
@@ -24,7 +24,7 @@ namespace Csharp_Project.Staff
             entity.username = txtUser.Text;
             entity.fullname = txtNewname.Text;
             entity.pwd = textToMd5.converText(txtOldpass.Text);
-            
+
             bool checkpwd = accountBLL.LoginAccount(entity);
             if (txtAcceptPass.Text != txtNewpass.Text)
             {

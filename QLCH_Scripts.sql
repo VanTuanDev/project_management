@@ -188,6 +188,7 @@ BEGIN
     WHERE username = @Username 
 END
 GO
+
 CREATE PROCEDURE UpdateInfo
     @Username VARCHAR(255),
 	@fullname NVARCHAR(255),

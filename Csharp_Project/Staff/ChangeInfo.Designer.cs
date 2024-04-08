@@ -50,9 +50,9 @@
             lblNewname.AutoSize = true;
             lblNewname.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewname.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewname.Location = new Point(89, 150);
+            lblNewname.Location = new Point(55, 200);
             lblNewname.Name = "lblNewname";
-            lblNewname.Size = new Size(216, 29);
+            lblNewname.Size = new Size(271, 36);
             lblNewname.TabIndex = 55;
             lblNewname.Text = "Tên người dùng :";
             lblNewname.UseMnemonic = false;
@@ -61,9 +61,10 @@
             // 
             txtNewname.BorderStyle = BorderStyle.None;
             txtNewname.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewname.Location = new Point(334, 150);
+            txtNewname.Location = new Point(383, 200);
+            txtNewname.Margin = new Padding(3, 4, 3, 4);
             txtNewname.Name = "txtNewname";
-            txtNewname.Size = new Size(248, 29);
+            txtNewname.Size = new Size(282, 37);
             txtNewname.TabIndex = 1;
             txtNewname.Tag = "0";
             // 
@@ -72,9 +73,9 @@
             lblOldpass.AutoSize = true;
             lblOldpass.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblOldpass.ForeColor = Color.FromArgb(0, 64, 0);
-            lblOldpass.Location = new Point(89, 199);
+            lblOldpass.Location = new Point(55, 265);
             lblOldpass.Name = "lblOldpass";
-            lblOldpass.Size = new Size(174, 29);
+            lblOldpass.Size = new Size(219, 36);
             lblOldpass.TabIndex = 54;
             lblOldpass.Text = "Mật khẩu cũ :";
             // 
@@ -82,9 +83,10 @@
             // 
             txtOldpass.BorderStyle = BorderStyle.None;
             txtOldpass.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtOldpass.Location = new Point(334, 199);
+            txtOldpass.Location = new Point(383, 265);
+            txtOldpass.Margin = new Padding(3, 4, 3, 4);
             txtOldpass.Name = "txtOldpass";
-            txtOldpass.Size = new Size(249, 29);
+            txtOldpass.Size = new Size(284, 37);
             txtOldpass.TabIndex = 2;
             txtOldpass.Tag = "7";
             // 
@@ -93,9 +95,9 @@
             lblSelectuser.AutoSize = true;
             lblSelectuser.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblSelectuser.ForeColor = Color.FromArgb(0, 64, 0);
-            lblSelectuser.Location = new Point(89, 105);
+            lblSelectuser.Location = new Point(55, 140);
             lblSelectuser.Name = "lblSelectuser";
-            lblSelectuser.Size = new Size(145, 29);
+            lblSelectuser.Size = new Size(182, 36);
             lblSelectuser.TabIndex = 53;
             lblSelectuser.Text = "Tài khoản :";
             lblSelectuser.UseMnemonic = false;
@@ -104,10 +106,11 @@
             // 
             txtUser.BorderStyle = BorderStyle.None;
             txtUser.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUser.Location = new Point(333, 105);
+            txtUser.Location = new Point(382, 140);
+            txtUser.Margin = new Padding(3, 4, 3, 4);
             txtUser.Name = "txtUser";
             txtUser.ReadOnly = true;
-            txtUser.Size = new Size(249, 29);
+            txtUser.Size = new Size(284, 37);
             txtUser.TabIndex = 0;
             txtUser.Tag = "0";
             // 
@@ -117,9 +120,10 @@
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.Green;
-            btnCancel.Location = new Point(335, 357);
+            btnCancel.Location = new Point(413, 476);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(116, 38);
+            btnCancel.Size = new Size(133, 51);
             btnCancel.TabIndex = 6;
             btnCancel.Tag = "10";
             btnCancel.Text = "Huỷ";
@@ -132,9 +136,10 @@
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.Green;
-            btnSave.Location = new Point(189, 357);
+            btnSave.Location = new Point(211, 476);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(116, 38);
+            btnSave.Size = new Size(133, 51);
             btnSave.TabIndex = 5;
             btnSave.Tag = "9";
             btnSave.Text = "Lưu";
@@ -146,9 +151,9 @@
             lblNewpass.AutoSize = true;
             lblNewpass.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewpass.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewpass.Location = new Point(89, 247);
+            lblNewpass.Location = new Point(55, 329);
             lblNewpass.Name = "lblNewpass";
-            lblNewpass.Size = new Size(191, 29);
+            lblNewpass.Size = new Size(241, 36);
             lblNewpass.TabIndex = 49;
             lblNewpass.Text = "Mật khẩu mới :";
             // 
@@ -156,9 +161,10 @@
             // 
             txtNewpass.BorderStyle = BorderStyle.None;
             txtNewpass.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewpass.Location = new Point(334, 247);
+            txtNewpass.Location = new Point(383, 329);
+            txtNewpass.Margin = new Padding(3, 4, 3, 4);
             txtNewpass.Name = "txtNewpass";
-            txtNewpass.Size = new Size(249, 29);
+            txtNewpass.Size = new Size(284, 37);
             txtNewpass.TabIndex = 3;
             txtNewpass.Tag = "7";
             // 
@@ -167,9 +173,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 64, 0);
-            label1.Location = new Point(89, 296);
+            label1.Location = new Point(55, 395);
             label1.Name = "label1";
-            label1.Size = new Size(239, 29);
+            label1.Size = new Size(301, 36);
             label1.TabIndex = 57;
             label1.Text = "Nhập lại mật khẩu:";
             // 
@@ -177,9 +183,10 @@
             // 
             txtAcceptPass.BorderStyle = BorderStyle.None;
             txtAcceptPass.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAcceptPass.Location = new Point(334, 296);
+            txtAcceptPass.Location = new Point(383, 395);
+            txtAcceptPass.Margin = new Padding(3, 4, 3, 4);
             txtAcceptPass.Name = "txtAcceptPass";
-            txtAcceptPass.Size = new Size(249, 29);
+            txtAcceptPass.Size = new Size(284, 37);
             txtAcceptPass.TabIndex = 4;
             txtAcceptPass.Tag = "7";
             // 
@@ -187,18 +194,19 @@
             // 
             ptbLogo.Image = (Image)resources.GetObject("ptbLogo.Image");
             ptbLogo.Location = new Point(-3, 0);
+            ptbLogo.Margin = new Padding(3, 4, 3, 4);
             ptbLogo.Name = "ptbLogo";
-            ptbLogo.Size = new Size(116, 90);
+            ptbLogo.Size = new Size(133, 120);
             ptbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             ptbLogo.TabIndex = 58;
             ptbLogo.TabStop = false;
             // 
             // ChangeInfo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
-            ClientSize = new Size(626, 411);
+            ClientSize = new Size(715, 548);
             Controls.Add(ptbLogo);
             Controls.Add(label1);
             Controls.Add(txtAcceptPass);
@@ -213,6 +221,7 @@
             Controls.Add(lblNewpass);
             Controls.Add(txtNewpass);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ChangeInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangeInfo";
