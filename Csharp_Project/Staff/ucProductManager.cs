@@ -16,7 +16,7 @@ namespace Csharp_Project.Staff
         {
             foodBLL = new ProductManager();
             InitializeComponent();
-            dgFood.DefaultCellStyle.Font = new Font("Tahoma", 10);
+            dgFood.DefaultCellStyle.Font = new Font("Tahoma", 12);
             dgFood.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgFood.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgFood.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -28,6 +28,9 @@ namespace Csharp_Project.Staff
             dgFood.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dgFood.AllowUserToResizeRows = false;
             dgFood.AllowUserToResizeColumns = false;
+
+            dgFood.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgFood.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         private void LoadFoods()
         {

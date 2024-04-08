@@ -15,7 +15,7 @@ namespace Csharp_Project.Staff
         {
             categoryBLL = new CategoryManager();
             InitializeComponent();
-            dgCategory.DefaultCellStyle.Font = new Font("Tahoma", 10);
+            dgCategory.DefaultCellStyle.Font = new Font("Tahoma", 12);
             dgCategory.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgCategory.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgCategory.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -27,6 +27,9 @@ namespace Csharp_Project.Staff
             dgCategory.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dgCategory.AllowUserToResizeRows = false;
             dgCategory.AllowUserToResizeColumns = false;
+
+            dgCategory.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgCategory.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         private void LoadCategories()
         {

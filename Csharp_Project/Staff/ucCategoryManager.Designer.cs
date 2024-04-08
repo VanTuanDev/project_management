@@ -338,7 +338,8 @@
             // 
             dgCategory.AllowUserToAddRows = false;
             dgCategory.BackgroundColor = Color.FromArgb(192, 255, 192);
-            dgCategory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgCategory.ColumnHeadersHeight = 35;
+            dgCategory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgCategory.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2 });
             dgCategory.Dock = DockStyle.Fill;
             dgCategory.Location = new Point(0, 0);
@@ -346,7 +347,8 @@
             dgCategory.Name = "dgCategory";
             dgCategory.ReadOnly = true;
             dgCategory.RowHeadersVisible = false;
-            dgCategory.RowHeadersWidth = 51;
+            dgCategory.RowHeadersWidth = 60;
+            dgCategory.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgCategory.RowTemplate.Height = 25;
             dgCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgCategory.Size = new Size(772, 868);

@@ -14,7 +14,7 @@ namespace Csharp_Project.Staff
         {
             clientBLL = new CustomerManager();
             InitializeComponent();
-            dgClient.DefaultCellStyle.Font = new Font("Tahoma", 10);
+            dgClient.DefaultCellStyle.Font = new Font("Tahoma", 12);
             dgClient.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgClient.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgClient.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -26,6 +26,9 @@ namespace Csharp_Project.Staff
             dgClient.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dgClient.AllowUserToResizeRows = false;
             dgClient.AllowUserToResizeColumns = false;
+
+            dgClient.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgClient.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         private void LoadClients()
         {

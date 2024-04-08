@@ -174,7 +174,7 @@
             cbbCategory.Location = new Point(185, 687);
             cbbCategory.Name = "cbbCategory";
             cbbCategory.Size = new Size(219, 32);
-            cbbCategory.TabIndex = 8;
+            cbbCategory.TabIndex = 13;
             // 
             // lblNewCategory
             // 
@@ -206,7 +206,7 @@
             txtNewUnit.Margin = new Padding(3, 4, 3, 4);
             txtNewUnit.Name = "txtNewUnit";
             txtNewUnit.Size = new Size(219, 25);
-            txtNewUnit.TabIndex = 6;
+            txtNewUnit.TabIndex = 11;
             txtNewUnit.Tag = "1";
             // 
             // lblNewPrice
@@ -228,7 +228,7 @@
             txtNewPrice.Margin = new Padding(3, 4, 3, 4);
             txtNewPrice.Name = "txtNewPrice";
             txtNewPrice.Size = new Size(219, 25);
-            txtNewPrice.TabIndex = 7;
+            txtNewPrice.TabIndex = 12;
             txtNewPrice.Tag = "1";
             txtNewPrice.KeyPress += txtNewPrice_KeyPress;
             // 
@@ -263,7 +263,7 @@
             txtNewName.Margin = new Padding(3, 4, 3, 4);
             txtNewName.Name = "txtNewName";
             txtNewName.Size = new Size(219, 25);
-            txtNewName.TabIndex = 5;
+            txtNewName.TabIndex = 10;
             txtNewName.Tag = "1";
             // 
             // txtNewId
@@ -274,7 +274,7 @@
             txtNewId.Margin = new Padding(3, 4, 3, 4);
             txtNewId.Name = "txtNewId";
             txtNewId.Size = new Size(219, 25);
-            txtNewId.TabIndex = 4;
+            txtNewId.TabIndex = 9;
             txtNewId.Tag = "0";
             txtNewId.KeyPress += txtNewId_KeyPress;
             // 
@@ -289,7 +289,7 @@
             btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(133, 51);
-            btnCancel.TabIndex = 10;
+            btnCancel.TabIndex = 15;
             btnCancel.Tag = "4";
             btnCancel.Text = "Hủy";
             btnCancel.UseVisualStyleBackColor = false;
@@ -306,7 +306,7 @@
             btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(133, 51);
-            btnSave.TabIndex = 9;
+            btnSave.TabIndex = 14;
             btnSave.Tag = "4";
             btnSave.Text = "Lưu";
             btnSave.UseVisualStyleBackColor = false;
@@ -332,7 +332,7 @@
             txtCategory.Name = "txtCategory";
             txtCategory.ReadOnly = true;
             txtCategory.Size = new Size(219, 25);
-            txtCategory.TabIndex = 16;
+            txtCategory.TabIndex = 5;
             txtCategory.Tag = "1";
             // 
             // lblUnit
@@ -355,7 +355,7 @@
             txtUnit.Name = "txtUnit";
             txtUnit.ReadOnly = true;
             txtUnit.Size = new Size(219, 25);
-            txtUnit.TabIndex = 14;
+            txtUnit.TabIndex = 3;
             txtUnit.Tag = "1";
             // 
             // lblPrice
@@ -378,7 +378,7 @@
             txtPrice.Name = "txtPrice";
             txtPrice.ReadOnly = true;
             txtPrice.Size = new Size(219, 25);
-            txtPrice.TabIndex = 11;
+            txtPrice.TabIndex = 4;
             txtPrice.Tag = "1";
             // 
             // ptbLogo
@@ -426,7 +426,7 @@
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(133, 51);
-            btnDelete.TabIndex = 3;
+            btnDelete.TabIndex = 8;
             btnDelete.Tag = "5";
             btnDelete.Text = "Xoá";
             btnDelete.UseVisualStyleBackColor = false;
@@ -443,7 +443,7 @@
             btnEdit.Margin = new Padding(3, 4, 3, 4);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(133, 51);
-            btnEdit.TabIndex = 2;
+            btnEdit.TabIndex = 7;
             btnEdit.Tag = "4";
             btnEdit.Text = "Sửa";
             btnEdit.UseVisualStyleBackColor = false;
@@ -472,7 +472,7 @@
             btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(133, 51);
-            btnAdd.TabIndex = 1;
+            btnAdd.TabIndex = 6;
             btnAdd.Tag = "3";
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = false;
@@ -487,7 +487,7 @@
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(219, 25);
-            txtId.TabIndex = 0;
+            txtId.TabIndex = 1;
             txtId.Tag = "0";
             // 
             // panel6
@@ -504,7 +504,8 @@
             // 
             dgFood.AllowUserToAddRows = false;
             dgFood.BackgroundColor = Color.FromArgb(192, 255, 192);
-            dgFood.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgFood.ColumnHeadersHeight = 35;
+            dgFood.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgFood.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5 });
             dgFood.Dock = DockStyle.Fill;
             dgFood.Location = new Point(0, 0);
@@ -512,7 +513,8 @@
             dgFood.Name = "dgFood";
             dgFood.ReadOnly = true;
             dgFood.RowHeadersVisible = false;
-            dgFood.RowHeadersWidth = 51;
+            dgFood.RowHeadersWidth = 60;
+            dgFood.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgFood.RowTemplate.Height = 25;
             dgFood.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgFood.Size = new Size(772, 868);

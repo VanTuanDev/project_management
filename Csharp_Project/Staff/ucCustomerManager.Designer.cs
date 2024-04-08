@@ -110,7 +110,8 @@
             // 
             dgClient.AllowUserToAddRows = false;
             dgClient.BackgroundColor = Color.FromArgb(192, 255, 192);
-            dgClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgClient.ColumnHeadersHeight = 35;
+            dgClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgClient.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4 });
             dgClient.Dock = DockStyle.Fill;
             dgClient.Location = new Point(0, 0);
@@ -118,7 +119,8 @@
             dgClient.Name = "dgClient";
             dgClient.ReadOnly = true;
             dgClient.RowHeadersVisible = false;
-            dgClient.RowHeadersWidth = 51;
+            dgClient.RowHeadersWidth = 60;
+            dgClient.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgClient.RowTemplate.Height = 25;
             dgClient.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgClient.Size = new Size(772, 868);
