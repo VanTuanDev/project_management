@@ -93,6 +93,7 @@ namespace Csharp_Project.Staff
             cbbCategory.DataSource = categoriesTable;
             cbbCategory.DisplayMember = "catename";
             cbbCategory.ValueMember = "catename";
+            cbbCategory.SelectedIndex = -1;
         }
 
         private void dgFood_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -224,7 +225,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (!char.IsLetterOrDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -232,15 +233,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtNewCategory_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }

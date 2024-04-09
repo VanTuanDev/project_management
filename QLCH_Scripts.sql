@@ -218,6 +218,7 @@ BEGIN
 	SELECT * FROM dbo.Account WHERE  username = @userName AND roleid = 1
 END
 GO
+
 CREATE PROC checkpwd
 @Username nvarchar(100),
 @pwd nvarchar(100)

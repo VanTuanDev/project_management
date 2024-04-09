@@ -169,6 +169,7 @@
             // 
             // cbbCategory
             // 
+            cbbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbCategory.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbCategory.FormattingEnabled = true;
             cbbCategory.Location = new Point(185, 687);

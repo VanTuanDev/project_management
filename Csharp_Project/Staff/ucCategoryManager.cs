@@ -205,7 +205,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (!char.IsLetterOrDigit(e.KeyChar))
             {
                 e.Handled = true;
             }

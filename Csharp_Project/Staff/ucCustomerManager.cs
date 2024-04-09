@@ -205,7 +205,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -213,7 +213,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (!char.IsLetterOrDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
