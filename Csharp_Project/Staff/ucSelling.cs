@@ -16,5 +16,11 @@ namespace Csharp_Project.Staff
         {
             InitializeComponent();
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            SelectCustomer f = new SelectCustomer();
+            f.ShowDialog();
+        }
     }
 }

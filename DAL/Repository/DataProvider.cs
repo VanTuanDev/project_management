@@ -6,8 +6,9 @@ namespace DAL.Repository
 {
     internal class DataProvider
     {
-        private string connectionSTR = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
+        //private string connectionSTR = "Data Source=.;Initial Catalog=QLCH;Integrated Security=True";
         //private string connectionSTR = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
+        private string connectionSTR = "Data Source=DESKTOP-AJPPPC6;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
         private static DataProvider instance;
 
         public string getconnectionSTR()
