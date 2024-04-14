@@ -1,7 +1,7 @@
 ﻿CREATE DATABASE QLCH
 GO
 
-USE QLCH
+USE QLCH	
 GO
 
 -- Tạo bảng Role

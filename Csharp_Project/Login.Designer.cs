@@ -54,6 +54,7 @@
             txtTaikhoan.Size = new Size(401, 44);
             txtTaikhoan.TabIndex = 0;
             txtTaikhoan.Tag = "0";
+            txtTaikhoan.Text = "levantuan";
             txtTaikhoan.KeyPress += txtTaikhoan_KeyPress;
             // 
             // btnLogin
@@ -112,6 +113,7 @@
             txtMatkhau.Size = new Size(401, 44);
             txtMatkhau.TabIndex = 1;
             txtMatkhau.Tag = "1";
+            txtMatkhau.Text = "123";
             txtMatkhau.KeyPress += txtMatkhau_KeyPress;
             // 
             // pictureBox1

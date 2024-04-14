@@ -28,71 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            id = new DataGridViewTextBoxColumn();
-            fullname = new DataGridViewTextBoxColumn();
-            address = new DataGridViewTextBoxColumn();
-            phone = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgKhachHang = new DataGridView();
+            cl1 = new DataGridViewTextBoxColumn();
+            cl2 = new DataGridViewTextBoxColumn();
+            cl3 = new DataGridViewTextBoxColumn();
+            cl4 = new DataGridViewTextBoxColumn();
+            cl5 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgKhachHang).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgKhachHang
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { id, fullname, address, phone });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(800, 450);
-            dataGridView1.TabIndex = 0;
+            dgKhachHang.AllowUserToAddRows = false;
+            dgKhachHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgKhachHang.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5 });
+            dgKhachHang.Dock = DockStyle.Fill;
+            dgKhachHang.Location = new Point(0, 0);
+            dgKhachHang.Margin = new Padding(3, 4, 3, 4);
+            dgKhachHang.Name = "dgKhachHang";
+            dgKhachHang.RowHeadersVisible = false;
+            dgKhachHang.RowHeadersWidth = 51;
+            dgKhachHang.RowTemplate.Height = 25;
+            dgKhachHang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgKhachHang.Size = new Size(914, 600);
+            dgKhachHang.TabIndex = 0;
+            dgKhachHang.DoubleClick += dgKhachHang_DoubleClick;
             // 
-            // id
+            // cl1
             // 
-            id.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            id.HeaderText = "Mã khách hàng";
-            id.Name = "id";
+            cl1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl1.DataPropertyName = "id";
+            cl1.HeaderText = "Mã khách hàng";
+            cl1.MinimumWidth = 6;
+            cl1.Name = "cl1";
+            cl1.Resizable = DataGridViewTriState.False;
+            cl1.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // fullname
+            // cl2
             // 
-            fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            fullname.HeaderText = "Tên khách hàng";
-            fullname.Name = "fullname";
+            cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl2.DataPropertyName = "fullname";
+            cl2.HeaderText = "Tên khách hàng";
+            cl2.MinimumWidth = 6;
+            cl2.Name = "cl2";
+            cl2.Resizable = DataGridViewTriState.False;
+            cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // address
+            // cl3
             // 
-            address.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            address.HeaderText = "Địa chỉ";
-            address.Name = "address";
+            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl3.DataPropertyName = "address";
+            cl3.HeaderText = "Địa chỉ";
+            cl3.MinimumWidth = 6;
+            cl3.Name = "cl3";
+            cl3.Resizable = DataGridViewTriState.False;
+            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // phone
+            // cl4
             // 
-            phone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            phone.HeaderText = "Số điện thoại";
-            phone.Name = "phone";
+            cl4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl4.DataPropertyName = "phonenumber";
+            cl4.HeaderText = "Số điện thoại";
+            cl4.MinimumWidth = 6;
+            cl4.Name = "cl4";
+            cl4.Resizable = DataGridViewTriState.False;
+            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cl5
+            // 
+            cl5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl5.DataPropertyName = "status";
+            cl5.HeaderText = "Trạng thái";
+            cl5.MinimumWidth = 6;
+            cl5.Name = "cl5";
+            cl5.Resizable = DataGridViewTriState.False;
+            cl5.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // SelectCustomer
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
-            FormBorderStyle = FormBorderStyle.None;
+            ClientSize = new Size(914, 600);
+            Controls.Add(dgKhachHang);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MaximumSize = new Size(936, 651);
+            MinimizeBox = false;
+            MinimumSize = new Size(936, 651);
             Name = "SelectCustomer";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "SelectCustomer";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Text = "Chọn khách hàng";
+            Load += SelectCustomer_Load;
+            ((System.ComponentModel.ISupportInitialize)dgKhachHang).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn fullname;
-        private DataGridViewTextBoxColumn address;
-        private DataGridViewTextBoxColumn phone;
+        private DataGridView dgKhachHang;
+        private DataGridViewTextBoxColumn cl1;
+        private DataGridViewTextBoxColumn cl2;
+        private DataGridViewTextBoxColumn cl3;
+        private DataGridViewTextBoxColumn cl4;
+        private DataGridViewTextBoxColumn cl5;
     }
 }

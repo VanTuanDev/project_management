@@ -28,63 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnChitiet = new Button();
-            dataGridView1 = new DataGridView();
-            dateTimePicker1 = new DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnChiTiet = new Button();
+            dgHoaDon = new DataGridView();
+            dtpThoiGian = new DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)dgHoaDon).BeginInit();
             SuspendLayout();
             // 
-            // btnChitiet
+            // btnChiTiet
             // 
-            btnChitiet.BackColor = Color.FromArgb(128, 255, 128);
-            btnChitiet.FlatStyle = FlatStyle.Flat;
-            btnChitiet.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnChitiet.ForeColor = Color.Green;
-            btnChitiet.Location = new Point(831, 5);
-            btnChitiet.Name = "btnChitiet";
-            btnChitiet.Size = new Size(214, 38);
-            btnChitiet.TabIndex = 8;
-            btnChitiet.Tag = "4";
-            btnChitiet.Text = "Chi tiết hoá đơn";
-            btnChitiet.UseVisualStyleBackColor = false;
+            btnChiTiet.BackColor = Color.FromArgb(128, 255, 128);
+            btnChiTiet.FlatStyle = FlatStyle.Flat;
+            btnChiTiet.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChiTiet.ForeColor = Color.Green;
+            btnChiTiet.Location = new Point(950, 7);
+            btnChiTiet.Margin = new Padding(3, 4, 3, 4);
+            btnChiTiet.Name = "btnChiTiet";
+            btnChiTiet.Size = new Size(245, 51);
+            btnChiTiet.TabIndex = 8;
+            btnChiTiet.Tag = "4";
+            btnChiTiet.Text = "Chi tiết hoá đơn";
+            btnChiTiet.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgHoaDon
             // 
-            dataGridView1.BackgroundColor = Color.Honeydew;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 51);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1057, 606);
-            dataGridView1.TabIndex = 7;
+            dgHoaDon.BackgroundColor = Color.Honeydew;
+            dgHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgHoaDon.Dock = DockStyle.Bottom;
+            dgHoaDon.Location = new Point(0, 68);
+            dgHoaDon.Margin = new Padding(3, 4, 3, 4);
+            dgHoaDon.Name = "dgHoaDon";
+            dgHoaDon.ReadOnly = true;
+            dgHoaDon.RowHeadersWidth = 51;
+            dgHoaDon.RowTemplate.Height = 25;
+            dgHoaDon.Size = new Size(1208, 808);
+            dgHoaDon.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // dtpThoiGian
             // 
-            dateTimePicker1.Location = new Point(12, 9);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(212, 23);
-            dateTimePicker1.TabIndex = 6;
+            dtpThoiGian.Location = new Point(14, 12);
+            dtpThoiGian.Margin = new Padding(3, 4, 3, 4);
+            dtpThoiGian.Name = "dtpThoiGian";
+            dtpThoiGian.Size = new Size(242, 27);
+            dtpThoiGian.TabIndex = 6;
             // 
-            // ucBillManage
+            // ucBillManager
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
-            Controls.Add(btnChitiet);
-            Controls.Add(dataGridView1);
-            Controls.Add(dateTimePicker1);
-            Name = "ucBillManage";
-            Size = new Size(1057, 657);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Controls.Add(btnChiTiet);
+            Controls.Add(dgHoaDon);
+            Controls.Add(dtpThoiGian);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "ucBillManager";
+            Size = new Size(1208, 876);
+            ((System.ComponentModel.ISupportInitialize)dgHoaDon).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnChitiet;
-        private DataGridView dataGridView1;
-        private DateTimePicker dateTimePicker1;
+        private Button btnChiTiet;
+        private DataGridView dgHoaDon;
+        private DateTimePicker dtpThoiGian;
     }
 }
