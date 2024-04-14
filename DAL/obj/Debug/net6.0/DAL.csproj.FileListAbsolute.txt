@@ -59,3 +59,16 @@ E:\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.dll
 E:\Code\C#\project_management\DAL\obj\Debug\net6.0\refint\DAL.dll
 E:\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.pdb
 E:\Code\C#\project_management\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\CSharp\project_management\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\CSharp\project_management\DAL\bin\Debug\net6.0\DAL.dll
+D:\CSharp\project_management\DAL\bin\Debug\net6.0\DAL.pdb
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.sourcelink.json
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.dll
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.pdb
+D:\CSharp\project_management\DAL\obj\Debug\net6.0\ref\DAL.dll

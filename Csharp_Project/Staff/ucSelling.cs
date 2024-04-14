@@ -65,6 +65,7 @@ namespace Csharp_Project.Staff
         {
             txtKhachHang.Text = string.Empty;
             txtSanPham.Text = string.Empty;
+            txtDonGia.Text = string.Empty;
             txtSoLuong.Text = "1";
             currentValue = 1;
         }
@@ -206,6 +207,12 @@ namespace Csharp_Project.Staff
         private void btnXoa_Click(object sender, EventArgs e)
         {
             Xoa();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            SelectCustomer f = new SelectCustomer();
+            f.ShowDialog();
         }
     }
 }

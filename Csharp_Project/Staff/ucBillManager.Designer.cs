@@ -32,6 +32,7 @@
             dgHoaDon = new DataGridView();
             dtpThoiGian = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dgHoaDon).BeginInit();
+
             SuspendLayout();
             // 
             // btnChiTiet
@@ -70,19 +71,7 @@
             dtpThoiGian.Name = "dtpThoiGian";
             dtpThoiGian.Size = new Size(242, 27);
             dtpThoiGian.TabIndex = 6;
-            // 
-            // ucBillManager
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(192, 255, 192);
-            Controls.Add(btnChiTiet);
-            Controls.Add(dgHoaDon);
-            Controls.Add(dtpThoiGian);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "ucBillManager";
-            Size = new Size(1208, 876);
-            ((System.ComponentModel.ISupportInitialize)dgHoaDon).EndInit();
+
             ResumeLayout(false);
         }
 
@@ -91,5 +80,6 @@
         private Button btnChiTiet;
         private DataGridView dgHoaDon;
         private DateTimePicker dtpThoiGian;
+
     }
 }

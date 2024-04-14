@@ -1,5 +1,7 @@
-﻿using System.Data;
+
 using BLL.Manager;
+using System.Data;
+using DAL.Entity;
 
 namespace Csharp_Project.Staff
 {
@@ -54,7 +56,7 @@ namespace Csharp_Project.Staff
 
             if (dataGridView != null && dataGridView.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];         
+                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
                 string tenKhachHang = selectedRow.Cells["cl2"].Value.ToString();
 
                 SelectedKhachHang = new KhachHang

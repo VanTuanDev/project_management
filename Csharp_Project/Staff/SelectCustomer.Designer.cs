@@ -58,7 +58,7 @@
             // 
             cl1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cl1.DataPropertyName = "id";
-            cl1.HeaderText = "Mã khách hàng";
+            cl1.HeaderText = "Mã KH";
             cl1.MinimumWidth = 6;
             cl1.Name = "cl1";
             cl1.Resizable = DataGridViewTriState.False;
@@ -68,7 +68,7 @@
             // 
             cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cl2.DataPropertyName = "fullname";
-            cl2.HeaderText = "Tên khách hàng";
+            cl2.HeaderText = "Tên KH";
             cl2.MinimumWidth = 6;
             cl2.Name = "cl2";
             cl2.Resizable = DataGridViewTriState.False;
@@ -103,6 +103,7 @@
             cl5.Name = "cl5";
             cl5.Resizable = DataGridViewTriState.False;
             cl5.SortMode = DataGridViewColumnSortMode.NotSortable;
+            cl5.Visible = false;
             // 
             // SelectCustomer
             // 

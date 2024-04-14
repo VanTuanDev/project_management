@@ -84,7 +84,7 @@
             panel4.Location = new Point(0, 876);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1208, 0);
+            panel4.Size = new Size(1381, 292);
             panel4.TabIndex = 11;
             // 
             // dataGridView2
@@ -97,7 +97,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(1208, 0);
+            dataGridView2.Size = new Size(1381, 292);
             dataGridView2.TabIndex = 0;
             // 
             // panel6
@@ -107,7 +107,7 @@
             panel6.Location = new Point(3, 4);
             panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(772, 868);
+            panel6.Size = new Size(822, 868);
             panel6.TabIndex = 1;
             // 
             // dgSanPham
@@ -118,14 +118,14 @@
             dgSanPham.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5, cl6 });
             dgSanPham.Dock = DockStyle.Fill;
             dgSanPham.Location = new Point(0, 0);
-            dgSanPham.Margin = new Padding(3, 4, 3, 4);
+            dgSanPham.Margin = new Padding(3, 5, 3, 5);
             dgSanPham.Name = "dgSanPham";
             dgSanPham.ReadOnly = true;
             dgSanPham.RowHeadersVisible = false;
             dgSanPham.RowHeadersWidth = 51;
             dgSanPham.RowTemplate.Height = 25;
             dgSanPham.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgSanPham.Size = new Size(772, 868);
+            dgSanPham.Size = new Size(822, 868);
             dgSanPham.TabIndex = 0;
             dgSanPham.CellClick += dgSanPham_CellClick;
             // 
@@ -203,10 +203,10 @@
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnXoa.ForeColor = Color.Green;
-            btnXoa.Location = new Point(245, 226);
-            btnXoa.Margin = new Padding(3, 4, 3, 4);
+            btnXoa.Location = new Point(186, 294);
+            btnXoa.Margin = new Padding(3, 5, 3, 5);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(155, 51);
+            btnXoa.Size = new Size(122, 44);
             btnXoa.TabIndex = 13;
             btnXoa.Tag = "3";
             btnXoa.Text = "Xoá";
@@ -218,10 +218,10 @@
             cbbDanhMuc.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbDanhMuc.FlatStyle = FlatStyle.Flat;
             cbbDanhMuc.FormattingEnabled = true;
-            cbbDanhMuc.Location = new Point(152, 58);
-            cbbDanhMuc.Margin = new Padding(3, 4, 3, 4);
+            cbbDanhMuc.Location = new Point(152, 77);
+            cbbDanhMuc.Margin = new Padding(3, 5, 3, 5);
             cbbDanhMuc.Name = "cbbDanhMuc";
-            cbbDanhMuc.Size = new Size(180, 28);
+            cbbDanhMuc.Size = new Size(196, 28);
             cbbDanhMuc.TabIndex = 12;
             // 
             // panel5
@@ -248,21 +248,21 @@
             panel5.Controls.Add(btnDatHang);
             panel5.Controls.Add(txtSoLuong);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(781, 4);
+            panel5.Location = new Point(831, 4);
             panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(424, 868);
+            panel5.Size = new Size(547, 868);
             panel5.TabIndex = 0;
             // 
             // txtDonGia
             // 
             txtDonGia.BorderStyle = BorderStyle.None;
             txtDonGia.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            txtDonGia.Location = new Point(152, 134);
-            txtDonGia.Margin = new Padding(3, 4, 3, 4);
+            txtDonGia.Location = new Point(152, 179);
+            txtDonGia.Margin = new Padding(3, 5, 3, 5);
             txtDonGia.Name = "txtDonGia";
             txtDonGia.ReadOnly = true;
-            txtDonGia.Size = new Size(255, 25);
+            txtDonGia.Size = new Size(289, 25);
             txtDonGia.TabIndex = 25;
             txtDonGia.Tag = "0";
             // 
@@ -271,7 +271,7 @@
             lblDonGia.AutoSize = true;
             lblDonGia.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblDonGia.ForeColor = Color.FromArgb(0, 64, 0);
-            lblDonGia.Location = new Point(3, 134);
+            lblDonGia.Location = new Point(3, 179);
             lblDonGia.Name = "lblDonGia";
             lblDonGia.Size = new Size(100, 24);
             lblDonGia.TabIndex = 24;
@@ -283,7 +283,7 @@
             lblTongTien.AutoSize = true;
             lblTongTien.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblTongTien.ForeColor = Color.FromArgb(0, 64, 0);
-            lblTongTien.Location = new Point(32, 809);
+            lblTongTien.Location = new Point(37, 355);
             lblTongTien.Name = "lblTongTien";
             lblTongTien.Size = new Size(0, 28);
             lblTongTien.TabIndex = 23;
@@ -295,10 +295,10 @@
             s.FlatStyle = FlatStyle.Flat;
             s.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             s.ForeColor = Color.Green;
-            s.Location = new Point(344, 54);
-            s.Margin = new Padding(3, 4, 3, 4);
+            s.Location = new Point(368, 72);
+            s.Margin = new Padding(3, 5, 3, 5);
             s.Name = "s";
-            s.Size = new Size(63, 35);
+            s.Size = new Size(72, 33);
             s.TabIndex = 22;
             s.Tag = "3";
             s.Text = "Lọc";
@@ -310,14 +310,16 @@
             dgSPDuocChon.BackgroundColor = Color.Honeydew;
             dgSPDuocChon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgSPDuocChon.Columns.AddRange(new DataGridViewColumn[] { column1, column2, column3, column4 });
-            dgSPDuocChon.Location = new Point(3, 319);
+            dgSPDuocChon.Dock = DockStyle.Bottom;
+            dgSPDuocChon.Location = new Point(0, 415);
+            dgSPDuocChon.Margin = new Padding(3, 4, 3, 4);
             dgSPDuocChon.Name = "dgSPDuocChon";
             dgSPDuocChon.ReadOnly = true;
             dgSPDuocChon.RowHeadersVisible = false;
             dgSPDuocChon.RowHeadersWidth = 51;
             dgSPDuocChon.RowTemplate.Height = 29;
             dgSPDuocChon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgSPDuocChon.Size = new Size(421, 457);
+            dgSPDuocChon.Size = new Size(547, 453);
             dgSPDuocChon.TabIndex = 20;
             dgSPDuocChon.RowsAdded += dgSPDuocChon_RowsAdded;
             // 
@@ -334,6 +336,7 @@
             // 
             // column2
             // 
+            column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column2.DataPropertyName = "quantity";
             column2.HeaderText = "SL";
             column2.MinimumWidth = 6;
@@ -341,7 +344,6 @@
             column2.ReadOnly = true;
             column2.Resizable = DataGridViewTriState.False;
             column2.SortMode = DataGridViewColumnSortMode.NotSortable;
-            column2.Width = 50;
             // 
             // column3
             // 
@@ -356,6 +358,7 @@
             // 
             // column4
             // 
+            column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column4.DataPropertyName = "total";
             column4.HeaderText = "Thành tiền";
             column4.MinimumWidth = 6;
@@ -363,7 +366,6 @@
             column4.ReadOnly = true;
             column4.Resizable = DataGridViewTriState.False;
             column4.SortMode = DataGridViewColumnSortMode.NotSortable;
-            column4.Width = 120;
             // 
             // btnChonKH
             // 
@@ -372,10 +374,10 @@
             btnChonKH.FlatStyle = FlatStyle.Flat;
             btnChonKH.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnChonKH.ForeColor = Color.Green;
-            btnChonKH.Location = new Point(344, 12);
-            btnChonKH.Margin = new Padding(3, 4, 3, 4);
+            btnChonKH.Location = new Point(369, 16);
+            btnChonKH.Margin = new Padding(3, 5, 3, 5);
             btnChonKH.Name = "btnChonKH";
-            btnChonKH.Size = new Size(63, 35);
+            btnChonKH.Size = new Size(72, 26);
             btnChonKH.TabIndex = 19;
             btnChonKH.Tag = "3";
             btnChonKH.Text = ". . .";
@@ -386,11 +388,11 @@
             // 
             txtKhachHang.BorderStyle = BorderStyle.None;
             txtKhachHang.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtKhachHang.Location = new Point(152, 13);
-            txtKhachHang.Margin = new Padding(3, 4, 3, 4);
+            txtKhachHang.Location = new Point(152, 17);
+            txtKhachHang.Margin = new Padding(3, 5, 3, 5);
             txtKhachHang.Name = "txtKhachHang";
             txtKhachHang.ReadOnly = true;
-            txtKhachHang.Size = new Size(180, 25);
+            txtKhachHang.Size = new Size(196, 25);
             txtKhachHang.TabIndex = 18;
             txtKhachHang.Tag = "0";
             // 
@@ -399,7 +401,7 @@
             lblKhachHang.AutoSize = true;
             lblKhachHang.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblKhachHang.ForeColor = Color.FromArgb(0, 64, 0);
-            lblKhachHang.Location = new Point(3, 13);
+            lblKhachHang.Location = new Point(3, 17);
             lblKhachHang.Name = "lblKhachHang";
             lblKhachHang.Size = new Size(143, 24);
             lblKhachHang.TabIndex = 17;
@@ -410,11 +412,11 @@
             // 
             txtSanPham.BorderStyle = BorderStyle.None;
             txtSanPham.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            txtSanPham.Location = new Point(152, 100);
-            txtSanPham.Margin = new Padding(3, 4, 3, 4);
+            txtSanPham.Location = new Point(152, 133);
+            txtSanPham.Margin = new Padding(3, 5, 3, 5);
             txtSanPham.Name = "txtSanPham";
             txtSanPham.ReadOnly = true;
-            txtSanPham.Size = new Size(255, 25);
+            txtSanPham.Size = new Size(289, 25);
             txtSanPham.TabIndex = 16;
             txtSanPham.Tag = "0";
             // 
@@ -425,10 +427,10 @@
             btnCong.FlatStyle = FlatStyle.Flat;
             btnCong.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCong.ForeColor = Color.Green;
-            btnCong.Location = new Point(317, 170);
-            btnCong.Margin = new Padding(3, 4, 3, 4);
+            btnCong.Location = new Point(335, 227);
+            btnCong.Margin = new Padding(3, 5, 3, 5);
             btnCong.Name = "btnCong";
-            btnCong.Size = new Size(45, 35);
+            btnCong.Size = new Size(51, 47);
             btnCong.TabIndex = 15;
             btnCong.Tag = "3";
             btnCong.Text = "+";
@@ -442,10 +444,10 @@
             btnTru.FlatStyle = FlatStyle.Flat;
             btnTru.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnTru.ForeColor = Color.Green;
-            btnTru.Location = new Point(143, 170);
-            btnTru.Margin = new Padding(3, 4, 3, 4);
+            btnTru.Location = new Point(136, 227);
+            btnTru.Margin = new Padding(3, 5, 3, 5);
             btnTru.Name = "btnTru";
-            btnTru.Size = new Size(45, 35);
+            btnTru.Size = new Size(51, 47);
             btnTru.TabIndex = 14;
             btnTru.Tag = "3";
             btnTru.Text = "-";
@@ -457,7 +459,7 @@
             lblDanhMuc.AutoSize = true;
             lblDanhMuc.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblDanhMuc.ForeColor = Color.FromArgb(0, 64, 0);
-            lblDanhMuc.Location = new Point(3, 58);
+            lblDanhMuc.Location = new Point(3, 77);
             lblDanhMuc.Name = "lblDanhMuc";
             lblDanhMuc.Size = new Size(125, 24);
             lblDanhMuc.TabIndex = 11;
@@ -468,7 +470,7 @@
             lblDanhSachDuocChon.AutoSize = true;
             lblDanhSachDuocChon.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblDanhSachDuocChon.ForeColor = Color.FromArgb(0, 64, 0);
-            lblDanhSachDuocChon.Location = new Point(160, 290);
+            lblDanhSachDuocChon.Location = new Point(183, 387);
             lblDanhSachDuocChon.Name = "lblDanhSachDuocChon";
             lblDanhSachDuocChon.Size = new Size(113, 24);
             lblDanhSachDuocChon.TabIndex = 9;
@@ -479,7 +481,7 @@
             lblSoLuong.AutoSize = true;
             lblSoLuong.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSoLuong.ForeColor = Color.FromArgb(0, 64, 0);
-            lblSoLuong.Location = new Point(3, 172);
+            lblSoLuong.Location = new Point(3, 229);
             lblSoLuong.Name = "lblSoLuong";
             lblSoLuong.Size = new Size(112, 24);
             lblSoLuong.TabIndex = 7;
@@ -490,7 +492,7 @@
             lblSanPham.AutoSize = true;
             lblSanPham.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSanPham.ForeColor = Color.FromArgb(0, 64, 0);
-            lblSanPham.Location = new Point(3, 100);
+            lblSanPham.Location = new Point(3, 133);
             lblSanPham.Name = "lblSanPham";
             lblSanPham.Size = new Size(124, 24);
             lblSanPham.TabIndex = 6;
@@ -504,10 +506,10 @@
             btnThanhToan.FlatStyle = FlatStyle.Flat;
             btnThanhToan.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnThanhToan.ForeColor = Color.Green;
-            btnThanhToan.Location = new Point(245, 796);
-            btnThanhToan.Margin = new Padding(3, 4, 3, 4);
+            btnThanhToan.Location = new Point(341, 294);
+            btnThanhToan.Margin = new Padding(3, 5, 3, 5);
             btnThanhToan.Name = "btnThanhToan";
-            btnThanhToan.Size = new Size(162, 51);
+            btnThanhToan.Size = new Size(129, 88);
             btnThanhToan.TabIndex = 5;
             btnThanhToan.Tag = "5";
             btnThanhToan.Text = "Thanh toán";
@@ -520,13 +522,13 @@
             btnDatHang.FlatStyle = FlatStyle.Flat;
             btnDatHang.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnDatHang.ForeColor = Color.Green;
-            btnDatHang.Location = new Point(32, 226);
-            btnDatHang.Margin = new Padding(3, 4, 3, 4);
+            btnDatHang.Location = new Point(27, 294);
+            btnDatHang.Margin = new Padding(3, 5, 3, 5);
             btnDatHang.Name = "btnDatHang";
-            btnDatHang.Size = new Size(155, 51);
+            btnDatHang.Size = new Size(122, 44);
             btnDatHang.TabIndex = 1;
             btnDatHang.Tag = "3";
-            btnDatHang.Text = "Đặt hàng";
+            btnDatHang.Text = "Thêm";
             btnDatHang.UseVisualStyleBackColor = false;
             btnDatHang.Click += btnDatHang_Click;
             // 
@@ -534,11 +536,11 @@
             // 
             txtSoLuong.BorderStyle = BorderStyle.None;
             txtSoLuong.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            txtSoLuong.Location = new Point(201, 175);
-            txtSoLuong.Margin = new Padding(3, 4, 3, 4);
+            txtSoLuong.Location = new Point(203, 233);
+            txtSoLuong.Margin = new Padding(3, 5, 3, 5);
             txtSoLuong.Name = "txtSoLuong";
             txtSoLuong.ReadOnly = true;
-            txtSoLuong.Size = new Size(103, 25);
+            txtSoLuong.Size = new Size(118, 25);
             txtSoLuong.TabIndex = 0;
             txtSoLuong.Tag = "0";
             txtSoLuong.Text = "1";
@@ -554,7 +556,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1208, 0);
+            dataGridView1.Size = new Size(1381, 292);
             dataGridView1.TabIndex = 0;
             // 
             // panel2
@@ -564,14 +566,14 @@
             panel2.Location = new Point(0, 876);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1208, 0);
+            panel2.Size = new Size(1381, 292);
             panel2.TabIndex = 12;
             // 
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 64.41441F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35.5855865F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
             tableLayoutPanel3.Controls.Add(panel5, 1, 0);
             tableLayoutPanel3.Controls.Add(panel6, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Top;
@@ -580,7 +582,7 @@
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(1208, 876);
+            tableLayoutPanel3.Size = new Size(1381, 876);
             tableLayoutPanel3.TabIndex = 13;
             // 
             // ucSelling
@@ -592,7 +594,7 @@
             Controls.Add(tableLayoutPanel3);
             Margin = new Padding(3, 4, 3, 4);
             Name = "ucSelling";
-            Size = new Size(1208, 876);
+            Size = new Size(1381, 1168);
             Load += ucSelling_Load;
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();

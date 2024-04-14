@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BLL.Manager;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using DAL.Entity;
+using System.Security.Principal;
 
 namespace Csharp_Project.Staff
 {
     public partial class ucBillManager : UserControl
     {
+        private BillManager billBLL;
         public ucBillManager()
         {
+            billBLL = new BillManager();
             InitializeComponent();
+        }
+
+        private void ucBillManager_Load(object sender, EventArgs e)
+        {
+            //
         }
     }
 }
