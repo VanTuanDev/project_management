@@ -44,13 +44,12 @@
             dgKhachHang.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5 });
             dgKhachHang.Dock = DockStyle.Fill;
             dgKhachHang.Location = new Point(0, 0);
-            dgKhachHang.Margin = new Padding(3, 4, 3, 4);
             dgKhachHang.Name = "dgKhachHang";
             dgKhachHang.RowHeadersVisible = false;
             dgKhachHang.RowHeadersWidth = 51;
             dgKhachHang.RowTemplate.Height = 25;
             dgKhachHang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgKhachHang.Size = new Size(914, 600);
+            dgKhachHang.Size = new Size(822, 499);
             dgKhachHang.TabIndex = 0;
             dgKhachHang.DoubleClick += dgKhachHang_DoubleClick;
             // 
@@ -107,16 +106,15 @@
             // 
             // SelectCustomer
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(802, 456);
             Controls.Add(dgKhachHang);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
-            Margin = new Padding(3, 4, 3, 4);
+            FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
-            MaximumSize = new Size(936, 651);
+            MaximumSize = new Size(822, 499);
             MinimizeBox = false;
-            MinimumSize = new Size(936, 651);
+            MinimumSize = new Size(822, 499);
             Name = "SelectCustomer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chọn khách hàng";

@@ -410,6 +410,7 @@
             txtPass.Size = new Size(176, 20);
             txtPass.TabIndex = 2;
             txtPass.Tag = "1";
+            txtPass.KeyPress += txtPass_KeyPress;
             // 
             // btnAdd
             // 
@@ -435,6 +436,7 @@
             txtUser.Size = new Size(176, 20);
             txtUser.TabIndex = 0;
             txtUser.Tag = "0";
+            txtUser.KeyPress += txtUser_KeyPress;
             // 
             // panel4
             // 

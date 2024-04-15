@@ -220,7 +220,7 @@ namespace Csharp_Project
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát khỏi ứng dụng ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
@@ -230,7 +230,7 @@ namespace Csharp_Project
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát khỏi ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 Main_Load(sender, e);

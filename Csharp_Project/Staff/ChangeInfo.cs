@@ -54,7 +54,35 @@ namespace Csharp_Project.Staff
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn không muốn sửa đổi thông tin ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void txtOldpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNewpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAcceptPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
         }
     }
 }
