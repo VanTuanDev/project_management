@@ -1,5 +1,7 @@
 ﻿using BLL.Manager;
+using DAL.Entity;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Csharp_Project.Staff
 {
@@ -7,11 +9,18 @@ namespace Csharp_Project.Staff
     {
         private DataTable dataDSSanPham = null;
         private ProductManager manager = null;
+        private SellingManager BHmanager = null;
         //private BillManager HDmanager = null;
+
+        ProductEntity product = new ProductEntity();
+        BillEntity bill = new BillEntity();
+        CustomerEntity customer = new CustomerEntity();
+        BillDetailEntity billdetail = new BillDetailEntity();
         public ucSelling()
         {
             dataDSSanPham = new DataTable();
             manager = new ProductManager();
+            BHmanager = new SellingManager();
             //HDmanager = new BillManager();
             InitializeComponent();
 
@@ -63,11 +72,23 @@ namespace Csharp_Project.Staff
 
         private void Reset()
         {
-            txtKhachHang.Text = string.Empty;
             txtSanPham.Text = string.Empty;
             txtDonGia.Text = string.Empty;
             txtSoLuong.Text = "1";
             currentValue = 1;
+            txtDanhMuc.Text = string.Empty;
+        }
+        private void ResetAll()
+        {
+            txtSanPham.Text = string.Empty;
+            txtDonGia.Text = string.Empty;
+            txtSoLuong.Text = "1";
+            currentValue = 1;
+            txtDanhMuc.Text = string.Empty;
+            txtKhachHang.Text = string.Empty;
+
+            lblTongTien.Text = string.Empty;
+            dgSPDuocChon.Rows.Clear();
         }
         private void btnChonKH_Click(object sender, EventArgs e)
         {
@@ -96,9 +117,11 @@ namespace Csharp_Project.Staff
 
                 string column2Value = selectedRow.Cells["cl2"].Value.ToString();
                 string column4Value = selectedRow.Cells["cl4"].Value.ToString();
+                string column5Value = selectedRow.Cells["cl5"].Value.ToString();
 
                 txtSanPham.Text = column2Value;
                 txtDonGia.Text = column4Value;
+                txtDanhMuc.Text = column5Value;
             }
         }
 
@@ -209,10 +232,75 @@ namespace Csharp_Project.Staff
             Xoa();
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            SelectCustomer f = new SelectCustomer();
-            f.ShowDialog();
+            if (!string.IsNullOrEmpty(txtKhachHang.Text))
+            {
+                bill.status = "Chưa thanh toán";
+                customer.fullname = txtKhachHang.Text;
+
+                bill.customerid = BHmanager.GetCustomerId(customer);
+                try
+                {
+                    if (billdetail.billid != -1)
+                    {
+                        if (dgSPDuocChon.Rows.Count > 0)
+                        {
+                            foreach (DataGridViewRow row in dgSPDuocChon.Rows)
+                            {
+                                billdetail.billid = BHmanager.CreateBill(bill);
+                                product.name = row.Cells["column1"].Value.ToString();
+                                billdetail.quantity = Convert.ToInt32(row.Cells["column2"].Value);
+                                billdetail.total = Convert.ToDecimal(row.Cells["column4"].Value);
+
+                                billdetail.itemid = BHmanager.GetProductId(product);
+                                BHmanager.CreateBillDetail(billdetail);
+                            }
+                            MessageBox.Show("Giao dịch của bạn đang được xử lý.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Giỏ hàng trống.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tạo hóa đơn thất bại");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("lỗi khi thực hiện giao dịch: " + ex.Message);
+                }
+                ResetAll();
+            }
+            else
+            {
+                MessageBox.Show("Chưa có khách hàng.");
+            }
+        }
+
+        private void dgSanPham_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.Value != null && e.Value is decimal)
+            {
+                e.Value = ((decimal)e.Value).ToString("#,##0.##");
+                e.FormattingApplied = true;
+            }
+        }
+
+        private void dgSPDuocChon_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 3 && e.Value != null && e.Value is decimal)
+            {
+                e.Value = ((decimal)e.Value).ToString("#,##0.##");
+                e.FormattingApplied = true;
+            }
+            if (e.ColumnIndex == 2 && e.Value != null && e.Value is decimal)
+            {
+                e.Value = ((decimal)e.Value).ToString("#,##0.##");
+                e.FormattingApplied = true;
+            }
         }
     }
 }

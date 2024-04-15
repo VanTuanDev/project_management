@@ -39,12 +39,11 @@
             cl5 = new DataGridViewTextBoxColumn();
             cl6 = new DataGridViewTextBoxColumn();
             btnXoa = new Button();
-            cbbDanhMuc = new ComboBox();
             panel5 = new Panel();
+            txtDanhMuc = new TextBox();
             txtDonGia = new TextBox();
             lblDonGia = new Label();
             lblTongTien = new Label();
-            s = new Button();
             dgSPDuocChon = new DataGridView();
             column1 = new DataGridViewTextBoxColumn();
             column2 = new DataGridViewTextBoxColumn();
@@ -128,6 +127,7 @@
             dgSanPham.Size = new Size(822, 868);
             dgSanPham.TabIndex = 0;
             dgSanPham.CellClick += dgSanPham_CellClick;
+            dgSanPham.CellFormatting += dgSanPham_CellFormatting;
             // 
             // cl1
             // 
@@ -137,8 +137,7 @@
             cl1.Name = "cl1";
             cl1.ReadOnly = true;
             cl1.Resizable = DataGridViewTriState.False;
-            cl1.SortMode = DataGridViewColumnSortMode.NotSortable;
-            cl1.Width = 80;
+            cl1.Width = 125;
             // 
             // cl2
             // 
@@ -182,7 +181,6 @@
             cl5.Name = "cl5";
             cl5.ReadOnly = true;
             cl5.Resizable = DataGridViewTriState.False;
-            cl5.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // cl6
             // 
@@ -203,7 +201,7 @@
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnXoa.ForeColor = Color.Green;
-            btnXoa.Location = new Point(186, 294);
+            btnXoa.Location = new Point(186, 292);
             btnXoa.Margin = new Padding(3, 5, 3, 5);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(122, 44);
@@ -213,24 +211,13 @@
             btnXoa.UseVisualStyleBackColor = false;
             btnXoa.Click += btnXoa_Click;
             // 
-            // cbbDanhMuc
-            // 
-            cbbDanhMuc.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbDanhMuc.FlatStyle = FlatStyle.Flat;
-            cbbDanhMuc.FormattingEnabled = true;
-            cbbDanhMuc.Location = new Point(152, 77);
-            cbbDanhMuc.Margin = new Padding(3, 5, 3, 5);
-            cbbDanhMuc.Name = "cbbDanhMuc";
-            cbbDanhMuc.Size = new Size(196, 28);
-            cbbDanhMuc.TabIndex = 12;
-            // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(192, 255, 192);
+            panel5.Controls.Add(txtDanhMuc);
             panel5.Controls.Add(txtDonGia);
             panel5.Controls.Add(lblDonGia);
             panel5.Controls.Add(lblTongTien);
-            panel5.Controls.Add(s);
             panel5.Controls.Add(dgSPDuocChon);
             panel5.Controls.Add(btnChonKH);
             panel5.Controls.Add(txtKhachHang);
@@ -239,7 +226,6 @@
             panel5.Controls.Add(btnCong);
             panel5.Controls.Add(btnTru);
             panel5.Controls.Add(btnXoa);
-            panel5.Controls.Add(cbbDanhMuc);
             panel5.Controls.Add(lblDanhMuc);
             panel5.Controls.Add(lblDanhSachDuocChon);
             panel5.Controls.Add(lblSoLuong);
@@ -253,6 +239,18 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(547, 868);
             panel5.TabIndex = 0;
+            // 
+            // txtDanhMuc
+            // 
+            txtDanhMuc.BorderStyle = BorderStyle.None;
+            txtDanhMuc.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtDanhMuc.Location = new Point(152, 81);
+            txtDanhMuc.Margin = new Padding(3, 5, 3, 5);
+            txtDanhMuc.Name = "txtDanhMuc";
+            txtDanhMuc.ReadOnly = true;
+            txtDanhMuc.Size = new Size(289, 25);
+            txtDanhMuc.TabIndex = 26;
+            txtDanhMuc.Tag = "0";
             // 
             // txtDonGia
             // 
@@ -283,26 +281,10 @@
             lblTongTien.AutoSize = true;
             lblTongTien.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblTongTien.ForeColor = Color.FromArgb(0, 64, 0);
-            lblTongTien.Location = new Point(37, 355);
+            lblTongTien.Location = new Point(30, 350);
             lblTongTien.Name = "lblTongTien";
             lblTongTien.Size = new Size(0, 28);
             lblTongTien.TabIndex = 23;
-            // 
-            // s
-            // 
-            s.BackColor = Color.FromArgb(128, 255, 128);
-            s.Cursor = Cursors.Hand;
-            s.FlatStyle = FlatStyle.Flat;
-            s.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            s.ForeColor = Color.Green;
-            s.Location = new Point(368, 72);
-            s.Margin = new Padding(3, 5, 3, 5);
-            s.Name = "s";
-            s.Size = new Size(72, 33);
-            s.TabIndex = 22;
-            s.Tag = "3";
-            s.Text = "Lọc";
-            s.UseVisualStyleBackColor = false;
             // 
             // dgSPDuocChon
             // 
@@ -321,13 +303,14 @@
             dgSPDuocChon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgSPDuocChon.Size = new Size(547, 453);
             dgSPDuocChon.TabIndex = 20;
+            dgSPDuocChon.CellFormatting += dgSPDuocChon_CellFormatting;
             dgSPDuocChon.RowsAdded += dgSPDuocChon_RowsAdded;
             // 
             // column1
             // 
             column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column1.DataPropertyName = "name";
-            column1.HeaderText = "Tên sản phẩm";
+            column1.HeaderText = "Tên SP";
             column1.MinimumWidth = 6;
             column1.Name = "column1";
             column1.ReadOnly = true;
@@ -336,7 +319,6 @@
             // 
             // column2
             // 
-            column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column2.DataPropertyName = "quantity";
             column2.HeaderText = "SL";
             column2.MinimumWidth = 6;
@@ -344,10 +326,10 @@
             column2.ReadOnly = true;
             column2.Resizable = DataGridViewTriState.False;
             column2.SortMode = DataGridViewColumnSortMode.NotSortable;
+            column2.Width = 70;
             // 
             // column3
             // 
-            column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column3.DataPropertyName = "price";
             column3.HeaderText = "Đơn giá";
             column3.MinimumWidth = 6;
@@ -355,6 +337,7 @@
             column3.ReadOnly = true;
             column3.Resizable = DataGridViewTriState.False;
             column3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            column3.Width = 130;
             // 
             // column4
             // 
@@ -374,7 +357,7 @@
             btnChonKH.FlatStyle = FlatStyle.Flat;
             btnChonKH.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnChonKH.ForeColor = Color.Green;
-            btnChonKH.Location = new Point(369, 16);
+            btnChonKH.Location = new Point(369, 27);
             btnChonKH.Margin = new Padding(3, 5, 3, 5);
             btnChonKH.Name = "btnChonKH";
             btnChonKH.Size = new Size(72, 26);
@@ -387,8 +370,8 @@
             // txtKhachHang
             // 
             txtKhachHang.BorderStyle = BorderStyle.None;
-            txtKhachHang.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtKhachHang.Location = new Point(152, 17);
+            txtKhachHang.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtKhachHang.Location = new Point(152, 28);
             txtKhachHang.Margin = new Padding(3, 5, 3, 5);
             txtKhachHang.Name = "txtKhachHang";
             txtKhachHang.ReadOnly = true;
@@ -401,7 +384,7 @@
             lblKhachHang.AutoSize = true;
             lblKhachHang.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblKhachHang.ForeColor = Color.FromArgb(0, 64, 0);
-            lblKhachHang.Location = new Point(3, 17);
+            lblKhachHang.Location = new Point(3, 28);
             lblKhachHang.Name = "lblKhachHang";
             lblKhachHang.Size = new Size(143, 24);
             lblKhachHang.TabIndex = 17;
@@ -459,7 +442,7 @@
             lblDanhMuc.AutoSize = true;
             lblDanhMuc.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblDanhMuc.ForeColor = Color.FromArgb(0, 64, 0);
-            lblDanhMuc.Location = new Point(3, 77);
+            lblDanhMuc.Location = new Point(3, 81);
             lblDanhMuc.Name = "lblDanhMuc";
             lblDanhMuc.Size = new Size(125, 24);
             lblDanhMuc.TabIndex = 11;
@@ -468,11 +451,11 @@
             // lblDanhSachDuocChon
             // 
             lblDanhSachDuocChon.AutoSize = true;
-            lblDanhSachDuocChon.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDanhSachDuocChon.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblDanhSachDuocChon.ForeColor = Color.FromArgb(0, 64, 0);
-            lblDanhSachDuocChon.Location = new Point(183, 387);
+            lblDanhSachDuocChon.Location = new Point(30, 384);
             lblDanhSachDuocChon.Name = "lblDanhSachDuocChon";
-            lblDanhSachDuocChon.Size = new Size(113, 24);
+            lblDanhSachDuocChon.Size = new Size(130, 28);
             lblDanhSachDuocChon.TabIndex = 9;
             lblDanhSachDuocChon.Text = "Giỏ hàng :";
             // 
@@ -506,7 +489,7 @@
             btnThanhToan.FlatStyle = FlatStyle.Flat;
             btnThanhToan.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnThanhToan.ForeColor = Color.Green;
-            btnThanhToan.Location = new Point(341, 294);
+            btnThanhToan.Location = new Point(341, 292);
             btnThanhToan.Margin = new Padding(3, 5, 3, 5);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(129, 88);
@@ -514,6 +497,7 @@
             btnThanhToan.Tag = "5";
             btnThanhToan.Text = "Thanh toán";
             btnThanhToan.UseVisualStyleBackColor = false;
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
             // btnDatHang
             // 
@@ -522,7 +506,7 @@
             btnDatHang.FlatStyle = FlatStyle.Flat;
             btnDatHang.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnDatHang.ForeColor = Color.Green;
-            btnDatHang.Location = new Point(27, 294);
+            btnDatHang.Location = new Point(27, 292);
             btnDatHang.Margin = new Padding(3, 5, 3, 5);
             btnDatHang.Name = "btnDatHang";
             btnDatHang.Size = new Size(122, 44);
@@ -616,7 +600,6 @@
         private Panel panel6;
         private DataGridView dgSanPham;
         private Button btnXoa;
-        private ComboBox cbbDanhMuc;
         private Panel panel5;
         private Label lblDanhMuc;
         private Label lblDanhSachDuocChon;
@@ -635,19 +618,19 @@
         private Label lblKhachHang;
         private TextBox txtSanPham;
         private DataGridView dgSPDuocChon;
-        private Button s;
         private Label lblTongTien;
-        private DataGridViewTextBoxColumn cl1;
-        private DataGridViewTextBoxColumn cl2;
-        private DataGridViewTextBoxColumn cl3;
-        private DataGridViewTextBoxColumn cl4;
-        private DataGridViewTextBoxColumn cl5;
-        private DataGridViewTextBoxColumn cl6;
         private TextBox txtDonGia;
         private Label lblDonGia;
         private DataGridViewTextBoxColumn column1;
         private DataGridViewTextBoxColumn column2;
         private DataGridViewTextBoxColumn column3;
         private DataGridViewTextBoxColumn column4;
+        private TextBox txtDanhMuc;
+        private DataGridViewTextBoxColumn cl1;
+        private DataGridViewTextBoxColumn cl2;
+        private DataGridViewTextBoxColumn cl3;
+        private DataGridViewTextBoxColumn cl4;
+        private DataGridViewTextBoxColumn cl5;
+        private DataGridViewTextBoxColumn cl6;
     }
 }

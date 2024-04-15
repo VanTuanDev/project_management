@@ -32,7 +32,7 @@ CREATE TABLE Item (
     id INT PRIMARY KEY,
     name VARCHAR(255),
     unit VARCHAR(50),
-    price DECIMAL(10, 2),
+    price DECIMAL(10, 0),
     cateid INT,
 	status nvarchar(255),
     FOREIGN KEY (cateid) REFERENCES Category(id)
@@ -49,7 +49,7 @@ CREATE TABLE Customer (
 
 -- Tạo bảng Bill
 CREATE TABLE Bill (
-    id INT PRIMARY KEY,
+    id INT IDENTITY(1,1) PRIMARY KEY,
     customerid INT,
     status VARCHAR(50),
     FOREIGN KEY (customerid) REFERENCES Customer(id)
@@ -57,11 +57,11 @@ CREATE TABLE Bill (
 
 -- Tạo bảng BillDetail
 CREATE TABLE BillDetail (
-    id INT PRIMARY KEY,
+    id INT IDENTITY(1,1) PRIMARY KEY,
     billid INT,
     itemid INT,
     quantity INT,
-	total DECIMAL(10, 2),
+	total DECIMAL(10, 0),
     FOREIGN KEY (billid) REFERENCES Bill(id),
     FOREIGN KEY (itemid) REFERENCES Item(id)
 );

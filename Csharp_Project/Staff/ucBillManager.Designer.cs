@@ -32,7 +32,6 @@
             dgHoaDon = new DataGridView();
             dtpThoiGian = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dgHoaDon).BeginInit();
-
             SuspendLayout();
             // 
             // btnChiTiet
@@ -71,7 +70,12 @@
             dtpThoiGian.Name = "dtpThoiGian";
             dtpThoiGian.Size = new Size(242, 27);
             dtpThoiGian.TabIndex = 6;
-
+            // 
+            // ucBillManager
+            // 
+            Name = "ucBillManager";
+            Size = new Size(787, 584);
+            ((System.ComponentModel.ISupportInitialize)dgHoaDon).EndInit();
             ResumeLayout(false);
         }
 

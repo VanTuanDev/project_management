@@ -7,10 +7,10 @@ namespace Csharp_Project.Staff
 {
     public partial class ucBillManager : UserControl
     {
-        private BillManager billBLL;
+        //private BillManager billBLL;
         public ucBillManager()
         {
-            billBLL = new BillManager();
+            //billBLL = new BillManager();
             InitializeComponent();
         }
 

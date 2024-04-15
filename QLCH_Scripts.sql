@@ -227,3 +227,60 @@ BEGIN
 	SELECT * FROM dbo.Account WHERE  username = @userName AND pwd = @pwd
 END
 GO
+
+CREATE PROCEDURE CreateBill
+    @customerid INT,
+    @status VARCHAR(50),
+	@id int OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO Bill (customerid, status)
+    VALUES (@customerid, @status);
+
+    SET @id = SCOPE_IDENTITY();
+END
+GO
+
+CREATE PROCEDURE CreateBillDetail
+    @billid INT,
+    @itemid INT,
+    @quantity INT,
+    @total DECIMAL(10, 2)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS (SELECT 1 FROM Bill WHERE id = @billid)
+    BEGIN
+        PRINT N'MaHoaDon không tồn tại';
+        RETURN;
+    END;
+
+    IF NOT EXISTS (SELECT 1 FROM Item WHERE id = @itemid)
+    BEGIN
+        PRINT N'MaSanPham không tồn tại';
+        RETURN;
+    END;
+
+    INSERT INTO BillDetail (billid, itemid, quantity, total)
+    VALUES (@billid, @itemid, @quantity, @total);
+END
+GO
+
+CREATE PROCEDURE GetProductId
+	@productName nvarchar(50)
+AS
+BEGIN
+	SELECT id FROM Item WHERE name = @productName
+END
+GO
+
+CREATE PROCEDURE GetCustomerId
+	@customerName nvarchar(50)
+AS
+BEGIN
+	SELECT id FROM Customer WHERE fullname = @customerName
+END
+GO

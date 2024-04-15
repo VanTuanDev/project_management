@@ -83,7 +83,32 @@ namespace DAL.Repository
             return data;
         }
 
-        
+        public void ExecuteNonQuery(string storedProcedureName, SqlParameter[] parameters)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
+                {
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand();
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = storedProcedureName;
+                    command.Connection = connection;
+
+                    if (parameters != null && parameters.Length > 0)
+                    {
+                        command.Parameters.AddRange(parameters);
+                    }
+
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;
@@ -126,6 +151,51 @@ namespace DAL.Repository
                     }
                 }
             }
+        }
+        public List<string> ExecuteReader(string query, string columnName)
+        {
+            List<string> values = new List<string>();
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string value = reader[columnName].ToString();
+                    values.Add(value);
+                }
+
+                reader.Close();
+            }
+
+            return values;
+        }
+        public string ExecuteScalarStoredProcedure(string storedProcedureName, SqlParameter[] parameters)
+        {
+            string result = null;
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(storedProcedureName, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddRange(parameters);
+
+                    object scalarResult = command.ExecuteScalar();
+                    if (scalarResult != null)
+                    {
+                        result = scalarResult.ToString();
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }
