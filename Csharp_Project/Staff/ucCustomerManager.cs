@@ -160,8 +160,8 @@ namespace Csharp_Project.Staff
                 entity.fullname = txtNewName.Text;
                 entity.address = txtNewAddress.Text;
                 entity.phonenumber = txtNewPhone.Text;
-
-                bool insertSuccess = clientBLL.InsertClient(entity);
+                string error = string.Empty;
+                bool insertSuccess = clientBLL.InsertClient(entity, ref error);
 
                 if (insertSuccess)
                 {
@@ -171,7 +171,7 @@ namespace Csharp_Project.Staff
                 }
                 else
                 {
-                    MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

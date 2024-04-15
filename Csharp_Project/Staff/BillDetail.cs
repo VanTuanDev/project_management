@@ -81,5 +81,19 @@ namespace Csharp_Project.Staff
 
             lblTongTienND.Text = total.ToString("#,##0.##") + " VNĐ";
         }
+
+        private void dgChiTiet_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 3 && e.Value != null && e.Value is decimal)
+            {
+                e.Value = ((decimal)e.Value).ToString("#,##0.##");
+                e.FormattingApplied = true;
+            }
+            if (e.ColumnIndex == 4 && e.Value != null && e.Value is decimal)
+            {
+                e.Value = ((decimal)e.Value).ToString("#,##0.##");
+                e.FormattingApplied = true;
+            }
+        }
     }
 }

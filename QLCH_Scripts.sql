@@ -31,8 +31,13 @@ CREATE PROCEDURE InsertCategory
     @CategoryName NVARCHAR(100)
 AS
 BEGIN
-    INSERT INTO Category(id, catename, status)
-    VALUES (@CategoryId, @CategoryName, N'Using')
+    BEGIN TRY
+        INSERT INTO Category(id, catename, status)
+        VALUES (@CategoryId, @CategoryName, N'Using')
+    END TRY
+    BEGIN CATCH
+        THROW;
+    END CATCH
 END
 GO
 
@@ -72,8 +77,13 @@ CREATE PROCEDURE InsertClient
     @ClientPhone CHAR(10)
 AS
 BEGIN
-    INSERT INTO Customer(id, fullname, address, phonenumber, status)
-    VALUES (@ClientId, @ClientName, @ClientAddress, @ClientPhone, N'Using')
+	BEGIN TRY
+        INSERT INTO Customer(id, fullname, address, phonenumber, status)
+		VALUES (@ClientId, @ClientName, @ClientAddress, @ClientPhone, N'Using')
+    END TRY
+    BEGIN CATCH
+        THROW;
+    END CATCH
 END
 GO
 
@@ -121,8 +131,13 @@ CREATE PROCEDURE InsertFood
     @CategoryId INT
 AS
 BEGIN
-    INSERT INTO Item(id, name, unit, price, cateid, status)
-    VALUES (@FoodId, @FoodName, @Unit, @Price, @CategoryId, N'Using')
+BEGIN TRY
+        INSERT INTO Item(id, name, unit, price, cateid, status)
+		VALUES (@FoodId, @FoodName, @Unit, @Price, @CategoryId, N'Using')
+    END TRY
+    BEGIN CATCH
+        THROW;
+    END CATCH
 END
 GO
 

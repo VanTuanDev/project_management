@@ -127,9 +127,7 @@ namespace Csharp_Project.Staff
         {
             isAdd = true;
             isEdit = false;
-
             Display();
-
             btnEdit.Enabled = false;
         }
 
@@ -161,10 +159,12 @@ namespace Csharp_Project.Staff
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+
                 entity.id = Convert.ToInt32(txtNewId.Text);
                 entity.catename = txtNewName.Text;
 
-                bool insertSuccess = categoryBLL.InsertCategory(entity);
+                string error = string.Empty;
+                bool insertSuccess = categoryBLL.InsertCategory(entity, ref error);
 
                 if (insertSuccess)
                 {
@@ -174,7 +174,7 @@ namespace Csharp_Project.Staff
                 }
                 else
                 {
-                    MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

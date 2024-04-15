@@ -30,12 +30,20 @@ namespace DAL.Repository
             return result > 0;
         }
 
-        public bool InsertCategory(CategoryEntity entity)
+        public bool InsertCategory(CategoryEntity entity, ref string error)
         {
             string query = "InsertCategory @CategoryId , @CategoryName";
 
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.catename });
-            return result > 0;
+            try
+            {
+                int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.catename });
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return false;
+            }
         }
 
         public bool UpdateCategory(CategoryEntity entity)

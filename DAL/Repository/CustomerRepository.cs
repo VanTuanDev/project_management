@@ -25,12 +25,20 @@ namespace DAL.Repository
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id });
             return result > 0;
         }
-        public bool InsertClient(CustomerEntity entity)
+        public bool InsertClient(CustomerEntity entity, ref string error)
         {
             string query = "InsertClient @ClientId , @ClientName , @ClientAddress , @ClientPhone";
 
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.fullname, entity.address, entity.phonenumber });
-            return result > 0;
+            try
+            {
+                int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { entity.id, entity.fullname, entity.address, entity.phonenumber });
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return false;
+            }
         }
         public bool UpdateClient(CustomerEntity entity)
         {

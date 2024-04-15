@@ -94,6 +94,7 @@
             dgChiTiet.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgChiTiet.Size = new Size(798, 268);
             dgChiTiet.TabIndex = 4;
+            dgChiTiet.CellFormatting += dgChiTiet_CellFormatting;
             // 
             // cl1
             // 

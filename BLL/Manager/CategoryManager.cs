@@ -21,9 +21,9 @@ namespace BLL.Manager
         {
             return categoryDAL.DeleteCategory(entity);
         }
-        public bool InsertCategory(CategoryEntity entity)
+        public bool InsertCategory(CategoryEntity entity, ref string error)
         {
-            return categoryDAL.InsertCategory(entity);
+            return categoryDAL.InsertCategory(entity, ref error);
         }
         public bool UpdateCategory(CategoryEntity entity)
         {

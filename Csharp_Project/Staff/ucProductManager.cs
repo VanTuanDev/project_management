@@ -179,8 +179,8 @@ namespace Csharp_Project.Staff
                 entity.price = Convert.ToInt32(txtNewPrice.Text);
                 entity2.catename = cbbCategory.Text;
                 entity.cateid = foodBLL.GetCategoryIdByName(entity2);
-
-                bool insertSuccess = foodBLL.InsertFood(entity);
+                string error = string.Empty;
+                bool insertSuccess = foodBLL.InsertFood(entity, ref error);
 
                 if (insertSuccess)
                 {
@@ -190,7 +190,7 @@ namespace Csharp_Project.Staff
                 }
                 else
                 {
-                    MessageBox.Show("Thêm dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

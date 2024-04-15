@@ -21,9 +21,9 @@ namespace BLL.Manager
         {
             return foodDAL.DeleteFood(entity);
         }
-        public bool InsertFood(ProductEntity entity)
+        public bool InsertFood(ProductEntity entity, ref string error)
         {
-            return foodDAL.InsertFood(entity);
+            return foodDAL.InsertFood(entity,ref error);
         }
         public bool UpdateFood(ProductEntity entity)
         {

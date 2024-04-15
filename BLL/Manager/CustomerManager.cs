@@ -21,9 +21,9 @@ namespace BLL.Manager
         {
             return clientDAL.DeleteClient(entity);
         }
-        public bool InsertClient(CustomerEntity entity)
+        public bool InsertClient(CustomerEntity entity, ref string error)
         {
-            return clientDAL.InsertClient(entity);
+            return clientDAL.InsertClient(entity, ref error);
         }
         public bool UpdateClient(CustomerEntity entity)
         {
