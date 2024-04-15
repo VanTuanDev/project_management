@@ -175,19 +175,35 @@ namespace Csharp_Project.Admin
             entity.status = txtNewstatus.Text;
             entity.rolename = cbbNewrole.Text;
             entity.role = accountBLL.GetRoleIdByName(entity);
-            
-                bool updateSuccess = accountBLL.UpdateAccount(entity);
 
-                if (updateSuccess)
-                {
-                    MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Reset();
-                    LoadAccount();
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            bool updateSuccess = accountBLL.UpdateAccount(entity);
+
+            if (updateSuccess)
+            {
+                MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+                LoadAccount();
             }
+            else
+            {
+                MessageBox.Show("Cập nhật dữ liệu thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

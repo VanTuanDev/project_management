@@ -1,20 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\CSharp\\project_management\\Csharp_Project\\",
+  "WorkspaceRootPath": "D:\\code\\C#\\project_management\\Csharp_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\csharp\\project_management\\csharp_project\\staff\\ucbillmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\selectcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\ucproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\ucbillmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucbillmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\csharp\\project_management\\csharp_project\\staff\\ucbillmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucbillmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{302DFAB8-B65B-4FFA-9E02-EBC217FE2073}|..\\BLL\\BLL.csproj|d:\\csharp\\project_management\\bll\\manager\\billmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{302DFAB8-B65B-4FFA-9E02-EBC217FE2073}|..\\BLL\\BLL.csproj|d:\\csharp\\project_management\\bll\\manager\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,57 +26,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoryManager.cs",
-              "DocumentMoniker": "D:\\CSharp\\project_management\\BLL\\Manager\\CategoryManager.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\Manager\\CategoryManager.cs",
-              "ToolTip": "D:\\CSharp\\project_management\\BLL\\Manager\\CategoryManager.cs",
-              "RelativeToolTip": "..\\BLL\\Manager\\CategoryManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "SelectCustomer.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\SelectCustomer.cs",
+              "RelativeDocumentMoniker": "Staff\\SelectCustomer.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\SelectCustomer.cs [Design]",
+              "RelativeToolTip": "Staff\\SelectCustomer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T04:05:52.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BillManager.cs",
-              "DocumentMoniker": "D:\\CSharp\\project_management\\BLL\\Manager\\BillManager.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\Manager\\BillManager.cs",
-              "ToolTip": "D:\\CSharp\\project_management\\BLL\\Manager\\BillManager.cs",
-              "RelativeToolTip": "..\\BLL\\Manager\\BillManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T04:00:31.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T23:56:23.242Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ucBillManager.cs",
-              "DocumentMoniker": "D:\\CSharp\\project_management\\Csharp_Project\\Staff\\ucBillManager.cs",
-              "RelativeDocumentMoniker": "Staff\\ucBillManager.cs",
-              "ToolTip": "D:\\CSharp\\project_management\\Csharp_Project\\Staff\\ucBillManager.cs",
-              "RelativeToolTip": "Staff\\ucBillManager.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAkwB8AAAApAAAA",
+              "Title": "ucProductManager.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucProductManager.cs",
+              "RelativeDocumentMoniker": "Staff\\ucProductManager.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucProductManager.cs [Design]",
+              "RelativeToolTip": "Staff\\ucProductManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T03:56:21.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T23:56:09.266Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ucSelling.cs [Design]",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs",
+              "RelativeDocumentMoniker": "Staff\\ucSelling.cs",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs [Design]",
+              "RelativeToolTip": "Staff\\ucSelling.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T23:55:55.194Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ucBillManager.cs [Design]",
-              "DocumentMoniker": "D:\\CSharp\\project_management\\Csharp_Project\\Staff\\ucBillManager.cs",
+              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucBillManager.cs",
               "RelativeDocumentMoniker": "Staff\\ucBillManager.cs",
-              "ToolTip": "D:\\CSharp\\project_management\\Csharp_Project\\Staff\\ucBillManager.cs [Design]",
+              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucBillManager.cs [Design]",
               "RelativeToolTip": "Staff\\ucBillManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T03:41:57.931Z",
+              "WhenOpened": "2024-04-14T23:55:47.625Z",
               "EditorCaption": " [Design]"
             }
           ]
