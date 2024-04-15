@@ -16,12 +16,12 @@ namespace Csharp_Project.Staff
         {
             foodBLL = new ProductManager();
             InitializeComponent();
-            dgFood.DefaultCellStyle.Font = new Font("Tahoma", 12);
+            dgFood.DefaultCellStyle.Font = new Font("Tahoma", 10);
             dgFood.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgFood.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgFood.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            dgFood.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12, FontStyle.Bold);
+            dgFood.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12 , FontStyle.Bold);
             dgFood.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgFood.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
 

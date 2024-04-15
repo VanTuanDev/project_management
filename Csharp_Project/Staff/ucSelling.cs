@@ -10,7 +10,6 @@ namespace Csharp_Project.Staff
         private DataTable dataDSSanPham = null;
         private ProductManager manager = null;
         private SellingManager BHmanager = null;
-        //private BillManager HDmanager = null;
 
         ProductEntity product = new ProductEntity();
         BillEntity bill = new BillEntity();
@@ -21,10 +20,9 @@ namespace Csharp_Project.Staff
             dataDSSanPham = new DataTable();
             manager = new ProductManager();
             BHmanager = new SellingManager();
-            //HDmanager = new BillManager();
             InitializeComponent();
 
-            dgSanPham.DefaultCellStyle.Font = new Font("Tahoma", 12);
+            dgSanPham.DefaultCellStyle.Font = new Font("Tahoma", 10);
             dgSanPham.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgSanPham.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgSanPham.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -246,9 +244,9 @@ namespace Csharp_Project.Staff
                     {
                         if (dgSPDuocChon.Rows.Count > 0)
                         {
+                            billdetail.billid = BHmanager.CreateBill(bill);
                             foreach (DataGridViewRow row in dgSPDuocChon.Rows)
                             {
-                                billdetail.billid = BHmanager.CreateBill(bill);
                                 product.name = row.Cells["column1"].Value.ToString();
                                 billdetail.quantity = Convert.ToInt32(row.Cells["column2"].Value);
                                 billdetail.total = Convert.ToDecimal(row.Cells["column4"].Value);

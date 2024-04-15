@@ -28,54 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnChiTiet = new Button();
-            dgHoaDon = new DataGridView();
-            dtpThoiGian = new DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)dgHoaDon).BeginInit();
+            panel1 = new Panel();
+            btnXemChiTiet = new Button();
+            btnXacNhan = new Button();
+            panel2 = new Panel();
+            dgBill = new DataGridView();
+            cl1 = new DataGridViewTextBoxColumn();
+            cl2 = new DataGridViewTextBoxColumn();
+            cl3 = new DataGridViewTextBoxColumn();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgBill).BeginInit();
             SuspendLayout();
             // 
-            // btnChiTiet
+            // panel1
             // 
-            btnChiTiet.BackColor = Color.FromArgb(128, 255, 128);
-            btnChiTiet.FlatStyle = FlatStyle.Flat;
-            btnChiTiet.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnChiTiet.ForeColor = Color.Green;
-            btnChiTiet.Location = new Point(950, 7);
-            btnChiTiet.Margin = new Padding(3, 4, 3, 4);
-            btnChiTiet.Name = "btnChiTiet";
-            btnChiTiet.Size = new Size(245, 51);
-            btnChiTiet.TabIndex = 8;
-            btnChiTiet.Tag = "4";
-            btnChiTiet.Text = "Chi tiết hoá đơn";
-            btnChiTiet.UseVisualStyleBackColor = false;
+            panel1.BackColor = Color.FromArgb(192, 255, 192);
+            panel1.Controls.Add(btnXemChiTiet);
+            panel1.Controls.Add(btnXacNhan);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1210, 87);
+            panel1.TabIndex = 0;
             // 
-            // dgHoaDon
+            // btnXemChiTiet
             // 
-            dgHoaDon.BackgroundColor = Color.Honeydew;
-            dgHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgHoaDon.Dock = DockStyle.Bottom;
-            dgHoaDon.Location = new Point(0, 68);
-            dgHoaDon.Margin = new Padding(3, 4, 3, 4);
-            dgHoaDon.Name = "dgHoaDon";
-            dgHoaDon.ReadOnly = true;
-            dgHoaDon.RowHeadersWidth = 51;
-            dgHoaDon.RowTemplate.Height = 25;
-            dgHoaDon.Size = new Size(1208, 808);
-            dgHoaDon.TabIndex = 7;
+            btnXemChiTiet.BackColor = Color.FromArgb(128, 255, 128);
+            btnXemChiTiet.Cursor = Cursors.Hand;
+            btnXemChiTiet.FlatStyle = FlatStyle.Flat;
+            btnXemChiTiet.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXemChiTiet.ForeColor = Color.Green;
+            btnXemChiTiet.Location = new Point(953, 18);
+            btnXemChiTiet.Name = "btnXemChiTiet";
+            btnXemChiTiet.Size = new Size(229, 57);
+            btnXemChiTiet.TabIndex = 1;
+            btnXemChiTiet.Text = "Xem chi tiết";
+            btnXemChiTiet.UseVisualStyleBackColor = false;
+            btnXemChiTiet.Click += btnXemChiTiet_Click;
             // 
-            // dtpThoiGian
+            // btnXacNhan
             // 
-            dtpThoiGian.Location = new Point(14, 12);
-            dtpThoiGian.Margin = new Padding(3, 4, 3, 4);
-            dtpThoiGian.Name = "dtpThoiGian";
-            dtpThoiGian.Size = new Size(242, 27);
-            dtpThoiGian.TabIndex = 6;
+            btnXacNhan.BackColor = Color.FromArgb(128, 255, 128);
+            btnXacNhan.Cursor = Cursors.Hand;
+            btnXacNhan.FlatStyle = FlatStyle.Flat;
+            btnXacNhan.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXacNhan.ForeColor = Color.Green;
+            btnXacNhan.Location = new Point(560, 18);
+            btnXacNhan.Name = "btnXacNhan";
+            btnXacNhan.Size = new Size(361, 57);
+            btnXacNhan.TabIndex = 0;
+            btnXacNhan.Text = "Xác nhận thanh toán";
+            btnXacNhan.UseVisualStyleBackColor = false;
+            btnXacNhan.Click += btnXacNhan_Click;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(dgBill);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 93);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1210, 783);
+            panel2.TabIndex = 1;
+            // 
+            // dgBill
+            // 
+            dgBill.AllowUserToAddRows = false;
+            dgBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgBill.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3 });
+            dgBill.Dock = DockStyle.Fill;
+            dgBill.Location = new Point(0, 0);
+            dgBill.Name = "dgBill";
+            dgBill.RowHeadersVisible = false;
+            dgBill.RowHeadersWidth = 51;
+            dgBill.RowTemplate.Height = 29;
+            dgBill.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgBill.Size = new Size(1210, 783);
+            dgBill.TabIndex = 0;
+            dgBill.CellClick += dgBill_CellClick;
+            // 
+            // cl1
+            // 
+            cl1.DataPropertyName = "id";
+            cl1.HeaderText = "Mã hóa đơn";
+            cl1.MinimumWidth = 6;
+            cl1.Name = "cl1";
+            cl1.Resizable = DataGridViewTriState.False;
+            cl1.SortMode = DataGridViewColumnSortMode.NotSortable;
+            cl1.Width = 250;
+            // 
+            // cl2
+            // 
+            cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl2.DataPropertyName = "fullname";
+            cl2.HeaderText = "Tên khách hàng";
+            cl2.MinimumWidth = 6;
+            cl2.Name = "cl2";
+            cl2.Resizable = DataGridViewTriState.False;
+            cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cl3
+            // 
+            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl3.DataPropertyName = "status";
+            cl3.HeaderText = "Trạng thái";
+            cl3.MinimumWidth = 6;
+            cl3.Name = "cl3";
+            cl3.Resizable = DataGridViewTriState.False;
+            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ucBillManager
             // 
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            MaximumSize = new Size(1210, 876);
+            MinimumSize = new Size(1210, 876);
             Name = "ucBillManager";
-            Size = new Size(787, 584);
-            ((System.ComponentModel.ISupportInitialize)dgHoaDon).EndInit();
+            Size = new Size(1210, 876);
+            Load += ucBillManager_Load;
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgBill).EndInit();
             ResumeLayout(false);
         }
 
@@ -84,6 +157,13 @@
         private Button btnChiTiet;
         private DataGridView dgHoaDon;
         private DateTimePicker dtpThoiGian;
-
+        private Panel panel1;
+        private Panel panel2;
+        private DataGridView dgBill;
+        private Button btnXemChiTiet;
+        private Button btnXacNhan;
+        private DataGridViewTextBoxColumn cl1;
+        private DataGridViewTextBoxColumn cl2;
+        private DataGridViewTextBoxColumn cl3;
     }
 }

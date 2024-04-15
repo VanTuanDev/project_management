@@ -26,16 +26,6 @@ namespace BLL.Manager
         public string GetCustomerId(CustomerEntity customer)
         {
             return Process.GetCustomerId(customer);
-        }
-        public void UpdateStatusBill(int maHoaDon, string tinhTrang)
-        {
-            BillEntity hoaDon = new BillEntity
-            {
-                id = maHoaDon,
-                status = tinhTrang
-            };
-
-            Process.UpdateStatusBill(hoaDon);
-        }
+        }       
     }
 }

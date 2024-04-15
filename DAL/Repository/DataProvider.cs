@@ -49,9 +49,37 @@ namespace DAL.Repository
                 adapter.Fill(data);
             }
 
-
-
             return data;
+        }
+        public DataTable ExecuteQuery2(string storedProcedureName, SqlParameter[] parameters)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
+                {
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand();
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = storedProcedureName;
+                    command.Connection = connection;
+
+                    if (parameters != null && parameters.Length > 0)
+                    {
+                        command.Parameters.AddRange(parameters);
+                    }
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    return dataTable;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {

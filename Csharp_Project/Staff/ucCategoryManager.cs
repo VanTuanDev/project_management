@@ -15,12 +15,12 @@ namespace Csharp_Project.Staff
         {
             categoryBLL = new CategoryManager();
             InitializeComponent();
-            dgCategory.DefaultCellStyle.Font = new Font("Tahoma", 12);
+            dgCategory.DefaultCellStyle.Font = new Font("Tahoma", 10);
             dgCategory.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgCategory.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgCategory.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            dgCategory.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12, FontStyle.Bold);
+            dgCategory.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12 , FontStyle.Bold);
             dgCategory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgCategory.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
 

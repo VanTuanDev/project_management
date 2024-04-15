@@ -51,7 +51,7 @@ CREATE TABLE Customer (
 CREATE TABLE Bill (
     id INT IDENTITY(1,1) PRIMARY KEY,
     customerid INT,
-    status VARCHAR(50),
+    status NVARCHAR(50),
     FOREIGN KEY (customerid) REFERENCES Customer(id)
 );
 

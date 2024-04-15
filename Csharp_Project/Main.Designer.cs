@@ -69,10 +69,11 @@
             tableLayoutPanel1.Controls.Add(pnlInfo, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Top;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1306, 663);
+            tableLayoutPanel1.Size = new Size(1493, 884);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // pnlMenu
@@ -95,20 +96,23 @@
             pnlMenu.Controls.Add(btnLogout);
             pnlMenu.Controls.Add(pictureBox1);
             pnlMenu.Dock = DockStyle.Fill;
-            pnlMenu.Location = new Point(3, 3);
+            pnlMenu.Location = new Point(3, 4);
+            pnlMenu.Margin = new Padding(3, 4, 3, 4);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.Size = new Size(237, 657);
+            pnlMenu.Size = new Size(271, 876);
             pnlMenu.TabIndex = 0;
             // 
             // btnExit
             // 
             btnExit.BackColor = Color.Honeydew;
+            btnExit.Cursor = Cursors.Hand;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.Green;
-            btnExit.Location = new Point(9, 610);
+            btnExit.Location = new Point(10, 813);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(214, 44);
+            btnExit.Size = new Size(245, 59);
             btnExit.TabIndex = 8;
             btnExit.Text = "Thoát";
             btnExit.UseVisualStyleBackColor = false;
@@ -117,9 +121,10 @@
             // pbxKhachhang
             // 
             pbxKhachhang.Image = (Image)resources.GetObject("pbxKhachhang.Image");
-            pbxKhachhang.Location = new Point(9, 185);
+            pbxKhachhang.Location = new Point(10, 247);
+            pbxKhachhang.Margin = new Padding(3, 4, 3, 4);
             pbxKhachhang.Name = "pbxKhachhang";
-            pbxKhachhang.Size = new Size(49, 44);
+            pbxKhachhang.Size = new Size(56, 59);
             pbxKhachhang.SizeMode = PictureBoxSizeMode.Zoom;
             pbxKhachhang.TabIndex = 14;
             pbxKhachhang.TabStop = false;
@@ -127,12 +132,14 @@
             // btnCustomer
             // 
             btnCustomer.BackColor = Color.Cornsilk;
+            btnCustomer.Cursor = Cursors.Hand;
             btnCustomer.FlatStyle = FlatStyle.Flat;
             btnCustomer.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnCustomer.ForeColor = Color.Green;
-            btnCustomer.Location = new Point(62, 185);
+            btnCustomer.Location = new Point(71, 247);
+            btnCustomer.Margin = new Padding(3, 4, 3, 4);
             btnCustomer.Name = "btnCustomer";
-            btnCustomer.Size = new Size(161, 44);
+            btnCustomer.Size = new Size(184, 59);
             btnCustomer.TabIndex = 1;
             btnCustomer.Tag = "";
             btnCustomer.Text = "Khách hàng";
@@ -142,9 +149,10 @@
             // pbxBanhang
             // 
             pbxBanhang.Image = (Image)resources.GetObject("pbxBanhang.Image");
-            pbxBanhang.Location = new Point(9, 436);
+            pbxBanhang.Location = new Point(10, 581);
+            pbxBanhang.Margin = new Padding(3, 4, 3, 4);
             pbxBanhang.Name = "pbxBanhang";
-            pbxBanhang.Size = new Size(49, 44);
+            pbxBanhang.Size = new Size(56, 59);
             pbxBanhang.SizeMode = PictureBoxSizeMode.Zoom;
             pbxBanhang.TabIndex = 12;
             pbxBanhang.TabStop = false;
@@ -152,9 +160,10 @@
             // pbxHoadon
             // 
             pbxHoadon.Image = (Image)resources.GetObject("pbxHoadon.Image");
-            pbxHoadon.Location = new Point(9, 373);
+            pbxHoadon.Location = new Point(10, 497);
+            pbxHoadon.Margin = new Padding(3, 4, 3, 4);
             pbxHoadon.Name = "pbxHoadon";
-            pbxHoadon.Size = new Size(49, 44);
+            pbxHoadon.Size = new Size(56, 59);
             pbxHoadon.SizeMode = PictureBoxSizeMode.Zoom;
             pbxHoadon.TabIndex = 11;
             pbxHoadon.TabStop = false;
@@ -162,9 +171,10 @@
             // pbxDanhmuc
             // 
             pbxDanhmuc.Image = (Image)resources.GetObject("pbxDanhmuc.Image");
-            pbxDanhmuc.Location = new Point(9, 308);
+            pbxDanhmuc.Location = new Point(10, 411);
+            pbxDanhmuc.Margin = new Padding(3, 4, 3, 4);
             pbxDanhmuc.Name = "pbxDanhmuc";
-            pbxDanhmuc.Size = new Size(49, 44);
+            pbxDanhmuc.Size = new Size(56, 59);
             pbxDanhmuc.SizeMode = PictureBoxSizeMode.Zoom;
             pbxDanhmuc.TabIndex = 10;
             pbxDanhmuc.TabStop = false;
@@ -172,9 +182,10 @@
             // pbxSanpham
             // 
             pbxSanpham.Image = (Image)resources.GetObject("pbxSanpham.Image");
-            pbxSanpham.Location = new Point(9, 245);
+            pbxSanpham.Location = new Point(10, 327);
+            pbxSanpham.Margin = new Padding(3, 4, 3, 4);
             pbxSanpham.Name = "pbxSanpham";
-            pbxSanpham.Size = new Size(49, 44);
+            pbxSanpham.Size = new Size(56, 59);
             pbxSanpham.SizeMode = PictureBoxSizeMode.Zoom;
             pbxSanpham.TabIndex = 9;
             pbxSanpham.TabStop = false;
@@ -182,9 +193,10 @@
             // pbxTaikhoan
             // 
             pbxTaikhoan.Image = (Image)resources.GetObject("pbxTaikhoan.Image");
-            pbxTaikhoan.Location = new Point(9, 124);
+            pbxTaikhoan.Location = new Point(10, 165);
+            pbxTaikhoan.Margin = new Padding(3, 4, 3, 4);
             pbxTaikhoan.Name = "pbxTaikhoan";
-            pbxTaikhoan.Size = new Size(49, 44);
+            pbxTaikhoan.Size = new Size(56, 59);
             pbxTaikhoan.SizeMode = PictureBoxSizeMode.Zoom;
             pbxTaikhoan.TabIndex = 8;
             pbxTaikhoan.TabStop = false;
@@ -192,12 +204,14 @@
             // btnChangeinfo
             // 
             btnChangeinfo.BackColor = Color.Honeydew;
+            btnChangeinfo.Cursor = Cursors.Hand;
             btnChangeinfo.FlatStyle = FlatStyle.Flat;
             btnChangeinfo.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnChangeinfo.ForeColor = Color.Green;
-            btnChangeinfo.Location = new Point(9, 499);
+            btnChangeinfo.Location = new Point(10, 665);
+            btnChangeinfo.Margin = new Padding(3, 4, 3, 4);
             btnChangeinfo.Name = "btnChangeinfo";
-            btnChangeinfo.Size = new Size(214, 44);
+            btnChangeinfo.Size = new Size(245, 59);
             btnChangeinfo.TabIndex = 6;
             btnChangeinfo.Tag = "";
             btnChangeinfo.Text = "Đổi thông tin";
@@ -207,12 +221,14 @@
             // btnSelling
             // 
             btnSelling.BackColor = Color.Cornsilk;
+            btnSelling.Cursor = Cursors.Hand;
             btnSelling.FlatStyle = FlatStyle.Flat;
             btnSelling.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSelling.ForeColor = Color.Green;
-            btnSelling.Location = new Point(62, 436);
+            btnSelling.Location = new Point(71, 581);
+            btnSelling.Margin = new Padding(3, 4, 3, 4);
             btnSelling.Name = "btnSelling";
-            btnSelling.Size = new Size(161, 44);
+            btnSelling.Size = new Size(184, 59);
             btnSelling.TabIndex = 5;
             btnSelling.Tag = "";
             btnSelling.Text = "Bán hàng";
@@ -222,12 +238,14 @@
             // btnBill
             // 
             btnBill.BackColor = Color.Cornsilk;
+            btnBill.Cursor = Cursors.Hand;
             btnBill.FlatStyle = FlatStyle.Flat;
             btnBill.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnBill.ForeColor = Color.Green;
-            btnBill.Location = new Point(62, 373);
+            btnBill.Location = new Point(71, 497);
+            btnBill.Margin = new Padding(3, 4, 3, 4);
             btnBill.Name = "btnBill";
-            btnBill.Size = new Size(161, 44);
+            btnBill.Size = new Size(184, 59);
             btnBill.TabIndex = 4;
             btnBill.Tag = "";
             btnBill.Text = "Hoá đơn";
@@ -237,12 +255,14 @@
             // btnCategory
             // 
             btnCategory.BackColor = Color.Cornsilk;
+            btnCategory.Cursor = Cursors.Hand;
             btnCategory.FlatStyle = FlatStyle.Flat;
             btnCategory.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnCategory.ForeColor = Color.Green;
-            btnCategory.Location = new Point(62, 308);
+            btnCategory.Location = new Point(71, 411);
+            btnCategory.Margin = new Padding(3, 4, 3, 4);
             btnCategory.Name = "btnCategory";
-            btnCategory.Size = new Size(161, 44);
+            btnCategory.Size = new Size(184, 59);
             btnCategory.TabIndex = 3;
             btnCategory.Tag = "";
             btnCategory.Text = "Danh mục";
@@ -253,12 +273,14 @@
             // btnProduct
             // 
             btnProduct.BackColor = Color.Cornsilk;
+            btnProduct.Cursor = Cursors.Hand;
             btnProduct.FlatStyle = FlatStyle.Flat;
             btnProduct.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnProduct.ForeColor = Color.Green;
-            btnProduct.Location = new Point(62, 245);
+            btnProduct.Location = new Point(71, 327);
+            btnProduct.Margin = new Padding(3, 4, 3, 4);
             btnProduct.Name = "btnProduct";
-            btnProduct.Size = new Size(161, 44);
+            btnProduct.Size = new Size(184, 59);
             btnProduct.TabIndex = 2;
             btnProduct.Tag = "";
             btnProduct.Text = "Sản phẩm";
@@ -268,12 +290,14 @@
             // btnAccount
             // 
             btnAccount.BackColor = Color.Cornsilk;
+            btnAccount.Cursor = Cursors.Hand;
             btnAccount.FlatStyle = FlatStyle.Flat;
             btnAccount.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnAccount.ForeColor = Color.Green;
-            btnAccount.Location = new Point(62, 124);
+            btnAccount.Location = new Point(71, 165);
+            btnAccount.Margin = new Padding(3, 4, 3, 4);
             btnAccount.Name = "btnAccount";
-            btnAccount.Size = new Size(161, 44);
+            btnAccount.Size = new Size(184, 59);
             btnAccount.TabIndex = 0;
             btnAccount.Tag = "";
             btnAccount.Text = "Tài khoản";
@@ -283,12 +307,14 @@
             // btnLogout
             // 
             btnLogout.BackColor = Color.Honeydew;
+            btnLogout.Cursor = Cursors.Hand;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogout.ForeColor = Color.Green;
-            btnLogout.Location = new Point(9, 555);
+            btnLogout.Location = new Point(10, 740);
+            btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(214, 44);
+            btnLogout.Size = new Size(245, 59);
             btnLogout.TabIndex = 7;
             btnLogout.Tag = "";
             btnLogout.Text = "Đăng xuất";
@@ -299,9 +325,10 @@
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 9);
+            pictureBox1.Location = new Point(0, 12);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(237, 97);
+            pictureBox1.Size = new Size(271, 129);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -310,19 +337,21 @@
             // 
             pnlInfo.BackColor = Color.Honeydew;
             pnlInfo.Dock = DockStyle.Fill;
-            pnlInfo.Location = new Point(246, 3);
+            pnlInfo.Location = new Point(280, 4);
+            pnlInfo.Margin = new Padding(3, 4, 3, 4);
             pnlInfo.Name = "pnlInfo";
-            pnlInfo.Size = new Size(1057, 657);
+            pnlInfo.Size = new Size(1210, 876);
             pnlInfo.TabIndex = 1;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1306, 663);
+            ClientSize = new Size(1493, 884);
             ControlBox = false;
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";

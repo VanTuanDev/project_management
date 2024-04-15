@@ -155,11 +155,7 @@ namespace Csharp_Project
                 BillManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(BillManage);
                 BillManage.BringToFront();
-                //pnlInfo.Controls.Remove(CategoryManage);
-                //pnlInfo.Controls.Remove(ClientManage);
-                //pnlInfo.Controls.Remove(FoodManage);
-                //pnlInfo.Controls.Remove(AccountManage);
-                //pnlInfo.Controls.Remove(Selling);
+                pnlInfo.Controls.Remove(Selling);
             }
             else
             {
@@ -177,11 +173,7 @@ namespace Csharp_Project
                 Selling.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(Selling);
                 Selling.BringToFront();
-                //pnlInfo.Controls.Remove(CategoryManage);
-                //pnlInfo.Controls.Remove(ClientManage);
-                //pnlInfo.Controls.Remove(FoodManage);
-                //pnlInfo.Controls.Remove(BillManage);
-                //pnlInfo.Controls.Remove(AccountManage);
+                pnlInfo.Controls.Remove(BillManage);
             }
             else
             {
@@ -240,7 +232,7 @@ namespace Csharp_Project
 
         private void btnChangeinfo_Click(object sender, EventArgs e)
         {
-            ChangeInfo f = new ChangeInfo();   
+            ChangeInfo f = new ChangeInfo();
             f.ShowDialog();
         }
     }

@@ -272,3 +272,4 @@ D:\CSharp\project_management\Csharp_Project\obj\Debug\net6.0-windows\refint\Csha
 D:\CSharp\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.pdb
 D:\CSharp\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.genruntimeconfig.cache
 D:\CSharp\project_management\Csharp_Project\obj\Debug\net6.0-windows\ref\Csharp_Project.dll
+E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.BillDetail.resources

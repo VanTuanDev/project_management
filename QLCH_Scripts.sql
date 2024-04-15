@@ -284,3 +284,54 @@ BEGIN
 	SELECT id FROM Customer WHERE fullname = @customerName
 END
 GO
+
+CREATE PROCEDURE UpdateStatusBill
+    @id INT,
+    @status nvarchar(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS (SELECT 1 FROM Bill WHERE id = @id)
+    BEGIN
+        PRINT N'MaHoaDon không tồn tại';
+        RETURN;
+    END;
+
+    UPDATE Bill
+    SET status = @status
+    WHERE id = @id;
+END
+GO
+
+CREATE PROCEDURE GetListBills
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    SELECT bi.id , cu.fullname, bi.status
+    FROM Bill bi
+    INNER JOIN Customer cu ON bi.customerid = cu.id;
+END
+GO
+
+CREATE PROCEDURE GetCustomerName
+	@id nvarchar(50)
+AS
+BEGIN
+	SELECT cu.fullname FROM Bill bi INNER JOIN Customer cu ON cu.id = bi.customerid WHERE bi.id = @id
+END
+GO
+
+CREATE PROCEDURE GetBillDetail
+    @billid INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT bd.billid, it.name, it.price, bd.quantity, bd.total
+	FROM BillDetail bd
+	INNER JOIN Item it ON bd.itemid = it.id
+	WHERE bd.billid = @billid;
+END
+GO

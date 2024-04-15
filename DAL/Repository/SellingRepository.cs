@@ -34,16 +34,7 @@ namespace DAL.Repository
 
             return maKhachHang;
         }
-        public void UpdateStatusBill(BillEntity bill)
-        {
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@billId", bill.id),
-                new SqlParameter("@billStatus", bill.status)
-            };
-
-            database.ExecuteNonQuery("UpdateStatusBill", parameters);
-        }
+        
         public int CreateBill(BillEntity bill)
         {
             SqlParameter[] parameters = new SqlParameter[3]
