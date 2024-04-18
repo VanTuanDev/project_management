@@ -106,6 +106,11 @@ namespace Csharp_Project.Admin
                 return;
             }
             entity.username = txtUser.Text.Trim();
+            if (accountBLL.checkUsername(entity))
+            {
+                MessageBox.Show("Tài khoản đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             entity.fullname = txtName.Text;
             entity.pwd = textToMd5.converText(txtPass.Text);
             entity.rolename = cbbRole.Text;
@@ -142,13 +147,11 @@ namespace Csharp_Project.Admin
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dgAccount.CurrentRow;
-
-            if (selectedRow == null)
+            if (!string.IsNullOrEmpty(txtUser.Text))
             {
-                MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                DataGridViewRow selectedRow = dgAccount.CurrentRow;
+
+            
 
             entity.username = selectedRow.Cells["username"].Value.ToString();
 
@@ -164,6 +167,12 @@ namespace Csharp_Project.Admin
             else
             {
                 MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -192,7 +201,7 @@ namespace Csharp_Project.Admin
 
         private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -200,7 +209,7 @@ namespace Csharp_Project.Admin
 
         private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (e.KeyChar == ' ')
             {
                 e.Handled = true;
             }

@@ -22,6 +22,10 @@ namespace BLL.Manager
         {
             return accountDAL.checkAdmin(Entity);
         }
+        public bool checkUsername(AccountEntity Entity)
+        {
+            return accountDAL.checkUsername(Entity);
+        }
         public DataTable GetAccount()
         {
             return accountDAL.GetAccount();

@@ -26,6 +26,13 @@ namespace DAL.Repository
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { Entity.username });
             return result.Rows.Count > 0;
         }
+        public bool checkUsername(AccountEntity Entity)
+        {
+            string query = "select * from Account where username like @Username ";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { Entity.username });
+            return result.Rows.Count > 0;
+        }
         public DataTable GetAccount()
         {
             string query = "GetAccounts";

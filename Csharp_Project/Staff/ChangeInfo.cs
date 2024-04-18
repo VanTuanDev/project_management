@@ -63,7 +63,7 @@ namespace Csharp_Project.Staff
 
         private void txtOldpass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -71,7 +71,7 @@ namespace Csharp_Project.Staff
 
         private void txtNewpass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -79,7 +79,7 @@ namespace Csharp_Project.Staff
 
         private void txtAcceptPass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
+            if (e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
