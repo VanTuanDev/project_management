@@ -248,6 +248,7 @@
             // 
             // cbbNewrole
             // 
+            cbbNewrole.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbNewrole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbNewrole.FormattingEnabled = true;
             cbbNewrole.Location = new Point(178, 491);
@@ -282,6 +283,7 @@
             // 
             // cbbRole
             // 
+            cbbRole.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbRole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbRole.FormattingEnabled = true;
             cbbRole.Location = new Point(178, 268);
