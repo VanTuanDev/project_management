@@ -94,11 +94,15 @@
             // dgBill
             // 
             dgBill.AllowUserToAddRows = false;
+            dgBill.AllowUserToDeleteRows = false;
+            dgBill.AllowUserToResizeColumns = false;
+            dgBill.AllowUserToResizeRows = false;
             dgBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgBill.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3 });
             dgBill.Dock = DockStyle.Fill;
             dgBill.Location = new Point(0, 0);
             dgBill.Name = "dgBill";
+            dgBill.ReadOnly = true;
             dgBill.RowHeadersVisible = false;
             dgBill.RowHeadersWidth = 51;
             dgBill.RowTemplate.Height = 29;
@@ -113,6 +117,7 @@
             cl1.HeaderText = "Mã hóa đơn";
             cl1.MinimumWidth = 6;
             cl1.Name = "cl1";
+            cl1.ReadOnly = true;
             cl1.Resizable = DataGridViewTriState.False;
             cl1.SortMode = DataGridViewColumnSortMode.NotSortable;
             cl1.Width = 250;
@@ -124,6 +129,7 @@
             cl2.HeaderText = "Tên khách hàng";
             cl2.MinimumWidth = 6;
             cl2.Name = "cl2";
+            cl2.ReadOnly = true;
             cl2.Resizable = DataGridViewTriState.False;
             cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
@@ -134,6 +140,7 @@
             cl3.HeaderText = "Trạng thái";
             cl3.MinimumWidth = 6;
             cl3.Name = "cl3";
+            cl3.ReadOnly = true;
             cl3.Resizable = DataGridViewTriState.False;
             cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
