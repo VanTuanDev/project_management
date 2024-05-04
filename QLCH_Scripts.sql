@@ -269,13 +269,13 @@ BEGIN
 
     IF NOT EXISTS (SELECT 1 FROM Bill WHERE id = @billid)
     BEGIN
-        PRINT N'MaHoaDon không tồn tại';
+        PRINT N'Mã hóa đơn không tồn tại';
         RETURN;
     END;
 
     IF NOT EXISTS (SELECT 1 FROM Item WHERE id = @itemid)
     BEGIN
-        PRINT N'MaSanPham không tồn tại';
+        PRINT N'Mã sản phẩm không tồn tại';
         RETURN;
     END;
 
@@ -309,7 +309,7 @@ BEGIN
 
     IF NOT EXISTS (SELECT 1 FROM Bill WHERE id = @id)
     BEGIN
-        PRINT N'MaHoaDon không tồn tại';
+        PRINT N'Mã hóa đơn không tồn tại';
         RETURN;
     END;
 

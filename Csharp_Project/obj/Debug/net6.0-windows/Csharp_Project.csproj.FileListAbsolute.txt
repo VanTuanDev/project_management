@@ -227,7 +227,6 @@ E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Pro
 E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.AssemblyInfoInputs.cache
 E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.AssemblyInfo.cs
 E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.csproj.CoreCompileInputs.cache
-E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.csproj.CopyComplete
 E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.dll
 E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\refint\Csharp_Project.dll
 E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.pdb
@@ -274,3 +273,4 @@ D:\CSharp\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Proj
 D:\CSharp\project_management\Csharp_Project\obj\Debug\net6.0-windows\ref\Csharp_Project.dll
 E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.BillDetail.resources
 D:\code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.Staff.BillDetail.resources
+E:\Code\C#\project_management\Csharp_Project\obj\Debug\net6.0-windows\Csharp_Project.csproj.CopyComplete

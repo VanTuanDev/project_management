@@ -521,6 +521,7 @@
             dgFood.Size = new Size(772, 868);
             dgFood.TabIndex = 0;
             dgFood.CellClick += dgFood_CellClick;
+            dgFood.CellFormatting += dgFood_CellFormatting;
             // 
             // cl1
             // 

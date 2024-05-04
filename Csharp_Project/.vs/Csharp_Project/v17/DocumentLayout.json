@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\code\\C#\\project_management\\Csharp_Project\\",
+  "WorkspaceRootPath": "E:\\Code\\C#\\project_management\\Csharp_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|d:\\code\\c#\\project_management\\csharp_project\\admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|E:\\Code\\C#\\project_management\\Csharp_Project\\staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\staff\\uccategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\uccategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|E:\\Code\\C#\\project_management\\Csharp_Project\\staff\\ucproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:admin\\ucaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|E:\\Code\\C#\\project_management\\Csharp_Project\\staff\\ucproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|D:\\code\\C#\\project_management\\Csharp_Project\\staff\\changeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\changeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|E:\\Code\\C#\\project_management\\Csharp_Project\\staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4000CC8-56A1-4095-B039-B89815BEFE25}|Csharp_Project.csproj|solutionrelative:staff\\ucselling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,49 +31,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ucAccountManager.cs [Design]",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
-              "RelativeDocumentMoniker": "Admin\\ucAccountManager.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs [Design]",
-              "RelativeToolTip": "Admin\\ucAccountManager.cs [Design]",
+              "Title": "ucSelling.cs [Design]",
+              "DocumentMoniker": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs",
+              "RelativeDocumentMoniker": "Staff\\ucSelling.cs",
+              "ToolTip": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs [Design]",
+              "RelativeToolTip": "Staff\\ucSelling.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T09:00:10.017Z",
+              "WhenOpened": "2024-05-04T04:26:03.961Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChangeInfo.cs [Design]",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ChangeInfo.cs",
-              "RelativeDocumentMoniker": "Staff\\ChangeInfo.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ChangeInfo.cs [Design]",
-              "RelativeToolTip": "Staff\\ChangeInfo.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "ucProductManager.cs [Design]",
+              "DocumentMoniker": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucProductManager.cs",
+              "RelativeDocumentMoniker": "Staff\\ucProductManager.cs",
+              "ToolTip": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucProductManager.cs [Design]",
+              "RelativeToolTip": "Staff\\ucProductManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T08:56:40.343Z"
+              "WhenOpened": "2024-05-04T04:25:49.323Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ucAccountManager.cs",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
-              "RelativeDocumentMoniker": "Admin\\ucAccountManager.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Admin\\ucAccountManager.cs",
-              "RelativeToolTip": "Admin\\ucAccountManager.cs",
-              "ViewState": "AQIAAIUAAAAAAAAAAAAYwK8AAAANAAAA",
+              "Title": "ucProductManager.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucProductManager.cs",
+              "RelativeDocumentMoniker": "Staff\\ucProductManager.cs",
+              "ToolTip": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucProductManager.cs",
+              "RelativeToolTip": "Staff\\ucProductManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T08:50:26.546Z"
+              "WhenOpened": "2024-05-04T04:24:37.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ucCategoryManager.cs",
-              "DocumentMoniker": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucCategoryManager.cs",
-              "RelativeDocumentMoniker": "Staff\\ucCategoryManager.cs",
-              "ToolTip": "D:\\code\\C#\\project_management\\Csharp_Project\\Staff\\ucCategoryManager.cs",
-              "RelativeToolTip": "Staff\\ucCategoryManager.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAuwHUAAAAMAAAA",
+              "DocumentIndex": 3,
+              "Title": "ucSelling.cs",
+              "DocumentMoniker": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs",
+              "RelativeDocumentMoniker": "Staff\\ucSelling.cs",
+              "ToolTip": "E:\\Code\\C#\\project_management\\Csharp_Project\\Staff\\ucSelling.cs",
+              "RelativeToolTip": "Staff\\ucSelling.cs",
+              "ViewState": "AQIAAAcBAAAAAAAAAAAAAB4BAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T08:50:22.306Z"
+              "WhenOpened": "2024-05-04T04:24:28.143Z",
+              "EditorCaption": ""
             }
           ]
         }

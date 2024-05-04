@@ -118,7 +118,14 @@ namespace Csharp_Project.Staff
                 string column5Value = selectedRow.Cells["cl5"].Value.ToString();
 
                 txtSanPham.Text = column2Value;
-                txtDonGia.Text = column4Value;
+
+                decimal donGia;
+                if (decimal.TryParse(column4Value, out donGia))
+                {
+                    string formattedDonGia = donGia.ToString("N0"); 
+                    txtDonGia.Text = formattedDonGia;
+                }
+
                 txtDanhMuc.Text = column5Value;
             }
         }

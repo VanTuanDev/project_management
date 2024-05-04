@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeInfo));
             lblNewname = new Label();
-            txtNewname = new TextBox();
+            txtNewName = new TextBox();
             lblOldpass = new Label();
-            txtOldpass = new TextBox();
+            txtOldPassword = new TextBox();
             lblSelectuser = new Label();
             txtUser = new TextBox();
             btnCancel = new Button();
             btnSave = new Button();
             lblNewpass = new Label();
-            txtNewpass = new TextBox();
+            txtNewPassword = new TextBox();
             label1 = new Label();
-            txtAcceptPass = new TextBox();
+            txtSubmitPassword = new TextBox();
             ptbLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
             SuspendLayout();
@@ -50,54 +50,56 @@
             lblNewname.AutoSize = true;
             lblNewname.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewname.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewname.Location = new Point(48, 150);
+            lblNewname.Location = new Point(55, 200);
             lblNewname.Name = "lblNewname";
-            lblNewname.Size = new Size(216, 29);
+            lblNewname.Size = new Size(271, 36);
             lblNewname.TabIndex = 55;
             lblNewname.Text = "Tên người dùng :";
             lblNewname.UseMnemonic = false;
             // 
-            // txtNewname
+            // txtNewName
             // 
-            txtNewname.BorderStyle = BorderStyle.None;
-            txtNewname.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewname.Location = new Point(335, 150);
-            txtNewname.Name = "txtNewname";
-            txtNewname.Size = new Size(247, 29);
-            txtNewname.TabIndex = 1;
-            txtNewname.Tag = "0";
+            txtNewName.BorderStyle = BorderStyle.None;
+            txtNewName.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewName.Location = new Point(383, 200);
+            txtNewName.Margin = new Padding(3, 4, 3, 4);
+            txtNewName.Name = "txtNewName";
+            txtNewName.Size = new Size(282, 37);
+            txtNewName.TabIndex = 1;
+            txtNewName.Tag = "0";
             // 
             // lblOldpass
             // 
             lblOldpass.AutoSize = true;
             lblOldpass.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblOldpass.ForeColor = Color.FromArgb(0, 64, 0);
-            lblOldpass.Location = new Point(48, 199);
+            lblOldpass.Location = new Point(55, 265);
             lblOldpass.Name = "lblOldpass";
-            lblOldpass.Size = new Size(174, 29);
+            lblOldpass.Size = new Size(219, 36);
             lblOldpass.TabIndex = 54;
             lblOldpass.Text = "Mật khẩu cũ :";
             // 
-            // txtOldpass
+            // txtOldPassword
             // 
-            txtOldpass.BorderStyle = BorderStyle.None;
-            txtOldpass.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtOldpass.Location = new Point(335, 199);
-            txtOldpass.Name = "txtOldpass";
-            txtOldpass.PasswordChar = '⬤';
-            txtOldpass.Size = new Size(248, 29);
-            txtOldpass.TabIndex = 2;
-            txtOldpass.Tag = "7";
-            txtOldpass.KeyPress += txtOldpass_KeyPress;
+            txtOldPassword.BorderStyle = BorderStyle.None;
+            txtOldPassword.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtOldPassword.Location = new Point(383, 265);
+            txtOldPassword.Margin = new Padding(3, 4, 3, 4);
+            txtOldPassword.Name = "txtOldPassword";
+            txtOldPassword.PasswordChar = '⬤';
+            txtOldPassword.Size = new Size(283, 37);
+            txtOldPassword.TabIndex = 2;
+            txtOldPassword.Tag = "7";
+            txtOldPassword.KeyPress += txtOldpass_KeyPress;
             // 
             // lblSelectuser
             // 
             lblSelectuser.AutoSize = true;
             lblSelectuser.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblSelectuser.ForeColor = Color.FromArgb(0, 64, 0);
-            lblSelectuser.Location = new Point(48, 105);
+            lblSelectuser.Location = new Point(55, 140);
             lblSelectuser.Name = "lblSelectuser";
-            lblSelectuser.Size = new Size(145, 29);
+            lblSelectuser.Size = new Size(182, 36);
             lblSelectuser.TabIndex = 53;
             lblSelectuser.Text = "Tài khoản :";
             lblSelectuser.UseMnemonic = false;
@@ -106,10 +108,11 @@
             // 
             txtUser.BorderStyle = BorderStyle.None;
             txtUser.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUser.Location = new Point(334, 105);
+            txtUser.Location = new Point(382, 140);
+            txtUser.Margin = new Padding(3, 4, 3, 4);
             txtUser.Name = "txtUser";
             txtUser.ReadOnly = true;
-            txtUser.Size = new Size(248, 29);
+            txtUser.Size = new Size(283, 37);
             txtUser.TabIndex = 0;
             txtUser.Tag = "0";
             // 
@@ -119,9 +122,10 @@
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.Green;
-            btnCancel.Location = new Point(361, 357);
+            btnCancel.Location = new Point(413, 476);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(116, 38);
+            btnCancel.Size = new Size(133, 51);
             btnCancel.TabIndex = 6;
             btnCancel.Tag = "10";
             btnCancel.Text = "Huỷ";
@@ -134,9 +138,10 @@
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.Green;
-            btnSave.Location = new Point(185, 357);
+            btnSave.Location = new Point(211, 476);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(116, 38);
+            btnSave.Size = new Size(133, 51);
             btnSave.TabIndex = 5;
             btnSave.Tag = "9";
             btnSave.Text = "Lưu";
@@ -148,77 +153,81 @@
             lblNewpass.AutoSize = true;
             lblNewpass.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewpass.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewpass.Location = new Point(48, 247);
+            lblNewpass.Location = new Point(55, 329);
             lblNewpass.Name = "lblNewpass";
-            lblNewpass.Size = new Size(191, 29);
+            lblNewpass.Size = new Size(241, 36);
             lblNewpass.TabIndex = 49;
             lblNewpass.Text = "Mật khẩu mới :";
             // 
-            // txtNewpass
+            // txtNewPassword
             // 
-            txtNewpass.BorderStyle = BorderStyle.None;
-            txtNewpass.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewpass.Location = new Point(335, 247);
-            txtNewpass.Name = "txtNewpass";
-            txtNewpass.PasswordChar = '⬤';
-            txtNewpass.Size = new Size(248, 29);
-            txtNewpass.TabIndex = 3;
-            txtNewpass.Tag = "7";
-            txtNewpass.KeyPress += txtNewpass_KeyPress;
+            txtNewPassword.BorderStyle = BorderStyle.None;
+            txtNewPassword.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewPassword.Location = new Point(383, 329);
+            txtNewPassword.Margin = new Padding(3, 4, 3, 4);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.PasswordChar = '⬤';
+            txtNewPassword.Size = new Size(283, 37);
+            txtNewPassword.TabIndex = 3;
+            txtNewPassword.Tag = "7";
+            txtNewPassword.KeyPress += txtNewpass_KeyPress;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 64, 0);
-            label1.Location = new Point(48, 296);
+            label1.Location = new Point(55, 395);
             label1.Name = "label1";
-            label1.Size = new Size(239, 29);
+            label1.Size = new Size(301, 36);
             label1.TabIndex = 57;
             label1.Text = "Nhập lại mật khẩu:";
             // 
-            // txtAcceptPass
+            // txtSubmitPassword
             // 
-            txtAcceptPass.BorderStyle = BorderStyle.None;
-            txtAcceptPass.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAcceptPass.Location = new Point(335, 296);
-            txtAcceptPass.Name = "txtAcceptPass";
-            txtAcceptPass.PasswordChar = '⬤';
-            txtAcceptPass.Size = new Size(248, 29);
-            txtAcceptPass.TabIndex = 4;
-            txtAcceptPass.Tag = "7";
-            txtAcceptPass.KeyPress += txtAcceptPass_KeyPress;
+            txtSubmitPassword.BorderStyle = BorderStyle.None;
+            txtSubmitPassword.Font = new Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSubmitPassword.Location = new Point(383, 395);
+            txtSubmitPassword.Margin = new Padding(3, 4, 3, 4);
+            txtSubmitPassword.Name = "txtSubmitPassword";
+            txtSubmitPassword.PasswordChar = '⬤';
+            txtSubmitPassword.Size = new Size(283, 37);
+            txtSubmitPassword.TabIndex = 4;
+            txtSubmitPassword.Tag = "7";
+            txtSubmitPassword.KeyPress += txtAcceptPass_KeyPress;
             // 
             // ptbLogo
             // 
             ptbLogo.Image = (Image)resources.GetObject("ptbLogo.Image");
             ptbLogo.Location = new Point(-3, 0);
+            ptbLogo.Margin = new Padding(3, 4, 3, 4);
             ptbLogo.Name = "ptbLogo";
-            ptbLogo.Size = new Size(116, 90);
+            ptbLogo.Size = new Size(133, 120);
             ptbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             ptbLogo.TabIndex = 58;
             ptbLogo.TabStop = false;
             // 
             // ChangeInfo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
-            ClientSize = new Size(626, 411);
+            ClientSize = new Size(715, 548);
             Controls.Add(ptbLogo);
             Controls.Add(label1);
-            Controls.Add(txtAcceptPass);
+            Controls.Add(txtSubmitPassword);
             Controls.Add(lblNewname);
-            Controls.Add(txtNewname);
+            Controls.Add(txtNewName);
             Controls.Add(lblOldpass);
-            Controls.Add(txtOldpass);
+            Controls.Add(txtOldPassword);
             Controls.Add(lblSelectuser);
             Controls.Add(txtUser);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(lblNewpass);
-            Controls.Add(txtNewpass);
+            Controls.Add(txtNewPassword);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ChangeInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangeInfo";
@@ -231,17 +240,17 @@
         #endregion
 
         private Label lblNewname;
-        private TextBox txtNewname;
+        private TextBox txtNewName;
         private Label lblOldpass;
-        private TextBox txtOldpass;
+        private TextBox txtOldPassword;
         private Label lblSelectuser;
         private TextBox txtUser;
         private Button btnCancel;
         private Button btnSave;
         private Label lblNewpass;
-        private TextBox txtNewpass;
+        private TextBox txtNewPassword;
         private Label label1;
-        private TextBox txtAcceptPass;
+        private TextBox txtSubmitPassword;
         private PictureBox ptbLogo;
     }
 }

@@ -21,7 +21,7 @@ namespace Csharp_Project.Staff
             dgFood.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgFood.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            dgFood.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12 , FontStyle.Bold);
+            dgFood.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12, FontStyle.Bold);
             dgFood.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgFood.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
 
@@ -104,7 +104,14 @@ namespace Csharp_Project.Staff
                 txtId.Text = row.Cells["cl1"].Value.ToString();
                 txtName.Text = row.Cells["cl2"].Value.ToString();
                 txtUnit.Text = row.Cells["cl3"].Value.ToString();
-                txtPrice.Text = row.Cells["cl4"].Value.ToString();
+
+                decimal price;
+                if (decimal.TryParse(row.Cells["cl4"].Value.ToString(), out price))
+                {
+                    string formattedPrice = price.ToString("N0"); 
+                    txtPrice.Text = formattedPrice;
+                }
+
                 txtCategory.Text = row.Cells["cl5"].Value.ToString();
             }
         }
@@ -236,6 +243,15 @@ namespace Csharp_Project.Staff
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void dgFood_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 3 && e.Value != null && e.Value is decimal)
+            {
+                e.Value = ((decimal)e.Value).ToString("#,##0.##");
+                e.FormattingApplied = true;
             }
         }
     }

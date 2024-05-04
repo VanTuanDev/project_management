@@ -1,5 +1,4 @@
-﻿
-using BLL.Manager;
+﻿using BLL.Manager;
 using static BLL.Manager.AccountManager;
 using DAL.Entity;
 
@@ -21,19 +20,30 @@ namespace Csharp_Project.Staff
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            entity.username = txtUser.Text;
-            entity.fullname = txtNewname.Text;
-            entity.pwd = textToMd5.converText(txtOldpass.Text);
-
-            bool checkpwd = accountBLL.LoginAccount(entity);
-            if (txtAcceptPass.Text != txtNewpass.Text)
+            if (string.IsNullOrEmpty(txtNewName.Text) ||
+                string.IsNullOrEmpty(txtOldPassword.Text) ||
+                string.IsNullOrEmpty(txtNewPassword.Text) ||
+                string.IsNullOrEmpty(txtSubmitPassword.Text))
             {
-                MessageBox.Show("Nhập lại mật khẩu mới không trùng ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            entity.username = txtUser.Text;
+            entity.fullname = txtNewName.Text;
+            entity.pwd = textToMd5.converText(txtOldPassword.Text);
+
+            bool checkpwd = accountBLL.LoginAccount(entity);
+
+            if (txtSubmitPassword.Text != txtNewPassword.Text)
+            {
+                MessageBox.Show("Mật khẩu xác nhận không trùng khớp.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (checkpwd)
             {
-                entity.pwd = textToMd5.converText(txtNewpass.Text);
+                entity.pwd = textToMd5.converText(txtNewPassword.Text);
                 bool updateSuccess = accountBLL.UpdateInfo(entity);
 
                 if (updateSuccess)
@@ -48,7 +58,7 @@ namespace Csharp_Project.Staff
             }
             else
             {
-                MessageBox.Show("Mật khẩu cũ sai", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn đã nhập sai mật khẩu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
