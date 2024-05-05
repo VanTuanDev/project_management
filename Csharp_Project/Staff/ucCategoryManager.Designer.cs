@@ -337,6 +337,7 @@
             // dgCategory
             // 
             dgCategory.AllowUserToAddRows = false;
+            dgCategory.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgCategory.BackgroundColor = Color.FromArgb(192, 255, 192);
             dgCategory.ColumnHeadersHeight = 35;
             dgCategory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;

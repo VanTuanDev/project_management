@@ -20,7 +20,7 @@ namespace Csharp_Project.Staff
             dgCategory.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgCategory.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            dgCategory.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12 , FontStyle.Bold);
+            dgCategory.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12, FontStyle.Bold);
             dgCategory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgCategory.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
 

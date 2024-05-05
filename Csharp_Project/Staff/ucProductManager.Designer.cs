@@ -504,6 +504,7 @@
             // dgFood
             // 
             dgFood.AllowUserToAddRows = false;
+            dgFood.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgFood.BackgroundColor = Color.FromArgb(192, 255, 192);
             dgFood.ColumnHeadersHeight = 35;
             dgFood.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;

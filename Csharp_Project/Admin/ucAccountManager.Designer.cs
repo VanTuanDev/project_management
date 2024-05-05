@@ -78,26 +78,29 @@
             // 
             panel6.Controls.Add(dgAccount);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 3);
+            panel6.Location = new Point(3, 4);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(674, 651);
+            panel6.Size = new Size(772, 868);
             panel6.TabIndex = 1;
             // 
             // dgAccount
             // 
             dgAccount.AllowUserToAddRows = false;
+            dgAccount.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgAccount.BackgroundColor = Color.Honeydew;
             dgAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgAccount.Columns.AddRange(new DataGridViewColumn[] { username, fullname, role, cl4 });
             dgAccount.Dock = DockStyle.Fill;
             dgAccount.Location = new Point(0, 0);
+            dgAccount.Margin = new Padding(3, 4, 3, 4);
             dgAccount.Name = "dgAccount";
             dgAccount.ReadOnly = true;
             dgAccount.RowHeadersVisible = false;
             dgAccount.RowHeadersWidth = 51;
             dgAccount.RowTemplate.Height = 25;
             dgAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgAccount.Size = new Size(674, 651);
+            dgAccount.Size = new Size(772, 868);
             dgAccount.TabIndex = 0;
             dgAccount.CellClick += dgAccount_CellClick;
             // 
@@ -114,19 +117,21 @@
             // 
             // fullname
             // 
+            fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             fullname.DataPropertyName = "fullname";
+            fullname.FillWeight = 85.58559F;
             fullname.HeaderText = "Tên người dùng";
             fullname.MinimumWidth = 6;
             fullname.Name = "fullname";
             fullname.ReadOnly = true;
             fullname.Resizable = DataGridViewTriState.False;
             fullname.SortMode = DataGridViewColumnSortMode.NotSortable;
-            fullname.Width = 230;
             // 
             // role
             // 
             role.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             role.DataPropertyName = "rolename";
+            role.FillWeight = 114.414413F;
             role.HeaderText = "Quyền";
             role.MinimumWidth = 6;
             role.Name = "role";
@@ -144,6 +149,7 @@
             cl4.ReadOnly = true;
             cl4.Resizable = DataGridViewTriState.False;
             cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
+            cl4.Visible = false;
             // 
             // btnSave
             // 
@@ -151,9 +157,10 @@
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.Green;
-            btnSave.Location = new Point(54, 574);
+            btnSave.Location = new Point(62, 765);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(116, 38);
+            btnSave.Size = new Size(133, 51);
             btnSave.TabIndex = 12;
             btnSave.Tag = "9";
             btnSave.Text = "Lưu";
@@ -165,9 +172,9 @@
             lblNewrole.AutoSize = true;
             lblNewrole.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewrole.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewrole.Location = new Point(3, 491);
+            lblNewrole.Location = new Point(3, 655);
             lblNewrole.Name = "lblNewrole";
-            lblNewrole.Size = new Size(106, 19);
+            lblNewrole.Size = new Size(131, 24);
             lblNewrole.TabIndex = 17;
             lblNewrole.Text = "Quyền mới :";
             // 
@@ -197,9 +204,10 @@
             panel5.Controls.Add(btnAdd);
             panel5.Controls.Add(txtUser);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(683, 3);
+            panel5.Location = new Point(781, 4);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(371, 651);
+            panel5.Size = new Size(424, 868);
             panel5.TabIndex = 0;
             // 
             // lblNewname
@@ -207,9 +215,9 @@
             lblNewname.AutoSize = true;
             lblNewname.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewname.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewname.Location = new Point(3, 432);
+            lblNewname.Location = new Point(3, 576);
             lblNewname.Name = "lblNewname";
-            lblNewname.Size = new Size(147, 19);
+            lblNewname.Size = new Size(182, 24);
             lblNewname.TabIndex = 41;
             lblNewname.Text = "Tên người dùng :";
             lblNewname.UseMnemonic = false;
@@ -218,9 +226,10 @@
             // 
             txtNewname.BorderStyle = BorderStyle.None;
             txtNewname.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewname.Location = new Point(178, 432);
+            txtNewname.Location = new Point(203, 576);
+            txtNewname.Margin = new Padding(3, 4, 3, 4);
             txtNewname.Name = "txtNewname";
-            txtNewname.Size = new Size(176, 20);
+            txtNewname.Size = new Size(201, 25);
             txtNewname.TabIndex = 7;
             txtNewname.Tag = "0";
             // 
@@ -229,9 +238,9 @@
             lblName.AutoSize = true;
             lblName.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblName.ForeColor = Color.FromArgb(0, 64, 0);
-            lblName.Location = new Point(3, 208);
+            lblName.Location = new Point(3, 277);
             lblName.Name = "lblName";
-            lblName.Size = new Size(147, 19);
+            lblName.Size = new Size(182, 24);
             lblName.TabIndex = 1;
             lblName.Text = "Tên người dùng :";
             lblName.UseMnemonic = false;
@@ -240,9 +249,10 @@
             // 
             txtName.BorderStyle = BorderStyle.None;
             txtName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(178, 208);
+            txtName.Location = new Point(203, 277);
+            txtName.Margin = new Padding(3, 4, 3, 4);
             txtName.Name = "txtName";
-            txtName.Size = new Size(176, 20);
+            txtName.Size = new Size(201, 25);
             txtName.TabIndex = 1;
             txtName.Tag = "0";
             // 
@@ -251,10 +261,9 @@
             cbbNewrole.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbNewrole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbNewrole.FormattingEnabled = true;
-            cbbNewrole.Location = new Point(178, 491);
-            cbbNewrole.Margin = new Padding(3, 2, 3, 2);
+            cbbNewrole.Location = new Point(203, 655);
             cbbNewrole.Name = "cbbNewrole";
-            cbbNewrole.Size = new Size(176, 27);
+            cbbNewrole.Size = new Size(201, 32);
             cbbNewrole.TabIndex = 11;
             cbbNewrole.Tag = "8";
             // 
@@ -263,9 +272,9 @@
             lblSelectuser.AutoSize = true;
             lblSelectuser.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSelectuser.ForeColor = Color.FromArgb(0, 64, 0);
-            lblSelectuser.Location = new Point(3, 402);
+            lblSelectuser.Location = new Point(3, 536);
             lblSelectuser.Name = "lblSelectuser";
-            lblSelectuser.Size = new Size(101, 19);
+            lblSelectuser.Size = new Size(121, 24);
             lblSelectuser.TabIndex = 34;
             lblSelectuser.Text = "Tài khoản :";
             lblSelectuser.UseMnemonic = false;
@@ -274,10 +283,11 @@
             // 
             txtSelectuser.BorderStyle = BorderStyle.None;
             txtSelectuser.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSelectuser.Location = new Point(178, 402);
+            txtSelectuser.Location = new Point(203, 536);
+            txtSelectuser.Margin = new Padding(3, 4, 3, 4);
             txtSelectuser.Name = "txtSelectuser";
             txtSelectuser.ReadOnly = true;
-            txtSelectuser.Size = new Size(177, 20);
+            txtSelectuser.Size = new Size(202, 25);
             txtSelectuser.TabIndex = 33;
             txtSelectuser.Tag = "0";
             // 
@@ -286,10 +296,9 @@
             cbbRole.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbRole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbRole.FormattingEnabled = true;
-            cbbRole.Location = new Point(178, 268);
-            cbbRole.Margin = new Padding(3, 2, 3, 2);
+            cbbRole.Location = new Point(203, 357);
             cbbRole.Name = "cbbRole";
-            cbbRole.Size = new Size(176, 27);
+            cbbRole.Size = new Size(201, 32);
             cbbRole.TabIndex = 3;
             cbbRole.Tag = "8";
             // 
@@ -298,9 +307,9 @@
             lblNewstatus.AutoSize = true;
             lblNewstatus.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblNewstatus.ForeColor = Color.FromArgb(0, 64, 0);
-            lblNewstatus.Location = new Point(3, 462);
+            lblNewstatus.Location = new Point(3, 616);
             lblNewstatus.Name = "lblNewstatus";
-            lblNewstatus.Size = new Size(110, 19);
+            lblNewstatus.Size = new Size(134, 24);
             lblNewstatus.TabIndex = 21;
             lblNewstatus.Text = "Tình trạng : ";
             // 
@@ -308,9 +317,10 @@
             // 
             txtNewstatus.BorderStyle = BorderStyle.None;
             txtNewstatus.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewstatus.Location = new Point(178, 462);
+            txtNewstatus.Location = new Point(203, 616);
+            txtNewstatus.Margin = new Padding(3, 4, 3, 4);
             txtNewstatus.Name = "txtNewstatus";
-            txtNewstatus.Size = new Size(177, 20);
+            txtNewstatus.Size = new Size(202, 25);
             txtNewstatus.TabIndex = 8;
             txtNewstatus.Tag = "6";
             // 
@@ -320,9 +330,10 @@
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.Green;
-            btnCancel.Location = new Point(200, 574);
+            btnCancel.Location = new Point(229, 765);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(116, 38);
+            btnCancel.Size = new Size(133, 51);
             btnCancel.TabIndex = 13;
             btnCancel.Tag = "10";
             btnCancel.Text = "Huỷ";
@@ -334,18 +345,19 @@
             lblRole.AutoSize = true;
             lblRole.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblRole.ForeColor = Color.FromArgb(0, 64, 0);
-            lblRole.Location = new Point(3, 268);
+            lblRole.Location = new Point(3, 357);
             lblRole.Name = "lblRole";
-            lblRole.Size = new Size(71, 19);
+            lblRole.Size = new Size(88, 24);
             lblRole.TabIndex = 11;
             lblRole.Text = "Quyền :";
             // 
             // ptbLogo
             // 
             ptbLogo.Image = (Image)resources.GetObject("ptbLogo.Image");
-            ptbLogo.Location = new Point(105, 65);
+            ptbLogo.Location = new Point(127, 50);
+            ptbLogo.Margin = new Padding(3, 4, 3, 4);
             ptbLogo.Name = "ptbLogo";
-            ptbLogo.Size = new Size(165, 90);
+            ptbLogo.Size = new Size(189, 120);
             ptbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             ptbLogo.TabIndex = 9;
             ptbLogo.TabStop = false;
@@ -355,9 +367,9 @@
             lblPass.AutoSize = true;
             lblPass.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblPass.ForeColor = Color.FromArgb(0, 64, 0);
-            lblPass.Location = new Point(3, 238);
+            lblPass.Location = new Point(3, 317);
             lblPass.Name = "lblPass";
-            lblPass.Size = new Size(96, 19);
+            lblPass.Size = new Size(117, 24);
             lblPass.TabIndex = 7;
             lblPass.Text = "Mật khẩu :";
             // 
@@ -366,9 +378,9 @@
             lblUser.AutoSize = true;
             lblUser.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblUser.ForeColor = Color.FromArgb(0, 64, 0);
-            lblUser.Location = new Point(3, 178);
+            lblUser.Location = new Point(3, 237);
             lblUser.Name = "lblUser";
-            lblUser.Size = new Size(101, 19);
+            lblUser.Size = new Size(121, 24);
             lblUser.TabIndex = 6;
             lblUser.Text = "Tài khoản :";
             lblUser.UseMnemonic = false;
@@ -379,9 +391,10 @@
             btnRemove.FlatStyle = FlatStyle.Flat;
             btnRemove.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnRemove.ForeColor = Color.Green;
-            btnRemove.Location = new Point(247, 316);
+            btnRemove.Location = new Point(282, 421);
+            btnRemove.Margin = new Padding(3, 4, 3, 4);
             btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(116, 38);
+            btnRemove.Size = new Size(133, 51);
             btnRemove.TabIndex = 6;
             btnRemove.Tag = "5";
             btnRemove.Text = "Xoá";
@@ -394,9 +407,10 @@
             btnEdit.FlatStyle = FlatStyle.Flat;
             btnEdit.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEdit.ForeColor = Color.Green;
-            btnEdit.Location = new Point(125, 316);
+            btnEdit.Location = new Point(143, 421);
+            btnEdit.Margin = new Padding(3, 4, 3, 4);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(116, 38);
+            btnEdit.Size = new Size(133, 51);
             btnEdit.TabIndex = 5;
             btnEdit.Tag = "4";
             btnEdit.Text = "Sửa";
@@ -407,9 +421,10 @@
             // 
             txtPass.BorderStyle = BorderStyle.None;
             txtPass.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPass.Location = new Point(178, 238);
+            txtPass.Location = new Point(203, 317);
+            txtPass.Margin = new Padding(3, 4, 3, 4);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(176, 20);
+            txtPass.Size = new Size(201, 25);
             txtPass.TabIndex = 2;
             txtPass.Tag = "1";
             txtPass.KeyPress += txtPass_KeyPress;
@@ -420,9 +435,10 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.Green;
-            btnAdd.Location = new Point(3, 316);
+            btnAdd.Location = new Point(3, 421);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(116, 38);
+            btnAdd.Size = new Size(133, 51);
             btnAdd.TabIndex = 4;
             btnAdd.Tag = "3";
             btnAdd.Text = "Thêm";
@@ -433,9 +449,10 @@
             // 
             txtUser.BorderStyle = BorderStyle.None;
             txtUser.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUser.Location = new Point(178, 178);
+            txtUser.Location = new Point(203, 237);
+            txtUser.Margin = new Padding(3, 4, 3, 4);
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(176, 20);
+            txtUser.Size = new Size(201, 25);
             txtUser.TabIndex = 0;
             txtUser.Tag = "0";
             txtUser.KeyPress += txtUser_KeyPress;
@@ -444,9 +461,10 @@
             // 
             panel4.Controls.Add(dataGridView2);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 657);
+            panel4.Location = new Point(0, 876);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1057, 0);
+            panel4.Size = new Size(1208, 0);
             panel4.TabIndex = 8;
             // 
             // dataGridView2
@@ -455,10 +473,11 @@
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(0, 0);
+            dataGridView2.Margin = new Padding(3, 4, 3, 4);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(1057, 0);
+            dataGridView2.Size = new Size(1208, 0);
             dataGridView2.TabIndex = 0;
             // 
             // dataGridView1
@@ -467,19 +486,21 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1057, 0);
+            dataGridView1.Size = new Size(1208, 0);
             dataGridView1.TabIndex = 0;
             // 
             // panel2
             // 
             panel2.Controls.Add(dataGridView1);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 657);
+            panel2.Location = new Point(0, 876);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1057, 0);
+            panel2.Size = new Size(1208, 0);
             panel2.TabIndex = 9;
             // 
             // tableLayoutPanel3
@@ -491,21 +512,23 @@
             tableLayoutPanel3.Controls.Add(panel6, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Top;
             tableLayoutPanel3.Location = new Point(0, 0);
+            tableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(1057, 657);
+            tableLayoutPanel3.Size = new Size(1208, 876);
             tableLayoutPanel3.TabIndex = 10;
             // 
             // ucAccountManager
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(tableLayoutPanel3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ucAccountManager";
-            Size = new Size(1057, 657);
+            Size = new Size(1208, 876);
             Load += ucAccountManage_Load;
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgAccount).EndInit();
@@ -551,11 +574,11 @@
         private TextBox txtNewname;
         private Label lblName;
         private TextBox txtName;
+        private Label lblPass;
+        private TextBox txtPass;
         private DataGridViewTextBoxColumn username;
         private DataGridViewTextBoxColumn fullname;
         private DataGridViewTextBoxColumn role;
         private DataGridViewTextBoxColumn cl4;
-        private Label lblPass;
-        private TextBox txtPass;
     }
 }

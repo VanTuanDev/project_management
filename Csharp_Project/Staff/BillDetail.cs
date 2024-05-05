@@ -51,11 +51,15 @@ namespace Csharp_Project.Staff
             BillEntity bill = new BillEntity();
             bill.id = maHoaDon;
 
-            DataTable dt = HDmanager.GetCustomerName(bill);
+            DataTable dt = HDmanager.GetInfomation(bill);
 
             if (dt.Rows.Count > 0)
             {
                 lblTenKhachHangND.Text = dt.Rows[0]["fullname"].ToString();
+                lblDiaChiND.Text = dt.Rows[0]["address"].ToString();
+
+                DateTime ngayMuaHang = Convert.ToDateTime(dt.Rows[0]["time"]);
+                lblNgayMuaHangND.Text = ngayMuaHang.ToString("dd/MM/yyyy");
             }
             else
             {
@@ -80,20 +84,6 @@ namespace Csharp_Project.Staff
             }
 
             lblTongTienND.Text = total.ToString("#,##0.##") + " VNĐ";
-        }
-
-        private void dgChiTiet_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex == 3 && e.Value != null && e.Value is decimal)
-            {
-                e.Value = ((decimal)e.Value).ToString("#,##0.##");
-                e.FormattingApplied = true;
-            }
-            if (e.ColumnIndex == 4 && e.Value != null && e.Value is decimal)
-            {
-                e.Value = ((decimal)e.Value).ToString("#,##0.##");
-                e.FormattingApplied = true;
-            }
         }
     }
 }

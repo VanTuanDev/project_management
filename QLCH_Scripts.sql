@@ -246,13 +246,14 @@ GO
 CREATE PROCEDURE CreateBill
     @customerid INT,
     @status VARCHAR(50),
-	@id int OUTPUT
+    @time DATE,
+    @id INT OUTPUT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    INSERT INTO Bill (customerid, status)
-    VALUES (@customerid, @status);
+    INSERT INTO Bill (customerid, status, time)
+    VALUES (@customerid, @status, @time);
 
     SET @id = SCOPE_IDENTITY();
 END
@@ -324,17 +325,17 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 
-    SELECT bi.id , cu.fullname, bi.status
+    SELECT bi.id , cu.fullname, bi.status, bi.time
     FROM Bill bi
     INNER JOIN Customer cu ON bi.customerid = cu.id;
 END
 GO
 
-CREATE PROCEDURE GetCustomerName
+CREATE PROCEDURE GetInfomation
 	@id nvarchar(50)
 AS
 BEGIN
-	SELECT cu.fullname FROM Bill bi INNER JOIN Customer cu ON cu.id = bi.customerid WHERE bi.id = @id
+	SELECT cu.fullname, cu.address, bi.time FROM Bill bi INNER JOIN Customer cu ON cu.id = bi.customerid WHERE bi.id = @id
 END
 GO
 

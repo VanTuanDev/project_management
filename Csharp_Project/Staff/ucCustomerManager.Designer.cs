@@ -109,6 +109,7 @@
             // dgClient
             // 
             dgClient.AllowUserToAddRows = false;
+            dgClient.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgClient.BackgroundColor = Color.FromArgb(192, 255, 192);
             dgClient.ColumnHeadersHeight = 35;
             dgClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;

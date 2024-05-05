@@ -16,6 +16,9 @@
     <Compile Update="Staff\ChangeInfo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Staff\PrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Staff\SelectCustomer.cs">
       <SubType>Form</SubType>
     </Compile>

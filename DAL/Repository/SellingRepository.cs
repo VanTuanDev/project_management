@@ -34,19 +34,20 @@ namespace DAL.Repository
 
             return maKhachHang;
         }
-        
+
         public int CreateBill(BillEntity bill)
         {
-            SqlParameter[] parameters = new SqlParameter[3]
+            SqlParameter[] parameters = new SqlParameter[4]
             {
                 new SqlParameter("@customerid", bill.customerid),
                 new SqlParameter("@status", bill.status),
+                new SqlParameter("@time", bill.time),
                 new SqlParameter("@id", SqlDbType.Int) { Direction = ParameterDirection.Output }
             };
 
             database.ExecuteNonQuery("CreateBill", parameters);
 
-            int maHoaDon = Convert.ToInt32(parameters[2].Value);
+            int maHoaDon = Convert.ToInt32(parameters[3].Value);
             return maHoaDon;
         }
 

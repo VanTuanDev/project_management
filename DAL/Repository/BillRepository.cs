@@ -23,14 +23,14 @@ namespace DAL.Repository
 
             database.ExecuteNonQuery("UpdateStatusBill", parameters);
         }
-        public DataTable GetCustomerName(BillEntity bill)
+        public DataTable GetInfomation(BillEntity bill)
         {
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@id", bill.id)
             };
 
-            return database.ExecuteQuery2("GetCustomerName", parameters);
+            return database.ExecuteQuery2("GetInfomation", parameters);
         }
         public DataTable GetBillDetail(BillDetailEntity billdetail)
         {

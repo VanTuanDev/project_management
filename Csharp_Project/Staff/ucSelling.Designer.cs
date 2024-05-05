@@ -112,6 +112,7 @@
             // dgSanPham
             // 
             dgSanPham.AllowUserToAddRows = false;
+            dgSanPham.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgSanPham.BackgroundColor = Color.Honeydew;
             dgSanPham.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgSanPham.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5, cl6 });
@@ -453,7 +454,7 @@
             lblDanhSachDuocChon.AutoSize = true;
             lblDanhSachDuocChon.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblDanhSachDuocChon.ForeColor = Color.FromArgb(0, 64, 0);
-            lblDanhSachDuocChon.Location = new Point(30, 384);
+            lblDanhSachDuocChon.Location = new Point(11, 379);
             lblDanhSachDuocChon.Name = "lblDanhSachDuocChon";
             lblDanhSachDuocChon.Size = new Size(130, 28);
             lblDanhSachDuocChon.TabIndex = 9;
@@ -492,7 +493,7 @@
             btnThanhToan.Location = new Point(341, 292);
             btnThanhToan.Margin = new Padding(3, 5, 3, 5);
             btnThanhToan.Name = "btnThanhToan";
-            btnThanhToan.Size = new Size(129, 88);
+            btnThanhToan.Size = new Size(131, 88);
             btnThanhToan.TabIndex = 5;
             btnThanhToan.Tag = "5";
             btnThanhToan.Text = "Thanh toán";

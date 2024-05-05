@@ -122,7 +122,7 @@ namespace Csharp_Project.Staff
                 decimal donGia;
                 if (decimal.TryParse(column4Value, out donGia))
                 {
-                    string formattedDonGia = donGia.ToString("N0"); 
+                    string formattedDonGia = donGia.ToString("N0");
                     txtDonGia.Text = formattedDonGia;
                 }
 
@@ -245,6 +245,7 @@ namespace Csharp_Project.Staff
                 customer.fullname = txtKhachHang.Text;
 
                 bill.customerid = BHmanager.GetCustomerId(customer);
+                bill.time = DateTime.Now;
                 try
                 {
                     if (billdetail.billid != -1)

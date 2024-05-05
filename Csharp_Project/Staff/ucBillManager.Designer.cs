@@ -28,15 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucBillManager));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            lblDenNgay = new Label();
+            lblTuNgay = new Label();
+            btnLoc = new Button();
+            dpDenNgay = new DateTimePicker();
+            dpTuNgay = new DateTimePicker();
+            ptbLogo = new PictureBox();
+            btnInHoaDon = new Button();
             btnXemChiTiet = new Button();
             btnXacNhan = new Button();
             panel2 = new Panel();
             dgBill = new DataGridView();
-            cl1 = new DataGridViewTextBoxColumn();
-            cl2 = new DataGridViewTextBoxColumn();
-            cl3 = new DataGridViewTextBoxColumn();
+            id = new DataGridViewTextBoxColumn();
+            fullname = new DataGridViewTextBoxColumn();
+            time = new DataGridViewTextBoxColumn();
+            status = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgBill).BeginInit();
             SuspendLayout();
@@ -44,24 +55,116 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(192, 255, 192);
+            panel1.Controls.Add(lblDenNgay);
+            panel1.Controls.Add(lblTuNgay);
+            panel1.Controls.Add(btnLoc);
+            panel1.Controls.Add(dpDenNgay);
+            panel1.Controls.Add(dpTuNgay);
+            panel1.Controls.Add(ptbLogo);
+            panel1.Controls.Add(btnInHoaDon);
             panel1.Controls.Add(btnXemChiTiet);
             panel1.Controls.Add(btnXacNhan);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1210, 87);
+            panel1.Size = new Size(1210, 167);
             panel1.TabIndex = 0;
+            // 
+            // lblDenNgay
+            // 
+            lblDenNgay.AutoSize = true;
+            lblDenNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDenNgay.ForeColor = SystemColors.ActiveCaptionText;
+            lblDenNgay.Location = new Point(646, 46);
+            lblDenNgay.Name = "lblDenNgay";
+            lblDenNgay.Size = new Size(113, 28);
+            lblDenNgay.TabIndex = 15;
+            lblDenNgay.Text = "Đến ngày :";
+            // 
+            // lblTuNgay
+            // 
+            lblTuNgay.AutoSize = true;
+            lblTuNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTuNgay.ForeColor = SystemColors.ActiveCaptionText;
+            lblTuNgay.Location = new Point(260, 46);
+            lblTuNgay.Name = "lblTuNgay";
+            lblTuNgay.Size = new Size(100, 28);
+            lblTuNgay.TabIndex = 14;
+            lblTuNgay.Text = "Từ ngày :";
+            // 
+            // btnLoc
+            // 
+            btnLoc.BackColor = Color.FromArgb(128, 255, 128);
+            btnLoc.Cursor = Cursors.Hand;
+            btnLoc.FlatStyle = FlatStyle.Flat;
+            btnLoc.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLoc.ForeColor = Color.Green;
+            btnLoc.Location = new Point(1082, 44);
+            btnLoc.Name = "btnLoc";
+            btnLoc.Size = new Size(107, 34);
+            btnLoc.TabIndex = 13;
+            btnLoc.Text = "Lọc";
+            btnLoc.UseVisualStyleBackColor = false;
+            btnLoc.Click += btnLoc_Click;
+            // 
+            // dpDenNgay
+            // 
+            dpDenNgay.CalendarForeColor = Color.Green;
+            dpDenNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dpDenNgay.Format = DateTimePickerFormat.Short;
+            dpDenNgay.Location = new Point(819, 44);
+            dpDenNgay.Name = "dpDenNgay";
+            dpDenNgay.Size = new Size(201, 34);
+            dpDenNgay.TabIndex = 12;
+            dpDenNgay.ValueChanged += dpDenNgay_ValueChanged;
+            // 
+            // dpTuNgay
+            // 
+            dpTuNgay.CalendarForeColor = Color.Green;
+            dpTuNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dpTuNgay.Format = DateTimePickerFormat.Short;
+            dpTuNgay.Location = new Point(406, 44);
+            dpTuNgay.Name = "dpTuNgay";
+            dpTuNgay.Size = new Size(201, 34);
+            dpTuNgay.TabIndex = 11;
+            dpTuNgay.ValueChanged += dpTuNgay_ValueChanged;
+            // 
+            // ptbLogo
+            // 
+            ptbLogo.Image = (Image)resources.GetObject("ptbLogo.Image");
+            ptbLogo.Location = new Point(17, 24);
+            ptbLogo.Margin = new Padding(3, 4, 3, 4);
+            ptbLogo.Name = "ptbLogo";
+            ptbLogo.Size = new Size(189, 120);
+            ptbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbLogo.TabIndex = 10;
+            ptbLogo.TabStop = false;
+            // 
+            // btnInHoaDon
+            // 
+            btnInHoaDon.BackColor = Color.FromArgb(128, 255, 128);
+            btnInHoaDon.Cursor = Cursors.Hand;
+            btnInHoaDon.FlatStyle = FlatStyle.Flat;
+            btnInHoaDon.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnInHoaDon.ForeColor = Color.Green;
+            btnInHoaDon.Location = new Point(1045, 110);
+            btnInHoaDon.Name = "btnInHoaDon";
+            btnInHoaDon.Size = new Size(145, 34);
+            btnInHoaDon.TabIndex = 2;
+            btnInHoaDon.Text = "In hóa đơn";
+            btnInHoaDon.UseVisualStyleBackColor = false;
+            btnInHoaDon.Click += btnInHoaDon_Click;
             // 
             // btnXemChiTiet
             // 
             btnXemChiTiet.BackColor = Color.FromArgb(128, 255, 128);
             btnXemChiTiet.Cursor = Cursors.Hand;
             btnXemChiTiet.FlatStyle = FlatStyle.Flat;
-            btnXemChiTiet.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXemChiTiet.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnXemChiTiet.ForeColor = Color.Green;
-            btnXemChiTiet.Location = new Point(953, 18);
+            btnXemChiTiet.Location = new Point(866, 110);
             btnXemChiTiet.Name = "btnXemChiTiet";
-            btnXemChiTiet.Size = new Size(229, 57);
+            btnXemChiTiet.Size = new Size(145, 34);
             btnXemChiTiet.TabIndex = 1;
             btnXemChiTiet.Text = "Xem chi tiết";
             btnXemChiTiet.UseVisualStyleBackColor = false;
@@ -72,11 +175,11 @@
             btnXacNhan.BackColor = Color.FromArgb(128, 255, 128);
             btnXacNhan.Cursor = Cursors.Hand;
             btnXacNhan.FlatStyle = FlatStyle.Flat;
-            btnXacNhan.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXacNhan.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnXacNhan.ForeColor = Color.Green;
-            btnXacNhan.Location = new Point(560, 18);
+            btnXacNhan.Location = new Point(586, 110);
             btnXacNhan.Name = "btnXacNhan";
-            btnXacNhan.Size = new Size(361, 57);
+            btnXacNhan.Size = new Size(244, 34);
             btnXacNhan.TabIndex = 0;
             btnXacNhan.Text = "Xác nhận thanh toán";
             btnXacNhan.UseVisualStyleBackColor = false;
@@ -86,9 +189,9 @@
             // 
             panel2.Controls.Add(dgBill);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 93);
+            panel2.Location = new Point(0, 173);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1210, 783);
+            panel2.Size = new Size(1210, 703);
             panel2.TabIndex = 1;
             // 
             // dgBill
@@ -98,7 +201,7 @@
             dgBill.AllowUserToResizeColumns = false;
             dgBill.AllowUserToResizeRows = false;
             dgBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgBill.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3 });
+            dgBill.Columns.AddRange(new DataGridViewColumn[] { id, fullname, time, status });
             dgBill.Dock = DockStyle.Fill;
             dgBill.Location = new Point(0, 0);
             dgBill.Name = "dgBill";
@@ -107,45 +210,60 @@
             dgBill.RowHeadersWidth = 51;
             dgBill.RowTemplate.Height = 29;
             dgBill.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgBill.Size = new Size(1210, 783);
+            dgBill.Size = new Size(1210, 703);
             dgBill.TabIndex = 0;
             dgBill.CellClick += dgBill_CellClick;
             // 
-            // cl1
+            // id
             // 
-            cl1.DataPropertyName = "id";
-            cl1.HeaderText = "Mã hóa đơn";
-            cl1.MinimumWidth = 6;
-            cl1.Name = "cl1";
-            cl1.ReadOnly = true;
-            cl1.Resizable = DataGridViewTriState.False;
-            cl1.SortMode = DataGridViewColumnSortMode.NotSortable;
-            cl1.Width = 250;
+            id.DataPropertyName = "id";
+            id.HeaderText = "Mã hóa đơn";
+            id.MinimumWidth = 6;
+            id.Name = "id";
+            id.ReadOnly = true;
+            id.Resizable = DataGridViewTriState.False;
+            id.SortMode = DataGridViewColumnSortMode.NotSortable;
+            id.Width = 250;
             // 
-            // cl2
+            // fullname
             // 
-            cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl2.DataPropertyName = "fullname";
-            cl2.HeaderText = "Tên khách hàng";
-            cl2.MinimumWidth = 6;
-            cl2.Name = "cl2";
-            cl2.ReadOnly = true;
-            cl2.Resizable = DataGridViewTriState.False;
-            cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
+            fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            fullname.DataPropertyName = "fullname";
+            fullname.HeaderText = "Tên khách hàng";
+            fullname.MinimumWidth = 6;
+            fullname.Name = "fullname";
+            fullname.ReadOnly = true;
+            fullname.Resizable = DataGridViewTriState.False;
+            fullname.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // cl3
+            // time
             // 
-            cl3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl3.DataPropertyName = "status";
-            cl3.HeaderText = "Trạng thái";
-            cl3.MinimumWidth = 6;
-            cl3.Name = "cl3";
-            cl3.ReadOnly = true;
-            cl3.Resizable = DataGridViewTriState.False;
-            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            time.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            time.DataPropertyName = "time";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            time.DefaultCellStyle = dataGridViewCellStyle1;
+            time.HeaderText = "Ngày mua hàng";
+            time.MinimumWidth = 6;
+            time.Name = "time";
+            time.ReadOnly = true;
+            time.Resizable = DataGridViewTriState.False;
+            time.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // status
+            // 
+            status.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            status.DataPropertyName = "status";
+            status.HeaderText = "Trạng thái";
+            status.MinimumWidth = 6;
+            status.Name = "status";
+            status.ReadOnly = true;
+            status.Resizable = DataGridViewTriState.False;
+            status.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ucBillManager
             // 
+            BackColor = Color.FromArgb(192, 255, 192);
             Controls.Add(panel2);
             Controls.Add(panel1);
             MaximumSize = new Size(1210, 876);
@@ -154,6 +272,8 @@
             Size = new Size(1210, 876);
             Load += ucBillManager_Load;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgBill).EndInit();
             ResumeLayout(false);
@@ -163,14 +283,21 @@
 
         private Button btnChiTiet;
         private DataGridView dgHoaDon;
-        private DateTimePicker dtpThoiGian;
         private Panel panel1;
         private Panel panel2;
         private DataGridView dgBill;
         private Button btnXemChiTiet;
         private Button btnXacNhan;
-        private DataGridViewTextBoxColumn cl1;
-        private DataGridViewTextBoxColumn cl2;
-        private DataGridViewTextBoxColumn cl3;
+        private Button btnInHoaDon;
+        private PictureBox ptbLogo;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn fullname;
+        private DataGridViewTextBoxColumn time;
+        private DataGridViewTextBoxColumn status;
+        private DateTimePicker dpDenNgay;
+        private DateTimePicker dpTuNgay;
+        private Button btnLoc;
+        private Label lblDenNgay;
+        private Label lblTuNgay;
     }
 }

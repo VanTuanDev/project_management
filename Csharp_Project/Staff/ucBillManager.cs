@@ -1,10 +1,12 @@
 ﻿using BLL.Manager;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Csharp_Project.Staff
 {
     public partial class ucBillManager : UserControl
     {
+        private BindingSource bindingSource;
         private DataTable dataDSHoaDon = null;
         private BillManager HDmanager = null;
         public ucBillManager()
@@ -12,7 +14,7 @@ namespace Csharp_Project.Staff
             dataDSHoaDon = new DataTable();
             HDmanager = new BillManager();
             InitializeComponent();
-            dgBill.DefaultCellStyle.Font = new Font("Tahoma", 12);
+            dgBill.DefaultCellStyle.Font = new Font("Tahoma", 10);
             dgBill.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgBill.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgBill.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -53,31 +55,46 @@ namespace Csharp_Project.Staff
         private void ucBillManager_Load(object sender, EventArgs e)
         {
             HienThiDSHoaDon();
+            dpTuNgay.Format = DateTimePickerFormat.Custom;
+            dpTuNgay.CustomFormat = "dd/MM/yyyy";
+
+            dpDenNgay.Format = DateTimePickerFormat.Custom;
+            dpDenNgay.CustomFormat = "dd/MM/yyyy";
+            bindingSource = new BindingSource();
+            bindingSource.DataSource = dgBill.DataSource;
+            dgBill.DataSource = bindingSource;
         }
         public void Reset()
         {
             maHoaDonDuocChon = -1;
         }
         private int maHoaDonDuocChon = -1;
+        private string trangThaiHoaDon = "";
+
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+            if (trangThaiHoaDon == "Đã thanh toán")
+            {
+                MessageBox.Show("Hóa đơn đã được thanh toán.");
+                return;
+            }
             if (maHoaDonDuocChon != -1)
             {
                 try
                 {
                     HDmanager.UpdateStatusBill(maHoaDonDuocChon, "Đã thanh toán");
-                    MessageBox.Show("Cập nhật trạng thái hóa đơn thành công");
+                    MessageBox.Show("Hóa đơn được thanh toán thành công");
                     HienThiDSHoaDon();
                     Reset();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi khi cập nhật trạng thái hóa đơn: " + ex.Message);
+                    MessageBox.Show("Lỗi khi thanh toán hóa đơn: " + ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn một hóa đơn để cập nhật trạng thái");
+                MessageBox.Show("Vui lòng chọn một hóa đơn để thanh toán");
             }
         }
 
@@ -104,9 +121,59 @@ namespace Csharp_Project.Staff
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow selectedRow = dgBill.Rows[e.RowIndex];
-                int maHoaDon = Convert.ToInt32(selectedRow.Cells["cl1"].Value);
+                int maHoaDon = Convert.ToInt32(selectedRow.Cells["id"].Value);
+                string trangThai = selectedRow.Cells["status"].Value.ToString();
 
                 maHoaDonDuocChon = maHoaDon;
+                trangThaiHoaDon = trangThai;
+            }
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            if (maHoaDonDuocChon != -1)
+            {
+                PrintBill formPrintBill = new PrintBill();
+
+                formPrintBill.MaHoaDon = maHoaDonDuocChon;
+
+                formPrintBill.ShowDialog();
+
+                HienThiDSHoaDon();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một hóa đơn để in");
+            }
+        }
+
+        private void btnLoc_Click(object sender, EventArgs e)
+        {
+            DateTime fromDate = dpTuNgay.Value.Date;
+            DateTime toDate = dpDenNgay.Value.Date.AddDays(1).AddSeconds(-1);
+
+            bindingSource.Filter = string.Format("time >= #{0}# AND time <= #{1}#", fromDate.ToString("MM/dd/yyyy"), toDate.ToString("MM/dd/yyyy"));
+        }
+
+        private void dpTuNgay_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fromDate = dpTuNgay.Value.Date;
+            DateTime toDate = dpDenNgay.Value.Date;
+
+            if (fromDate > toDate)
+            {
+                dpDenNgay.Value = fromDate;
+            }
+        }
+
+        private void dpDenNgay_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fromDate = dpTuNgay.Value.Date;
+            DateTime toDate = dpDenNgay.Value.Date;
+
+            if (toDate < fromDate)
+            {
+                dpTuNgay.Value = toDate;
             }
         }
     }

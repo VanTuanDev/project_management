@@ -31,14 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             tableLayoutPanel1 = new TableLayoutPanel();
             pnlMenu = new Panel();
+            pbxReport = new PictureBox();
+            btnReport = new Button();
             btnExit = new Button();
-            pbxKhachhang = new PictureBox();
+            pbxCustomer = new PictureBox();
             btnCustomer = new Button();
-            pbxBanhang = new PictureBox();
-            pbxHoadon = new PictureBox();
-            pbxDanhmuc = new PictureBox();
-            pbxSanpham = new PictureBox();
-            pbxTaikhoan = new PictureBox();
+            pbxSelling = new PictureBox();
+            pbxBill = new PictureBox();
+            pbxCategory = new PictureBox();
+            pbxProduct = new PictureBox();
+            pbxAccount = new PictureBox();
             btnChangeinfo = new Button();
             btnSelling = new Button();
             btnBill = new Button();
@@ -50,12 +52,13 @@
             pnlInfo = new Panel();
             tableLayoutPanel1.SuspendLayout();
             pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxKhachhang).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbxBanhang).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbxHoadon).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbxDanhmuc).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbxSanpham).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbxTaikhoan).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxReport).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxCustomer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxSelling).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxBill).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxCategory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxProduct).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -79,14 +82,16 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(192, 255, 192);
+            pnlMenu.Controls.Add(pbxReport);
+            pnlMenu.Controls.Add(btnReport);
             pnlMenu.Controls.Add(btnExit);
-            pnlMenu.Controls.Add(pbxKhachhang);
+            pnlMenu.Controls.Add(pbxCustomer);
             pnlMenu.Controls.Add(btnCustomer);
-            pnlMenu.Controls.Add(pbxBanhang);
-            pnlMenu.Controls.Add(pbxHoadon);
-            pnlMenu.Controls.Add(pbxDanhmuc);
-            pnlMenu.Controls.Add(pbxSanpham);
-            pnlMenu.Controls.Add(pbxTaikhoan);
+            pnlMenu.Controls.Add(pbxSelling);
+            pnlMenu.Controls.Add(pbxBill);
+            pnlMenu.Controls.Add(pbxCategory);
+            pnlMenu.Controls.Add(pbxProduct);
+            pnlMenu.Controls.Add(pbxAccount);
             pnlMenu.Controls.Add(btnChangeinfo);
             pnlMenu.Controls.Add(btnSelling);
             pnlMenu.Controls.Add(btnBill);
@@ -101,6 +106,33 @@
             pnlMenu.Name = "pnlMenu";
             pnlMenu.Size = new Size(271, 876);
             pnlMenu.TabIndex = 0;
+            // 
+            // pbxReport
+            // 
+            pbxReport.Image = (Image)resources.GetObject("pbxReport.Image");
+            pbxReport.Location = new Point(10, 609);
+            pbxReport.Margin = new Padding(3, 4, 3, 4);
+            pbxReport.Name = "pbxReport";
+            pbxReport.Size = new Size(56, 59);
+            pbxReport.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxReport.TabIndex = 16;
+            pbxReport.TabStop = false;
+            // 
+            // btnReport
+            // 
+            btnReport.BackColor = Color.Cornsilk;
+            btnReport.Cursor = Cursors.Hand;
+            btnReport.FlatStyle = FlatStyle.Flat;
+            btnReport.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReport.ForeColor = Color.Green;
+            btnReport.Location = new Point(71, 609);
+            btnReport.Margin = new Padding(3, 4, 3, 4);
+            btnReport.Name = "btnReport";
+            btnReport.Size = new Size(184, 59);
+            btnReport.TabIndex = 15;
+            btnReport.Tag = "";
+            btnReport.Text = "Thống kê";
+            btnReport.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
@@ -118,16 +150,16 @@
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnThoat_Click;
             // 
-            // pbxKhachhang
+            // pbxCustomer
             // 
-            pbxKhachhang.Image = (Image)resources.GetObject("pbxKhachhang.Image");
-            pbxKhachhang.Location = new Point(10, 247);
-            pbxKhachhang.Margin = new Padding(3, 4, 3, 4);
-            pbxKhachhang.Name = "pbxKhachhang";
-            pbxKhachhang.Size = new Size(56, 59);
-            pbxKhachhang.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxKhachhang.TabIndex = 14;
-            pbxKhachhang.TabStop = false;
+            pbxCustomer.Image = (Image)resources.GetObject("pbxCustomer.Image");
+            pbxCustomer.Location = new Point(10, 224);
+            pbxCustomer.Margin = new Padding(3, 4, 3, 4);
+            pbxCustomer.Name = "pbxCustomer";
+            pbxCustomer.Size = new Size(56, 59);
+            pbxCustomer.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxCustomer.TabIndex = 14;
+            pbxCustomer.TabStop = false;
             // 
             // btnCustomer
             // 
@@ -136,7 +168,7 @@
             btnCustomer.FlatStyle = FlatStyle.Flat;
             btnCustomer.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnCustomer.ForeColor = Color.Green;
-            btnCustomer.Location = new Point(71, 247);
+            btnCustomer.Location = new Point(71, 224);
             btnCustomer.Margin = new Padding(3, 4, 3, 4);
             btnCustomer.Name = "btnCustomer";
             btnCustomer.Size = new Size(184, 59);
@@ -146,60 +178,60 @@
             btnCustomer.UseVisualStyleBackColor = false;
             btnCustomer.Click += btnKhachhang_Click;
             // 
-            // pbxBanhang
+            // pbxSelling
             // 
-            pbxBanhang.Image = (Image)resources.GetObject("pbxBanhang.Image");
-            pbxBanhang.Location = new Point(10, 581);
-            pbxBanhang.Margin = new Padding(3, 4, 3, 4);
-            pbxBanhang.Name = "pbxBanhang";
-            pbxBanhang.Size = new Size(56, 59);
-            pbxBanhang.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxBanhang.TabIndex = 12;
-            pbxBanhang.TabStop = false;
+            pbxSelling.Image = (Image)resources.GetObject("pbxSelling.Image");
+            pbxSelling.Location = new Point(10, 531);
+            pbxSelling.Margin = new Padding(3, 4, 3, 4);
+            pbxSelling.Name = "pbxSelling";
+            pbxSelling.Size = new Size(56, 59);
+            pbxSelling.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxSelling.TabIndex = 12;
+            pbxSelling.TabStop = false;
             // 
-            // pbxHoadon
+            // pbxBill
             // 
-            pbxHoadon.Image = (Image)resources.GetObject("pbxHoadon.Image");
-            pbxHoadon.Location = new Point(10, 497);
-            pbxHoadon.Margin = new Padding(3, 4, 3, 4);
-            pbxHoadon.Name = "pbxHoadon";
-            pbxHoadon.Size = new Size(56, 59);
-            pbxHoadon.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxHoadon.TabIndex = 11;
-            pbxHoadon.TabStop = false;
+            pbxBill.Image = (Image)resources.GetObject("pbxBill.Image");
+            pbxBill.Location = new Point(10, 455);
+            pbxBill.Margin = new Padding(3, 4, 3, 4);
+            pbxBill.Name = "pbxBill";
+            pbxBill.Size = new Size(56, 59);
+            pbxBill.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxBill.TabIndex = 11;
+            pbxBill.TabStop = false;
             // 
-            // pbxDanhmuc
+            // pbxCategory
             // 
-            pbxDanhmuc.Image = (Image)resources.GetObject("pbxDanhmuc.Image");
-            pbxDanhmuc.Location = new Point(10, 411);
-            pbxDanhmuc.Margin = new Padding(3, 4, 3, 4);
-            pbxDanhmuc.Name = "pbxDanhmuc";
-            pbxDanhmuc.Size = new Size(56, 59);
-            pbxDanhmuc.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxDanhmuc.TabIndex = 10;
-            pbxDanhmuc.TabStop = false;
+            pbxCategory.Image = (Image)resources.GetObject("pbxCategory.Image");
+            pbxCategory.Location = new Point(10, 377);
+            pbxCategory.Margin = new Padding(3, 4, 3, 4);
+            pbxCategory.Name = "pbxCategory";
+            pbxCategory.Size = new Size(56, 59);
+            pbxCategory.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxCategory.TabIndex = 10;
+            pbxCategory.TabStop = false;
             // 
-            // pbxSanpham
+            // pbxProduct
             // 
-            pbxSanpham.Image = (Image)resources.GetObject("pbxSanpham.Image");
-            pbxSanpham.Location = new Point(10, 327);
-            pbxSanpham.Margin = new Padding(3, 4, 3, 4);
-            pbxSanpham.Name = "pbxSanpham";
-            pbxSanpham.Size = new Size(56, 59);
-            pbxSanpham.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxSanpham.TabIndex = 9;
-            pbxSanpham.TabStop = false;
+            pbxProduct.Image = (Image)resources.GetObject("pbxProduct.Image");
+            pbxProduct.Location = new Point(10, 299);
+            pbxProduct.Margin = new Padding(3, 4, 3, 4);
+            pbxProduct.Name = "pbxProduct";
+            pbxProduct.Size = new Size(56, 59);
+            pbxProduct.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxProduct.TabIndex = 9;
+            pbxProduct.TabStop = false;
             // 
-            // pbxTaikhoan
+            // pbxAccount
             // 
-            pbxTaikhoan.Image = (Image)resources.GetObject("pbxTaikhoan.Image");
-            pbxTaikhoan.Location = new Point(10, 165);
-            pbxTaikhoan.Margin = new Padding(3, 4, 3, 4);
-            pbxTaikhoan.Name = "pbxTaikhoan";
-            pbxTaikhoan.Size = new Size(56, 59);
-            pbxTaikhoan.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxTaikhoan.TabIndex = 8;
-            pbxTaikhoan.TabStop = false;
+            pbxAccount.Image = (Image)resources.GetObject("pbxAccount.Image");
+            pbxAccount.Location = new Point(10, 147);
+            pbxAccount.Margin = new Padding(3, 4, 3, 4);
+            pbxAccount.Name = "pbxAccount";
+            pbxAccount.Size = new Size(56, 59);
+            pbxAccount.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxAccount.TabIndex = 8;
+            pbxAccount.TabStop = false;
             // 
             // btnChangeinfo
             // 
@@ -208,7 +240,7 @@
             btnChangeinfo.FlatStyle = FlatStyle.Flat;
             btnChangeinfo.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnChangeinfo.ForeColor = Color.Green;
-            btnChangeinfo.Location = new Point(10, 665);
+            btnChangeinfo.Location = new Point(10, 681);
             btnChangeinfo.Margin = new Padding(3, 4, 3, 4);
             btnChangeinfo.Name = "btnChangeinfo";
             btnChangeinfo.Size = new Size(245, 59);
@@ -225,7 +257,7 @@
             btnSelling.FlatStyle = FlatStyle.Flat;
             btnSelling.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSelling.ForeColor = Color.Green;
-            btnSelling.Location = new Point(71, 581);
+            btnSelling.Location = new Point(71, 531);
             btnSelling.Margin = new Padding(3, 4, 3, 4);
             btnSelling.Name = "btnSelling";
             btnSelling.Size = new Size(184, 59);
@@ -242,7 +274,7 @@
             btnBill.FlatStyle = FlatStyle.Flat;
             btnBill.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnBill.ForeColor = Color.Green;
-            btnBill.Location = new Point(71, 497);
+            btnBill.Location = new Point(71, 455);
             btnBill.Margin = new Padding(3, 4, 3, 4);
             btnBill.Name = "btnBill";
             btnBill.Size = new Size(184, 59);
@@ -259,7 +291,7 @@
             btnCategory.FlatStyle = FlatStyle.Flat;
             btnCategory.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnCategory.ForeColor = Color.Green;
-            btnCategory.Location = new Point(71, 411);
+            btnCategory.Location = new Point(71, 377);
             btnCategory.Margin = new Padding(3, 4, 3, 4);
             btnCategory.Name = "btnCategory";
             btnCategory.Size = new Size(184, 59);
@@ -277,7 +309,7 @@
             btnProduct.FlatStyle = FlatStyle.Flat;
             btnProduct.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnProduct.ForeColor = Color.Green;
-            btnProduct.Location = new Point(71, 327);
+            btnProduct.Location = new Point(71, 299);
             btnProduct.Margin = new Padding(3, 4, 3, 4);
             btnProduct.Name = "btnProduct";
             btnProduct.Size = new Size(184, 59);
@@ -294,7 +326,7 @@
             btnAccount.FlatStyle = FlatStyle.Flat;
             btnAccount.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnAccount.ForeColor = Color.Green;
-            btnAccount.Location = new Point(71, 165);
+            btnAccount.Location = new Point(71, 147);
             btnAccount.Margin = new Padding(3, 4, 3, 4);
             btnAccount.Name = "btnAccount";
             btnAccount.Size = new Size(184, 59);
@@ -311,7 +343,7 @@
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogout.ForeColor = Color.Green;
-            btnLogout.Location = new Point(10, 740);
+            btnLogout.Location = new Point(10, 747);
             btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(245, 59);
@@ -335,7 +367,7 @@
             // 
             // pnlInfo
             // 
-            pnlInfo.BackColor = Color.Honeydew;
+            pnlInfo.BackColor = Color.FromArgb(192, 255, 192);
             pnlInfo.Dock = DockStyle.Fill;
             pnlInfo.Location = new Point(280, 4);
             pnlInfo.Margin = new Padding(3, 4, 3, 4);
@@ -347,6 +379,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(1493, 884);
             ControlBox = false;
             Controls.Add(tableLayoutPanel1);
@@ -358,12 +391,13 @@
             Load += Main_Load;
             tableLayoutPanel1.ResumeLayout(false);
             pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbxKhachhang).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbxBanhang).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbxHoadon).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbxDanhmuc).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbxSanpham).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbxTaikhoan).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxReport).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxCustomer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxSelling).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxBill).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxCategory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxProduct).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -382,13 +416,15 @@
         private Button btnBill;
         private Button btnCategory;
         private Button btnProduct;
-        private PictureBox pbxBanhang;
-        private PictureBox pbxHoadon;
-        private PictureBox pbxDanhmuc;
-        private PictureBox pbxSanpham;
-        private PictureBox pbxTaikhoan;
-        private PictureBox pbxKhachhang;
+        private PictureBox pbxSelling;
+        private PictureBox pbxBill;
+        private PictureBox pbxCategory;
+        private PictureBox pbxProduct;
+        private PictureBox pbxAccount;
+        private PictureBox pbxCustomer;
         private Button btnCustomer;
         private Button btnExit;
+        private PictureBox pbxReport;
+        private Button btnReport;
     }
 }

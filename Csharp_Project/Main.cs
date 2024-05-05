@@ -51,11 +51,6 @@ namespace Csharp_Project
             {
                 pnlInfo.Controls.Remove(BillManage);
             }
-            if (pnlInfo.Controls.Contains(Selling))
-            {
-                pnlInfo.Controls.Remove(Selling);
-            }
-
         }
         private void btnTaikhoan_Click(object sender, EventArgs e)
         {
@@ -67,11 +62,10 @@ namespace Csharp_Project
                 AccountManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(AccountManage);
                 AccountManage.BringToFront();
-                //pnlInfo.Controls.Remove(CategoryManage);
-                //pnlInfo.Controls.Remove(ClientManage);
-                //pnlInfo.Controls.Remove(FoodManage);
-                //pnlInfo.Controls.Remove(BillManage);
-                //pnlInfo.Controls.Remove(Selling);
+                pnlInfo.Controls.Remove(CategoryManage);
+                pnlInfo.Controls.Remove(ClientManage);
+                pnlInfo.Controls.Remove(FoodManage);
+                pnlInfo.Controls.Remove(BillManage);
             }
             else
             {
@@ -89,11 +83,10 @@ namespace Csharp_Project
                 ClientManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(ClientManage);
                 ClientManage.BringToFront();
-                //pnlInfo.Controls.Remove(CategoryManage);
-                //pnlInfo.Controls.Remove(AccountManage);
-                //pnlInfo.Controls.Remove(FoodManage);
-                //pnlInfo.Controls.Remove(BillManage);
-                //pnlInfo.Controls.Remove(Selling);
+                pnlInfo.Controls.Remove(CategoryManage);
+                pnlInfo.Controls.Remove(AccountManage);
+                pnlInfo.Controls.Remove(FoodManage);
+                pnlInfo.Controls.Remove(BillManage);
             }
             else
             {
@@ -111,11 +104,10 @@ namespace Csharp_Project
                 FoodManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(FoodManage);
                 FoodManage.BringToFront();
-                //pnlInfo.Controls.Remove(CategoryManage);
-                //pnlInfo.Controls.Remove(ClientManage);
-                //pnlInfo.Controls.Remove(AccountManage);
-                //pnlInfo.Controls.Remove(BillManage);
-                //pnlInfo.Controls.Remove(Selling);
+                pnlInfo.Controls.Remove(CategoryManage);
+                pnlInfo.Controls.Remove(ClientManage);
+                pnlInfo.Controls.Remove(AccountManage);
+                pnlInfo.Controls.Remove(BillManage);
             }
             else
             {
@@ -133,11 +125,10 @@ namespace Csharp_Project
                 CategoryManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(CategoryManage);
                 CategoryManage.BringToFront();
-                //pnlInfo.Controls.Remove(AccountManage);
-                //pnlInfo.Controls.Remove(ClientManage);
-                //pnlInfo.Controls.Remove(FoodManage);
-                //pnlInfo.Controls.Remove(BillManage);
-                //pnlInfo.Controls.Remove(Selling);
+                pnlInfo.Controls.Remove(AccountManage);
+                pnlInfo.Controls.Remove(ClientManage);
+                pnlInfo.Controls.Remove(FoodManage);
+                pnlInfo.Controls.Remove(BillManage);
             }
             else
             {
@@ -155,6 +146,10 @@ namespace Csharp_Project
                 BillManage.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(BillManage);
                 BillManage.BringToFront();
+                pnlInfo.Controls.Remove(AccountManage);
+                pnlInfo.Controls.Remove(ClientManage);
+                pnlInfo.Controls.Remove(FoodManage);
+                pnlInfo.Controls.Remove(CategoryManage);
                 pnlInfo.Controls.Remove(Selling);
             }
             else
@@ -173,6 +168,10 @@ namespace Csharp_Project
                 Selling.Dock = DockStyle.Fill;
                 pnlInfo.Controls.Add(Selling);
                 Selling.BringToFront();
+                pnlInfo.Controls.Remove(AccountManage);
+                pnlInfo.Controls.Remove(ClientManage);
+                pnlInfo.Controls.Remove(FoodManage);
+                pnlInfo.Controls.Remove(CategoryManage);
                 pnlInfo.Controls.Remove(BillManage);
             }
             else
@@ -183,9 +182,8 @@ namespace Csharp_Project
         AccountManager accountBLL = new AccountManager();
         private void Main_Load(object sender, EventArgs e)
         {
-
             btnAccount.Visible = false;
-            pbxTaikhoan.Visible = false;
+            pbxAccount.Visible = false;
             this.Hide();
 
             Login f = new Login();
@@ -201,13 +199,10 @@ namespace Csharp_Project
             if (checkAdmin)
             {
                 btnAccount.Visible = true;
-                pbxTaikhoan.Visible = true;
+                pbxAccount.Visible = true;
             }
-
             this.Show();
-
-
-
+            btnBanhang_Click(sender, e);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -234,6 +229,11 @@ namespace Csharp_Project
         {
             ChangeInfo f = new ChangeInfo();
             f.ShowDialog();
+            pnlInfo.Controls.Remove(AccountManage);
+            pnlInfo.Controls.Remove(CategoryManage);
+            pnlInfo.Controls.Remove(ClientManage);
+            pnlInfo.Controls.Remove(FoodManage);
+            pnlInfo.Controls.Remove(BillManage);
         }
     }
 }

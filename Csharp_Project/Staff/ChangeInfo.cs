@@ -21,11 +21,9 @@ namespace Csharp_Project.Staff
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNewName.Text) ||
-                string.IsNullOrEmpty(txtOldPassword.Text) ||
-                string.IsNullOrEmpty(txtNewPassword.Text) ||
-                string.IsNullOrEmpty(txtSubmitPassword.Text))
+                string.IsNullOrEmpty(txtOldPassword.Text))
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin bắt buộc nếu muốn thay đổi thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

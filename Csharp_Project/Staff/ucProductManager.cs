@@ -108,7 +108,7 @@ namespace Csharp_Project.Staff
                 decimal price;
                 if (decimal.TryParse(row.Cells["cl4"].Value.ToString(), out price))
                 {
-                    string formattedPrice = price.ToString("N0"); 
+                    string formattedPrice = price.ToString("N0");
                     txtPrice.Text = formattedPrice;
                 }
 

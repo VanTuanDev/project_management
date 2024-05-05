@@ -26,9 +26,9 @@ namespace BLL.Manager
 
             Process.UpdateStatusBill(hoaDon);
         }
-        public DataTable GetCustomerName(BillEntity bill)
+        public DataTable GetInfomation(BillEntity bill)
         {
-            return Process.GetCustomerName(bill);
+            return Process.GetInfomation(bill);
         }
         public DataTable GetBillDetail(BillDetailEntity billdetail)
         {

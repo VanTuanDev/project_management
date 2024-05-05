@@ -82,6 +82,7 @@ namespace Csharp_Project.Admin
             cbbNewrole.DisplayMember = "rolename";
             cbbNewrole.ValueMember = "rolename";
             cbbRole.Text = string.Empty;
+            cbbRole.SelectedIndex = -1;
         }
 
         private void dgAccount_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -151,23 +152,23 @@ namespace Csharp_Project.Admin
             {
                 DataGridViewRow selectedRow = dgAccount.CurrentRow;
 
-            
-
-            entity.username = selectedRow.Cells["username"].Value.ToString();
 
 
-            bool deleteSuccess = accountBLL.DeleteAccount(entity);
+                entity.username = selectedRow.Cells["username"].Value.ToString();
 
-            if (deleteSuccess)
-            {
-                MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadAccount();
-                Reset();
-            }
-            else
-            {
-                MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+                bool deleteSuccess = accountBLL.DeleteAccount(entity);
+
+                if (deleteSuccess)
+                {
+                    MessageBox.Show("Xóa dòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadAccount();
+                    Reset();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa dòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
