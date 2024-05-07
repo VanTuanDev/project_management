@@ -16,12 +16,12 @@ namespace Csharp_Project.Staff
             dataDSKhachHang = new DataTable();
             manager = new CustomerManager();
             InitializeComponent();
-            dgKhachHang.DefaultCellStyle.Font = new Font("Tahoma", 12);
+            dgKhachHang.DefaultCellStyle.Font = new Font("Tahoma", 10);
             dgKhachHang.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgKhachHang.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgKhachHang.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            dgKhachHang.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 14, FontStyle.Bold);
+            dgKhachHang.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 12, FontStyle.Bold);
             dgKhachHang.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgKhachHang.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
 

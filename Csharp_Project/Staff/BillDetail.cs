@@ -83,7 +83,7 @@ namespace Csharp_Project.Staff
                 }
             }
 
-            lblTongTienND.Text = total.ToString("#,##0.##") + " VNĐ";
+            lblTongTienND.Text = total.ToString("#,##0.##");
         }
     }
 }

@@ -40,22 +40,23 @@
             // dgKhachHang
             // 
             dgKhachHang.AllowUserToAddRows = false;
+            dgKhachHang.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgKhachHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgKhachHang.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5 });
             dgKhachHang.Dock = DockStyle.Fill;
             dgKhachHang.Location = new Point(0, 0);
+            dgKhachHang.Margin = new Padding(3, 4, 3, 4);
             dgKhachHang.Name = "dgKhachHang";
             dgKhachHang.RowHeadersVisible = false;
             dgKhachHang.RowHeadersWidth = 51;
             dgKhachHang.RowTemplate.Height = 25;
             dgKhachHang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgKhachHang.Size = new Size(822, 499);
+            dgKhachHang.Size = new Size(921, 618);
             dgKhachHang.TabIndex = 0;
             dgKhachHang.DoubleClick += dgKhachHang_DoubleClick;
             // 
             // cl1
             // 
-            cl1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cl1.DataPropertyName = "id";
             cl1.HeaderText = "Mã KH";
             cl1.MinimumWidth = 6;
@@ -106,15 +107,16 @@
             // 
             // SelectCustomer
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(802, 456);
+            ClientSize = new Size(921, 618);
             Controls.Add(dgKhachHang);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
-            MaximumSize = new Size(822, 499);
+            MaximumSize = new Size(939, 665);
             MinimizeBox = false;
-            MinimumSize = new Size(822, 499);
+            MinimumSize = new Size(939, 665);
             Name = "SelectCustomer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chọn khách hàng";

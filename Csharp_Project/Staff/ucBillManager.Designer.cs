@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucBillManager));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            lblSLHD = new Label();
+            lblSoLuongHoaDon = new Label();
             lblDenNgay = new Label();
             lblTuNgay = new Label();
             btnLoc = new Button();
@@ -55,6 +57,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(192, 255, 192);
+            panel1.Controls.Add(lblSLHD);
+            panel1.Controls.Add(lblSoLuongHoaDon);
             panel1.Controls.Add(lblDenNgay);
             panel1.Controls.Add(lblTuNgay);
             panel1.Controls.Add(btnLoc);
@@ -69,6 +73,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1210, 167);
             panel1.TabIndex = 0;
+            // 
+            // lblSLHD
+            // 
+            lblSLHD.AutoSize = true;
+            lblSLHD.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSLHD.ForeColor = SystemColors.ActiveCaptionText;
+            lblSLHD.Location = new Point(459, 113);
+            lblSLHD.Name = "lblSLHD";
+            lblSLHD.Size = new Size(0, 28);
+            lblSLHD.TabIndex = 17;
+            // 
+            // lblSoLuongHoaDon
+            // 
+            lblSoLuongHoaDon.AutoSize = true;
+            lblSoLuongHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSoLuongHoaDon.ForeColor = SystemColors.ActiveCaptionText;
+            lblSoLuongHoaDon.Location = new Point(260, 112);
+            lblSoLuongHoaDon.Name = "lblSoLuongHoaDon";
+            lblSoLuongHoaDon.Size = new Size(193, 28);
+            lblSoLuongHoaDon.TabIndex = 16;
+            lblSoLuongHoaDon.Text = "Số lượng hóa đơn :";
             // 
             // lblDenNgay
             // 
@@ -240,7 +265,7 @@
             // 
             time.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             time.DataPropertyName = "time";
-            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
             dataGridViewCellStyle1.NullValue = null;
             time.DefaultCellStyle = dataGridViewCellStyle1;
             time.HeaderText = "Ngày mua hàng";
@@ -290,14 +315,16 @@
         private Button btnXacNhan;
         private Button btnInHoaDon;
         private PictureBox ptbLogo;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn fullname;
-        private DataGridViewTextBoxColumn time;
-        private DataGridViewTextBoxColumn status;
         private DateTimePicker dpDenNgay;
         private DateTimePicker dpTuNgay;
         private Button btnLoc;
         private Label lblDenNgay;
         private Label lblTuNgay;
+        private Label lblSoLuongHoaDon;
+        private Label lblSLHD;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn fullname;
+        private DataGridViewTextBoxColumn time;
+        private DataGridViewTextBoxColumn status;
     }
 }

@@ -105,6 +105,7 @@ namespace Csharp_Project.Staff
             HienThiDanhSachSanPham();
             dgSanPham.ClearSelection();
             dgSPDuocChon.ClearSelection();
+            DataTable categoriesTable = manager.GetCategories();
         }
 
         private void dgSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -158,7 +159,7 @@ namespace Csharp_Project.Staff
                 }
             }
 
-            lblTongTien.Text = total.ToString("#,##0.##") + " VNĐ";
+            lblTongTien.Text = total.ToString("#,##0.##");
         }
 
         private void dgSPDuocChon_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -283,29 +284,6 @@ namespace Csharp_Project.Staff
             else
             {
                 MessageBox.Show("Chưa có khách hàng.");
-            }
-        }
-
-        private void dgSanPham_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex == 4 && e.Value != null && e.Value is decimal)
-            {
-                e.Value = ((decimal)e.Value).ToString("#,##0.##");
-                e.FormattingApplied = true;
-            }
-        }
-
-        private void dgSPDuocChon_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex == 3 && e.Value != null && e.Value is decimal)
-            {
-                e.Value = ((decimal)e.Value).ToString("#,##0.##");
-                e.FormattingApplied = true;
-            }
-            if (e.ColumnIndex == 2 && e.Value != null && e.Value is decimal)
-            {
-                e.Value = ((decimal)e.Value).ToString("#,##0.##");
-                e.FormattingApplied = true;
             }
         }
     }

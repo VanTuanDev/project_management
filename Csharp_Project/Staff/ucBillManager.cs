@@ -60,9 +60,13 @@ namespace Csharp_Project.Staff
 
             dpDenNgay.Format = DateTimePickerFormat.Custom;
             dpDenNgay.CustomFormat = "dd/MM/yyyy";
+
             bindingSource = new BindingSource();
             bindingSource.DataSource = dgBill.DataSource;
             dgBill.DataSource = bindingSource;
+
+            RowCount = dgBill.RowCount;
+            lblSLHD.Text = RowCount.ToString();
         }
         public void Reset()
         {
@@ -146,13 +150,15 @@ namespace Csharp_Project.Staff
                 MessageBox.Show("Vui lòng chọn một hóa đơn để in");
             }
         }
-
+        int RowCount = 0;
         private void btnLoc_Click(object sender, EventArgs e)
         {
             DateTime fromDate = dpTuNgay.Value.Date;
             DateTime toDate = dpDenNgay.Value.Date.AddDays(1).AddSeconds(-1);
 
             bindingSource.Filter = string.Format("time >= #{0}# AND time <= #{1}#", fromDate.ToString("MM/dd/yyyy"), toDate.ToString("MM/dd/yyyy"));
+            RowCount = dgBill.RowCount;
+            lblSLHD.Text = RowCount.ToString();
         }
 
         private void dpTuNgay_ValueChanged(object sender, EventArgs e)

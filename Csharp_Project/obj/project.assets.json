@@ -504,6 +504,53 @@
           }
         }
       },
+      "Microsoft.ReportViewer.Common/10.0.40219.1": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
+        }
+      },
+      "Microsoft.ReportViewer.Runtime.Common/12.0.2402.15": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
+        }
+      },
+      "Microsoft.ReportViewer.Runtime.WinForms/12.0.2402.15": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ReportViewer.Runtime.Common": "[12.0.2402.15]"
+        },
+        "compile": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {}
+        }
+      },
+      "Microsoft.ReportViewer.WinForms/10.0.40219.1": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {}
+        }
+      },
       "Microsoft.SqlServer.DacFx/150.4769.1": {
         "type": "package",
         "dependencies": {
@@ -2774,6 +2821,58 @@
         "license/ThirdPartyNotices_ReportViewer.txt",
         "microsoft.reportingservices.reportviewercontrol.winforms.150.1620.0.nupkg.sha512",
         "microsoft.reportingservices.reportviewercontrol.winforms.nuspec"
+      ]
+    },
+    "Microsoft.ReportViewer.Common/10.0.40219.1": {
+      "sha512": "BvYKVVgeRwdwiqCDUdIbaV179YIXg4RD+MlHI4KndReULmM2xO6KGlYmxOOMB/Lq5ktwFuMVyChbZgpgUqEgHw==",
+      "type": "package",
+      "path": "microsoft.reportviewer.common/10.0.40219.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.ReportViewer.Common.dll",
+        "lib/Microsoft.ReportViewer.DataVisualization.dll",
+        "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll",
+        "microsoft.reportviewer.common.10.0.40219.1.nupkg.sha512",
+        "microsoft.reportviewer.common.nuspec"
+      ]
+    },
+    "Microsoft.ReportViewer.Runtime.Common/12.0.2402.15": {
+      "sha512": "lKO3zds4H87vVzByCCrMXRZluIxZVSY+oOJ/ctkLKuCkCOxBpNcT2A6krGMt+7p6MH7GdtsKwy/mOgrxbqGmRQ==",
+      "type": "package",
+      "path": "microsoft.reportviewer.runtime.common/12.0.2402.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.ReportViewer.Common.dll",
+        "lib/Microsoft.ReportViewer.DataVisualization.dll",
+        "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll",
+        "microsoft.reportviewer.runtime.common.12.0.2402.15.nupkg.sha512",
+        "microsoft.reportviewer.runtime.common.nuspec"
+      ]
+    },
+    "Microsoft.ReportViewer.Runtime.WinForms/12.0.2402.15": {
+      "sha512": "d8loGX7vAd9yEFYKZMi/xPwVWbHR2hfMFyIzCHnPIBMqNMO5CznLEpLrTAir5mmKHY7qK7LfKLEQiwAL6oNOLQ==",
+      "type": "package",
+      "path": "microsoft.reportviewer.runtime.winforms/12.0.2402.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.ReportViewer.WinForms.dll",
+        "microsoft.reportviewer.runtime.winforms.12.0.2402.15.nupkg.sha512",
+        "microsoft.reportviewer.runtime.winforms.nuspec"
+      ]
+    },
+    "Microsoft.ReportViewer.WinForms/10.0.40219.1": {
+      "sha512": "jUPFTKTQ+HHr2uttku6fKoxTR4nsQfQEaTqABtopWPHRvRjKHTSKfexMqW0SwnWToQIAG5u2T5w/9j0iGW44mQ==",
+      "type": "package",
+      "path": "microsoft.reportviewer.winforms/10.0.40219.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.ReportViewer.WinForms.dll",
+        "microsoft.reportviewer.winforms.10.0.40219.1.nupkg.sha512",
+        "microsoft.reportviewer.winforms.nuspec"
       ]
     },
     "Microsoft.SqlServer.DacFx/150.4769.1": {
@@ -7051,6 +7150,10 @@
     "net6.0-windows7.0": [
       "BLL >= 1.0.0",
       "Microsoft.Data.Tools.Msbuild >= 16.0.62005.1040-preview",
+      "Microsoft.ReportViewer.Common >= 10.0.40219.1",
+      "Microsoft.ReportViewer.Runtime.Common >= 12.0.2402.15",
+      "Microsoft.ReportViewer.Runtime.WinForms >= 12.0.2402.15",
+      "Microsoft.ReportViewer.WinForms >= 10.0.40219.1",
       "Microsoft.ReportingServices.ReportViewerControl.Winforms >= 150.1620.0",
       "System.Data.SqlClient >= 4.8.6"
     ]
@@ -7106,6 +7209,22 @@
           "Microsoft.Data.Tools.Msbuild": {
             "target": "Package",
             "version": "[16.0.62005.1040-preview, )"
+          },
+          "Microsoft.ReportViewer.Common": {
+            "target": "Package",
+            "version": "[10.0.40219.1, )"
+          },
+          "Microsoft.ReportViewer.Runtime.Common": {
+            "target": "Package",
+            "version": "[12.0.2402.15, )"
+          },
+          "Microsoft.ReportViewer.Runtime.WinForms": {
+            "target": "Package",
+            "version": "[12.0.2402.15, )"
+          },
+          "Microsoft.ReportViewer.WinForms": {
+            "target": "Package",
+            "version": "[10.0.40219.1, )"
           },
           "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
             "target": "Package",
@@ -7184,6 +7303,46 @@
       "warningLevel": 1,
       "message": "Package 'Microsoft.ReportingServices.ReportViewerControl.Winforms 150.1620.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.ReportingServices.ReportViewerControl.Winforms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.Common 10.0.40219.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.Common",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.Runtime.Common 12.0.2402.15' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.Runtime.Common",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.Runtime.WinForms 12.0.2402.15' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.Runtime.WinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.WinForms 10.0.40219.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.WinForms",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]

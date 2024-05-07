@@ -457,6 +457,57 @@
           }
         }
       },
+      "Microsoft.ReportViewer.Common/10.0.40219.1": {
+        "runtime": {
+          "lib/Microsoft.ReportViewer.Common.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.40219.1"
+          },
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.40219.1"
+          },
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.40219.1"
+          }
+        }
+      },
+      "Microsoft.ReportViewer.Runtime.Common/12.0.2402.15": {
+        "runtime": {
+          "lib/Microsoft.ReportViewer.Common.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2402.15"
+          },
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2402.15"
+          },
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2402.15"
+          }
+        }
+      },
+      "Microsoft.ReportViewer.Runtime.WinForms/12.0.2402.15": {
+        "dependencies": {
+          "Microsoft.ReportViewer.Runtime.Common": "12.0.2402.15"
+        },
+        "runtime": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2402.15"
+          }
+        }
+      },
+      "Microsoft.ReportViewer.WinForms/10.0.40219.1": {
+        "runtime": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.40219.1"
+          }
+        }
+      },
       "Microsoft.SqlServer.DacFx/150.4769.1": {
         "dependencies": {
           "Microsoft.Build": "16.0.461",
@@ -2075,6 +2126,34 @@
       "sha512": "sha512-x5gR0feapdCWeFEsceoDUCDUwmX2StM/xRDkYLOmbX7oJDHCH7w6RVRQ3C4KtzW/5fdxgWOyhs4Kjw4pfOqdeg==",
       "path": "microsoft.reportingservices.reportviewercontrol.winforms/150.1620.0",
       "hashPath": "microsoft.reportingservices.reportviewercontrol.winforms.150.1620.0.nupkg.sha512"
+    },
+    "Microsoft.ReportViewer.Common/10.0.40219.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BvYKVVgeRwdwiqCDUdIbaV179YIXg4RD+MlHI4KndReULmM2xO6KGlYmxOOMB/Lq5ktwFuMVyChbZgpgUqEgHw==",
+      "path": "microsoft.reportviewer.common/10.0.40219.1",
+      "hashPath": "microsoft.reportviewer.common.10.0.40219.1.nupkg.sha512"
+    },
+    "Microsoft.ReportViewer.Runtime.Common/12.0.2402.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lKO3zds4H87vVzByCCrMXRZluIxZVSY+oOJ/ctkLKuCkCOxBpNcT2A6krGMt+7p6MH7GdtsKwy/mOgrxbqGmRQ==",
+      "path": "microsoft.reportviewer.runtime.common/12.0.2402.15",
+      "hashPath": "microsoft.reportviewer.runtime.common.12.0.2402.15.nupkg.sha512"
+    },
+    "Microsoft.ReportViewer.Runtime.WinForms/12.0.2402.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d8loGX7vAd9yEFYKZMi/xPwVWbHR2hfMFyIzCHnPIBMqNMO5CznLEpLrTAir5mmKHY7qK7LfKLEQiwAL6oNOLQ==",
+      "path": "microsoft.reportviewer.runtime.winforms/12.0.2402.15",
+      "hashPath": "microsoft.reportviewer.runtime.winforms.12.0.2402.15.nupkg.sha512"
+    },
+    "Microsoft.ReportViewer.WinForms/10.0.40219.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jUPFTKTQ+HHr2uttku6fKoxTR4nsQfQEaTqABtopWPHRvRjKHTSKfexMqW0SwnWToQIAG5u2T5w/9j0iGW44mQ==",
+      "path": "microsoft.reportviewer.winforms/10.0.40219.1",
+      "hashPath": "microsoft.reportviewer.winforms.10.0.40219.1.nupkg.sha512"
     },
     "Microsoft.SqlServer.DacFx/150.4769.1": {
       "type": "package",

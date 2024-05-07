@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yDdaW2OdEI7SI1NGEjlBk7yNtfXgIrQ+tzqy6wp2Ez7raIfR2JUI/9ZgSOyn6mznGDqqYwqhDBxOMJ0W292qMw==",
+  "dgSpecHash": "T/Grl/rT1mfdktQZUvzdcO+EV/ttTSk5Y5JQMPutpjM06G6IXdza04dZSUgKtjuFXg9KLFqyPS2a6o4sbTHMUw==",
   "success": true,
   "projectFilePath": "E:\\Code\\C#\\project_management\\Csharp_Project\\Csharp_Project.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,10 @@
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.reportingservices.reportviewercontrol.winforms\\150.1620.0\\microsoft.reportingservices.reportviewercontrol.winforms.150.1620.0.nupkg.sha512",
+    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.reportviewer.common\\10.0.40219.1\\microsoft.reportviewer.common.10.0.40219.1.nupkg.sha512",
+    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.reportviewer.runtime.common\\12.0.2402.15\\microsoft.reportviewer.runtime.common.12.0.2402.15.nupkg.sha512",
+    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.reportviewer.runtime.winforms\\12.0.2402.15\\microsoft.reportviewer.runtime.winforms.12.0.2402.15.nupkg.sha512",
+    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.reportviewer.winforms\\10.0.40219.1\\microsoft.reportviewer.winforms.10.0.40219.1.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.sqlserver.dacfx\\150.4769.1\\microsoft.sqlserver.dacfx.150.4769.1.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.314.76\\microsoft.sqlserver.types.14.0.314.76.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -144,6 +148,46 @@
       "warningLevel": 1,
       "message": "Package 'Microsoft.ReportingServices.ReportViewerControl.Winforms 150.1620.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.ReportingServices.ReportViewerControl.Winforms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.Common 10.0.40219.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.Common",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.Runtime.Common 12.0.2402.15' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.Runtime.Common",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.Runtime.WinForms 12.0.2402.15' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.Runtime.WinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportViewer.WinForms 10.0.40219.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportViewer.WinForms",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]

@@ -139,6 +139,22 @@
               "target": "Package",
               "version": "[16.0.62005.1040-preview, )"
             },
+            "Microsoft.ReportViewer.Common": {
+              "target": "Package",
+              "version": "[10.0.40219.1, )"
+            },
+            "Microsoft.ReportViewer.Runtime.Common": {
+              "target": "Package",
+              "version": "[12.0.2402.15, )"
+            },
+            "Microsoft.ReportViewer.Runtime.WinForms": {
+              "target": "Package",
+              "version": "[12.0.2402.15, )"
+            },
+            "Microsoft.ReportViewer.WinForms": {
+              "target": "Package",
+              "version": "[10.0.40219.1, )"
+            },
             "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
               "target": "Package",
               "version": "[150.1620.0, )"
