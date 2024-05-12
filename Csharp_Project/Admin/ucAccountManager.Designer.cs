@@ -38,16 +38,16 @@
             btnSave = new Button();
             lblNewrole = new Label();
             panel5 = new Panel();
+            cbbNewStatus = new ComboBox();
             lblNewname = new Label();
-            txtNewname = new TextBox();
+            txtNewName = new TextBox();
             lblName = new Label();
             txtName = new TextBox();
-            cbbNewrole = new ComboBox();
+            cbbNewRole = new ComboBox();
             lblSelectuser = new Label();
-            txtSelectuser = new TextBox();
+            txtUsername = new TextBox();
             cbbRole = new ComboBox();
             lblNewstatus = new Label();
-            txtNewstatus = new TextBox();
             btnCancel = new Button();
             lblRole = new Label();
             ptbLogo = new PictureBox();
@@ -181,16 +181,16 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(192, 255, 192);
+            panel5.Controls.Add(cbbNewStatus);
             panel5.Controls.Add(lblNewname);
-            panel5.Controls.Add(txtNewname);
+            panel5.Controls.Add(txtNewName);
             panel5.Controls.Add(lblName);
             panel5.Controls.Add(txtName);
-            panel5.Controls.Add(cbbNewrole);
+            panel5.Controls.Add(cbbNewRole);
             panel5.Controls.Add(lblSelectuser);
-            panel5.Controls.Add(txtSelectuser);
+            panel5.Controls.Add(txtUsername);
             panel5.Controls.Add(cbbRole);
             panel5.Controls.Add(lblNewstatus);
-            panel5.Controls.Add(txtNewstatus);
             panel5.Controls.Add(btnCancel);
             panel5.Controls.Add(btnSave);
             panel5.Controls.Add(lblNewrole);
@@ -210,6 +210,18 @@
             panel5.Size = new Size(424, 868);
             panel5.TabIndex = 0;
             // 
+            // cbbNewStatus
+            // 
+            cbbNewStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbNewStatus.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbNewStatus.FormattingEnabled = true;
+            cbbNewStatus.Items.AddRange(new object[] { "Using", "Unusing" });
+            cbbNewStatus.Location = new Point(203, 613);
+            cbbNewStatus.Name = "cbbNewStatus";
+            cbbNewStatus.Size = new Size(201, 32);
+            cbbNewStatus.TabIndex = 42;
+            cbbNewStatus.Tag = "8";
+            // 
             // lblNewname
             // 
             lblNewname.AutoSize = true;
@@ -222,16 +234,16 @@
             lblNewname.Text = "Tên người dùng :";
             lblNewname.UseMnemonic = false;
             // 
-            // txtNewname
+            // txtNewName
             // 
-            txtNewname.BorderStyle = BorderStyle.None;
-            txtNewname.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewname.Location = new Point(203, 576);
-            txtNewname.Margin = new Padding(3, 4, 3, 4);
-            txtNewname.Name = "txtNewname";
-            txtNewname.Size = new Size(201, 25);
-            txtNewname.TabIndex = 7;
-            txtNewname.Tag = "0";
+            txtNewName.BorderStyle = BorderStyle.None;
+            txtNewName.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewName.Location = new Point(203, 576);
+            txtNewName.Margin = new Padding(3, 4, 3, 4);
+            txtNewName.Name = "txtNewName";
+            txtNewName.Size = new Size(201, 25);
+            txtNewName.TabIndex = 7;
+            txtNewName.Tag = "0";
             // 
             // lblName
             // 
@@ -256,16 +268,16 @@
             txtName.TabIndex = 1;
             txtName.Tag = "0";
             // 
-            // cbbNewrole
+            // cbbNewRole
             // 
-            cbbNewrole.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbNewrole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbbNewrole.FormattingEnabled = true;
-            cbbNewrole.Location = new Point(203, 655);
-            cbbNewrole.Name = "cbbNewrole";
-            cbbNewrole.Size = new Size(201, 32);
-            cbbNewrole.TabIndex = 11;
-            cbbNewrole.Tag = "8";
+            cbbNewRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbNewRole.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbNewRole.FormattingEnabled = true;
+            cbbNewRole.Location = new Point(203, 655);
+            cbbNewRole.Name = "cbbNewRole";
+            cbbNewRole.Size = new Size(201, 32);
+            cbbNewRole.TabIndex = 11;
+            cbbNewRole.Tag = "8";
             // 
             // lblSelectuser
             // 
@@ -279,17 +291,17 @@
             lblSelectuser.Text = "Tài khoản :";
             lblSelectuser.UseMnemonic = false;
             // 
-            // txtSelectuser
+            // txtUsername
             // 
-            txtSelectuser.BorderStyle = BorderStyle.None;
-            txtSelectuser.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSelectuser.Location = new Point(203, 536);
-            txtSelectuser.Margin = new Padding(3, 4, 3, 4);
-            txtSelectuser.Name = "txtSelectuser";
-            txtSelectuser.ReadOnly = true;
-            txtSelectuser.Size = new Size(202, 25);
-            txtSelectuser.TabIndex = 33;
-            txtSelectuser.Tag = "0";
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.Location = new Point(203, 536);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Name = "txtUsername";
+            txtUsername.ReadOnly = true;
+            txtUsername.Size = new Size(202, 25);
+            txtUsername.TabIndex = 33;
+            txtUsername.Tag = "0";
             // 
             // cbbRole
             // 
@@ -312,17 +324,6 @@
             lblNewstatus.Size = new Size(134, 24);
             lblNewstatus.TabIndex = 21;
             lblNewstatus.Text = "Tình trạng : ";
-            // 
-            // txtNewstatus
-            // 
-            txtNewstatus.BorderStyle = BorderStyle.None;
-            txtNewstatus.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNewstatus.Location = new Point(203, 616);
-            txtNewstatus.Margin = new Padding(3, 4, 3, 4);
-            txtNewstatus.Name = "txtNewstatus";
-            txtNewstatus.Size = new Size(202, 25);
-            txtNewstatus.TabIndex = 8;
-            txtNewstatus.Tag = "6";
             // 
             // btnCancel
             // 
@@ -564,14 +565,13 @@
         private TableLayoutPanel tableLayoutPanel3;
         private Button btnCancel;
         private Label lblNewstatus;
-        private TextBox txtNewstatus;
         private ComboBox cbbRole;
         private Label lblSelectuser;
-        private TextBox txtSelectuser;
-        private ComboBox cbbNewrole;
+        private TextBox txtUsername;
+        private ComboBox cbbNewRole;
         private DataGridViewTextBoxColumn status;
         private Label lblNewname;
-        private TextBox txtNewname;
+        private TextBox txtNewName;
         private Label lblName;
         private TextBox txtName;
         private Label lblPass;
@@ -580,5 +580,6 @@
         private DataGridViewTextBoxColumn fullname;
         private DataGridViewTextBoxColumn role;
         private DataGridViewTextBoxColumn cl4;
+        private ComboBox cbbNewStatus;
     }
 }

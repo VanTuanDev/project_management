@@ -37,19 +37,19 @@ namespace Csharp_Project.Admin
             txtName.Text = string.Empty;
             txtPass.Text = string.Empty;
             cbbRole.Text = string.Empty;
-            txtNewname.Text = string.Empty;
-            txtSelectuser.Text = string.Empty;
-            txtNewstatus.Text = string.Empty;
-            cbbNewrole.Text = string.Empty;
+            txtNewName.Text = string.Empty;
+            txtUsername.Text = string.Empty;
+            cbbNewStatus.Text = string.Empty;
+            cbbNewRole.Text = string.Empty;
 
             lblSelectuser.Visible = false;
-            txtSelectuser.Visible = false;
+            txtUsername.Visible = false;
             lblNewname.Visible = false;
-            txtNewname.Visible = false;
+            txtNewName.Visible = false;
             lblNewstatus.Visible = false;
-            txtNewstatus.Visible = false;
+            cbbNewStatus.Visible = false;
             lblNewrole.Visible = false;
-            cbbNewrole.Visible = false;
+            cbbNewRole.Visible = false;
 
             btnSave.Visible = false;
             btnCancel.Visible = false;
@@ -59,13 +59,13 @@ namespace Csharp_Project.Admin
         private void Display()
         {
             lblSelectuser.Visible = true;
-            txtSelectuser.Visible = true;
+            txtUsername.Visible = true;
             lblNewname.Visible = true;
-            txtNewname.Visible = true;
+            txtNewName.Visible = true;
             lblNewstatus.Visible = true;
-            txtNewstatus.Visible = true;
+            cbbNewStatus.Visible = true;
             lblNewrole.Visible = true;
-            cbbNewrole.Visible = true;
+            cbbNewRole.Visible = true;
             btnSave.Visible = true;
             btnCancel.Visible = true;
         }
@@ -78,9 +78,9 @@ namespace Csharp_Project.Admin
             cbbRole.DataSource = roleTable;
             cbbRole.DisplayMember = "rolename";
             cbbRole.ValueMember = "rolename";
-            cbbNewrole.DataSource = roleTable;
-            cbbNewrole.DisplayMember = "rolename";
-            cbbNewrole.ValueMember = "rolename";
+            cbbNewRole.DataSource = roleTable;
+            cbbNewRole.DisplayMember = "rolename";
+            cbbNewRole.ValueMember = "rolename";
             cbbRole.Text = string.Empty;
             cbbRole.SelectedIndex = -1;
         }
@@ -93,9 +93,9 @@ namespace Csharp_Project.Admin
                 txtUser.Text = row.Cells["username"].Value.ToString();
                 txtName.Text = row.Cells["fullname"].Value.ToString();
                 cbbRole.Text = row.Cells["role"].Value.ToString();
-                txtNewstatus.Text = row.Cells["cl4"].Value.ToString();
-                txtSelectuser.Text = txtUser.Text;
-                txtNewname.Text = txtName.Text;
+                cbbNewStatus.Text = row.Cells["cl4"].Value.ToString();
+                txtUsername.Text = txtUser.Text;
+                txtNewName.Text = txtName.Text;
             }
         }
 
@@ -180,10 +180,10 @@ namespace Csharp_Project.Admin
         private void btnLuu_Click(object sender, EventArgs e)
         {
 
-            entity.username = txtSelectuser.Text;
-            entity.fullname = txtNewname.Text;
-            entity.status = txtNewstatus.Text;
-            entity.rolename = cbbNewrole.Text;
+            entity.username = txtUsername.Text;
+            entity.fullname = txtNewName.Text;
+            entity.status = cbbNewStatus.Text;
+            entity.rolename = cbbNewRole.Text;
             entity.role = accountBLL.GetRoleIdByName(entity);
 
             bool updateSuccess = accountBLL.UpdateAccount(entity);

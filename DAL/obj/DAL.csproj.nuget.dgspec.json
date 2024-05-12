@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj": {}
+    "D:\\Storage\\Code\\C#\\project_management\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj": {
+    "D:\\Storage\\Code\\C#\\project_management\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Storage\\Code\\C#\\project_management\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\Code\\C#\\project_management\\DAL\\DAL.csproj",
+        "projectPath": "D:\\Storage\\Code\\C#\\project_management\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Le Van Tuan\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\C#\\project_management\\DAL\\obj\\",
+        "outputPath": "D:\\Storage\\Code\\C#\\project_management\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,7 +25,8 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
+          "C:\\Users\\Le Van Tuan\\.nuget\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,10 +45,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Data.Tools.Msbuild": {
-              "target": "Package",
-              "version": "[16.0.62004.28040, )"
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"

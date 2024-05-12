@@ -183,7 +183,7 @@ namespace Csharp_Project.Staff
                 entity.id = Convert.ToInt32(txtNewId.Text);
                 entity.name = txtNewName.Text;
                 entity.unit = txtNewUnit.Text;
-                entity.price = Convert.ToInt32(txtNewPrice.Text);
+                entity.price = Convert.ToDecimal(txtNewPrice.Text);
                 entity2.catename = cbbCategory.Text;
                 entity.cateid = foodBLL.GetCategoryIdByName(entity2);
                 string error = string.Empty;
@@ -206,7 +206,7 @@ namespace Csharp_Project.Staff
                 entity.id = Convert.ToInt32(txtNewId.Text);
                 entity.name = txtNewName.Text;
                 entity.unit = txtNewUnit.Text;
-                entity.price = Convert.ToInt32(txtNewPrice.Text);
+                entity.price = Convert.ToDecimal(txtNewPrice.Text);
                 entity2.catename = cbbCategory.Text;
                 entity.cateid = foodBLL.GetCategoryIdByName(entity2);
 

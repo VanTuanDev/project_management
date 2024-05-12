@@ -229,11 +229,6 @@ namespace Csharp_Project
         {
             ChangeInfo f = new ChangeInfo();
             f.ShowDialog();
-            pnlInfo.Controls.Remove(AccountManage);
-            pnlInfo.Controls.Remove(CategoryManage);
-            pnlInfo.Controls.Remove(ClientManage);
-            pnlInfo.Controls.Remove(FoodManage);
-            pnlInfo.Controls.Remove(BillManage);
         }
     }
 }

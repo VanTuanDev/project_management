@@ -39,7 +39,6 @@
             dpDenNgay = new DateTimePicker();
             dpTuNgay = new DateTimePicker();
             ptbLogo = new PictureBox();
-            btnInHoaDon = new Button();
             btnXemChiTiet = new Button();
             btnXacNhan = new Button();
             panel2 = new Panel();
@@ -65,7 +64,6 @@
             panel1.Controls.Add(dpDenNgay);
             panel1.Controls.Add(dpTuNgay);
             panel1.Controls.Add(ptbLogo);
-            panel1.Controls.Add(btnInHoaDon);
             panel1.Controls.Add(btnXemChiTiet);
             panel1.Controls.Add(btnXacNhan);
             panel1.Dock = DockStyle.Top;
@@ -79,7 +77,7 @@
             lblSLHD.AutoSize = true;
             lblSLHD.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSLHD.ForeColor = SystemColors.ActiveCaptionText;
-            lblSLHD.Location = new Point(459, 113);
+            lblSLHD.Location = new Point(420, 113);
             lblSLHD.Name = "lblSLHD";
             lblSLHD.Size = new Size(0, 28);
             lblSLHD.TabIndex = 17;
@@ -89,7 +87,7 @@
             lblSoLuongHoaDon.AutoSize = true;
             lblSoLuongHoaDon.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSoLuongHoaDon.ForeColor = SystemColors.ActiveCaptionText;
-            lblSoLuongHoaDon.Location = new Point(260, 112);
+            lblSoLuongHoaDon.Location = new Point(221, 112);
             lblSoLuongHoaDon.Name = "lblSoLuongHoaDon";
             lblSoLuongHoaDon.Size = new Size(193, 28);
             lblSoLuongHoaDon.TabIndex = 16;
@@ -100,7 +98,7 @@
             lblDenNgay.AutoSize = true;
             lblDenNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblDenNgay.ForeColor = SystemColors.ActiveCaptionText;
-            lblDenNgay.Location = new Point(646, 46);
+            lblDenNgay.Location = new Point(548, 46);
             lblDenNgay.Name = "lblDenNgay";
             lblDenNgay.Size = new Size(113, 28);
             lblDenNgay.TabIndex = 15;
@@ -111,7 +109,7 @@
             lblTuNgay.AutoSize = true;
             lblTuNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTuNgay.ForeColor = SystemColors.ActiveCaptionText;
-            lblTuNgay.Location = new Point(260, 46);
+            lblTuNgay.Location = new Point(220, 46);
             lblTuNgay.Name = "lblTuNgay";
             lblTuNgay.Size = new Size(100, 28);
             lblTuNgay.TabIndex = 14;
@@ -124,7 +122,7 @@
             btnLoc.FlatStyle = FlatStyle.Flat;
             btnLoc.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLoc.ForeColor = Color.Green;
-            btnLoc.Location = new Point(1082, 44);
+            btnLoc.Location = new Point(940, 44);
             btnLoc.Name = "btnLoc";
             btnLoc.Size = new Size(107, 34);
             btnLoc.TabIndex = 13;
@@ -137,9 +135,9 @@
             dpDenNgay.CalendarForeColor = Color.Green;
             dpDenNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dpDenNgay.Format = DateTimePickerFormat.Short;
-            dpDenNgay.Location = new Point(819, 44);
+            dpDenNgay.Location = new Point(682, 44);
             dpDenNgay.Name = "dpDenNgay";
-            dpDenNgay.Size = new Size(201, 34);
+            dpDenNgay.Size = new Size(161, 34);
             dpDenNgay.TabIndex = 12;
             dpDenNgay.ValueChanged += dpDenNgay_ValueChanged;
             // 
@@ -148,9 +146,9 @@
             dpTuNgay.CalendarForeColor = Color.Green;
             dpTuNgay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dpTuNgay.Format = DateTimePickerFormat.Short;
-            dpTuNgay.Location = new Point(406, 44);
+            dpTuNgay.Location = new Point(327, 44);
             dpTuNgay.Name = "dpTuNgay";
-            dpTuNgay.Size = new Size(201, 34);
+            dpTuNgay.Size = new Size(161, 34);
             dpTuNgay.TabIndex = 11;
             dpTuNgay.ValueChanged += dpTuNgay_ValueChanged;
             // 
@@ -165,21 +163,6 @@
             ptbLogo.TabIndex = 10;
             ptbLogo.TabStop = false;
             // 
-            // btnInHoaDon
-            // 
-            btnInHoaDon.BackColor = Color.FromArgb(128, 255, 128);
-            btnInHoaDon.Cursor = Cursors.Hand;
-            btnInHoaDon.FlatStyle = FlatStyle.Flat;
-            btnInHoaDon.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnInHoaDon.ForeColor = Color.Green;
-            btnInHoaDon.Location = new Point(1045, 110);
-            btnInHoaDon.Name = "btnInHoaDon";
-            btnInHoaDon.Size = new Size(145, 34);
-            btnInHoaDon.TabIndex = 2;
-            btnInHoaDon.Text = "In hóa đơn";
-            btnInHoaDon.UseVisualStyleBackColor = false;
-            btnInHoaDon.Click += btnInHoaDon_Click;
-            // 
             // btnXemChiTiet
             // 
             btnXemChiTiet.BackColor = Color.FromArgb(128, 255, 128);
@@ -187,7 +170,7 @@
             btnXemChiTiet.FlatStyle = FlatStyle.Flat;
             btnXemChiTiet.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnXemChiTiet.ForeColor = Color.Green;
-            btnXemChiTiet.Location = new Point(866, 110);
+            btnXemChiTiet.Location = new Point(903, 110);
             btnXemChiTiet.Name = "btnXemChiTiet";
             btnXemChiTiet.Size = new Size(145, 34);
             btnXemChiTiet.TabIndex = 1;
@@ -202,9 +185,9 @@
             btnXacNhan.FlatStyle = FlatStyle.Flat;
             btnXacNhan.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnXacNhan.ForeColor = Color.Green;
-            btnXacNhan.Location = new Point(586, 110);
+            btnXacNhan.Location = new Point(637, 110);
             btnXacNhan.Name = "btnXacNhan";
-            btnXacNhan.Size = new Size(244, 34);
+            btnXacNhan.Size = new Size(230, 34);
             btnXacNhan.TabIndex = 0;
             btnXacNhan.Text = "Xác nhận thanh toán";
             btnXacNhan.UseVisualStyleBackColor = false;
@@ -313,7 +296,6 @@
         private DataGridView dgBill;
         private Button btnXemChiTiet;
         private Button btnXacNhan;
-        private Button btnInHoaDon;
         private PictureBox ptbLogo;
         private DateTimePicker dpDenNgay;
         private DateTimePicker dpTuNgay;

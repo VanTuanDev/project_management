@@ -72,3 +72,15 @@ D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.dll
 D:\CSharp\project_management\DAL\obj\Debug\net6.0\refint\DAL.dll
 D:\CSharp\project_management\DAL\obj\Debug\net6.0\DAL.pdb
 D:\CSharp\project_management\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\Storage\Code\C#\project_management\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\Storage\Code\C#\project_management\DAL\bin\Debug\net6.0\DAL.dll
+D:\Storage\Code\C#\project_management\DAL\bin\Debug\net6.0\DAL.pdb
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.dll
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\DAL.pdb
+D:\Storage\Code\C#\project_management\DAL\obj\Debug\net6.0\ref\DAL.dll
