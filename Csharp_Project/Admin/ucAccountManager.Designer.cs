@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucAccountManager));
-            panel6 = new Panel();
+            pnlLeft = new Panel();
+            label1 = new Label();
             dgAccount = new DataGridView();
             username = new DataGridViewTextBoxColumn();
             fullname = new DataGridViewTextBoxColumn();
@@ -63,7 +64,7 @@
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
-            panel6.SuspendLayout();
+            pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgAccount).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
@@ -74,15 +75,29 @@
             tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
-            // panel6
+            // pnlLeft
             // 
-            panel6.Controls.Add(dgAccount);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 4);
-            panel6.Margin = new Padding(3, 4, 3, 4);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(772, 868);
-            panel6.TabIndex = 1;
+            pnlLeft.BackColor = Color.FromArgb(192, 255, 192);
+            pnlLeft.Controls.Add(label1);
+            pnlLeft.Controls.Add(dgAccount);
+            pnlLeft.Dock = DockStyle.Fill;
+            pnlLeft.Location = new Point(3, 4);
+            pnlLeft.Margin = new Padding(3, 4, 3, 4);
+            pnlLeft.Name = "pnlLeft";
+            pnlLeft.Size = new Size(772, 868);
+            pnlLeft.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 64, 0);
+            label1.Location = new Point(0, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(444, 48);
+            label1.TabIndex = 43;
+            label1.Text = "QUẢN LÝ TÀI KHOẢN";
+            label1.UseMnemonic = false;
             // 
             // dgAccount
             // 
@@ -91,8 +106,7 @@
             dgAccount.BackgroundColor = Color.Honeydew;
             dgAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgAccount.Columns.AddRange(new DataGridViewColumn[] { username, fullname, role, cl4 });
-            dgAccount.Dock = DockStyle.Fill;
-            dgAccount.Location = new Point(0, 0);
+            dgAccount.Location = new Point(0, 165);
             dgAccount.Margin = new Padding(3, 4, 3, 4);
             dgAccount.Name = "dgAccount";
             dgAccount.ReadOnly = true;
@@ -100,7 +114,7 @@
             dgAccount.RowHeadersWidth = 51;
             dgAccount.RowTemplate.Height = 25;
             dgAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgAccount.Size = new Size(772, 868);
+            dgAccount.Size = new Size(772, 703);
             dgAccount.TabIndex = 0;
             dgAccount.CellClick += dgAccount_CellClick;
             // 
@@ -496,6 +510,7 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.FromArgb(192, 255, 192);
             panel2.Controls.Add(dataGridView1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 876);
@@ -510,7 +525,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 64.41441F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35.5855865F));
             tableLayoutPanel3.Controls.Add(panel5, 1, 0);
-            tableLayoutPanel3.Controls.Add(panel6, 0, 0);
+            tableLayoutPanel3.Controls.Add(pnlLeft, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Top;
             tableLayoutPanel3.Location = new Point(0, 0);
             tableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
@@ -524,6 +539,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(tableLayoutPanel3);
@@ -531,7 +547,8 @@
             Name = "ucAccountManager";
             Size = new Size(1208, 876);
             Load += ucAccountManage_Load;
-            panel6.ResumeLayout(false);
+            pnlLeft.ResumeLayout(false);
+            pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgAccount).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
@@ -546,7 +563,7 @@
 
         #endregion
 
-        private Panel panel6;
+        private Panel pnlLeft;
         private DataGridView dgAccount;
         private Button btnSave;
         private Label lblNewrole;
@@ -581,5 +598,6 @@
         private DataGridViewTextBoxColumn role;
         private DataGridViewTextBoxColumn cl4;
         private ComboBox cbbNewStatus;
+        private Label label1;
     }
 }

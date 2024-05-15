@@ -9,6 +9,9 @@ namespace Csharp_Project.Staff
         private BindingSource bindingSource;
         private DataTable dataDSHoaDon = null;
         private BillManager HDmanager = null;
+
+        private DateTime fromDateFilter;
+        private DateTime toDateFilter;
         public ucBillManager()
         {
             dataDSHoaDon = new DataTable();
@@ -31,6 +34,27 @@ namespace Csharp_Project.Staff
             dgBill.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
+        //public void HienThiDSHoaDon()
+        //{
+        //    string error = string.Empty;
+        //    if (HDmanager != null)
+        //    {
+        //        dataDSHoaDon = HDmanager.GetListBills();
+        //        if (dataDSHoaDon != null)
+        //        {
+        //            dgBill.DataSource = dataDSHoaDon;
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show(error);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("HDmanager is null");
+        //    }
+        //}
+
         public void HienThiDSHoaDon()
         {
             string error = string.Empty;
@@ -39,7 +63,11 @@ namespace Csharp_Project.Staff
                 dataDSHoaDon = HDmanager.GetListBills();
                 if (dataDSHoaDon != null)
                 {
-                    dgBill.DataSource = dataDSHoaDon;
+                    // Áp dụng bộ lọc ngày tháng
+                    DataView dv = new DataView(dataDSHoaDon);
+                    dv.RowFilter = string.Format("time >= #{0}# AND time <= #{1}#", fromDateFilter.ToString("MM/dd/yyyy"), toDateFilter.ToString("MM/dd/yyyy"));
+
+                    dgBill.DataSource = dv;
                 }
                 else
                 {
@@ -71,6 +99,7 @@ namespace Csharp_Project.Staff
         public void Reset()
         {
             maHoaDonDuocChon = -1;
+            trangThaiHoaDon = string.Empty;
         }
         private int maHoaDonDuocChon = -1;
         private string trangThaiHoaDon = "";
@@ -113,6 +142,8 @@ namespace Csharp_Project.Staff
                 formChiTietHoaDon.ShowDialog();
 
                 HienThiDSHoaDon();
+
+                Reset();
             }
             else
             {
@@ -133,30 +164,27 @@ namespace Csharp_Project.Staff
             }
         }
 
-        private void btnInHoaDon_Click(object sender, EventArgs e)
-        {
-            if (maHoaDonDuocChon != -1)
-            {
-                PrintBill formPrintBill = new PrintBill();
-
-                formPrintBill.MaHoaDon = maHoaDonDuocChon;
-
-                formPrintBill.ShowDialog();
-
-                HienThiDSHoaDon();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một hóa đơn để in");
-            }
-        }
         int RowCount = 0;
+        //private void btnLoc_Click(object sender, EventArgs e)
+        //{
+        //    DateTime fromDate = dpTuNgay.Value.Date;
+        //    DateTime toDate = dpDenNgay.Value.Date.AddDays(1).AddSeconds(-1);
+
+        //    bindingSource.Filter = string.Format("time >= #{0}# AND time <= #{1}#", fromDate.ToString("MM/dd/yyyy"), toDate.ToString("MM/dd/yyyy"));
+        //    RowCount = dgBill.RowCount;
+        //    lblSLHD.Text = RowCount.ToString();
+        //}
+
         private void btnLoc_Click(object sender, EventArgs e)
         {
             DateTime fromDate = dpTuNgay.Value.Date;
             DateTime toDate = dpDenNgay.Value.Date.AddDays(1).AddSeconds(-1);
 
-            bindingSource.Filter = string.Format("time >= #{0}# AND time <= #{1}#", fromDate.ToString("MM/dd/yyyy"), toDate.ToString("MM/dd/yyyy"));
+            fromDateFilter = fromDate;
+            toDateFilter = toDate;
+
+            HienThiDSHoaDon();
+
             RowCount = dgBill.RowCount;
             lblSLHD.Text = RowCount.ToString();
         }

@@ -68,6 +68,7 @@
             cl4 = new DataGridViewTextBoxColumn();
             cl5 = new DataGridViewTextBoxColumn();
             panel4 = new Panel();
+            label1 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -493,6 +494,7 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(label1);
             panel6.Controls.Add(dgFood);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 4);
@@ -509,8 +511,7 @@
             dgFood.ColumnHeadersHeight = 35;
             dgFood.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgFood.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5 });
-            dgFood.Dock = DockStyle.Fill;
-            dgFood.Location = new Point(0, 0);
+            dgFood.Location = new Point(0, 165);
             dgFood.Margin = new Padding(3, 4, 3, 4);
             dgFood.Name = "dgFood";
             dgFood.ReadOnly = true;
@@ -519,7 +520,7 @@
             dgFood.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgFood.RowTemplate.Height = 25;
             dgFood.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgFood.Size = new Size(772, 868);
+            dgFood.Size = new Size(772, 703);
             dgFood.TabIndex = 0;
             dgFood.CellClick += dgFood_CellClick;
             dgFood.CellFormatting += dgFood_CellFormatting;
@@ -587,10 +588,23 @@
             panel4.Size = new Size(1208, 876);
             panel4.TabIndex = 11;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 64, 0);
+            label1.Location = new Point(0, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(428, 48);
+            label1.TabIndex = 46;
+            label1.Text = "QUẢN LÝ SẢN PHẨM";
+            label1.UseMnemonic = false;
+            // 
             // ucProductManager
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             Controls.Add(panel2);
             Controls.Add(tableLayoutPanel3);
             Controls.Add(panel4);
@@ -606,6 +620,7 @@
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
             panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgFood).EndInit();
             panel4.ResumeLayout(false);
             ResumeLayout(false);
@@ -652,5 +667,6 @@
         private DataGridViewTextBoxColumn cl3;
         private DataGridViewTextBoxColumn cl4;
         private DataGridViewTextBoxColumn cl5;
+        private Label label1;
     }
 }

@@ -62,6 +62,7 @@
             txtId = new TextBox();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
+            label1 = new Label();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel6.SuspendLayout();
@@ -98,6 +99,7 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(label1);
             panel6.Controls.Add(dgClient);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 4);
@@ -114,8 +116,7 @@
             dgClient.ColumnHeadersHeight = 35;
             dgClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgClient.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4 });
-            dgClient.Dock = DockStyle.Fill;
-            dgClient.Location = new Point(0, 0);
+            dgClient.Location = new Point(0, 165);
             dgClient.Margin = new Padding(3, 4, 3, 4);
             dgClient.Name = "dgClient";
             dgClient.ReadOnly = true;
@@ -124,7 +125,7 @@
             dgClient.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgClient.RowTemplate.Height = 25;
             dgClient.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgClient.Size = new Size(772, 868);
+            dgClient.Size = new Size(772, 703);
             dgClient.TabIndex = 0;
             dgClient.CellClick += dgClient_CellClick;
             // 
@@ -521,10 +522,23 @@
             panel2.Size = new Size(1208, 876);
             panel2.TabIndex = 12;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 64, 0);
+            label1.Location = new Point(0, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(488, 48);
+            label1.TabIndex = 45;
+            label1.Text = "QUẢN LÝ KHÁCH HÀNG";
+            label1.UseMnemonic = false;
+            // 
             // ucCustomerManager
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             Controls.Add(panel4);
             Controls.Add(tableLayoutPanel3);
             Controls.Add(panel2);
@@ -535,6 +549,7 @@
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgClient).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
@@ -582,5 +597,6 @@
         private DataGridViewTextBoxColumn cl2;
         private DataGridViewTextBoxColumn cl3;
         private DataGridViewTextBoxColumn cl4;
+        private Label label1;
     }
 }

@@ -49,6 +49,7 @@
             btnAdd = new Button();
             txtId = new TextBox();
             panel6 = new Panel();
+            label1 = new Label();
             dgCategory = new DataGridView();
             cl1 = new DataGridViewTextBoxColumn();
             cl2 = new DataGridViewTextBoxColumn();
@@ -102,6 +103,7 @@
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.BackColor = Color.FromArgb(192, 255, 192);
             tableLayoutPanel3.ColumnCount = 2;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 64.41441F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35.5855865F));
@@ -326,6 +328,8 @@
             // 
             // panel6
             // 
+            panel6.BackColor = Color.FromArgb(192, 255, 192);
+            panel6.Controls.Add(label1);
             panel6.Controls.Add(dgCategory);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 4);
@@ -333,6 +337,18 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(772, 868);
             panel6.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 64, 0);
+            label1.Location = new Point(0, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(437, 48);
+            label1.TabIndex = 44;
+            label1.Text = "QUẢN LÝ DANH MỤC";
+            label1.UseMnemonic = false;
             // 
             // dgCategory
             // 
@@ -342,8 +358,7 @@
             dgCategory.ColumnHeadersHeight = 35;
             dgCategory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgCategory.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2 });
-            dgCategory.Dock = DockStyle.Fill;
-            dgCategory.Location = new Point(0, 0);
+            dgCategory.Location = new Point(0, 165);
             dgCategory.Margin = new Padding(3, 4, 3, 4);
             dgCategory.Name = "dgCategory";
             dgCategory.ReadOnly = true;
@@ -352,7 +367,7 @@
             dgCategory.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgCategory.RowTemplate.Height = 25;
             dgCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgCategory.Size = new Size(772, 868);
+            dgCategory.Size = new Size(772, 703);
             dgCategory.TabIndex = 0;
             dgCategory.CellClick += dgCategory_CellClick;
             // 
@@ -406,6 +421,7 @@
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
             panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgCategory).EndInit();
             panel4.ResumeLayout(false);
             ResumeLayout(false);
@@ -437,5 +453,6 @@
         private Button btnCancel;
         private DataGridViewTextBoxColumn cl1;
         private DataGridViewTextBoxColumn cl2;
+        private Label label1;
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AHgkJu7eWOq7zjvc02JaEQx3J2UqWEt0GYYNpIgkha3lcpHbBypUSx3jR397nxXYNFw66WX35d3NzdjTBadEdQ==",
+  "dgSpecHash": "spz9uLEGoK3Q2VY7cMVqVdr8qQ8+NCgzPEqSngOCkir18gWn1ZFETw9fBTQl/r3R/tFInoqnxvqkEvOxEVuy2Q==",
   "success": true,
   "projectFilePath": "D:\\Storage\\Code\\C#\\project_management\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
@@ -13,9 +13,9 @@
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Le Van Tuan\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.30\\microsoft.windowsdesktop.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.30\\microsoft.netcore.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\Le Van Tuan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.30\\microsoft.aspnetcore.app.ref.6.0.30.nupkg.sha512"
   ],
   "logs": []
 }

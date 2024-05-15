@@ -28,20 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSelling));
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel4 = new Panel();
             dataGridView2 = new DataGridView();
             panel6 = new Panel();
+            label1 = new Label();
             dgSanPham = new DataGridView();
-            cl1 = new DataGridViewTextBoxColumn();
-            cl2 = new DataGridViewTextBoxColumn();
-            cl3 = new DataGridViewTextBoxColumn();
-            cl4 = new DataGridViewTextBoxColumn();
-            cl5 = new DataGridViewTextBoxColumn();
-            cl6 = new DataGridViewTextBoxColumn();
             btnXoa = new Button();
             panel5 = new Panel();
             ptbLogo = new PictureBox();
@@ -70,6 +65,12 @@
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
+            cl1 = new DataGridViewTextBoxColumn();
+            cl2 = new DataGridViewTextBoxColumn();
+            cl3 = new DataGridViewTextBoxColumn();
+            cl4 = new DataGridViewTextBoxColumn();
+            cl5 = new DataGridViewTextBoxColumn();
+            cl6 = new DataGridViewTextBoxColumn();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel6.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(label1);
             panel6.Controls.Add(dgSanPham);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 4);
@@ -115,6 +117,18 @@
             panel6.Size = new Size(822, 868);
             panel6.TabIndex = 1;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 64, 0);
+            label1.Location = new Point(3, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(488, 48);
+            label1.TabIndex = 45;
+            label1.Text = "DANH SÁCH SẢN PHẨM";
+            label1.UseMnemonic = false;
+            // 
             // dgSanPham
             // 
             dgSanPham.AllowUserToAddRows = false;
@@ -122,8 +136,7 @@
             dgSanPham.BackgroundColor = Color.Honeydew;
             dgSanPham.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgSanPham.Columns.AddRange(new DataGridViewColumn[] { cl1, cl2, cl3, cl4, cl5, cl6 });
-            dgSanPham.Dock = DockStyle.Fill;
-            dgSanPham.Location = new Point(0, 0);
+            dgSanPham.Location = new Point(0, 165);
             dgSanPham.Margin = new Padding(3, 5, 3, 5);
             dgSanPham.Name = "dgSanPham";
             dgSanPham.ReadOnly = true;
@@ -131,77 +144,9 @@
             dgSanPham.RowHeadersWidth = 51;
             dgSanPham.RowTemplate.Height = 25;
             dgSanPham.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgSanPham.Size = new Size(822, 868);
+            dgSanPham.Size = new Size(687, 703);
             dgSanPham.TabIndex = 0;
             dgSanPham.CellClick += dgSanPham_CellClick;
-            // 
-            // cl1
-            // 
-            cl1.DataPropertyName = "id";
-            cl1.HeaderText = "Mã SP";
-            cl1.MinimumWidth = 6;
-            cl1.Name = "cl1";
-            cl1.ReadOnly = true;
-            cl1.Resizable = DataGridViewTriState.False;
-            cl1.Width = 125;
-            // 
-            // cl2
-            // 
-            cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl2.DataPropertyName = "name";
-            cl2.HeaderText = "Tên sản phẩm";
-            cl2.MinimumWidth = 6;
-            cl2.Name = "cl2";
-            cl2.ReadOnly = true;
-            cl2.Resizable = DataGridViewTriState.False;
-            cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // cl3
-            // 
-            cl3.DataPropertyName = "unit";
-            cl3.HeaderText = "ĐVT";
-            cl3.MinimumWidth = 6;
-            cl3.Name = "cl3";
-            cl3.ReadOnly = true;
-            cl3.Resizable = DataGridViewTriState.False;
-            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
-            cl3.Width = 125;
-            // 
-            // cl4
-            // 
-            cl4.DataPropertyName = "price";
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = null;
-            cl4.DefaultCellStyle = dataGridViewCellStyle1;
-            cl4.HeaderText = "Đơn giá";
-            cl4.MinimumWidth = 6;
-            cl4.Name = "cl4";
-            cl4.ReadOnly = true;
-            cl4.Resizable = DataGridViewTriState.False;
-            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
-            cl4.Width = 130;
-            // 
-            // cl5
-            // 
-            cl5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl5.DataPropertyName = "catename";
-            cl5.HeaderText = "Danh mục";
-            cl5.MinimumWidth = 6;
-            cl5.Name = "cl5";
-            cl5.ReadOnly = true;
-            cl5.Resizable = DataGridViewTriState.False;
-            // 
-            // cl6
-            // 
-            cl6.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cl6.DataPropertyName = "status";
-            cl6.HeaderText = "Trạng thái";
-            cl6.MinimumWidth = 6;
-            cl6.Name = "cl6";
-            cl6.ReadOnly = true;
-            cl6.Resizable = DataGridViewTriState.False;
-            cl6.SortMode = DataGridViewColumnSortMode.NotSortable;
-            cl6.Visible = false;
             // 
             // btnXoa
             // 
@@ -595,10 +540,78 @@
             tableLayoutPanel3.Size = new Size(1381, 876);
             tableLayoutPanel3.TabIndex = 13;
             // 
+            // cl1
+            // 
+            cl1.DataPropertyName = "id";
+            cl1.HeaderText = "Mã SP";
+            cl1.MinimumWidth = 6;
+            cl1.Name = "cl1";
+            cl1.ReadOnly = true;
+            cl1.Resizable = DataGridViewTriState.False;
+            // 
+            // cl2
+            // 
+            cl2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl2.DataPropertyName = "name";
+            cl2.HeaderText = "Tên sản phẩm";
+            cl2.MinimumWidth = 6;
+            cl2.Name = "cl2";
+            cl2.ReadOnly = true;
+            cl2.Resizable = DataGridViewTriState.False;
+            cl2.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cl3
+            // 
+            cl3.DataPropertyName = "unit";
+            cl3.HeaderText = "ĐVT";
+            cl3.MinimumWidth = 6;
+            cl3.Name = "cl3";
+            cl3.ReadOnly = true;
+            cl3.Resizable = DataGridViewTriState.False;
+            cl3.SortMode = DataGridViewColumnSortMode.NotSortable;
+            cl3.Width = 90;
+            // 
+            // cl4
+            // 
+            cl4.DataPropertyName = "price";
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = null;
+            cl4.DefaultCellStyle = dataGridViewCellStyle1;
+            cl4.HeaderText = "Đơn giá";
+            cl4.MinimumWidth = 6;
+            cl4.Name = "cl4";
+            cl4.ReadOnly = true;
+            cl4.Resizable = DataGridViewTriState.False;
+            cl4.SortMode = DataGridViewColumnSortMode.NotSortable;
+            cl4.Width = 130;
+            // 
+            // cl5
+            // 
+            cl5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl5.DataPropertyName = "catename";
+            cl5.HeaderText = "Danh mục";
+            cl5.MinimumWidth = 6;
+            cl5.Name = "cl5";
+            cl5.ReadOnly = true;
+            cl5.Resizable = DataGridViewTriState.False;
+            // 
+            // cl6
+            // 
+            cl6.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cl6.DataPropertyName = "status";
+            cl6.HeaderText = "Trạng thái";
+            cl6.MinimumWidth = 6;
+            cl6.Name = "cl6";
+            cl6.ReadOnly = true;
+            cl6.Resizable = DataGridViewTriState.False;
+            cl6.SortMode = DataGridViewColumnSortMode.NotSortable;
+            cl6.Visible = false;
+            // 
             // ucSelling
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(tableLayoutPanel3);
@@ -609,6 +622,7 @@
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgSanPham).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
@@ -650,15 +664,16 @@
         private Label lblDonGia;
         private TextBox txtDanhMuc;
         private PictureBox ptbLogo;
+        private DataGridViewTextBoxColumn column1;
+        private DataGridViewTextBoxColumn column2;
+        private DataGridViewTextBoxColumn column3;
+        private DataGridViewTextBoxColumn column4;
+        private Label label1;
         private DataGridViewTextBoxColumn cl1;
         private DataGridViewTextBoxColumn cl2;
         private DataGridViewTextBoxColumn cl3;
         private DataGridViewTextBoxColumn cl4;
         private DataGridViewTextBoxColumn cl5;
         private DataGridViewTextBoxColumn cl6;
-        private DataGridViewTextBoxColumn column1;
-        private DataGridViewTextBoxColumn column2;
-        private DataGridViewTextBoxColumn column3;
-        private DataGridViewTextBoxColumn column4;
     }
 }
