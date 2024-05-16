@@ -11,7 +11,7 @@
 
 ### Sinh viên thực hiện
 
-|**STT**|**MSSV **|  **Họ và tên**  |    **Trách nhiệm**   |
+|**STT**|**MSSV** |  **Họ và tên**  |    **Trách nhiệm**   |
 |-------|---------|-----------------|----------------------|
 |   1   |121001332|Lê Văn Tuấn      |      Nhóm trưởng     |
 |   2   |121001126|Nguyễn Thiện Nhân|      Thành viên      |
