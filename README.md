@@ -13,9 +13,9 @@
 
 |**STT**|**MSSV** |  **Họ và tên**  |    **Trách nhiệm**   |
 |-------|---------|-----------------|----------------------|
-|   1   |121001332|Lê Văn Tuấn      |      Nhóm trưởng     |
-|   2   |121001126|Nguyễn Thiện Nhân|      Thành viên      |
-|   3   |121001491|Lê Tấn Phát      |      Thành viên      |
+|   1   |121001332|Lê Văn Tuấn      |        Leader        |
+|   2   |121001126|Nguyễn Thiện Nhân|        Member        |
+|   3   |121001491|Lê Tấn Phát      |        Member        |
 
 #### Yêu cầu để thực thi project
 
